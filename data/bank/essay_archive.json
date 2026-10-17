@@ -1,0 +1,290 @@
+[
+ {
+  "id": "L01-02",
+  "unit": 2,
+  "type": "short",
+  "question": "List three different ways for structuring an operating system.",
+  "model_answer": "Monolithic (simple/UNIX); Layered; Modules (LKMs)",
+  "answer_status": "source_partly_out",
+  "note": "Microkernel is not in the in-scope slides; in-scope structures are simple/monolithic, layered, modules."
+ },
+ {
+  "id": "L01-03",
+  "unit": 3,
+  "type": "short",
+  "question": "What are the two fundamental models of inter-process communication?",
+  "model_answer": "Shared memory; Message passing",
+  "answer_status": "matches_source",
+  "note": ""
+ },
+ {
+  "id": "L01-04",
+  "unit": 5,
+  "type": "short",
+  "question": "List three different criteria for designing a CPU scheduling algorithm.",
+  "model_answer": "Any three of: CPU utilization, throughput, turnaround time, waiting time, response time",
+  "answer_status": "matches_source",
+  "note": ""
+ },
+ {
+  "id": "L01-05",
+  "unit": 3,
+  "type": "match",
+  "question": "Match the numbered transitions in the process-state diagram with: Process dispatch, I/O completed, Trap, Admitted, Job completed, Process need I/O.",
+  "model_answer": "new->ready: admitted; ready->running: scheduler dispatch; running->ready: interrupt; running->waiting: I/O or event wait; waiting->ready: I/O or event completion; running->terminated: exit",
+  "answer_status": "needs_figure",
+  "note": "Figure not available in text; numbering depends on the exam figure. Slide uses 'interrupt' where the exam says 'Trap'."
+ },
+ {
+  "id": "L01-06",
+  "unit": 3,
+  "type": "diagram",
+  "question": "Draw a diagram that shows how the CPU switches from process to process.",
+  "model_answer": "P0 executing -> interrupt/system call -> save state into PCB0 -> reload state from PCB1 -> P1 executing (P0 idle) -> interrupt/system call -> save state into PCB1 -> reload state from PCB0 -> P0 executing",
+  "answer_status": "no_source_answer",
+  "note": ""
+ },
+ {
+  "id": "L01-17",
+  "unit": 5,
+  "type": "scheduling",
+  "question": "Processes (arrival, burst ms): P1 (0, 20), P2 (3, 7), P3 (5, 2), P4 (7, 3). Draw a Gantt chart and find the average waiting time for (a) FCFS and (b) preemptive SJF (SRTF).",
+  "model_answer": "FCFS avg WT = 15.25 ms; SRTF avg WT = 4.25 ms",
+  "answer_status": "matches_source",
+  "note": "Verified by recomputation."
+ },
+ {
+  "id": "L02-22",
+  "unit": 2,
+  "type": "short",
+  "question": "What is the bootstrap program? (transfers the operating system from mass storage to main memory)",
+  "model_answer": "A small piece of code (stored in ROM/EEPROM) that initializes the system, locates the kernel, loads it into memory and starts it.",
+  "answer_status": "no_source_answer",
+  "note": "Also ch1 s27."
+ },
+ {
+  "id": "L02-23",
+  "unit": 3,
+  "type": "short",
+  "question": "Computation speed-up is a reason for __________.",
+  "model_answer": "Cooperating processes",
+  "answer_status": "uncertain",
+  "note": "Fragment; context in source is missing."
+ },
+ {
+  "id": "L03-16",
+  "unit": 4,
+  "type": "short",
+  "question": "What are the two types of parallelism?",
+  "model_answer": "Data parallelism and task parallelism",
+  "answer_status": "no_source_answer",
+  "note": ""
+ },
+ {
+  "id": "L03-18",
+  "unit": 5,
+  "type": "scheduling",
+  "question": "Processes Pa, Pb, Pc, Pd with burst times 8, 5, 1, 6 ms, all arriving at time 0 in that order. (1) Gantt chart for SJF. (2) Gantt chart for RR with q = 5 ms. (3) Average waiting time for both; which is better?",
+  "model_answer": "SJF: Pc 0-1, Pb 1-6, Pd 6-12, Pa 12-20; WT Pa=12, Pb=1, Pc=0, Pd=6; avg 4.75 ms. RR(q=5): Pa 0-5, Pb 5-10, Pc 10-11, Pd 11-16, Pa 16-19, Pd 19-20; WT Pa=11, Pb=5, Pc=10, Pd=14; avg 10 ms. SJF is better.",
+  "answer_status": "no_source_answer",
+  "note": "Computed."
+ },
+ {
+  "id": "L04-30",
+  "unit": 5,
+  "type": "scheduling",
+  "question": "Processes (burst, priority): P1 (10, 3), P2 (1, 1), P3 (2, 3), P4 (1, 4), P5 (5, 2), all arriving at time 0 in order P1..P5. Using (nonpreemptive) priority scheduling, what is the average waiting time?",
+  "model_answer": "Gantt: P2 0-1, P5 1-6, P1 6-16, P3 16-18, P4 18-19. WT: P1=6, P2=0, P3=16, P4=18, P5=1. Avg = 41/5 = 8.2 ms",
+  "answer_status": "source_arithmetic_typo",
+  "note": "Variant of the slide 20 example (P3/P4 priorities differ; P1 and P3 tie at 3, broken by arrival order). Source wrote 40/5; the sum is 41."
+ },
+ {
+  "id": "L06-10",
+  "unit": 5,
+  "type": "short",
+  "question": "Explain the difference between preemptive and nonpreemptive scheduling.",
+  "model_answer": "Nonpreemptive: scheduling only when a process switches from running to waiting or terminates (cases 1 and 4); the process keeps the CPU until then. Preemptive: scheduling can also occur when a process switches running->ready or waiting->ready, so the running process can be interrupted.",
+  "answer_status": "matches_source",
+  "note": ""
+ },
+ {
+  "id": "L06-11",
+  "unit": 4,
+  "type": "short",
+  "question": "Mention only one benefit of multithreading, and explain it.",
+  "model_answer": "Any of: responsiveness, resource sharing, economy, scalability (with explanation from slide 7).",
+  "answer_status": "matches_source",
+  "note": ""
+ },
+ {
+  "id": "L06-12",
+  "unit": 5,
+  "type": "scheduling",
+  "question": "Processes (arrival, burst ms): P1 (2, 6), P2 (4, 3), P3 (10, 4). Multilevel feedback queue with 2 queues and preemptive priority between queues. Q1: Round Robin with q = 3 ms (highest priority); a process that does not finish its time slice moves to Q2. Q2: nonpreemptive SJF; a process preempted from Q2 goes to the end of Q2. All arriving processes enter Q1. A process whose waiting time reaches 4 ms is upgraded to the next higher queue. Draw the Gantt charts of Q1, Q2 and the CPU and find the average waiting time.",
+  "model_answer": "CPU: P1 2-5 (Q1), P2 5-8 (Q1), P1 8-10 (Q2, preempted by P3), P3 10-13 (Q1), P1 13-14 (upgraded to Q1), P3 14-15 (Q2). WT: P1=6, P2=1, P3=1; avg = 8/3 ≈ 2.67 ms",
+  "answer_status": "matches_source",
+  "note": "Verified by recomputation. Source rounds 2.67 down to 2.6."
+ },
+ {
+  "id": "L08-08",
+  "unit": 5,
+  "type": "short",
+  "question": "What is the difference between nonpreemptive and preemptive scheduling?",
+  "model_answer": "See L06-10.",
+  "answer_status": "matches_source",
+  "note": "Duplicate concept of L06-10."
+ },
+ {
+  "id": "L08-18",
+  "unit": 5,
+  "type": "short",
+  "question": "What is the difference between a multilevel queue and a multilevel feedback queue?",
+  "model_answer": "In a multilevel queue, the ready queue is split into separate queues and each process is permanently assigned to one queue (e.g. by process type). In a multilevel feedback queue, a process can move between queues (upgrade/demote), which also allows aging.",
+  "answer_status": "matches_source",
+  "note": "Marked 'important essay' (مهم مقالي) in source."
+ },
+ {
+  "id": "L08-19",
+  "unit": 5,
+  "type": "short",
+  "question": "What is the difference between turnaround time and response time?",
+  "model_answer": "Turnaround time = completion time - arrival time (total time to execute a process). Response time = time from submission until the first response is produced (not the output); used for time-sharing environments.",
+  "answer_status": "matches_source",
+  "note": ""
+ },
+ {
+  "id": "L08-30",
+  "unit": 5,
+  "type": "scheduling",
+  "question": "Processes (arrival, burst, priority; 0 is highest): P1 (0, 7, 0), P2 (2, 4, 1), P3 (4, 1, 2), P4 (5, 4, 3). Draw Gantt charts for preemptive priority, FCFS, and RR with q = 2.",
+  "model_answer": "Priority and FCFS: P1 0-7, P2 7-11, P3 11-12, P4 12-16. RR q=2 (new arrivals queued before the preempted process): P1 0-2, P2 2-4, P1 4-6, P3 6-7, P2 7-9, P4 9-11, P1 11-13, P4 13-15, P1 15-16",
+  "answer_status": "source_wrong",
+  "note": "Column headers in the source are swapped (handwritten fix: first column = arrival, second = burst). The RR chart marked correct in the source skips P1 at t=4 even though P1 was queued at t=2. RR depends on the tie-break convention; state it explicitly in any question built from this."
+ },
+ {
+  "id": "L08-31",
+  "unit": 5,
+  "type": "scheduling",
+  "question": "Processes (arrival, burst): P1 (10, 7), P2 (4, 3), P3 (2, 8), P4 (6, 6). (a) Draw the Gantt chart for preemptive SJF. (b) What is the average turnaround time?",
+  "model_answer": "SRTF: P3 2-4, P2 4-7, P3 7-13, P4 13-19, P1 19-26. TAT: P1=16, P2=3, P3=11, P4=13; avg = 43/4 = 10.75",
+  "answer_status": "source_wrong",
+  "note": "Source photo is blurry with handwritten edits to the burst times; its answer does not match the printed table. Recomputed from the printed values (tie at t=7 between P3 and P4 gives the same average either way)."
+ },
+ {
+  "id": "L10-03",
+  "unit": 5,
+  "type": "scheduling",
+  "question": "Processes (arrival, burst): P1 (0, 8), P2 (1, 5), P3 (2, 3), P4 (3, 4). (A) Average waiting time with Round Robin, q = 4. (B) Order of execution with FCFS. (C) Order of execution with SJF.",
+  "model_answer": "RR q=4: P1 0-4, P2 4-8, P3 8-11, P4 11-15, P1 15-19, P2 19-20. WT: P1=11, P2=14, P3=6, P4=8; avg = 39/4 = 9.75 ms. FCFS: P1-P2-P3-P4. Nonpreemptive SJF: P1-P3-P4-P2.",
+  "answer_status": "source_wrong",
+  "note": "Source computed P1 = 19 - 0 - 8 as 10 (should be 11), giving 9.5 instead of 9.75."
+ },
+ {
+  "id": "L10-07",
+  "unit": 1,
+  "type": "short",
+  "question": "Clarify the key difference between 'kernel' and 'user' modes.",
+  "model_answer": "Kernel mode (mode bit 0): the OS is executing and privileged instructions can run. User mode (mode bit 1): user code is executing; privileged instructions are not allowed. A system call switches to kernel mode and the return switches back to user mode.",
+  "answer_status": "matches_source",
+  "note": ""
+ },
+ {
+  "id": "L10-08",
+  "unit": 3,
+  "type": "short",
+  "question": "Clarify the key difference between 'process' and 'program'.",
+  "model_answer": "A program is a passive entity stored on disk (executable file); a process is an active entity (a program in execution). A program becomes a process when its executable file is loaded into memory.",
+  "answer_status": "matches_source",
+  "note": ""
+ },
+ {
+  "id": "L10-09",
+  "unit": 3,
+  "type": "short",
+  "question": "Clarify the key difference between the 'heap section' and the 'stack section'.",
+  "model_answer": "Heap: memory dynamically allocated during run time. Stack: temporary data such as function parameters, return addresses and local variables.",
+  "answer_status": "matches_source",
+  "note": ""
+ },
+ {
+  "id": "L10-10",
+  "unit": 3,
+  "type": "short",
+  "question": "Clarify the key difference between 'ready' and 'device' queues.",
+  "model_answer": "Ready queue: processes residing in main memory, ready and waiting to execute. Device (wait) queue: processes waiting for an event such as I/O.",
+  "answer_status": "source_wrong",
+  "note": "Slides call the second one 'wait queue'."
+ },
+ {
+  "id": "L10-11",
+  "unit": 3,
+  "type": "short",
+  "question": "Program: cout<<\"Start\"<<endl; int a = 0; fork(); a = a + 2; cout<<\"a = \"<<a<<endl; (A) How many processes are created? (B) Show the output.",
+  "model_answer": "(A) fork() is called once: one new (child) process is created, two processes in total. (B) Start / a = 2 / a = 2 (Start is printed once, before fork; each process prints a = 2).",
+  "answer_status": "source_wrong",
+  "note": "Source answer is incomplete (prints a = 2 only once)."
+ },
+ {
+  "id": "L11-15",
+  "unit": 2,
+  "type": "short",
+  "question": "In operating systems, what is the difference between protection and security? Explain each briefly.",
+  "model_answer": "Protection: ensuring that all access to system resources is controlled. Security: defending the system from outsiders; requires user authentication and extends to defending external I/O devices from invalid access attempts.",
+  "answer_status": "matches_source",
+  "note": ""
+ },
+ {
+  "id": "L11-16",
+  "unit": 5,
+  "type": "scheduling",
+  "question": "Four processes arrive at time 0 in the order P1, P2, P3, P4 with bursts 8, 6, 1, 9 ms. (1) SJF (nonpreemptive): Gantt chart, AWT and ATAT. (2) RR with q = 3: Gantt chart, AWT and ATAT. (3) Find the smallest time quantum q for which RR gives the same AWT as FCFS. (4) Assign priority numbers 1-4 so that priority scheduling gives the same AWT as SJF.",
+  "model_answer": "(1) SJF: P3 0-1, P2 1-7, P1 7-15, P4 15-24; WT 7, 1, 0, 15 -> AWT = 5.75 ms; TAT 15, 7, 1, 24 -> ATAT = 11.75 ms. (2) RR q=3: P1 0-3, P2 3-6, P3 6-7, P4 7-10, P1 10-13, P2 13-16, P4 16-19, P1 19-21, P4 21-24; TAT 21, 16, 7, 24 -> ATAT = 17 ms; WT 13, 10, 6, 15 -> AWT = 11 ms. (3) FCFS AWT = (0+8+14+15)/4 = 9.25; smallest q giving the same schedule is q = 8. (4) P3=1, P2=2, P1=3, P4=4.",
+  "answer_status": "source_wrong",
+  "note": "Student's RR ATAT (68/4 written as 14.2) is wrong; correct is 17. Other parts verified. Checked q = 1..7 do not give 9.25."
+ },
+ {
+  "id": "L11-17",
+  "unit": 3,
+  "type": "short",
+  "question": "int x = 1; pid_t pid = fork(); if (pid == 0) { x = x + 2; fork(); printf(\"A %d\\n\", x); } else { x = x * 5; printf(\"B %d\\n\", x); } printf(\"C %d\\n\", x); (1) Show the process tree. (2) What is the output if parents must wait for their children?",
+  "model_answer": "(1) P0 -> P1 (first fork); P1 -> P2 (second fork, child branch only). (2) P2: A 3, C 3; P1: A 3, C 3; P0: B 5, C 5. The parent's x is 1 (the child's x = x + 2 does not affect the parent), so the parent prints 5, not 15.",
+  "answer_status": "source_wrong",
+  "note": "Student computed 3 x 5 = 15 for the parent (it got partial marks); separate address spaces mean the parent's x stays 1."
+ },
+ {
+  "id": "L12-01",
+  "unit": 5,
+  "type": "scheduling",
+  "question": "Processes (arrival, burst ms): P1 (1, 4), P2 (4, 2), P3 (5, 5), P4 (10, 1). Draw the Gantt chart using a multilevel feedback queue with 2 queues and preemptive priority between queues. Q1: Round Robin, q = 2 ms, highest priority; a process that does not finish its time slice moves to Q2. Q2: FCFS, lowest priority; a process preempted from Q2 goes to the end of Q2. Initially all arriving processes are assigned to Q1.",
+  "model_answer": "CPU: P1 1-3 (Q1), P1 3-4 (Q2, preempted by P2), P2 4-6 (Q1), P3 6-8 (Q1), P1 8-9 (Q2), P3 9-10 (Q2, preempted by P4), P4 10-11 (Q1), P3 11-13 (Q2). WT: P1=4, P2=0, P3=3, P4=0; avg = 1.75 ms.",
+  "answer_status": "no_source_answer",
+  "note": "Screenshot of 'Updated-Version A-Tue-mid1 - Model Answer' (2021). The rest of the rules is cut off; any extra rule (e.g. aging) could change the answer. Computed without aging."
+ },
+ {
+  "id": "L14-03",
+  "unit": 5,
+  "type": "scheduling",
+  "question": "Processes (arrival, burst ms): P1 (0, 6), P2 (1, 5), P3 (4, 3). Two queues. Q1: RR q = 3 ms, highest priority; an unfinished process moves to the end of Q2. Q2: nonpreemptive SJF. Scheduling between queues is preemptive priority; a preempted process goes to the end of Q2. Initially all arriving processes go to Q1. A process whose waiting time reaches 8 ms is upgraded to the next higher queue. Give the sequence of execution.",
+  "model_answer": "P1 0-3, P2 3-6, P3 6-9, P2 9-11 (Q2, shorter), P1 11-14 (upgraded at t=11 after waiting 8 ms). Sequence: P1-P2-P3-P2-P1.",
+  "answer_status": "no_source_answer",
+  "note": "Answer options are cut off in the screenshot; stored as a written question."
+ },
+ {
+  "id": "L14-15",
+  "unit": 5,
+  "type": "scheduling",
+  "question": "Processes P1..P5 with bursts 2, 1, 8, 4, 5 and priorities 2, 1, 4, 2, 3, all arriving at time 0 in order P1..P5. Draw the FCFS Gantt chart and find waiting and turnaround times (later parts cut off).",
+  "model_answer": "FCFS: P1 0-2, P2 2-3, P3 3-11, P4 11-15, P5 15-20. WT: 0, 2, 3, 11, 15 (avg 6.2). TAT: 2, 3, 11, 15, 20 (avg 10.2).",
+  "answer_status": "no_source_answer",
+  "note": "Textbook exercise; other parts (SJF, priority, RR) are cut off and can be generated."
+ },
+ {
+  "id": "L15-29",
+  "unit": 3,
+  "type": "short",
+  "question": "Program: cout<<\"Hi\"<<endl; fork(); cout<<\"OK\"<<endl; fork(); cout<<\"Done\"<<endl; Assume parents wait for their children. (1) How many processes are created? (2) What is the output?",
+  "model_answer": "(1) 4 processes in total (3 newly created). (2) Hi printed once, OK twice, Done four times.",
+  "answer_status": "matches_source",
+  "note": "State whether 'created' counts the original process when converting to MCQ."
+ }
+]

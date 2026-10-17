@@ -1,0 +1,1725 @@
+[
+ {
+  "id": "c2-001",
+  "unit": 2,
+  "topic": "Operating System Services",
+  "difficulty": "easy",
+  "question": "Which operating-system service ensures that all access to system resources is controlled?",
+  "options": [
+   "Protection",
+   "Security",
+   "Resource allocation",
+   "Logging"
+  ],
+  "answer": 0,
+  "hint": "Think about the service that controls who may use which resource inside the system, not defending against outsiders.",
+  "explanation": "Slide 2.6: protection involves ensuring that all access to system resources is controlled. Security is about defending the system from outsiders.",
+  "source": {
+   "kind": "leak",
+   "refs": [
+    "L01-11",
+    "L02-20",
+    "L03-04"
+   ]
+  },
+  "syllabus_ref": {
+   "file": "CH-2-Updated.pdf",
+   "slides": [
+    6
+   ]
+  },
+  "review_status": "approved"
+ },
+ {
+  "id": "c2-002",
+  "unit": 2,
+  "topic": "Operating System Services",
+  "difficulty": "medium",
+  "question": "Requiring user authentication, and extending that to defending external I/O devices from invalid access attempts, describes which OS service?",
+  "options": [
+   "Protection",
+   "Communications",
+   "Security",
+   "Error detection"
+  ],
+  "answer": 2,
+  "hint": "This service is about threats coming from outside the system.",
+  "explanation": "Slide 2.6: security of the system from outsiders requires user authentication and extends to defending external I/O devices from invalid access attempts. Protection is about controlling all access to resources.",
+  "source": {
+   "kind": "leak",
+   "refs": [
+    "L11-15",
+    "L03-04"
+   ]
+  },
+  "syllabus_ref": {
+   "file": "CH-2-Updated.pdf",
+   "slides": [
+    6
+   ]
+  },
+  "review_status": "approved"
+ },
+ {
+  "id": "c2-003",
+  "unit": 2,
+  "topic": "System Calls",
+  "difficulty": "easy",
+  "question": "What provides the programming interface to the services offered by the operating system?",
+  "options": [
+   "System programs",
+   "System calls",
+   "The shell",
+   "Device drivers"
+  ],
+  "answer": 1,
+  "hint": "Programs usually reach it through an API such as Win32 or POSIX.",
+  "explanation": "Slide 2.11: system calls are the programming interface to the services provided by the OS. They are mostly accessed through a high-level API rather than directly.",
+  "source": {
+   "kind": "leak",
+   "refs": [
+    "L01-14",
+    "L11-07"
+   ]
+  },
+  "syllabus_ref": {
+   "file": "CH-2-Updated.pdf",
+   "slides": [
+    11
+   ]
+  },
+  "review_status": "approved"
+ },
+ {
+  "id": "c2-004",
+  "unit": 2,
+  "topic": "System Boot",
+  "difficulty": "easy",
+  "question": "Which small piece of code locates the kernel, loads it into memory, and starts it?",
+  "options": [
+   "CPU scheduler",
+   "Linker",
+   "Bootstrap loader",
+   "Dispatcher"
+  ],
+  "answer": 2,
+  "hint": "It runs right after power is initialized, before the kernel exists in memory.",
+  "explanation": "Slide 2.44: a small piece of code, the bootstrap loader (BIOS), stored in ROM or EEPROM, locates the kernel, loads it into memory and starts it.",
+  "source": {
+   "kind": "leak",
+   "refs": [
+    "L01-15",
+    "L02-22"
+   ]
+  },
+  "syllabus_ref": {
+   "file": "CH-2-Updated.pdf",
+   "slides": [
+    44
+   ]
+  },
+  "review_status": "approved"
+ },
+ {
+  "id": "c2-005",
+  "unit": 2,
+  "topic": "System Boot",
+  "difficulty": "easy",
+  "question": "Where is the bootstrap loader (BIOS) typically stored?",
+  "options": [
+   "On the hard disk only",
+   "In the CPU cache",
+   "In RAM",
+   "In ROM or EEPROM"
+  ],
+  "answer": 3,
+  "hint": "It must survive power-off and be available the moment power is applied.",
+  "explanation": "Slide 2.44: the bootstrap loader (BIOS) is stored in ROM or EEPROM. RAM is volatile and empty at power-up.",
+  "source": {
+   "kind": "leak",
+   "refs": [
+    "L05-118",
+    "L18-12",
+    "L18-18"
+   ]
+  },
+  "syllabus_ref": {
+   "file": "CH-2-Updated.pdf",
+   "slides": [
+    44
+   ]
+  },
+  "review_status": "approved"
+ },
+ {
+  "id": "c2-006",
+  "unit": 2,
+  "topic": "System Call Parameter Passing",
+  "difficulty": "easy",
+  "question": "Which data structure can be used by one of the techniques for passing parameters to a system call?",
+  "options": [
+   "Tree",
+   "Stack",
+   "Linked list",
+   "Queue"
+  ],
+  "answer": 1,
+  "hint": "The program pushes the parameters and the operating system pops them off.",
+  "explanation": "Slide 2.16: parameters can be placed (pushed) onto the stack by the program and popped off the stack by the operating system.",
+  "source": {
+   "kind": "leak",
+   "refs": [
+    "L01-16"
+   ]
+  },
+  "syllabus_ref": {
+   "file": "CH-2-Updated.pdf",
+   "slides": [
+    16
+   ]
+  },
+  "review_status": "approved"
+ },
+ {
+  "id": "c2-007",
+  "unit": 2,
+  "topic": "System Call Parameter Passing",
+  "difficulty": "easy",
+  "question": "Which of the following is NOT a method for passing parameters from an application to a system call?",
+  "options": [
+   "Cache memory",
+   "A block (table) in memory",
+   "Stack",
+   "Registers"
+  ],
+  "answer": 0,
+  "hint": "Slide 2.16 lists exactly three general methods.",
+  "explanation": "Slide 2.16: the three general methods are registers, a block/table in memory whose address is passed in a register, and the stack. Cache memory is not one of them.",
+  "source": {
+   "kind": "leak",
+   "refs": [
+    "L03-05",
+    "L07-09"
+   ]
+  },
+  "syllabus_ref": {
+   "file": "CH-2-Updated.pdf",
+   "slides": [
+    16
+   ]
+  },
+  "review_status": "approved"
+ },
+ {
+  "id": "c2-008",
+  "unit": 2,
+  "topic": "Operating System Services",
+  "difficulty": "medium",
+  "question": "Which pair of OS services exists to ensure the efficient operation of the system itself through resource sharing?",
+  "options": [
+   "Resource allocation and logging",
+   "Error detection and file-system manipulation",
+   "User interface and communications",
+   "Program execution and I/O operations"
+  ],
+  "answer": 0,
+  "hint": "These services serve the system as a whole rather than an individual user.",
+  "explanation": "Slide 2.6: the set of services for efficient operation of the system itself includes resource allocation, logging, and protection and security. The others are user-oriented services (slides 2.4-2.5).",
+  "source": {
+   "kind": "leak",
+   "refs": [
+    "L11-03",
+    "L15-01",
+    "L02-19"
+   ]
+  },
+  "syllabus_ref": {
+   "file": "CH-2-Updated.pdf",
+   "slides": [
+    6
+   ]
+  },
+  "review_status": "approved"
+ },
+ {
+  "id": "c2-009",
+  "unit": 2,
+  "topic": "Operating System Services",
+  "difficulty": "easy",
+  "question": "Keeping track of which users use how much and what kinds of computer resources is the OS service called:",
+  "options": [
+   "Resource allocation",
+   "Logging",
+   "Protection",
+   "Error detection"
+  ],
+  "answer": 1,
+  "hint": "It is about recording usage, not distributing it.",
+  "explanation": "Slide 2.6: logging keeps track of which users use how much and what kinds of computer resources.",
+  "source": {
+   "kind": "leak",
+   "refs": [
+    "L07-10"
+   ]
+  },
+  "syllabus_ref": {
+   "file": "CH-2-Updated.pdf",
+   "slides": [
+    6
+   ]
+  },
+  "review_status": "approved"
+ },
+ {
+  "id": "c2-010",
+  "unit": 2,
+  "topic": "Operating System Services",
+  "difficulty": "easy",
+  "question": "Which of the following is a resource that the operating system allocates to concurrently running jobs?",
+  "options": [
+   "A system call",
+   "An API",
+   "The PCB of another process",
+   "Main memory"
+  ],
+  "answer": 3,
+  "hint": "Slide 2.6 lists CPU cycles, file storage and I/O devices as other examples.",
+  "explanation": "Slide 2.6: resource types that must be allocated include CPU cycles, main memory, file storage and I/O devices.",
+  "source": {
+   "kind": "leak",
+   "refs": [
+    "L10-04"
+   ]
+  },
+  "syllabus_ref": {
+   "file": "CH-2-Updated.pdf",
+   "slides": [
+    6
+   ]
+  },
+  "review_status": "approved"
+ },
+ {
+  "id": "c2-011",
+  "unit": 2,
+  "topic": "Operating System Services",
+  "difficulty": "medium",
+  "question": "Which of the following OS services belongs to the set that is helpful to the user (rather than to the efficient operation of the system)?",
+  "options": [
+   "File-system manipulation",
+   "Resource allocation",
+   "Accounting of CPU usage per user",
+   "Logging"
+  ],
+  "answer": 0,
+  "hint": "Ask whether the service is something a user's program directly needs to get its work done.",
+  "explanation": "Slides 2.4-2.5: user-helpful services are user interface, program execution, I/O operations, file-system manipulation, communications and error detection. Logging and resource allocation (slide 2.6) serve the system itself.",
+  "source": {
+   "kind": "leak",
+   "refs": [
+    "L15-32"
+   ]
+  },
+  "syllabus_ref": {
+   "file": "CH-2-Updated.pdf",
+   "slides": [
+    4,
+    5,
+    6
+   ]
+  },
+  "review_status": "approved"
+ },
+ {
+  "id": "c2-012",
+  "unit": 2,
+  "topic": "Linkers and Loaders",
+  "difficulty": "easy",
+  "question": "A binary executable file must be brought into memory to be executed. Which program does this?",
+  "options": [
+   "Assembler",
+   "Compiler",
+   "Linker",
+   "Loader"
+  ],
+  "answer": 3,
+  "hint": "The linker has already produced the file; something else must place it in memory.",
+  "explanation": "Slide 2.30: the program resides on secondary storage as a binary executable and must be brought into memory by the loader to be executed.",
+  "source": {
+   "kind": "leak",
+   "refs": [
+    "L05-045"
+   ]
+  },
+  "syllabus_ref": {
+   "file": "CH-2-Updated.pdf",
+   "slides": [
+    30,
+    31
+   ]
+  },
+  "review_status": "approved"
+ },
+ {
+  "id": "c2-013",
+  "unit": 2,
+  "topic": "Linkers and Loaders",
+  "difficulty": "medium",
+  "question": "Which program combines relocatable object files (and libraries) into a single binary executable file?",
+  "options": [
+   "Loader",
+   "Bootstrap loader",
+   "Linker",
+   "Compiler"
+  ],
+  "answer": 2,
+  "hint": "It runs after compilation but before the program is placed in memory.",
+  "explanation": "Slide 2.30: source code is compiled into relocatable object files, and the linker combines these into a single binary executable file, also bringing in libraries.",
+  "source": {
+   "kind": "leak",
+   "refs": [
+    "L05-258",
+    "L05-319"
+   ]
+  },
+  "syllabus_ref": {
+   "file": "CH-2-Updated.pdf",
+   "slides": [
+    30,
+    31
+   ]
+  },
+  "review_status": "approved"
+ },
+ {
+  "id": "c2-014",
+  "unit": 2,
+  "topic": "Operating System Structure",
+  "difficulty": "easy",
+  "question": "In the layered approach to operating-system structure, layer 0 (the bottom layer) is:",
+  "options": [
+   "The system-call interface",
+   "The hardware",
+   "The user interface",
+   "The kernel modules"
+  ],
+  "answer": 1,
+  "hint": "The highest layer (layer N) is what the user sees.",
+  "explanation": "Slide 2.39: the bottom layer (layer 0) is the hardware; the highest layer (layer N) is the user interface.",
+  "source": {
+   "kind": "leak",
+   "refs": [
+    "L11-06"
+   ]
+  },
+  "syllabus_ref": {
+   "file": "CH-2-Updated.pdf",
+   "slides": [
+    39
+   ]
+  },
+  "review_status": "approved"
+ },
+ {
+  "id": "c2-015",
+  "unit": 2,
+  "topic": "Operating System Structure",
+  "difficulty": "medium",
+  "question": "In the layered approach, layers are selected so that each layer uses functions and services of:",
+  "options": [
+   "Only higher-level layers",
+   "No other layer",
+   "Only lower-level layers",
+   "Any other layer"
+  ],
+  "answer": 2,
+  "hint": "Each layer is built on top of something.",
+  "explanation": "Slide 2.39: with modularity, layers are selected such that each uses functions (operations) and services of only lower-level layers.",
+  "source": {
+   "kind": "leak",
+   "refs": [
+    "L07-06"
+   ]
+  },
+  "syllabus_ref": {
+   "file": "CH-2-Updated.pdf",
+   "slides": [
+    39
+   ]
+  },
+  "review_status": "approved"
+ },
+ {
+  "id": "c2-016",
+  "unit": 2,
+  "topic": "Types of System Calls",
+  "difficulty": "easy",
+  "question": "The system calls fork(), exec() and wait() belong to which category of system calls?",
+  "options": [
+   "Information maintenance",
+   "Device management",
+   "File management",
+   "Process control"
+  ],
+  "answer": 3,
+  "hint": "They create a process, replace its program, and wait for it to finish.",
+  "explanation": "Slide 2.18: process control includes create/terminate process, load and execute, and wait event. fork(), exec() and wait() are the UNIX versions of these.",
+  "source": {
+   "kind": "leak",
+   "refs": [
+    "L11-08"
+   ]
+  },
+  "syllabus_ref": {
+   "file": "CH-2-Updated.pdf",
+   "slides": [
+    18,
+    22
+   ]
+  },
+  "review_status": "approved"
+ },
+ {
+  "id": "c2-017",
+  "unit": 2,
+  "topic": "System Call Implementation",
+  "difficulty": "medium",
+  "question": "Why can a programmer use a system call through an API without knowing how the system call is implemented?",
+  "options": [
+   "The API runs the system call in user mode",
+   "Most details of the OS interface are hidden from the programmer by the API",
+   "The API exposes all details of the system call",
+   "The API replaces the kernel"
+  ],
+  "answer": 1,
+  "hint": "The caller only has to obey the API and understand what the OS will do as a result.",
+  "explanation": "Slide 2.14: the caller need know nothing about how the system call is implemented; most details of the OS interface are hidden from the programmer by the API and managed by the run-time support library.",
+  "source": {
+   "kind": "leak",
+   "refs": [
+    "L15-11"
+   ]
+  },
+  "syllabus_ref": {
+   "file": "CH-2-Updated.pdf",
+   "slides": [
+    14,
+    15
+   ]
+  },
+  "review_status": "approved"
+ },
+ {
+  "id": "c2-018",
+  "unit": 2,
+  "topic": "User Interface",
+  "difficulty": "easy",
+  "question": "The command interpreter that lets the user enter commands directly is known as the:",
+  "options": [
+   "Shell",
+   "Kernel",
+   "Compiler",
+   "Loader"
+  ],
+  "answer": 0,
+  "hint": "Several flavors of it may be implemented on the same system.",
+  "explanation": "Slide 2.8: the CLI or command interpreter allows direct command entry; multiple flavors may be implemented, called shells.",
+  "source": {
+   "kind": "leak",
+   "refs": [
+    "L16-21"
+   ]
+  },
+  "syllabus_ref": {
+   "file": "CH-2-Updated.pdf",
+   "slides": [
+    8
+   ]
+  },
+  "review_status": "approved"
+ },
+ {
+  "id": "c2-019",
+  "unit": 2,
+  "topic": "Operating System Structure",
+  "difficulty": "easy",
+  "question": "The original UNIX operating system, whose kernel provides a large number of functions for one level, is an example of which structure?",
+  "options": [
+   "Loadable kernel modules",
+   "Monolithic structure",
+   "Two-level model",
+   "Layered approach"
+  ],
+  "answer": 1,
+  "hint": "Everything between the system-call interface and the hardware is in one big piece.",
+  "explanation": "Slide 2.37: the original UNIX had limited structuring (monolithic). Its kernel is everything below the system-call interface and above the hardware, with many functions in one level.",
+  "source": {
+   "kind": "leak",
+   "refs": [
+    "L01-02"
+   ]
+  },
+  "syllabus_ref": {
+   "file": "CH-2-Updated.pdf",
+   "slides": [
+    36,
+    37
+   ]
+  },
+  "review_status": "approved"
+ },
+ {
+  "id": "c2-020",
+  "unit": 2,
+  "topic": "Operating System Services",
+  "difficulty": "easy",
+  "question": "The ability of the system to load a program into memory, run it, and end its execution either normally or abnormally is the OS service called:",
+  "options": [
+   "I/O operations",
+   "Program execution",
+   "Error detection",
+   "Resource allocation"
+  ],
+  "answer": 1,
+  "hint": "Abnormal termination indicates an error, but the service itself is about running programs.",
+  "explanation": "Slide 2.4: program execution means the system must be able to load a program into memory, run it, and end execution, either normally or abnormally (indicating error).",
+  "source": {
+   "kind": "generated"
+  },
+  "syllabus_ref": {
+   "file": "CH-2-Updated.pdf",
+   "slides": [
+    4
+   ]
+  },
+  "review_status": "approved"
+ },
+ {
+  "id": "c2-021",
+  "unit": 2,
+  "topic": "Operating System Services",
+  "difficulty": "medium",
+  "question": "According to the slides, communication between processes may be carried out through:",
+  "options": [
+   "Device drivers only",
+   "Registers or the stack",
+   "The bootstrap loader",
+   "Shared memory or message passing"
+  ],
+  "answer": 3,
+  "hint": "Message passing means packets are moved by the OS.",
+  "explanation": "Slide 2.5: communications may be via shared memory or through message passing (packets moved by the OS), on the same computer or across a network.",
+  "source": {
+   "kind": "generated"
+  },
+  "syllabus_ref": {
+   "file": "CH-2-Updated.pdf",
+   "slides": [
+    5
+   ]
+  },
+  "review_status": "approved"
+ },
+ {
+  "id": "c2-022",
+  "unit": 2,
+  "topic": "Operating System Services",
+  "difficulty": "easy",
+  "question": "The OS service that must be constantly aware of possible errors in the CPU, memory hardware, I/O devices and user programs is:",
+  "options": [
+   "Program execution",
+   "Error detection",
+   "Protection",
+   "Logging"
+  ],
+  "answer": 1,
+  "hint": "For each type of error the OS should take the appropriate action.",
+  "explanation": "Slide 2.5: error detection means the OS needs to be constantly aware of possible errors and take the appropriate action for each type to ensure correct and consistent computing.",
+  "source": {
+   "kind": "generated"
+  },
+  "syllabus_ref": {
+   "file": "CH-2-Updated.pdf",
+   "slides": [
+    5
+   ]
+  },
+  "review_status": "approved"
+ },
+ {
+  "id": "c2-023",
+  "unit": 2,
+  "topic": "Operating System Services",
+  "difficulty": "easy",
+  "question": "Which of the following is NOT listed as a type of user interface on the OS services slides?",
+  "options": [
+   "Batch",
+   "Graphical User Interface (GUI)",
+   "Command-Line (CLI)",
+   "Compiler interface"
+  ],
+  "answer": 3,
+  "hint": "The slide lists four kinds of UI, including touch-screen.",
+  "explanation": "Slide 2.4: user interfaces vary between Command-Line (CLI), Graphical User Interface (GUI), touch-screen and Batch.",
+  "source": {
+   "kind": "generated"
+  },
+  "syllabus_ref": {
+   "file": "CH-2-Updated.pdf",
+   "slides": [
+    4
+   ]
+  },
+  "review_status": "approved"
+ },
+ {
+  "id": "c2-024",
+  "unit": 2,
+  "topic": "User Interface",
+  "difficulty": "medium",
+  "question": "In a CLI where commands are just names of programs (not built into the shell), what is the advantage?",
+  "options": [
+   "Adding new features doesn't require shell modification",
+   "Users cannot add new commands",
+   "The shell needs no memory",
+   "Commands execute inside the kernel"
+  ],
+  "answer": 0,
+  "hint": "Think about what happens when you want a new command.",
+  "explanation": "Slide 2.8: sometimes commands are built-in and sometimes just names of programs; if the latter, adding new features doesn't require shell modification.",
+  "source": {
+   "kind": "generated"
+  },
+  "syllabus_ref": {
+   "file": "CH-2-Updated.pdf",
+   "slides": [
+    8
+   ]
+  },
+  "review_status": "approved"
+ },
+ {
+  "id": "c2-025",
+  "unit": 2,
+  "topic": "User Interface",
+  "difficulty": "easy",
+  "question": "Where was the graphical user interface (GUI) invented?",
+  "options": [
+   "Xerox PARC",
+   "Microsoft",
+   "Apple",
+   "Bell Labs"
+  ],
+  "answer": 0,
+  "hint": "It was a research center, not the company that later popularized the GUI.",
+  "explanation": "Slide 2.9: the GUI, a user-friendly desktop metaphor interface, was invented at Xerox PARC.",
+  "source": {
+   "kind": "generated"
+  },
+  "syllabus_ref": {
+   "file": "CH-2-Updated.pdf",
+   "slides": [
+    9
+   ]
+  },
+  "review_status": "approved"
+ },
+ {
+  "id": "c2-026",
+  "unit": 2,
+  "topic": "User Interface",
+  "difficulty": "medium",
+  "question": "Which statement about operating-system interfaces is correct according to the slides?",
+  "options": [
+   "Apple Mac OS X has no UNIX kernel",
+   "Unix and Linux have a CLI with optional GUI interfaces",
+   "Microsoft Windows has no command shell",
+   "Touchscreen interfaces rely mainly on the mouse"
+  ],
+  "answer": 1,
+  "hint": "Many systems now include both CLI and GUI.",
+  "explanation": "Slide 2.9: Unix and Linux have a CLI with optional GUIs (CDE, KDE, GNOME); Windows is a GUI with a CLI 'command' shell; Mac OS X has the Aqua GUI with a UNIX kernel. Slide 2.10: touchscreens use gestures, not a mouse.",
+  "source": {
+   "kind": "generated"
+  },
+  "syllabus_ref": {
+   "file": "CH-2-Updated.pdf",
+   "slides": [
+    9,
+    10
+   ]
+  },
+  "review_status": "approved"
+ },
+ {
+  "id": "c2-027",
+  "unit": 2,
+  "topic": "User Interface",
+  "difficulty": "easy",
+  "question": "In touchscreen interfaces, actions and selection are based on:",
+  "options": [
+   "Gestures",
+   "Shell scripts",
+   "Mouse clicks",
+   "Batch commands"
+  ],
+  "answer": 0,
+  "hint": "A mouse is not possible or not desired on these devices.",
+  "explanation": "Slide 2.10: touchscreen devices require new interfaces; the mouse is not possible or desired, actions and selection are based on gestures, with a virtual keyboard and voice commands.",
+  "source": {
+   "kind": "generated"
+  },
+  "syllabus_ref": {
+   "file": "CH-2-Updated.pdf",
+   "slides": [
+    10
+   ]
+  },
+  "review_status": "approved"
+ },
+ {
+  "id": "c2-028",
+  "unit": 2,
+  "topic": "System Calls",
+  "difficulty": "easy",
+  "question": "Which of the following is NOT one of the three most common APIs mentioned in the slides?",
+  "options": [
+   "DirectX API",
+   "Java API",
+   "POSIX API",
+   "Win32 API"
+  ],
+  "answer": 0,
+  "hint": "One is for Windows, one for UNIX-like systems, and one for a virtual machine.",
+  "explanation": "Slide 2.11: the three most common APIs are Win32 API for Windows, POSIX API for POSIX-based systems (UNIX, Linux, Mac OS X), and Java API for the JVM.",
+  "source": {
+   "kind": "generated"
+  },
+  "syllabus_ref": {
+   "file": "CH-2-Updated.pdf",
+   "slides": [
+    11
+   ]
+  },
+  "review_status": "approved"
+ },
+ {
+  "id": "c2-029",
+  "unit": 2,
+  "topic": "System Calls",
+  "difficulty": "easy",
+  "question": "System calls are typically written in:",
+  "options": [
+   "Python",
+   "A high-level language such as C or C++",
+   "Java only",
+   "Machine code only, with no exceptions"
+  ],
+  "answer": 1,
+  "hint": "The same languages that the main body of most operating systems uses.",
+  "explanation": "Slide 2.11: system calls are typically written in a high-level language (C or C++).",
+  "source": {
+   "kind": "generated"
+  },
+  "syllabus_ref": {
+   "file": "CH-2-Updated.pdf",
+   "slides": [
+    11
+   ]
+  },
+  "review_status": "approved"
+ },
+ {
+  "id": "c2-030",
+  "unit": 2,
+  "topic": "System Call Implementation",
+  "difficulty": "medium",
+  "question": "How does the system-call interface find the system call that a program requested?",
+  "options": [
+   "It asks the user to select the system call",
+   "It uses a number associated with each system call to index a table",
+   "It reads the program counter of the calling process",
+   "It searches the disk for the system call's name"
+  ],
+  "answer": 1,
+  "hint": "Each system call is identified by something simple and fixed.",
+  "explanation": "Slide 2.14: typically a number is associated with each system call, and the system-call interface maintains a table indexed according to these numbers.",
+  "source": {
+   "kind": "generated"
+  },
+  "syllabus_ref": {
+   "file": "CH-2-Updated.pdf",
+   "slides": [
+    14
+   ]
+  },
+  "review_status": "approved"
+ },
+ {
+  "id": "c2-031",
+  "unit": 2,
+  "topic": "System Call Implementation",
+  "difficulty": "medium",
+  "question": "The details of the OS interface hidden by the API are managed by the:",
+  "options": [
+   "Run-time support library",
+   "Process control block",
+   "Bootstrap loader",
+   "Device controller"
+  ],
+  "answer": 0,
+  "hint": "It is a set of functions built into libraries included with the compiler.",
+  "explanation": "Slide 2.14: most details of the OS interface are hidden from the programmer by the API and managed by the run-time support library (functions built into libraries included with the compiler).",
+  "source": {
+   "kind": "generated"
+  },
+  "syllabus_ref": {
+   "file": "CH-2-Updated.pdf",
+   "slides": [
+    14
+   ]
+  },
+  "review_status": "approved"
+ },
+ {
+  "id": "c2-032",
+  "unit": 2,
+  "topic": "System Call Parameter Passing",
+  "difficulty": "medium",
+  "question": "Which parameter-passing methods do NOT limit the number or length of parameters being passed?",
+  "options": [
+   "Block (table) and stack methods",
+   "Registers and stack",
+   "Registers only",
+   "Registers and block"
+  ],
+  "answer": 0,
+  "hint": "One of the methods is limited because there may be more parameters than available slots.",
+  "explanation": "Slide 2.16: passing parameters in registers is simplest, but there may be more parameters than registers. Block and stack methods do not limit the number or length of parameters.",
+  "source": {
+   "kind": "generated"
+  },
+  "syllabus_ref": {
+   "file": "CH-2-Updated.pdf",
+   "slides": [
+    16,
+    17
+   ]
+  },
+  "review_status": "approved"
+ },
+ {
+  "id": "c2-033",
+  "unit": 2,
+  "topic": "System Call Parameter Passing",
+  "difficulty": "medium",
+  "question": "Linux and Solaris pass system-call parameters by:",
+  "options": [
+   "Placing all of them directly in registers only",
+   "Storing them in a block in memory and passing the block's address in a register",
+   "Pushing them onto the stack only",
+   "Writing them to a file on disk"
+  ],
+  "answer": 1,
+  "hint": "The slide names these two systems next to one particular method.",
+  "explanation": "Slide 2.16: parameters stored in a block, or table, in memory with the address of the block passed as a parameter in a register; this approach is taken by Linux and Solaris.",
+  "source": {
+   "kind": "generated"
+  },
+  "syllabus_ref": {
+   "file": "CH-2-Updated.pdf",
+   "slides": [
+    16,
+    17
+   ]
+  },
+  "review_status": "approved"
+ },
+ {
+  "id": "c2-034",
+  "unit": 2,
+  "topic": "Types of System Calls",
+  "difficulty": "easy",
+  "question": "'create file, delete file, open, close, read, write, reposition' are examples of which type of system calls?",
+  "options": [
+   "Process control",
+   "Communications",
+   "Protection",
+   "File management"
+  ],
+  "answer": 3,
+  "hint": "They all operate on files.",
+  "explanation": "Slide 2.19: file management includes create/delete file, open/close file, read/write/reposition, and get/set file attributes.",
+  "source": {
+   "kind": "generated"
+  },
+  "syllabus_ref": {
+   "file": "CH-2-Updated.pdf",
+   "slides": [
+    19
+   ]
+  },
+  "review_status": "approved"
+ },
+ {
+  "id": "c2-035",
+  "unit": 2,
+  "topic": "Types of System Calls",
+  "difficulty": "medium",
+  "question": "'request device, release device, logically attach or detach devices' belong to which type of system calls?",
+  "options": [
+   "Information maintenance",
+   "Device management",
+   "File management",
+   "Process control"
+  ],
+  "answer": 1,
+  "hint": "Look at the object being requested and released.",
+  "explanation": "Slide 2.19: device management includes request/release device, read/write/reposition, get/set device attributes, and logically attach or detach devices.",
+  "source": {
+   "kind": "generated"
+  },
+  "syllabus_ref": {
+   "file": "CH-2-Updated.pdf",
+   "slides": [
+    19
+   ]
+  },
+  "review_status": "approved"
+ },
+ {
+  "id": "c2-036",
+  "unit": 2,
+  "topic": "Types of System Calls",
+  "difficulty": "easy",
+  "question": "'get time or date, set time or date, get system data, set system data' are examples of:",
+  "options": [
+   "Protection",
+   "Information maintenance",
+   "Device management",
+   "Communications"
+  ],
+  "answer": 1,
+  "hint": "These calls read or update information about the system.",
+  "explanation": "Slide 2.20: information maintenance includes get/set time or date, get/set system data, and get/set process, file, or device attributes.",
+  "source": {
+   "kind": "generated"
+  },
+  "syllabus_ref": {
+   "file": "CH-2-Updated.pdf",
+   "slides": [
+    20
+   ]
+  },
+  "review_status": "approved"
+ },
+ {
+  "id": "c2-037",
+  "unit": 2,
+  "topic": "Types of System Calls",
+  "difficulty": "medium",
+  "question": "Creating and deleting communication connections and sending and receiving messages belong to which type of system calls?",
+  "options": [
+   "Protection",
+   "Communications",
+   "File management",
+   "Process control"
+  ],
+  "answer": 1,
+  "hint": "The shared-memory model's 'create and gain access to memory regions' is in the same category.",
+  "explanation": "Slide 2.20: communications includes create/delete communication connection, send/receive messages, gaining access to shared memory regions, transferring status information and attaching/detaching remote devices.",
+  "source": {
+   "kind": "generated"
+  },
+  "syllabus_ref": {
+   "file": "CH-2-Updated.pdf",
+   "slides": [
+    20
+   ]
+  },
+  "review_status": "approved"
+ },
+ {
+  "id": "c2-038",
+  "unit": 2,
+  "topic": "Types of System Calls",
+  "difficulty": "easy",
+  "question": "System calls that control access to resources, get and set permissions, and allow or deny user access belong to:",
+  "options": [
+   "Communications",
+   "Device management",
+   "Protection",
+   "Information maintenance"
+  ],
+  "answer": 2,
+  "hint": "They decide who may access what.",
+  "explanation": "Slide 2.21: protection system calls control access to resources, get and set permissions, and allow and deny user access.",
+  "source": {
+   "kind": "generated"
+  },
+  "syllabus_ref": {
+   "file": "CH-2-Updated.pdf",
+   "slides": [
+    21
+   ]
+  },
+  "review_status": "approved"
+ },
+ {
+  "id": "c2-039",
+  "unit": 2,
+  "topic": "Types of System Calls",
+  "difficulty": "medium",
+  "question": "Locks for managing access to shared data between processes appear under which type of system calls?",
+  "options": [
+   "File management",
+   "Protection",
+   "Information maintenance",
+   "Process control"
+  ],
+  "answer": 3,
+  "hint": "The same category also includes debugging and dumping memory on error.",
+  "explanation": "Slide 2.18: process control includes create/terminate, load/execute, wait, allocate/free memory, dump memory on error, debugger, and locks for managing access to shared data.",
+  "source": {
+   "kind": "generated"
+  },
+  "syllabus_ref": {
+   "file": "CH-2-Updated.pdf",
+   "slides": [
+    18
+   ]
+  },
+  "review_status": "approved"
+ },
+ {
+  "id": "c2-040",
+  "unit": 2,
+  "topic": "System Calls",
+  "difficulty": "medium",
+  "question": "When a C program calls printf(), what happens according to the standard C library example?",
+  "options": [
+   "printf() calls fork() to create a new process",
+   "printf() writes directly to the hardware without the OS",
+   "The library function printf() invokes the write() system call",
+   "printf() is itself a system call executed in user mode"
+  ],
+  "answer": 2,
+  "hint": "printf() is a library call, not a system call.",
+  "explanation": "Slide 2.23: a C program invoking the printf() library call, which calls the write() system call.",
+  "source": {
+   "kind": "generated"
+  },
+  "syllabus_ref": {
+   "file": "CH-2-Updated.pdf",
+   "slides": [
+    23
+   ]
+  },
+  "review_status": "approved"
+ },
+ {
+  "id": "c2-041",
+  "unit": 2,
+  "topic": "System Services",
+  "difficulty": "medium",
+  "question": "According to the slides, most users' view of the operating system is defined by:",
+  "options": [
+   "The actual system calls",
+   "The bootstrap loader",
+   "The kernel's source code",
+   "System programs"
+  ],
+  "answer": 3,
+  "hint": "Users rarely invoke system calls directly.",
+  "explanation": "Slide 2.26: most users' view of the operating system is defined by system programs, not the actual system calls.",
+  "source": {
+   "kind": "generated"
+  },
+  "syllabus_ref": {
+   "file": "CH-2-Updated.pdf",
+   "slides": [
+    26
+   ]
+  },
+  "review_status": "approved"
+ },
+ {
+  "id": "c2-042",
+  "unit": 2,
+  "topic": "System Services",
+  "difficulty": "medium",
+  "question": "Some systems implement a registry. What is it used for?",
+  "options": [
+   "To pass parameters to system calls",
+   "To store and retrieve configuration information",
+   "To hold the process ready queue",
+   "To store the bootstrap program"
+  ],
+  "answer": 1,
+  "hint": "It appears under the status information system programs.",
+  "explanation": "Slide 2.27: under status information, some systems implement a registry, used to store and retrieve configuration information.",
+  "source": {
+   "kind": "generated"
+  },
+  "syllabus_ref": {
+   "file": "CH-2-Updated.pdf",
+   "slides": [
+    27
+   ]
+  },
+  "review_status": "approved"
+ },
+ {
+  "id": "c2-043",
+  "unit": 2,
+  "topic": "System Services",
+  "difficulty": "easy",
+  "question": "Compilers, assemblers, debuggers and interpreters are system programs in which category?",
+  "options": [
+   "Communications",
+   "Background services",
+   "File modification",
+   "Programming-language support"
+  ],
+  "answer": 3,
+  "hint": "They help you write and build programs.",
+  "explanation": "Slide 2.28: programming-language support includes compilers, assemblers, debuggers and interpreters.",
+  "source": {
+   "kind": "generated"
+  },
+  "syllabus_ref": {
+   "file": "CH-2-Updated.pdf",
+   "slides": [
+    28
+   ]
+  },
+  "review_status": "approved"
+ },
+ {
+  "id": "c2-044",
+  "unit": 2,
+  "topic": "System Services",
+  "difficulty": "medium",
+  "question": "Background services (daemons) that launch at boot time run in:",
+  "options": [
+   "Kernel context only",
+   "User context, not kernel context",
+   "The CPU cache",
+   "The bootstrap ROM"
+  ],
+  "answer": 1,
+  "hint": "They are system programs, not part of the kernel.",
+  "explanation": "Slide 2.29: background services launch at boot time, provide facilities like disk checking, process scheduling, error logging and printing, run in user context not kernel context, and are known as services, subsystems or daemons.",
+  "source": {
+   "kind": "generated"
+  },
+  "syllabus_ref": {
+   "file": "CH-2-Updated.pdf",
+   "slides": [
+    29
+   ]
+  },
+  "review_status": "approved"
+ },
+ {
+  "id": "c2-045",
+  "unit": 2,
+  "topic": "System Services",
+  "difficulty": "easy",
+  "question": "Which statement about application programs is correct according to the slides?",
+  "options": [
+   "They run in kernel context",
+   "They are not typically considered part of the OS",
+   "They are a type of system call",
+   "They are loaded by the bootstrap program before the kernel"
+  ],
+  "answer": 1,
+  "hint": "They don't pertain to the system and are run by users.",
+  "explanation": "Slide 2.29: application programs don't pertain to the system, are run by users, are not typically considered part of the OS, and are launched by command line, mouse click or finger poke.",
+  "source": {
+   "kind": "generated"
+  },
+  "syllabus_ref": {
+   "file": "CH-2-Updated.pdf",
+   "slides": [
+    29
+   ]
+  },
+  "review_status": "approved"
+ },
+ {
+  "id": "c2-046",
+  "unit": 2,
+  "topic": "Linkers and Loaders",
+  "difficulty": "easy",
+  "question": "Source code compiled into object files designed to be loaded into any physical memory location produces a(n):",
+  "options": [
+   "Dynamically linked library",
+   "Relocatable object file",
+   "Boot block",
+   "Absolute executable"
+  ],
+  "answer": 1,
+  "hint": "The key property is that its final addresses are not fixed yet.",
+  "explanation": "Slide 2.30: source code is compiled into object files designed to be loaded into any physical memory location, called relocatable object files.",
+  "source": {
+   "kind": "generated"
+  },
+  "syllabus_ref": {
+   "file": "CH-2-Updated.pdf",
+   "slides": [
+    30
+   ]
+  },
+  "review_status": "approved"
+ },
+ {
+  "id": "c2-047",
+  "unit": 2,
+  "topic": "Linkers and Loaders",
+  "difficulty": "medium",
+  "question": "Instead of linking libraries into each executable, modern general-purpose systems use:",
+  "options": [
+   "Dynamically linked libraries loaded as needed and shared by all programs using the same version",
+   "Static copies of every library inside each executable",
+   "Libraries compiled into the bootstrap loader",
+   "Libraries stored only in ROM"
+  ],
+  "answer": 0,
+  "hint": "On Windows these are called DLLs.",
+  "explanation": "Slide 2.30: modern general-purpose systems don't link libraries into executables; dynamically linked libraries (DLLs in Windows) are loaded as needed and shared by all that use the same version (loaded once).",
+  "source": {
+   "kind": "generated"
+  },
+  "syllabus_ref": {
+   "file": "CH-2-Updated.pdf",
+   "slides": [
+    30
+   ]
+  },
+  "review_status": "approved"
+ },
+ {
+  "id": "c2-048",
+  "unit": 2,
+  "topic": "Linkers and Loaders",
+  "difficulty": "medium",
+  "question": "Assigning final addresses to program parts and adjusting the code and data to match those addresses is called:",
+  "options": [
+   "Compilation",
+   "Dispatching",
+   "Booting",
+   "Relocation"
+  ],
+  "answer": 3,
+  "hint": "It is what makes a relocatable object file usable at a real location.",
+  "explanation": "Slide 2.30: relocation assigns final addresses to program parts and adjusts code and data in the program to match those addresses.",
+  "source": {
+   "kind": "generated"
+  },
+  "syllabus_ref": {
+   "file": "CH-2-Updated.pdf",
+   "slides": [
+    30
+   ]
+  },
+  "review_status": "approved"
+ },
+ {
+  "id": "c2-049",
+  "unit": 2,
+  "topic": "Implementation",
+  "difficulty": "medium",
+  "question": "What is the trade-off of implementing an OS in a higher-level language?",
+  "options": [
+   "Easier to port to other hardware, but slower",
+   "Requires no assembly language at all",
+   "Faster, but harder to port",
+   "Smaller, but impossible to debug"
+  ],
+  "answer": 0,
+  "hint": "The slide states one advantage and one disadvantage.",
+  "explanation": "Slide 2.35: a more high-level language is easier to port to other hardware, but slower. Usually the lowest levels are still in assembly and the main body in C.",
+  "source": {
+   "kind": "generated"
+  },
+  "syllabus_ref": {
+   "file": "CH-2-Updated.pdf",
+   "slides": [
+    35
+   ]
+  },
+  "review_status": "approved"
+ },
+ {
+  "id": "c2-050",
+  "unit": 2,
+  "topic": "Implementation",
+  "difficulty": "easy",
+  "question": "In a typical modern OS implementation, the lowest levels are written in assembly and the main body is written in:",
+  "options": [
+   "Python",
+   "C",
+   "PERL",
+   "Java"
+  ],
+  "answer": 1,
+  "hint": "Scripting languages are used for some system programs, not the main body.",
+  "explanation": "Slide 2.35: usually a mix of languages; lowest levels in assembly, main body in C, and system programs in C, C++ and scripting languages like PERL, Python and shell scripts.",
+  "source": {
+   "kind": "generated"
+  },
+  "syllabus_ref": {
+   "file": "CH-2-Updated.pdf",
+   "slides": [
+    35
+   ]
+  },
+  "review_status": "approved"
+ },
+ {
+  "id": "c2-051",
+  "unit": 2,
+  "topic": "Implementation",
+  "difficulty": "easy",
+  "question": "What allows an operating system to run on non-native hardware?",
+  "options": [
+   "Multiprogramming",
+   "Emulation",
+   "Relocation",
+   "Caching"
+  ],
+  "answer": 1,
+  "hint": "The hardware is imitated in software.",
+  "explanation": "Slide 2.35: emulation can allow an OS to run on non-native hardware.",
+  "source": {
+   "kind": "generated"
+  },
+  "syllabus_ref": {
+   "file": "CH-2-Updated.pdf",
+   "slides": [
+    35
+   ]
+  },
+  "review_status": "approved"
+ },
+ {
+  "id": "c2-052",
+  "unit": 2,
+  "topic": "Operating System Structure",
+  "difficulty": "medium",
+  "question": "In the original UNIX structure, the kernel consists of everything:",
+  "options": [
+   "Above the system-call interface",
+   "Stored in the bootstrap ROM",
+   "Below the system-call interface and above the physical hardware",
+   "Inside the system programs"
+  ],
+  "answer": 2,
+  "hint": "UNIX consists of two separable parts: system programs and the kernel.",
+  "explanation": "Slide 2.37: the UNIX kernel consists of everything below the system-call interface and above the physical hardware, providing the file system, CPU scheduling, memory management and other functions.",
+  "source": {
+   "kind": "generated"
+  },
+  "syllabus_ref": {
+   "file": "CH-2-Updated.pdf",
+   "slides": [
+    37,
+    38
+   ]
+  },
+  "review_status": "approved"
+ },
+ {
+  "id": "c2-053",
+  "unit": 2,
+  "topic": "Operating System Structure",
+  "difficulty": "easy",
+  "question": "Many modern operating systems (for example Linux and Solaris) use an object-oriented approach where each core component is separate and loadable as needed within the kernel. This is called:",
+  "options": [
+   "Monolithic structure",
+   "Simple structure",
+   "Loadable kernel modules",
+   "Batch structure"
+  ],
+  "answer": 2,
+  "hint": "Each component talks to the others over known interfaces.",
+  "explanation": "Slide 2.40: many modern OSes implement loadable kernel modules (LKMs): object-oriented, each core component separate, talking over known interfaces, loadable as needed. Examples: Linux, Solaris.",
+  "source": {
+   "kind": "generated"
+  },
+  "syllabus_ref": {
+   "file": "CH-2-Updated.pdf",
+   "slides": [
+    40
+   ]
+  },
+  "review_status": "approved"
+ },
+ {
+  "id": "c2-054",
+  "unit": 2,
+  "topic": "Operating System Structure",
+  "difficulty": "medium",
+  "question": "How do loadable kernel modules compare to the layered approach?",
+  "options": [
+   "Exactly the same as layers",
+   "Less flexible than layers",
+   "Unrelated, because modules run outside the kernel",
+   "Similar to layers but more flexible"
+  ],
+  "answer": 3,
+  "hint": "Modules are not restricted to calling only lower layers.",
+  "explanation": "Slide 2.40: overall, modules are similar to layers but more flexible.",
+  "source": {
+   "kind": "generated"
+  },
+  "syllabus_ref": {
+   "file": "CH-2-Updated.pdf",
+   "slides": [
+    40
+   ]
+  },
+  "review_status": "approved"
+ },
+ {
+  "id": "c2-055",
+  "unit": 2,
+  "topic": "Operating System Structure",
+  "difficulty": "easy",
+  "question": "Which operating system is given as an example of a simple structure?",
+  "options": [
+   "UNIX",
+   "MS-DOS",
+   "Solaris",
+   "Linux"
+  ],
+  "answer": 1,
+  "hint": "UNIX is given as the 'more complex' example.",
+  "explanation": "Slide 2.36: ways to structure an OS: simple structure (MS-DOS), more complex (UNIX), layered, and modules.",
+  "source": {
+   "kind": "generated"
+  },
+  "syllabus_ref": {
+   "file": "CH-2-Updated.pdf",
+   "slides": [
+    36
+   ]
+  },
+  "review_status": "approved"
+ },
+ {
+  "id": "c2-056",
+  "unit": 2,
+  "topic": "Building and Booting",
+  "difficulty": "medium",
+  "question": "When generating an operating system from scratch, which step comes immediately after configuring the OS for the system on which it will run?",
+  "options": [
+   "Compile the operating system",
+   "Boot the computer",
+   "Write the source code",
+   "Install the operating system"
+  ],
+  "answer": 0,
+  "hint": "Order: write, configure, ..., install, boot.",
+  "explanation": "Slide 2.42: write the OS source code, configure it for the target system, compile it, install it, then boot the computer and its new OS.",
+  "source": {
+   "kind": "generated"
+  },
+  "syllabus_ref": {
+   "file": "CH-2-Updated.pdf",
+   "slides": [
+    42
+   ]
+  },
+  "review_status": "approved"
+ },
+ {
+  "id": "c2-057",
+  "unit": 2,
+  "topic": "System Boot",
+  "difficulty": "medium",
+  "question": "In a two-step boot process, what is loaded first by the ROM code?",
+  "options": [
+   "A boot block at a fixed location, which then loads the bootstrap loader from disk",
+   "The shell",
+   "The full kernel directly from RAM",
+   "The system daemons"
+  ],
+  "answer": 0,
+  "hint": "The first stage is small and sits at a known location.",
+  "explanation": "Slide 2.44: sometimes it is a two-step process where a boot block at a fixed location is loaded by ROM code, which loads the bootstrap loader from disk.",
+  "source": {
+   "kind": "generated"
+  },
+  "syllabus_ref": {
+   "file": "CH-2-Updated.pdf",
+   "slides": [
+    44
+   ]
+  },
+  "review_status": "approved"
+ },
+ {
+  "id": "c2-058",
+  "unit": 2,
+  "topic": "System Boot",
+  "difficulty": "easy",
+  "question": "Modern systems replace the BIOS with:",
+  "options": [
+   "EEPROM",
+   "UEFI",
+   "GRUB",
+   "POSIX"
+  ],
+  "answer": 1,
+  "hint": "It stands for Unified Extensible Firmware Interface.",
+  "explanation": "Slide 2.44: modern systems replace BIOS with the Unified Extensible Firmware Interface (UEFI).",
+  "source": {
+   "kind": "generated"
+  },
+  "syllabus_ref": {
+   "file": "CH-2-Updated.pdf",
+   "slides": [
+    44
+   ]
+  },
+  "review_status": "approved"
+ },
+ {
+  "id": "c2-059",
+  "unit": 2,
+  "topic": "System Boot",
+  "difficulty": "medium",
+  "question": "GRUB is a common bootstrap loader that allows:",
+  "options": [
+   "Scheduling processes on the CPU",
+   "Selection of the kernel from multiple disks, versions and kernel options",
+   "Passing parameters to system calls",
+   "Linking object files into executables"
+  ],
+  "answer": 1,
+  "hint": "It is used at boot time, before the kernel runs.",
+  "explanation": "Slide 2.44: GRUB, a common bootstrap loader, allows selection of the kernel from multiple disks, versions and kernel options. Boot loaders also allow boot states such as single-user mode.",
+  "source": {
+   "kind": "generated"
+  },
+  "syllabus_ref": {
+   "file": "CH-2-Updated.pdf",
+   "slides": [
+    44
+   ]
+  },
+  "review_status": "approved"
+ },
+ {
+  "id": "c2-060",
+  "unit": 2,
+  "topic": "System Boot",
+  "difficulty": "easy",
+  "question": "When power is initialized on a system, execution starts at:",
+  "options": [
+   "A fixed memory location",
+   "A random memory location",
+   "The last instruction executed before shutdown",
+   "The ready queue"
+  ],
+  "answer": 0,
+  "hint": "The hardware must always know where to begin.",
+  "explanation": "Slide 2.44: when power is initialized on a system, execution starts at a fixed memory location.",
+  "source": {
+   "kind": "generated"
+  },
+  "syllabus_ref": {
+   "file": "CH-2-Updated.pdf",
+   "slides": [
+    44
+   ]
+  },
+  "review_status": "approved"
+ },
+ {
+  "id": "c2-061",
+  "unit": 2,
+  "topic": "System Calls",
+  "difficulty": "hard",
+  "question": "A C program calls printf(\"hi\"). Which sequence correctly describes what happens?",
+  "options": [
+   "printf() executes directly in kernel mode -> write() runs in user mode -> the shell prints the text",
+   "printf() in the C library (user mode) -> write() system call -> system-call interface looks up the call number -> kernel performs the write -> returns status to the program",
+   "The bootstrap loader receives printf() -> loads the kernel -> prints the text",
+   "printf() -> fork() -> exec() -> the child process prints the text"
+  ],
+  "answer": 1,
+  "hint": "Combine the standard C library example with how the system-call interface works.",
+  "explanation": "Slide 2.23: printf() is a library call that calls the write() system call. Slide 2.14: the system-call interface uses the number associated with the call to index a table, invokes the system call in the kernel and returns its status and return values.",
+  "source": {
+   "kind": "generated"
+  },
+  "syllabus_ref": {
+   "file": "CH-2-Updated.pdf",
+   "slides": [
+    14,
+    15,
+    23
+   ]
+  },
+  "review_status": "approved"
+ },
+ {
+  "id": "c2-062",
+  "unit": 2,
+  "topic": "System Call Parameter Passing",
+  "difficulty": "hard",
+  "question": "A system call needs 9 parameters, but only 4 registers are available for passing parameters. Which method is suitable?",
+  "options": [
+   "Pass all 9 parameters in the 4 registers",
+   "Pass only the first 4 parameters and ignore the rest",
+   "Write the parameters into the interrupt vector",
+   "Store the parameters in a block in memory and pass the block's address in a register"
+  ],
+  "answer": 3,
+  "hint": "One of the methods does not limit the number of parameters.",
+  "explanation": "Slide 2.16: passing in registers is simplest, but there may be more parameters than registers. Parameters can instead be stored in a block (table) in memory with its address passed in a register, or pushed onto the stack; block and stack methods do not limit the number or length of parameters.",
+  "source": {
+   "kind": "generated"
+  },
+  "syllabus_ref": {
+   "file": "CH-2-Updated.pdf",
+   "slides": [
+    16,
+    17
+   ]
+  },
+  "review_status": "approved"
+ },
+ {
+  "id": "c2-063",
+  "unit": 2,
+  "topic": "Types of System Calls",
+  "difficulty": "hard",
+  "question": "Which pairing of a system call with its category is correct?",
+  "options": [
+   "wait event, signal event -> process control",
+   "get file attributes -> device management",
+   "send, receive messages -> file management",
+   "allow and deny user access -> information maintenance"
+  ],
+  "answer": 0,
+  "hint": "Check each pairing against the six categories on slides 2.18-2.21.",
+  "explanation": "Slide 2.18: wait event and signal event are process control. File attributes are file management (2.19), send/receive messages are communications (2.20), and allow/deny user access is protection (2.21).",
+  "source": {
+   "kind": "generated"
+  },
+  "syllabus_ref": {
+   "file": "CH-2-Updated.pdf",
+   "slides": [
+    18,
+    19,
+    20,
+    21
+   ]
+  },
+  "review_status": "approved"
+ }
+]

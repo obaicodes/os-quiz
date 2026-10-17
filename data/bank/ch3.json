@@ -1,0 +1,2084 @@
+[
+ {
+  "id": "c3-001",
+  "unit": 3,
+  "topic": "Interprocess Communication",
+  "difficulty": "easy",
+  "question": "What are the two models of interprocess communication (IPC)?",
+  "options": [
+   "Ready queue and wait queue",
+   "Fork and exec",
+   "Stack and heap",
+   "Shared memory and message passing"
+  ],
+  "answer": 3,
+  "hint": "In one model processes use a common region; in the other they send and receive.",
+  "explanation": "Slides 3.26-3.27: the two models of IPC are shared memory and message passing.",
+  "source": {
+   "kind": "leak",
+   "refs": [
+    "L01-03"
+   ]
+  },
+  "syllabus_ref": {
+   "file": "CH-3-Updated.pdf",
+   "slides": [
+    26,
+    27
+   ]
+  },
+  "review_status": "approved"
+ },
+ {
+  "id": "c3-002",
+  "unit": 3,
+  "topic": "Process State",
+  "difficulty": "medium",
+  "question": "In the process-state diagram, which event moves a process from the ready state to the running state?",
+  "options": [
+   "Scheduler dispatch",
+   "I/O or event completion",
+   "Interrupt",
+   "Admitted"
+  ],
+  "answer": 0,
+  "hint": "The process has been selected to use the CPU.",
+  "explanation": "Slide 3.9: new -> ready (admitted), ready -> running (scheduler dispatch), running -> ready (interrupt), running -> waiting (I/O or event wait), waiting -> ready (I/O or event completion), running -> terminated (exit).",
+  "source": {
+   "kind": "leak",
+   "refs": [
+    "L01-05",
+    "L18-32"
+   ]
+  },
+  "syllabus_ref": {
+   "file": "CH-3-Updated.pdf",
+   "slides": [
+    8,
+    9
+   ]
+  },
+  "review_status": "approved"
+ },
+ {
+  "id": "c3-003",
+  "unit": 3,
+  "topic": "Process State",
+  "difficulty": "medium",
+  "question": "In a time-sharing system, when the time slot given to a running process expires, the process moves from RUNNING to:",
+  "options": [
+   "Waiting",
+   "New",
+   "Terminated",
+   "Ready"
+  ],
+  "answer": 3,
+  "hint": "The process has not finished and is not waiting for any event.",
+  "explanation": "Slide 3.9: an interrupt moves a process from running back to ready. It still needs the CPU, so it is not terminated and not waiting for I/O.",
+  "source": {
+   "kind": "leak",
+   "refs": [
+    "L05-240",
+    "L07-19"
+   ]
+  },
+  "syllabus_ref": {
+   "file": "CH-3-Updated.pdf",
+   "slides": [
+    9
+   ]
+  },
+  "review_status": "approved"
+ },
+ {
+  "id": "c3-004",
+  "unit": 3,
+  "topic": "Context Switch",
+  "difficulty": "medium",
+  "question": "During a context switch from process P0 to process P1, the operating system must:",
+  "options": [
+   "Save P0's state into PCB0, then reload P1's state from PCB1",
+   "Save P0's text section to disk, then load P1's text section",
+   "Close all of P0's open files, then open P1's files",
+   "Save P1's state into PCB1, then reload P0's state from PCB0"
+  ],
+  "answer": 0,
+  "hint": "The state of the old process is saved before the new one is loaded.",
+  "explanation": "Slides 3.16-3.17: the system saves the state of the old process and loads the saved state for the new process; the context is represented in the PCB.",
+  "source": {
+   "kind": "leak",
+   "refs": [
+    "L11-12",
+    "L01-06"
+   ]
+  },
+  "syllabus_ref": {
+   "file": "CH-3-Updated.pdf",
+   "slides": [
+    16,
+    17
+   ]
+  },
+  "review_status": "approved"
+ },
+ {
+  "id": "c3-005",
+  "unit": 3,
+  "topic": "Process Concept",
+  "difficulty": "easy",
+  "question": "A program that has been loaded into memory and is executing is called a:",
+  "options": [
+   "Thread",
+   "Shell",
+   "Program counter",
+   "Process"
+  ],
+  "answer": 3,
+  "hint": "It is the active version of a program.",
+  "explanation": "Slides 3.4-3.5: a process is a program in execution; a program becomes a process when its executable file is loaded into memory.",
+  "source": {
+   "kind": "leak",
+   "refs": [
+    "L01-13",
+    "L04-29",
+    "L05-019"
+   ]
+  },
+  "syllabus_ref": {
+   "file": "CH-3-Updated.pdf",
+   "slides": [
+    4,
+    5
+   ]
+  },
+  "review_status": "approved"
+ },
+ {
+  "id": "c3-006",
+  "unit": 3,
+  "topic": "Process Scheduling",
+  "difficulty": "easy",
+  "question": "The set of processes waiting for an event such as I/O is kept in the:",
+  "options": [
+   "Ready queue",
+   "PCB",
+   "Text section",
+   "Wait queue"
+  ],
+  "answer": 3,
+  "hint": "These processes are not ready to use the CPU yet.",
+  "explanation": "Slide 3.13: the ready queue is the set of processes in main memory ready and waiting to execute; wait queues are sets of processes waiting for an event (e.g. I/O).",
+  "source": {
+   "kind": "leak",
+   "refs": [
+    "L02-01",
+    "L10-10"
+   ]
+  },
+  "syllabus_ref": {
+   "file": "CH-3-Updated.pdf",
+   "slides": [
+    13,
+    14
+   ]
+  },
+  "review_status": "approved"
+ },
+ {
+  "id": "c3-007",
+  "unit": 3,
+  "topic": "Cooperating Processes",
+  "difficulty": "easy",
+  "question": "Which of the following is a reason (advantage) for cooperating processes?",
+  "options": [
+   "Separate address spaces",
+   "Computation speed-up",
+   "Longer context switches",
+   "Starvation"
+  ],
+  "answer": 1,
+  "hint": "The slide also lists information sharing, modularity and convenience.",
+  "explanation": "Slides 3.26 and 3.28: reasons for cooperating processes are information sharing, computation speed-up, modularity and convenience.",
+  "source": {
+   "kind": "leak",
+   "refs": [
+    "L02-23"
+   ]
+  },
+  "syllabus_ref": {
+   "file": "CH-3-Updated.pdf",
+   "slides": [
+    26,
+    28
+   ]
+  },
+  "review_status": "approved"
+ },
+ {
+  "id": "c3-008",
+  "unit": 3,
+  "topic": "Cooperating Processes",
+  "difficulty": "easy",
+  "question": "An independent process is one that:",
+  "options": [
+   "Can affect or be affected by other processes",
+   "Must exchange data with other processes",
+   "Cannot affect or be affected by the execution of another process",
+   "Always shares memory with its parent"
+  ],
+  "answer": 2,
+  "hint": "Its opposite is a cooperating process.",
+  "explanation": "Slide 3.28: an independent process cannot affect or be affected by the execution of another process; a cooperating process can.",
+  "source": {
+   "kind": "leak",
+   "refs": [
+    "L03-09",
+    "L18-14"
+   ]
+  },
+  "syllabus_ref": {
+   "file": "CH-3-Updated.pdf",
+   "slides": [
+    28
+   ]
+  },
+  "review_status": "approved"
+ },
+ {
+  "id": "c3-009",
+  "unit": 3,
+  "topic": "Cooperating Processes",
+  "difficulty": "easy",
+  "question": "A process that can affect or be affected by other processes executing in the system, including by sharing data, is a(n):",
+  "options": [
+   "Terminated process",
+   "Child process",
+   "Cooperating process",
+   "Independent process"
+  ],
+  "answer": 2,
+  "hint": "Such processes need IPC.",
+  "explanation": "Slide 3.26: a cooperating process can affect or be affected by other processes, including sharing data; cooperating processes need IPC.",
+  "source": {
+   "kind": "leak",
+   "refs": [
+    "L04-11"
+   ]
+  },
+  "syllabus_ref": {
+   "file": "CH-3-Updated.pdf",
+   "slides": [
+    26,
+    28
+   ]
+  },
+  "review_status": "approved"
+ },
+ {
+  "id": "c3-010",
+  "unit": 3,
+  "topic": "Process State",
+  "difficulty": "medium",
+  "question": "Which of the following is a correct order of a process's states over its lifetime?",
+  "options": [
+   "New -> running -> ready -> new",
+   "Ready -> new -> running -> terminated",
+   "New -> waiting -> running -> terminated",
+   "New -> ready -> running -> terminated"
+  ],
+  "answer": 3,
+  "hint": "A new process must be admitted before it can be dispatched.",
+  "explanation": "Slide 3.9: new -> (admitted) ready -> (scheduler dispatch) running -> (exit) terminated. A process never goes directly from new to running or from waiting to running.",
+  "source": {
+   "kind": "leak",
+   "refs": [
+    "L03-12"
+   ]
+  },
+  "syllabus_ref": {
+   "file": "CH-3-Updated.pdf",
+   "slides": [
+    8,
+    9
+   ]
+  },
+  "review_status": "approved"
+ },
+ {
+  "id": "c3-011",
+  "unit": 3,
+  "topic": "Process Control Block",
+  "difficulty": "easy",
+  "question": "The program-counter field of the PCB stores the address of the:",
+  "options": [
+   "Last instruction executed",
+   "Previous process",
+   "Next instruction to execute",
+   "First instruction of the program"
+  ],
+  "answer": 2,
+  "hint": "It is what lets the process continue correctly later.",
+  "explanation": "Slide 3.10: program counter - location of the instruction to next execute.",
+  "source": {
+   "kind": "leak",
+   "refs": [
+    "L04-04",
+    "L07-07",
+    "L16-03",
+    "L18-19"
+   ]
+  },
+  "syllabus_ref": {
+   "file": "CH-3-Updated.pdf",
+   "slides": [
+    10
+   ]
+  },
+  "review_status": "approved"
+ },
+ {
+  "id": "c3-012",
+  "unit": 3,
+  "topic": "Process Scheduling",
+  "difficulty": "easy",
+  "question": "The set of all processes residing in main memory, ready and waiting to execute, is kept in the:",
+  "options": [
+   "PCB",
+   "Ready queue",
+   "Job list on disk",
+   "Wait queue"
+  ],
+  "answer": 1,
+  "hint": "These processes are only missing the CPU.",
+  "explanation": "Slide 3.13: the ready queue is the set of all processes residing in main memory, ready and waiting to execute.",
+  "source": {
+   "kind": "leak",
+   "refs": [
+    "L04-05",
+    "L08-04",
+    "L17-21",
+    "L18-31"
+   ]
+  },
+  "syllabus_ref": {
+   "file": "CH-3-Updated.pdf",
+   "slides": [
+    13,
+    14
+   ]
+  },
+  "review_status": "approved"
+ },
+ {
+  "id": "c3-013",
+  "unit": 3,
+  "topic": "Process Termination",
+  "difficulty": "easy",
+  "question": "A process executes its last statement and then asks the operating system to delete it using the __________ system call.",
+  "options": [
+   "exit()",
+   "wait()",
+   "exec()",
+   "fork()"
+  ],
+  "answer": 0,
+  "hint": "Its status data is returned to the parent via wait().",
+  "explanation": "Slide 3.23: a process executes its last statement and asks the OS to delete it using exit(); status data is returned to the parent via wait().",
+  "source": {
+   "kind": "leak",
+   "refs": [
+    "L04-06"
+   ]
+  },
+  "syllabus_ref": {
+   "file": "CH-3-Updated.pdf",
+   "slides": [
+    23
+   ]
+  },
+  "review_status": "approved"
+ },
+ {
+  "id": "c3-014",
+  "unit": 3,
+  "topic": "Process State",
+  "difficulty": "easy",
+  "question": "A process that is waiting for some event to occur, such as I/O completion, is in the __________ state.",
+  "options": [
+   "Running",
+   "Ready",
+   "Waiting",
+   "New"
+  ],
+  "answer": 2,
+  "hint": "It cannot use the CPU until the event happens.",
+  "explanation": "Slide 3.8: waiting - the process is waiting for some event to occur.",
+  "source": {
+   "kind": "leak",
+   "refs": [
+    "L04-07",
+    "L18-15"
+   ]
+  },
+  "syllabus_ref": {
+   "file": "CH-3-Updated.pdf",
+   "slides": [
+    8
+   ]
+  },
+  "review_status": "approved"
+ },
+ {
+  "id": "c3-015",
+  "unit": 3,
+  "topic": "Process Concept",
+  "difficulty": "easy",
+  "question": "Which statement is correct?",
+  "options": [
+   "A process is an active entity; a program is a passive entity",
+   "A program and a process are the same thing",
+   "A program is an active entity",
+   "A process is a passive entity stored on disk"
+  ],
+  "answer": 0,
+  "hint": "A program becomes a process when it is loaded into memory.",
+  "explanation": "Slide 3.5: a program is a passive entity stored on disk (executable file); a process is active.",
+  "source": {
+   "kind": "leak",
+   "refs": [
+    "L04-10",
+    "L10-08"
+   ]
+  },
+  "syllabus_ref": {
+   "file": "CH-3-Updated.pdf",
+   "slides": [
+    5
+   ]
+  },
+  "review_status": "approved"
+ },
+ {
+  "id": "c3-016",
+  "unit": 3,
+  "topic": "Process Creation",
+  "difficulty": "easy",
+  "question": "In UNIX, which system call creates a new process?",
+  "options": [
+   "wait()",
+   "exec()",
+   "exit()",
+   "fork()"
+  ],
+  "answer": 3,
+  "hint": "exec() is used after it to load a new program.",
+  "explanation": "Slide 3.22: the fork() system call creates a new process; exec() is used after fork() to replace the process's memory space with a new program.",
+  "source": {
+   "kind": "leak",
+   "refs": [
+    "L04-12",
+    "L15-10",
+    "L05-298"
+   ]
+  },
+  "syllabus_ref": {
+   "file": "CH-3-Updated.pdf",
+   "slides": [
+    22
+   ]
+  },
+  "review_status": "approved"
+ },
+ {
+  "id": "c3-017",
+  "unit": 3,
+  "topic": "Process Control Block",
+  "difficulty": "easy",
+  "question": "Each process is represented in the operating system by a:",
+  "options": [
+   "Process control block (PCB)",
+   "Ready queue",
+   "Program counter",
+   "Text section"
+  ],
+  "answer": 0,
+  "hint": "It is also called a task control block.",
+  "explanation": "Slide 3.10: the PCB (also called task control block) holds the information associated with each process.",
+  "source": {
+   "kind": "leak",
+   "refs": [
+    "L04-16",
+    "L15-09"
+   ]
+  },
+  "syllabus_ref": {
+   "file": "CH-3-Updated.pdf",
+   "slides": [
+    10
+   ]
+  },
+  "review_status": "approved"
+ },
+ {
+  "id": "c3-018",
+  "unit": 3,
+  "topic": "Process State",
+  "difficulty": "easy",
+  "question": "Which process state means 'the process is being created'?",
+  "options": [
+   "Waiting",
+   "Ready",
+   "New",
+   "Running"
+  ],
+  "answer": 2,
+  "hint": "It is the first state in the diagram.",
+  "explanation": "Slide 3.8: new - the process is being created.",
+  "source": {
+   "kind": "leak",
+   "refs": [
+    "L04-17"
+   ]
+  },
+  "syllabus_ref": {
+   "file": "CH-3-Updated.pdf",
+   "slides": [
+    8
+   ]
+  },
+  "review_status": "approved"
+ },
+ {
+  "id": "c3-019",
+  "unit": 3,
+  "topic": "Process State",
+  "difficulty": "easy",
+  "question": "Which process state means 'the process is waiting to be assigned to a processor'?",
+  "options": [
+   "New",
+   "Ready",
+   "Waiting",
+   "Terminated"
+  ],
+  "answer": 1,
+  "hint": "Do not confuse it with waiting for an I/O event.",
+  "explanation": "Slide 3.8: ready - the process is waiting to be assigned to a processor.",
+  "source": {
+   "kind": "leak",
+   "refs": [
+    "L04-18",
+    "L18-04"
+   ]
+  },
+  "syllabus_ref": {
+   "file": "CH-3-Updated.pdf",
+   "slides": [
+    8
+   ]
+  },
+  "review_status": "approved"
+ },
+ {
+  "id": "c3-020",
+  "unit": 3,
+  "topic": "Process State",
+  "difficulty": "easy",
+  "question": "Which process state means 'instructions are being executed'?",
+  "options": [
+   "Ready",
+   "Running",
+   "New",
+   "Waiting"
+  ],
+  "answer": 1,
+  "hint": "The process currently has the CPU.",
+  "explanation": "Slide 3.8: running - instructions are being executed.",
+  "source": {
+   "kind": "leak",
+   "refs": [
+    "L04-19"
+   ]
+  },
+  "syllabus_ref": {
+   "file": "CH-3-Updated.pdf",
+   "slides": [
+    8
+   ]
+  },
+  "review_status": "approved"
+ },
+ {
+  "id": "c3-021",
+  "unit": 3,
+  "topic": "Process State",
+  "difficulty": "medium",
+  "question": "Which of the following state transitions is NOT possible directly?",
+  "options": [
+   "Waiting -> ready",
+   "Running -> waiting",
+   "Ready -> running",
+   "Waiting -> running"
+  ],
+  "answer": 3,
+  "hint": "After the event completes, the process must still be selected by the scheduler.",
+  "explanation": "Slide 3.9: a waiting process moves to ready when its I/O or event completes; only the scheduler dispatch moves a process from ready to running.",
+  "source": {
+   "kind": "leak",
+   "refs": [
+    "L04-22"
+   ]
+  },
+  "syllabus_ref": {
+   "file": "CH-3-Updated.pdf",
+   "slides": [
+    9
+   ]
+  },
+  "review_status": "approved"
+ },
+ {
+  "id": "c3-022",
+  "unit": 3,
+  "topic": "Process State",
+  "difficulty": "easy",
+  "question": "Which process state means 'the process has finished execution'?",
+  "options": [
+   "Ready",
+   "Terminated",
+   "Waiting",
+   "Running"
+  ],
+  "answer": 1,
+  "hint": "It is the last state in the diagram.",
+  "explanation": "Slide 3.8: terminated - the process has finished execution.",
+  "source": {
+   "kind": "leak",
+   "refs": [
+    "L04-25"
+   ]
+  },
+  "syllabus_ref": {
+   "file": "CH-3-Updated.pdf",
+   "slides": [
+    8
+   ]
+  },
+  "review_status": "approved"
+ },
+ {
+  "id": "c3-023",
+  "unit": 3,
+  "topic": "Process Concept",
+  "difficulty": "easy",
+  "question": "Which section of a process contains its global variables?",
+  "options": [
+   "Text section",
+   "Stack",
+   "Heap",
+   "Data section"
+  ],
+  "answer": 3,
+  "hint": "It is neither temporary nor dynamically allocated data.",
+  "explanation": "Slide 3.4: the data section contains global variables; the stack contains temporary data; the heap holds dynamically allocated memory; the text section holds the code.",
+  "source": {
+   "kind": "leak",
+   "refs": [
+    "L04-26",
+    "L15-27"
+   ]
+  },
+  "syllabus_ref": {
+   "file": "CH-3-Updated.pdf",
+   "slides": [
+    4,
+    6
+   ]
+  },
+  "review_status": "approved"
+ },
+ {
+  "id": "c3-024",
+  "unit": 3,
+  "topic": "Process State",
+  "difficulty": "easy",
+  "question": "A process in the waiting state for an I/O service is notified that the service has completed. Which state does it go to?",
+  "options": [
+   "Terminated",
+   "New",
+   "Ready",
+   "Running"
+  ],
+  "answer": 2,
+  "hint": "It still has to be selected by the scheduler.",
+  "explanation": "Slide 3.9: I/O or event completion moves a process from waiting to ready.",
+  "source": {
+   "kind": "leak",
+   "refs": [
+    "L05-040",
+    "L15-19"
+   ]
+  },
+  "syllabus_ref": {
+   "file": "CH-3-Updated.pdf",
+   "slides": [
+    8,
+    9
+   ]
+  },
+  "review_status": "approved"
+ },
+ {
+  "id": "c3-025",
+  "unit": 3,
+  "topic": "Process State",
+  "difficulty": "medium",
+  "question": "Which state transition is initiated by the running process itself?",
+  "options": [
+   "Running -> ready due to an interrupt",
+   "Running -> waiting (it requests I/O or waits for an event)",
+   "Ready -> running",
+   "Waiting -> ready"
+  ],
+  "answer": 1,
+  "hint": "The others are caused by the scheduler, an interrupt, or an event completing.",
+  "explanation": "Slide 3.9: running -> waiting happens on 'I/O or event wait', which the process itself requests. Dispatch is done by the scheduler, interrupts come from outside, and completion is signaled by the device.",
+  "source": {
+   "kind": "leak",
+   "refs": [
+    "L05-248"
+   ]
+  },
+  "syllabus_ref": {
+   "file": "CH-3-Updated.pdf",
+   "slides": [
+    9
+   ]
+  },
+  "review_status": "approved"
+ },
+ {
+  "id": "c3-026",
+  "unit": 3,
+  "topic": "Interprocess Communication",
+  "difficulty": "easy",
+  "question": "The message-passing IPC facility provides which two operations?",
+  "options": [
+   "send(message) and receive(message)",
+   "open() and close()",
+   "read() and write() on a disk",
+   "fork() and exec()"
+  ],
+  "answer": 0,
+  "hint": "One process gives, the other takes.",
+  "explanation": "Slide 3.29: the IPC facility provides two operations: send(message) and receive(message).",
+  "source": {
+   "kind": "leak",
+   "refs": [
+    "L05-304"
+   ]
+  },
+  "syllabus_ref": {
+   "file": "CH-3-Updated.pdf",
+   "slides": [
+    29
+   ]
+  },
+  "review_status": "approved"
+ },
+ {
+  "id": "c3-027",
+  "unit": 3,
+  "topic": "Process State",
+  "difficulty": "easy",
+  "question": "Which of the following is NOT a process state?",
+  "options": [
+   "New",
+   "Running",
+   "Finished",
+   "Ready"
+  ],
+  "answer": 2,
+  "hint": "The five states are new, running, waiting, ready and one more.",
+  "explanation": "Slide 3.8: the states are new, running, waiting, ready and terminated. 'Finished' is not a state name.",
+  "source": {
+   "kind": "leak",
+   "refs": [
+    "L05-452",
+    "L15-17"
+   ]
+  },
+  "syllabus_ref": {
+   "file": "CH-3-Updated.pdf",
+   "slides": [
+    8
+   ]
+  },
+  "review_status": "approved"
+ },
+ {
+  "id": "c3-028",
+  "unit": 3,
+  "topic": "Threads",
+  "difficulty": "medium",
+  "question": "A process having multiple threads of control means that:",
+  "options": [
+   "Multiple locations in the process can execute at once",
+   "It has multiple address spaces",
+   "It can do only one task at a time, but faster",
+   "It has no program counter"
+  ],
+  "answer": 0,
+  "hint": "Consider having multiple program counters per process.",
+  "explanation": "Slide 3.11: with multiple program counters per process, multiple locations can execute at once - multiple threads of control.",
+  "source": {
+   "kind": "leak",
+   "refs": [
+    "L08-24",
+    "L14-04"
+   ]
+  },
+  "syllabus_ref": {
+   "file": "CH-3-Updated.pdf",
+   "slides": [
+    11
+   ]
+  },
+  "review_status": "approved"
+ },
+ {
+  "id": "c3-029",
+  "unit": 3,
+  "topic": "Process State",
+  "difficulty": "easy",
+  "question": "When a running process requests an I/O operation, it moves into the __________ state.",
+  "options": [
+   "Ready",
+   "Waiting",
+   "Terminated",
+   "New"
+  ],
+  "answer": 1,
+  "hint": "It cannot continue until the I/O completes.",
+  "explanation": "Slide 3.9: I/O or event wait moves a process from running to waiting.",
+  "source": {
+   "kind": "leak",
+   "refs": [
+    "L10-05"
+   ]
+  },
+  "syllabus_ref": {
+   "file": "CH-3-Updated.pdf",
+   "slides": [
+    8,
+    9
+   ]
+  },
+  "review_status": "approved"
+ },
+ {
+  "id": "c3-030",
+  "unit": 3,
+  "topic": "Process Concept",
+  "difficulty": "easy",
+  "question": "Which section of a process holds memory that is dynamically allocated during run time?",
+  "options": [
+   "Heap",
+   "Data section",
+   "Text section",
+   "Stack"
+  ],
+  "answer": 0,
+  "hint": "In C this memory comes from malloc().",
+  "explanation": "Slide 3.4: the heap contains memory dynamically allocated during run time; the stack contains temporary data such as parameters and local variables.",
+  "source": {
+   "kind": "leak",
+   "refs": [
+    "L10-09",
+    "L18-20"
+   ]
+  },
+  "syllabus_ref": {
+   "file": "CH-3-Updated.pdf",
+   "slides": [
+    4
+   ]
+  },
+  "review_status": "approved"
+ },
+ {
+  "id": "c3-031",
+  "unit": 3,
+  "topic": "Process Creation",
+  "difficulty": "hard",
+  "question": "Assume fork() succeeds. How many times is the line \"a = 2\" printed?",
+  "code": "cout << \"Start\" << endl;\nint a = 0;\nfork();\na = a + 2;\ncout << \"a = \" << a << endl;",
+  "options": [
+   "1",
+   "2",
+   "0",
+   "4"
+  ],
+  "answer": 1,
+  "hint": "Count how many processes reach the last line, and remember each process has its own copy of a.",
+  "explanation": "Slide 3.22: fork() creates a child that is a duplicate of the parent. 'Start' is printed once before fork(); after fork() both parent and child execute a = a + 2 on their own copy of a and print 'a = 2', so it appears twice.",
+  "source": {
+   "kind": "leak",
+   "refs": [
+    "L10-11"
+   ]
+  },
+  "syllabus_ref": {
+   "file": "CH-3-Updated.pdf",
+   "slides": [
+    20,
+    22
+   ]
+  },
+  "review_status": "approved"
+ },
+ {
+  "id": "c3-032",
+  "unit": 3,
+  "topic": "Process State",
+  "difficulty": "medium",
+  "question": "A running process issues a disk-read request. Its state moves from ____ to ____. When the disk operation completes, it moves to ____.",
+  "options": [
+   "Running; Ready; Waiting",
+   "Ready; Waiting; Running",
+   "Running; Waiting; Ready",
+   "Running; Waiting; Running"
+  ],
+  "answer": 2,
+  "hint": "After an event completes, a process never goes straight back to the CPU.",
+  "explanation": "Slide 3.9: running -> waiting on I/O wait, then waiting -> ready on I/O completion.",
+  "source": {
+   "kind": "leak",
+   "refs": [
+    "L11-09"
+   ]
+  },
+  "syllabus_ref": {
+   "file": "CH-3-Updated.pdf",
+   "slides": [
+    8,
+    9
+   ]
+  },
+  "review_status": "approved"
+ },
+ {
+  "id": "c3-033",
+  "unit": 3,
+  "topic": "Process Concept",
+  "difficulty": "hard",
+  "question": "A C program declares a global variable int y = 15; and inside main() declares int *values; then executes values = malloc(10 * sizeof(int));. Where are these stored?",
+  "options": [
+   "y -> data; values (the pointer) -> stack; the allocated array -> heap",
+   "y -> data; values -> heap; the allocated array -> stack",
+   "y -> stack; values -> stack; the allocated array -> heap",
+   "y -> data; values -> heap; the allocated array -> heap"
+  ],
+  "answer": 0,
+  "hint": "Classify each item: global, local, or dynamically allocated.",
+  "explanation": "Slides 3.4 and 3.7: global variables are in the data section, local variables (including a local pointer) are on the stack, and memory allocated at run time by malloc() is in the heap.",
+  "source": {
+   "kind": "leak",
+   "refs": [
+    "L11-14"
+   ]
+  },
+  "syllabus_ref": {
+   "file": "CH-3-Updated.pdf",
+   "slides": [
+    4,
+    7
+   ]
+  },
+  "review_status": "approved"
+ },
+ {
+  "id": "c3-034",
+  "unit": 3,
+  "topic": "Process Creation",
+  "difficulty": "hard",
+  "question": "Assume all fork() calls succeed. What value does the parent process print on the line starting with B?",
+  "code": "int x = 1;\npid_t pid = fork();\nif (pid == 0) {\n    x = x + 2;\n    fork();\n    printf(\"A %d\\n\", x);\n} else {\n    x = x * 5;\n    printf(\"B %d\\n\", x);\n}\nprintf(\"C %d\\n\", x);",
+  "options": [
+   "B 1",
+   "B 3",
+   "B 5",
+   "B 15"
+  ],
+  "answer": 2,
+  "hint": "Does the child's change to x affect the parent's copy?",
+  "explanation": "Slide 3.22: the child is a duplicate of the parent with its own copy of the address space. The child's x = x + 2 does not change the parent's x, so the parent computes 1 * 5 = 5.",
+  "source": {
+   "kind": "leak",
+   "refs": [
+    "L11-17"
+   ]
+  },
+  "syllabus_ref": {
+   "file": "CH-3-Updated.pdf",
+   "slides": [
+    20,
+    21,
+    22
+   ]
+  },
+  "review_status": "approved"
+ },
+ {
+  "id": "c3-035",
+  "unit": 3,
+  "topic": "Process Creation",
+  "difficulty": "hard",
+  "question": "Using the same program, how many times is the line \"C 3\" printed?",
+  "code": "int x = 1;\npid_t pid = fork();\nif (pid == 0) {\n    x = x + 2;\n    fork();\n    printf(\"A %d\\n\", x);\n} else {\n    x = x * 5;\n    printf(\"B %d\\n\", x);\n}\nprintf(\"C %d\\n\", x);",
+  "options": [
+   "2",
+   "3",
+   "1",
+   "4"
+  ],
+  "answer": 0,
+  "hint": "Find which processes have x = 3 and whether each reaches the last line.",
+  "explanation": "Slides 3.20-3.22: the first fork creates child P1, which sets x = 3 and forks P2 (a copy with x = 3). Both P1 and P2 print 'A 3' and then 'C 3'. The parent prints 'B 5' and 'C 5'. So 'C 3' appears twice.",
+  "source": {
+   "kind": "leak",
+   "refs": [
+    "L11-17"
+   ]
+  },
+  "syllabus_ref": {
+   "file": "CH-3-Updated.pdf",
+   "slides": [
+    20,
+    21,
+    22
+   ]
+  },
+  "review_status": "approved"
+ },
+ {
+  "id": "c3-036",
+  "unit": 3,
+  "topic": "Process Creation",
+  "difficulty": "medium",
+  "question": "After a classical fork(), which of the following is NOT the same in the child as in the parent?",
+  "options": [
+   "The program code",
+   "The process identifier (pid)",
+   "The program being executed (before any exec())",
+   "The values of the variables at the moment of fork()"
+  ],
+  "answer": 1,
+  "hint": "Each process in the tree is identified and managed by something unique.",
+  "explanation": "Slides 3.20 and 3.22: processes are identified and managed via a process identifier (pid), and the child's address space is a duplicate of the parent's. So the child has the same code and variable values but its own pid.",
+  "source": {
+   "kind": "leak",
+   "refs": [
+    "L15-05"
+   ]
+  },
+  "syllabus_ref": {
+   "file": "CH-3-Updated.pdf",
+   "slides": [
+    20,
+    22
+   ]
+  },
+  "review_status": "approved"
+ },
+ {
+  "id": "c3-037",
+  "unit": 3,
+  "topic": "Process Creation",
+  "difficulty": "medium",
+  "question": "Which statement about parent and child processes is NOT correct according to the slides?",
+  "options": [
+   "The child always shares the parent's data section, so changes by one are seen by the other",
+   "Parent and children may share all resources",
+   "Children may share a subset of the parent's resources",
+   "Parent and children may execute concurrently"
+  ],
+  "answer": 0,
+  "hint": "Think about what 'child duplicate of parent' means for memory.",
+  "explanation": "Slides 3.20 and 3.22: resource sharing options are all, a subset, or none; parent and children may execute concurrently or the parent may wait. The child's address space is a duplicate of the parent's, so changes are not shared.",
+  "source": {
+   "kind": "leak",
+   "refs": [
+    "L15-16"
+   ]
+  },
+  "syllabus_ref": {
+   "file": "CH-3-Updated.pdf",
+   "slides": [
+    20,
+    22
+   ]
+  },
+  "review_status": "approved"
+ },
+ {
+  "id": "c3-038",
+  "unit": 3,
+  "topic": "Process State",
+  "difficulty": "medium",
+  "question": "On a single-processor (single-core) system, how many processes can be in the running state at any moment?",
+  "options": [
+   "Any number",
+   "None, ever",
+   "Two",
+   "Exactly one at most"
+  ],
+  "answer": 3,
+  "hint": "Running means instructions are being executed on the processor.",
+  "explanation": "Slides 3.8 and 3.13: running means instructions are being executed, and the process scheduler selects one process for execution on the CPU core. Other processes wait in the ready and wait queues.",
+  "source": {
+   "kind": "leak",
+   "refs": [
+    "L15-20"
+   ]
+  },
+  "syllabus_ref": {
+   "file": "CH-3-Updated.pdf",
+   "slides": [
+    8,
+    13
+   ]
+  },
+  "review_status": "approved"
+ },
+ {
+  "id": "c3-039",
+  "unit": 3,
+  "topic": "Process Creation",
+  "difficulty": "hard",
+  "question": "Assume the fork() calls succeed and parents wait for their children. How many times is \"Done\" printed?",
+  "code": "cout << \"Hi\" << endl;\nfork();\ncout << \"OK\" << endl;\nfork();\ncout << \"Done\" << endl;",
+  "options": [
+   "4",
+   "3",
+   "1",
+   "2"
+  ],
+  "answer": 0,
+  "hint": "Each fork() doubles the number of processes that execute the lines after it.",
+  "explanation": "Slides 3.20-3.22: 'Hi' is printed by 1 process, 'OK' by 2 (after the first fork), and 'Done' by 4 (after the second fork).",
+  "source": {
+   "kind": "leak",
+   "refs": [
+    "L15-29"
+   ]
+  },
+  "syllabus_ref": {
+   "file": "CH-3-Updated.pdf",
+   "slides": [
+    20,
+    21,
+    22
+   ]
+  },
+  "review_status": "approved"
+ },
+ {
+  "id": "c3-040",
+  "unit": 3,
+  "topic": "Process Concept",
+  "difficulty": "easy",
+  "question": "The stack section of a process is used to store:",
+  "options": [
+   "The program code",
+   "Temporary data such as function parameters, return addresses and local variables",
+   "Global variables",
+   "Dynamically allocated memory"
+  ],
+  "answer": 1,
+  "hint": "Its contents change with each function call.",
+  "explanation": "Slide 3.4: the stack contains temporary data - function parameters, return addresses and local variables.",
+  "source": {
+   "kind": "leak",
+   "refs": [
+    "L15-33",
+    "L18-06"
+   ]
+  },
+  "syllabus_ref": {
+   "file": "CH-3-Updated.pdf",
+   "slides": [
+    4
+   ]
+  },
+  "review_status": "approved"
+ },
+ {
+  "id": "c3-041",
+  "unit": 3,
+  "topic": "Process Control Block",
+  "difficulty": "medium",
+  "question": "Process priority and scheduling queue pointers are stored in which part of the PCB?",
+  "options": [
+   "Memory-management information",
+   "CPU-scheduling information",
+   "I/O status information",
+   "Accounting information"
+  ],
+  "answer": 1,
+  "hint": "They are used to decide when the process gets the CPU.",
+  "explanation": "Slide 3.10: CPU scheduling information - priorities and scheduling queue pointers.",
+  "source": {
+   "kind": "leak",
+   "refs": [
+    "L16-34"
+   ]
+  },
+  "syllabus_ref": {
+   "file": "CH-3-Updated.pdf",
+   "slides": [
+    10
+   ]
+  },
+  "review_status": "approved"
+ },
+ {
+  "id": "c3-042",
+  "unit": 3,
+  "topic": "Process Concept",
+  "difficulty": "easy",
+  "question": "Which list contains parts of a process?",
+  "options": [
+   "Only the text section",
+   "Only the stack and the program counter",
+   "Text section, data section, stack, heap and the current activity (program counter and registers)",
+   "The bootstrap program and the kernel"
+  ],
+  "answer": 2,
+  "hint": "A process is more than its program code.",
+  "explanation": "Slide 3.4: a process has multiple parts - the program code (text section), current activity (program counter, processor registers), stack, data section and heap.",
+  "source": {
+   "kind": "leak",
+   "refs": [
+    "L17-14"
+   ]
+  },
+  "syllabus_ref": {
+   "file": "CH-3-Updated.pdf",
+   "slides": [
+    4,
+    6
+   ]
+  },
+  "review_status": "approved"
+ },
+ {
+  "id": "c3-043",
+  "unit": 3,
+  "topic": "Context Switch",
+  "difficulty": "easy",
+  "question": "Saving the state of the currently running process and restoring the state of the next process to run is called a:",
+  "options": [
+   "Process termination",
+   "Context switch",
+   "Dispatch latency",
+   "Fork"
+  ],
+  "answer": 1,
+  "hint": "The state is kept in the PCB.",
+  "explanation": "Slide 3.17: when the CPU switches to another process, the system saves the state of the old process and loads the saved state of the new one via a context switch.",
+  "source": {
+   "kind": "leak",
+   "refs": [
+    "L17-25",
+    "L18-30"
+   ]
+  },
+  "syllabus_ref": {
+   "file": "CH-3-Updated.pdf",
+   "slides": [
+    16,
+    17
+   ]
+  },
+  "review_status": "approved"
+ },
+ {
+  "id": "c3-044",
+  "unit": 3,
+  "topic": "Process Scheduling",
+  "difficulty": "hard",
+  "question": "If almost all processes in the system are I/O-bound, which queue will usually be almost empty?",
+  "options": [
+   "The ready queue",
+   "The list of PCBs",
+   "The text section",
+   "The wait queues"
+  ],
+  "answer": 0,
+  "hint": "I/O-bound processes spend most of their time waiting for I/O.",
+  "explanation": "Slide 3.13: processes migrate between the ready queue and wait queues. I/O-bound processes are mostly in wait queues waiting for I/O events, so the ready queue is almost always empty.",
+  "source": {
+   "kind": "leak",
+   "refs": [
+    "L18-01"
+   ]
+  },
+  "syllabus_ref": {
+   "file": "CH-3-Updated.pdf",
+   "slides": [
+    13,
+    14
+   ]
+  },
+  "review_status": "approved"
+ },
+ {
+  "id": "c3-045",
+  "unit": 3,
+  "topic": "Process Control Block",
+  "difficulty": "easy",
+  "question": "Which of the following is NOT part of a process control block?",
+  "options": [
+   "Process state",
+   "I/O status information",
+   "Accounting information",
+   "The bootstrap program"
+  ],
+  "answer": 3,
+  "hint": "The PCB holds information about one process.",
+  "explanation": "Slide 3.10: the PCB contains process state, program counter, CPU registers, CPU-scheduling information, memory-management information, accounting information and I/O status information.",
+  "source": {
+   "kind": "leak",
+   "refs": [
+    "L18-05"
+   ]
+  },
+  "syllabus_ref": {
+   "file": "CH-3-Updated.pdf",
+   "slides": [
+    10
+   ]
+  },
+  "review_status": "approved"
+ },
+ {
+  "id": "c3-046",
+  "unit": 3,
+  "topic": "Process Concept",
+  "difficulty": "easy",
+  "question": "The program code of a process is stored in the:",
+  "options": [
+   "Heap",
+   "Stack",
+   "Data section",
+   "Text section"
+  ],
+  "answer": 3,
+  "hint": "It is the part of the process that is read-only code.",
+  "explanation": "Slide 3.4: the program code is also called the text section.",
+  "source": {
+   "kind": "leak",
+   "refs": [
+    "L18-07"
+   ]
+  },
+  "syllabus_ref": {
+   "file": "CH-3-Updated.pdf",
+   "slides": [
+    4,
+    6
+   ]
+  },
+  "review_status": "approved"
+ },
+ {
+  "id": "c3-047",
+  "unit": 3,
+  "topic": "Interprocess Communication",
+  "difficulty": "easy",
+  "question": "The IPC model in which processes use a region of memory to exchange information is:",
+  "options": [
+   "Message passing",
+   "Context switching",
+   "Shared memory",
+   "Fork-join"
+  ],
+  "answer": 2,
+  "hint": "The other model sends messages through the OS.",
+  "explanation": "Slides 3.26-3.27: the two IPC models are shared memory (a shared region) and message passing.",
+  "source": {
+   "kind": "leak",
+   "refs": [
+    "L18-26",
+    "L18-10"
+   ]
+  },
+  "syllabus_ref": {
+   "file": "CH-3-Updated.pdf",
+   "slides": [
+    26,
+    27
+   ]
+  },
+  "review_status": "approved"
+ },
+ {
+  "id": "c3-048",
+  "unit": 3,
+  "topic": "Interprocess Communication",
+  "difficulty": "easy",
+  "question": "Message passing is a mechanism for processes to:",
+  "options": [
+   "Replace their memory with a new program",
+   "Create child processes",
+   "Communicate and synchronize their actions without resorting to shared variables",
+   "Share a single address space"
+  ],
+  "answer": 2,
+  "hint": "No shared variables are needed.",
+  "explanation": "Slide 3.29: message passing is a mechanism for processes to communicate and to synchronize their actions; processes communicate without resorting to shared variables.",
+  "source": {
+   "kind": "leak",
+   "refs": [
+    "L18-27"
+   ]
+  },
+  "syllabus_ref": {
+   "file": "CH-3-Updated.pdf",
+   "slides": [
+    29
+   ]
+  },
+  "review_status": "approved"
+ },
+ {
+  "id": "c3-049",
+  "unit": 3,
+  "topic": "Process Concept",
+  "difficulty": "medium",
+  "question": "Several users executing the same program at the same time results in:",
+  "options": [
+   "Several processes from one program",
+   "One program per user stored separately on disk",
+   "No processes until one user finishes",
+   "One process shared by all users"
+  ],
+  "answer": 0,
+  "hint": "One program can be several processes.",
+  "explanation": "Slide 3.5: one program can be several processes - consider multiple users executing the same program.",
+  "source": {
+   "kind": "generated"
+  },
+  "syllabus_ref": {
+   "file": "CH-3-Updated.pdf",
+   "slides": [
+    5
+   ]
+  },
+  "review_status": "approved"
+ },
+ {
+  "id": "c3-050",
+  "unit": 3,
+  "topic": "Process Concept",
+  "difficulty": "easy",
+  "question": "A program becomes a process when:",
+  "options": [
+   "It is written by a programmer",
+   "It is compiled",
+   "Its executable file is loaded into memory",
+   "It is saved to disk"
+  ],
+  "answer": 2,
+  "hint": "Execution can start via a GUI click or a command line.",
+  "explanation": "Slide 3.5: a program becomes a process when the executable file is loaded into memory.",
+  "source": {
+   "kind": "generated"
+  },
+  "syllabus_ref": {
+   "file": "CH-3-Updated.pdf",
+   "slides": [
+    5
+   ]
+  },
+  "review_status": "approved"
+ },
+ {
+  "id": "c3-051",
+  "unit": 3,
+  "topic": "Process Control Block",
+  "difficulty": "medium",
+  "question": "The list of open files of a process is stored in which part of its PCB?",
+  "options": [
+   "CPU registers",
+   "Accounting information",
+   "CPU-scheduling information",
+   "I/O status information"
+  ],
+  "answer": 3,
+  "hint": "This part also lists I/O devices allocated to the process.",
+  "explanation": "Slide 3.10: I/O status information - I/O devices allocated to the process and the list of open files.",
+  "source": {
+   "kind": "generated"
+  },
+  "syllabus_ref": {
+   "file": "CH-3-Updated.pdf",
+   "slides": [
+    10
+   ]
+  },
+  "review_status": "approved"
+ },
+ {
+  "id": "c3-052",
+  "unit": 3,
+  "topic": "Process Control Block",
+  "difficulty": "medium",
+  "question": "CPU time used, clock time elapsed since start, and time limits are stored in which part of the PCB?",
+  "options": [
+   "Memory-management information",
+   "I/O status information",
+   "Accounting information",
+   "Process state"
+  ],
+  "answer": 2,
+  "hint": "These values measure how much a process has used.",
+  "explanation": "Slide 3.10: accounting information - CPU used, clock time elapsed since start, time limits.",
+  "source": {
+   "kind": "generated"
+  },
+  "syllabus_ref": {
+   "file": "CH-3-Updated.pdf",
+   "slides": [
+    10
+   ]
+  },
+  "review_status": "approved"
+ },
+ {
+  "id": "c3-053",
+  "unit": 3,
+  "topic": "Process Control Block",
+  "difficulty": "easy",
+  "question": "Another name for the process control block is:",
+  "options": [
+   "Thread table",
+   "Device-status table",
+   "Task control block",
+   "Interrupt vector"
+  ],
+  "answer": 2,
+  "hint": "Some systems call a process a task.",
+  "explanation": "Slide 3.10: the PCB is also called the task control block.",
+  "source": {
+   "kind": "generated"
+  },
+  "syllabus_ref": {
+   "file": "CH-3-Updated.pdf",
+   "slides": [
+    10
+   ]
+  },
+  "review_status": "approved"
+ },
+ {
+  "id": "c3-054",
+  "unit": 3,
+  "topic": "Threads",
+  "difficulty": "medium",
+  "question": "If a process has multiple threads, what must the PCB be extended to store?",
+  "options": [
+   "Nothing; the PCB is unchanged",
+   "A separate kernel for each thread",
+   "Thread details, including multiple program counters",
+   "A copy of the bootstrap program"
+  ],
+  "answer": 2,
+  "hint": "Each thread tracks its own next instruction.",
+  "explanation": "Slide 3.11: with threads, the system must have storage for thread details, multiple program counters, in the PCB.",
+  "source": {
+   "kind": "generated"
+  },
+  "syllabus_ref": {
+   "file": "CH-3-Updated.pdf",
+   "slides": [
+    11
+   ]
+  },
+  "review_status": "approved"
+ },
+ {
+  "id": "c3-055",
+  "unit": 3,
+  "topic": "Process Scheduling",
+  "difficulty": "easy",
+  "question": "The goal of process scheduling is to:",
+  "options": [
+   "Avoid using queues",
+   "Keep the CPU idle as much as possible",
+   "Maximize CPU use by quickly switching processes onto the CPU core",
+   "Run only one process until the system shuts down"
+  ],
+  "answer": 2,
+  "hint": "The process scheduler selects among available processes for execution.",
+  "explanation": "Slide 3.13: process scheduling aims to maximize CPU use and quickly switch processes onto the CPU core; the process scheduler selects among available processes.",
+  "source": {
+   "kind": "generated"
+  },
+  "syllabus_ref": {
+   "file": "CH-3-Updated.pdf",
+   "slides": [
+    13
+   ]
+  },
+  "review_status": "approved"
+ },
+ {
+  "id": "c3-056",
+  "unit": 3,
+  "topic": "Context Switch",
+  "difficulty": "medium",
+  "question": "Why is context-switch time considered overhead?",
+  "options": [
+   "The system does no useful work while switching",
+   "It increases the number of processes",
+   "It runs user code in kernel mode",
+   "It always requires disk I/O"
+  ],
+  "answer": 0,
+  "hint": "No process makes progress during the switch.",
+  "explanation": "Slide 3.17: context-switch time is overhead; the system does no useful work while switching.",
+  "source": {
+   "kind": "generated"
+  },
+  "syllabus_ref": {
+   "file": "CH-3-Updated.pdf",
+   "slides": [
+    17
+   ]
+  },
+  "review_status": "approved"
+ },
+ {
+  "id": "c3-057",
+  "unit": 3,
+  "topic": "Context Switch",
+  "difficulty": "medium",
+  "question": "Which factor makes a context switch take longer?",
+  "options": [
+   "Fewer processes in the ready queue",
+   "A more complex OS and PCB",
+   "A simpler PCB",
+   "Having multiple register sets in hardware"
+  ],
+  "answer": 1,
+  "hint": "More state means more to save and restore.",
+  "explanation": "Slide 3.17: the more complex the OS and the PCB, the longer the context switch. Hardware with multiple sets of registers per CPU can make it faster.",
+  "source": {
+   "kind": "generated"
+  },
+  "syllabus_ref": {
+   "file": "CH-3-Updated.pdf",
+   "slides": [
+    17
+   ]
+  },
+  "review_status": "approved"
+ },
+ {
+  "id": "c3-058",
+  "unit": 3,
+  "topic": "Context Switch",
+  "difficulty": "hard",
+  "question": "Some hardware provides multiple sets of registers per CPU. How does this affect context switching?",
+  "options": [
+   "Multiple contexts can be loaded at once, making switching faster",
+   "It makes the context switch slower",
+   "It forces all processes into the waiting state",
+   "It removes the need for PCBs"
+  ],
+  "answer": 0,
+  "hint": "Context-switch time depends on hardware support.",
+  "explanation": "Slide 3.17: context-switch time is dependent on hardware support; some hardware provides multiple sets of registers per CPU, so multiple contexts are loaded at once.",
+  "source": {
+   "kind": "generated"
+  },
+  "syllabus_ref": {
+   "file": "CH-3-Updated.pdf",
+   "slides": [
+    17
+   ]
+  },
+  "review_status": "approved"
+ },
+ {
+  "id": "c3-059",
+  "unit": 3,
+  "topic": "Multitasking in Mobile Systems",
+  "difficulty": "medium",
+  "question": "Due to screen size and user-interface limits, early versions of iOS provided:",
+  "options": [
+   "No background processes of any kind",
+   "Only batch processing",
+   "Unlimited foreground processes on screen",
+   "A single foreground process, with background processes allowed under limits"
+  ],
+  "answer": 3,
+  "hint": "One process is controlled via the user interface.",
+  "explanation": "Slide 3.18: iOS provides a single foreground process controlled via the user interface, and multiple background processes in memory, running but not on the display, with limits.",
+  "source": {
+   "kind": "generated"
+  },
+  "syllabus_ref": {
+   "file": "CH-3-Updated.pdf",
+   "slides": [
+    18
+   ]
+  },
+  "review_status": "approved"
+ },
+ {
+  "id": "c3-060",
+  "unit": 3,
+  "topic": "Multitasking in Mobile Systems",
+  "difficulty": "medium",
+  "question": "In Android, a background process performs tasks by using a:",
+  "options": [
+   "Service, which can keep running even if the background process is suspended",
+   "Device controller",
+   "Bootstrap loader",
+   "Shell"
+  ],
+  "answer": 0,
+  "hint": "It has no user interface and uses little memory.",
+  "explanation": "Slide 3.18: Android runs foreground and background with fewer limits; a background process uses a service to perform tasks. The service can keep running even if the background process is suspended, has no UI and small memory use.",
+  "source": {
+   "kind": "generated"
+  },
+  "syllabus_ref": {
+   "file": "CH-3-Updated.pdf",
+   "slides": [
+    18
+   ]
+  },
+  "review_status": "approved"
+ },
+ {
+  "id": "c3-061",
+  "unit": 3,
+  "topic": "Process Creation",
+  "difficulty": "easy",
+  "question": "Parent processes create children, which in turn create other processes, forming a:",
+  "options": [
+   "Ready queue",
+   "Single chain only",
+   "Hash table",
+   "Tree of processes"
+  ],
+  "answer": 3,
+  "hint": "Linux shows this structure starting from one root process.",
+  "explanation": "Slides 3.20-3.21: parent processes create children processes, which create other processes, forming a tree of processes.",
+  "source": {
+   "kind": "generated"
+  },
+  "syllabus_ref": {
+   "file": "CH-3-Updated.pdf",
+   "slides": [
+    20,
+    21
+   ]
+  },
+  "review_status": "approved"
+ },
+ {
+  "id": "c3-062",
+  "unit": 3,
+  "topic": "Process Creation",
+  "difficulty": "medium",
+  "question": "Which of the following is an execution option for a parent and its child processes?",
+  "options": [
+   "Parent and child can never run at the same time",
+   "The parent must always terminate first",
+   "The child must run before the parent is created",
+   "The parent waits until the children terminate"
+  ],
+  "answer": 3,
+  "hint": "The other option is that they execute concurrently.",
+  "explanation": "Slide 3.20: execution options - parent and children execute concurrently, or the parent waits until children terminate.",
+  "source": {
+   "kind": "generated"
+  },
+  "syllabus_ref": {
+   "file": "CH-3-Updated.pdf",
+   "slides": [
+    20
+   ]
+  },
+  "review_status": "approved"
+ },
+ {
+  "id": "c3-063",
+  "unit": 3,
+  "topic": "Process Creation",
+  "difficulty": "medium",
+  "question": "Which system call is used after fork() to replace the process's memory space with a new program?",
+  "options": [
+   "abort()",
+   "wait()",
+   "exec()",
+   "exit()"
+  ],
+  "answer": 2,
+  "hint": "It loads a different program into the child.",
+  "explanation": "Slide 3.22: exec() is used after fork() to replace the process's memory space with a new program.",
+  "source": {
+   "kind": "generated"
+  },
+  "syllabus_ref": {
+   "file": "CH-3-Updated.pdf",
+   "slides": [
+    22
+   ]
+  },
+  "review_status": "approved"
+ },
+ {
+  "id": "c3-064",
+  "unit": 3,
+  "topic": "Process Creation",
+  "difficulty": "easy",
+  "question": "A parent process calls __________ to wait for its child to terminate.",
+  "options": [
+   "send()",
+   "fork()",
+   "wait()",
+   "exec()"
+  ],
+  "answer": 2,
+  "hint": "The child's status data is returned through it.",
+  "explanation": "Slides 3.22-3.23: the parent calls wait() for the child to terminate; status data from the child returns to the parent via wait().",
+  "source": {
+   "kind": "generated"
+  },
+  "syllabus_ref": {
+   "file": "CH-3-Updated.pdf",
+   "slides": [
+    22,
+    23
+   ]
+  },
+  "review_status": "approved"
+ },
+ {
+  "id": "c3-065",
+  "unit": 3,
+  "topic": "Process Termination",
+  "difficulty": "medium",
+  "question": "A parent may terminate its children using the abort() system call. Which of the following is one of the reasons listed?",
+  "options": [
+   "The child is in the ready queue",
+   "The child has the same program as the parent",
+   "The child was created with fork()",
+   "The child has exceeded its allocated resources"
+  ],
+  "answer": 3,
+  "hint": "The slide also mentions that the task may no longer be required.",
+  "explanation": "Slide 3.23: reasons include the child exceeding allocated resources, the task assigned to the child no longer being required, and the parent exiting when the OS doesn't allow a child to continue.",
+  "source": {
+   "kind": "generated"
+  },
+  "syllabus_ref": {
+   "file": "CH-3-Updated.pdf",
+   "slides": [
+    23
+   ]
+  },
+  "review_status": "approved"
+ },
+ {
+  "id": "c3-066",
+  "unit": 3,
+  "topic": "Process Termination",
+  "difficulty": "medium",
+  "question": "When a process terminates, what happens to its resources?",
+  "options": [
+   "They are copied to the child's stack",
+   "They are given to the bootstrap program",
+   "They are kept forever",
+   "They are deallocated by the operating system"
+  ],
+  "answer": 3,
+  "hint": "The OS reclaims them.",
+  "explanation": "Slide 3.23: the process's resources are deallocated by the operating system.",
+  "source": {
+   "kind": "generated"
+  },
+  "syllabus_ref": {
+   "file": "CH-3-Updated.pdf",
+   "slides": [
+    23
+   ]
+  },
+  "review_status": "approved"
+ },
+ {
+  "id": "c3-067",
+  "unit": 3,
+  "topic": "Process Creation",
+  "difficulty": "hard",
+  "question": "A program calls fork() three times in a row, with no conditions around the calls. Including the original process, how many processes exist after the third fork()?",
+  "code": "fork();\nfork();\nfork();",
+  "options": [
+   "8",
+   "3",
+   "4",
+   "6"
+  ],
+  "answer": 0,
+  "hint": "Every process that executes a fork() creates one more process.",
+  "explanation": "Slide 3.22: each fork() creates one child that continues from the same point. After the first fork there are 2 processes, after the second 4, after the third 8 (2^3).",
+  "source": {
+   "kind": "generated"
+  },
+  "syllabus_ref": {
+   "file": "CH-3-Updated.pdf",
+   "slides": [
+    20,
+    22
+   ]
+  },
+  "review_status": "approved"
+ },
+ {
+  "id": "c3-068",
+  "unit": 3,
+  "topic": "Process Creation",
+  "difficulty": "medium",
+  "question": "Regarding the address space of a newly created child process, which option is listed on the slides?",
+  "options": [
+   "The child shares the parent's stack",
+   "The child uses the parent's PCB",
+   "The child always gets an empty address space",
+   "The child is a duplicate of the parent"
+  ],
+  "answer": 3,
+  "hint": "The other option is that the child has a program loaded into it.",
+  "explanation": "Slide 3.22: address space - the child is a duplicate of the parent, or the child has a program loaded into it.",
+  "source": {
+   "kind": "generated"
+  },
+  "syllabus_ref": {
+   "file": "CH-3-Updated.pdf",
+   "slides": [
+    22
+   ]
+  },
+  "review_status": "approved"
+ },
+ {
+  "id": "c3-069",
+  "unit": 3,
+  "topic": "Interprocess Communication",
+  "difficulty": "easy",
+  "question": "Cooperating processes need:",
+  "options": [
+   "To be independent",
+   "Interprocess communication (IPC)",
+   "No operating-system support",
+   "A separate CPU each"
+  ],
+  "answer": 1,
+  "hint": "They must exchange data and information.",
+  "explanation": "Slide 3.26: cooperating processes need interprocess communication (IPC).",
+  "source": {
+   "kind": "generated"
+  },
+  "syllabus_ref": {
+   "file": "CH-3-Updated.pdf",
+   "slides": [
+    26
+   ]
+  },
+  "review_status": "approved"
+ },
+ {
+  "id": "c3-070",
+  "unit": 3,
+  "topic": "Interprocess Communication",
+  "difficulty": "easy",
+  "question": "In message passing, the message size is:",
+  "options": [
+   "Always fixed at one byte",
+   "Determined by the bootstrap loader",
+   "Always unlimited",
+   "Either fixed or variable"
+  ],
+  "answer": 3,
+  "hint": "The slide gives two possibilities.",
+  "explanation": "Slide 3.29: the message size is either fixed or variable.",
+  "source": {
+   "kind": "generated"
+  },
+  "syllabus_ref": {
+   "file": "CH-3-Updated.pdf",
+   "slides": [
+    29
+   ]
+  },
+  "review_status": "approved"
+ },
+ {
+  "id": "c3-071",
+  "unit": 3,
+  "topic": "Process Scheduling",
+  "difficulty": "medium",
+  "question": "Processes during their lifetime:",
+  "options": [
+   "Migrate among the various scheduling queues",
+   "Are stored only on disk",
+   "Never enter a wait queue",
+   "Stay in the ready queue forever"
+  ],
+  "answer": 0,
+  "hint": "Think about a process that alternates between computing and I/O.",
+  "explanation": "Slide 3.13: the scheduler maintains scheduling queues of processes (ready queue, wait queues), and processes migrate among the various queues.",
+  "source": {
+   "kind": "generated"
+  },
+  "syllabus_ref": {
+   "file": "CH-3-Updated.pdf",
+   "slides": [
+    13,
+    14,
+    15
+   ]
+  },
+  "review_status": "approved"
+ },
+ {
+  "id": "c3-072",
+  "unit": 3,
+  "topic": "Process Control Block",
+  "difficulty": "medium",
+  "question": "The memory allocated to a process is recorded in which part of its PCB?",
+  "options": [
+   "Accounting information",
+   "Process state",
+   "CPU registers",
+   "Memory-management information"
+  ],
+  "answer": 3,
+  "hint": "The name of the field describes it.",
+  "explanation": "Slide 3.10: memory-management information - memory allocated to the process.",
+  "source": {
+   "kind": "generated"
+  },
+  "syllabus_ref": {
+   "file": "CH-3-Updated.pdf",
+   "slides": [
+    10
+   ]
+  },
+  "review_status": "approved"
+ }
+]

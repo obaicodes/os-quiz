@@ -1,0 +1,1449 @@
+[
+ {
+  "id": "c4-001",
+  "unit": 4,
+  "topic": "Threads Overview",
+  "difficulty": "medium",
+  "question": "Two threads of the same process execute the same function at the same time. Are the function's local variables shared between them?",
+  "options": [
+   "No, each thread has its own stack, so each has its own copy of the local variables",
+   "Yes, local variables are stored in the shared heap",
+   "No, local variables are stored in the PCB of the process",
+   "Yes, all threads share local variables through the data section"
+  ],
+  "answer": 0,
+  "hint": "Look at what each thread owns separately in the single vs multithreaded process diagram.",
+  "explanation": "Slide 4.5: threads share code, data and files, but each thread has its own registers, program counter and stack. Local variables live on the stack, so they are not shared.",
+  "source": {
+   "kind": "leak",
+   "refs": [
+    "L02-05",
+    "L15-28"
+   ]
+  },
+  "syllabus_ref": {
+   "file": "CH-4-Updated.pdf",
+   "slides": [
+    5
+   ]
+  },
+  "review_status": "approved"
+ },
+ {
+  "id": "c4-002",
+  "unit": 4,
+  "topic": "Multicore Programming",
+  "difficulty": "easy",
+  "question": "__________ implies a system can perform more than one task simultaneously.",
+  "options": [
+   "Synchronization",
+   "Concurrency",
+   "Parallelism",
+   "Multiprogramming"
+  ],
+  "answer": 2,
+  "hint": "The other term only requires that more than one task makes progress.",
+  "explanation": "Slide 4.8: parallelism implies a system can perform more than one task simultaneously; concurrency supports more than one task making progress.",
+  "source": {
+   "kind": "leak",
+   "refs": [
+    "L02-07",
+    "L16-37",
+    "L17-20"
+   ]
+  },
+  "syllabus_ref": {
+   "file": "CH-4-Updated.pdf",
+   "slides": [
+    8,
+    9
+   ]
+  },
+  "review_status": "approved"
+ },
+ {
+  "id": "c4-003",
+  "unit": 4,
+  "topic": "Benefits of Threads",
+  "difficulty": "easy",
+  "question": "Which pair consists of benefits of multithreaded programming listed on the slides?",
+  "options": [
+   "Separate address spaces and resource sharing",
+   "Higher context-switch overhead and economy",
+   "Isolation and security",
+   "Responsiveness and scalability"
+  ],
+  "answer": 3,
+  "hint": "The four benefits are responsiveness, resource sharing, economy and one more.",
+  "explanation": "Slide 4.7: the benefits are responsiveness, resource sharing, economy and scalability.",
+  "source": {
+   "kind": "leak",
+   "refs": [
+    "L02-11",
+    "L06-11"
+   ]
+  },
+  "syllabus_ref": {
+   "file": "CH-4-Updated.pdf",
+   "slides": [
+    7
+   ]
+  },
+  "review_status": "approved"
+ },
+ {
+  "id": "c4-004",
+  "unit": 4,
+  "topic": "Benefits of Threads",
+  "difficulty": "medium",
+  "question": "Why is thread creation considered light-weight compared to process creation?",
+  "options": [
+   "All threads of a process exist in the same address space and share its resources",
+   "Each thread gets a new separate address space",
+   "Threads share their local variables",
+   "Threads do not need a program counter"
+  ],
+  "answer": 0,
+  "hint": "Think about what does not need to be duplicated when a new thread is created.",
+  "explanation": "Slides 4.4 and 4.7: process creation is heavy-weight while thread creation is light-weight; threads share the resources of their process (economy).",
+  "source": {
+   "kind": "leak",
+   "refs": [
+    "L02-12"
+   ]
+  },
+  "syllabus_ref": {
+   "file": "CH-4-Updated.pdf",
+   "slides": [
+    4,
+    7
+   ]
+  },
+  "review_status": "approved"
+ },
+ {
+  "id": "c4-005",
+  "unit": 4,
+  "topic": "Multithreading Models",
+  "difficulty": "easy",
+  "question": "Which multithreading model allows many user-level threads to be mapped to many (a smaller or equal number of) kernel threads?",
+  "options": [
+   "One-to-many",
+   "Many-to-many",
+   "Many-to-one",
+   "One-to-one"
+  ],
+  "answer": 1,
+  "hint": "It lets the OS create a sufficient number of kernel threads.",
+  "explanation": "Slide 4.17: the many-to-many model allows many user-level threads to be mapped to many kernel threads and lets the OS create a sufficient number of kernel threads.",
+  "source": {
+   "kind": "leak",
+   "refs": [
+    "L03-06",
+    "L07-11"
+   ]
+  },
+  "syllabus_ref": {
+   "file": "CH-4-Updated.pdf",
+   "slides": [
+    17
+   ]
+  },
+  "review_status": "approved"
+ },
+ {
+  "id": "c4-006",
+  "unit": 4,
+  "topic": "Threads Overview",
+  "difficulty": "easy",
+  "question": "According to the slides, which statement about kernels is correct?",
+  "options": [
+   "Only user programs can be multithreaded",
+   "Kernels can never use threads",
+   "Kernels are always single-threaded for safety",
+   "Kernels are generally multithreaded"
+  ],
+  "answer": 3,
+  "hint": "It is the last point on the Motivation slide.",
+  "explanation": "Slide 4.4: kernels are generally multithreaded.",
+  "source": {
+   "kind": "leak",
+   "refs": [
+    "L03-08"
+   ]
+  },
+  "syllabus_ref": {
+   "file": "CH-4-Updated.pdf",
+   "slides": [
+    4
+   ]
+  },
+  "review_status": "approved"
+ },
+ {
+  "id": "c4-007",
+  "unit": 4,
+  "topic": "Benefits of Threads",
+  "difficulty": "medium",
+  "question": "Which of the following statements is NOT true?",
+  "options": [
+   "Threads share the resources of their process",
+   "Thread switching has lower overhead than context switching between processes",
+   "Process creation is faster than thread creation",
+   "Process creation is heavy-weight"
+  ],
+  "answer": 2,
+  "hint": "Compare the cost of creating each.",
+  "explanation": "Slides 4.4 and 4.7: thread creation is light-weight and cheaper than process creation, and thread switching has lower overhead than context switching. So 'process creation is faster' is false.",
+  "source": {
+   "kind": "leak",
+   "refs": [
+    "L03-10",
+    "L08-20",
+    "L08-21"
+   ]
+  },
+  "syllabus_ref": {
+   "file": "CH-4-Updated.pdf",
+   "slides": [
+    4,
+    7
+   ]
+  },
+  "review_status": "approved"
+ },
+ {
+  "id": "c4-008",
+  "unit": 4,
+  "topic": "Multicore Programming",
+  "difficulty": "easy",
+  "question": "Distributing subsets of the same data across multiple cores and performing the same operation on each is called:",
+  "options": [
+   "Task parallelism",
+   "Concurrency",
+   "Data parallelism",
+   "Data dependency"
+  ],
+  "answer": 2,
+  "hint": "The operation is the same; what is split is the input.",
+  "explanation": "Slide 4.10: data parallelism distributes subsets of the same data across multiple cores, with the same operation on each.",
+  "source": {
+   "kind": "leak",
+   "refs": [
+    "L15-03",
+    "L07-14",
+    "L03-16"
+   ]
+  },
+  "syllabus_ref": {
+   "file": "CH-4-Updated.pdf",
+   "slides": [
+    10,
+    11
+   ]
+  },
+  "review_status": "approved"
+ },
+ {
+  "id": "c4-009",
+  "unit": 4,
+  "topic": "Multicore Programming",
+  "difficulty": "medium",
+  "question": "On a quad-core system, summing a large array by giving each core one quarter of the array to add up is an example of:",
+  "options": [
+   "Task parallelism",
+   "Many-to-one threading",
+   "Interprocess communication",
+   "Data parallelism"
+  ],
+  "answer": 3,
+  "hint": "Every core runs the same operation.",
+  "explanation": "Slide 4.10: each core performs the same operation (summing) on a different subset of the same data, which is data parallelism.",
+  "source": {
+   "kind": "leak",
+   "refs": [
+    "L11-10"
+   ]
+  },
+  "syllabus_ref": {
+   "file": "CH-4-Updated.pdf",
+   "slides": [
+    10,
+    11
+   ]
+  },
+  "review_status": "approved"
+ },
+ {
+  "id": "c4-010",
+  "unit": 4,
+  "topic": "Threads Overview",
+  "difficulty": "easy",
+  "question": "Which statement about processes and threads is correct?",
+  "options": [
+   "A process can never contain more than one thread",
+   "Threads exist outside of any process",
+   "A process can be single-threaded or multithreaded",
+   "A process must always have at least two threads"
+  ],
+  "answer": 2,
+  "hint": "Compare the two diagrams on the Single and Multithreaded Processes slide.",
+  "explanation": "Slide 4.5 shows both a single-threaded process and a multithreaded process; threads run within an application (slide 4.4).",
+  "source": {
+   "kind": "leak",
+   "refs": [
+    "L04-24"
+   ]
+  },
+  "syllabus_ref": {
+   "file": "CH-4-Updated.pdf",
+   "slides": [
+    4,
+    5
+   ]
+  },
+  "review_status": "approved"
+ },
+ {
+  "id": "c4-011",
+  "unit": 4,
+  "topic": "Multithreading Models",
+  "difficulty": "easy",
+  "question": "Which multithreading model maps many user-level threads to a single kernel thread?",
+  "options": [
+   "One-to-one",
+   "Two-level",
+   "Many-to-many",
+   "Many-to-one"
+  ],
+  "answer": 3,
+  "hint": "Solaris Green Threads and GNU Portable Threads are examples.",
+  "explanation": "Slide 4.15: many-to-one maps many user-level threads to a single kernel thread. Examples: Solaris Green Threads, GNU Portable Threads.",
+  "source": {
+   "kind": "leak",
+   "refs": [
+    "L04-28"
+   ]
+  },
+  "syllabus_ref": {
+   "file": "CH-4-Updated.pdf",
+   "slides": [
+    15
+   ]
+  },
+  "review_status": "approved"
+ },
+ {
+  "id": "c4-012",
+  "unit": 4,
+  "topic": "Multicore Programming",
+  "difficulty": "medium",
+  "question": "Concurrent processes are processes that:",
+  "options": [
+   "Cannot run on a single-core system",
+   "Overlap in time, each making progress",
+   "Never overlap in time",
+   "Must execute at exactly the same instant on different cores"
+  ],
+  "answer": 1,
+  "hint": "A single core with a scheduler can provide this.",
+  "explanation": "Slides 4.8-4.9: concurrency supports more than one task making progress; on a single core the scheduler interleaves them so their executions overlap in time.",
+  "source": {
+   "kind": "leak",
+   "refs": [
+    "L05-264"
+   ]
+  },
+  "syllabus_ref": {
+   "file": "CH-4-Updated.pdf",
+   "slides": [
+    8,
+    9
+   ]
+  },
+  "review_status": "approved"
+ },
+ {
+  "id": "c4-013",
+  "unit": 4,
+  "topic": "Benefits of Threads",
+  "difficulty": "hard",
+  "question": "A single-threaded process P1 and a multithreaded process P2 perform similar tasks on identical multicore systems. Which one is expected to finish first?",
+  "options": [
+   "Both finish at exactly the same time",
+   "P1, because it has no thread-switching overhead",
+   "It cannot finish, because multithreaded processes deadlock",
+   "P2, because its threads can run in parallel on different cores"
+  ],
+  "answer": 3,
+  "hint": "Which benefit of threads relates to multicore architectures?",
+  "explanation": "Slide 4.7 (scalability): a process can take advantage of multicore architectures. Slide 4.9: on a multicore system its threads can run in parallel.",
+  "source": {
+   "kind": "leak",
+   "refs": [
+    "L06-02"
+   ]
+  },
+  "syllabus_ref": {
+   "file": "CH-4-Updated.pdf",
+   "slides": [
+    7,
+    9
+   ]
+  },
+  "review_status": "approved"
+ },
+ {
+  "id": "c4-014",
+  "unit": 4,
+  "topic": "Threads Overview",
+  "difficulty": "medium",
+  "question": "What happens to the threads of a process when the process terminates?",
+  "options": [
+   "The threads move to another process",
+   "Only the first thread is terminated",
+   "The threads continue running without the process",
+   "All threads within the process are terminated"
+  ],
+  "answer": 3,
+  "hint": "Threads run within an application and share its resources.",
+  "explanation": "Slides 4.4-4.5: threads run within a process and share its code, data and files, so when the process ends all of its threads end.",
+  "source": {
+   "kind": "leak",
+   "refs": [
+    "L07-16"
+   ]
+  },
+  "syllabus_ref": {
+   "file": "CH-4-Updated.pdf",
+   "slides": [
+    4,
+    5
+   ]
+  },
+  "review_status": "approved"
+ },
+ {
+  "id": "c4-015",
+  "unit": 4,
+  "topic": "Threads Overview",
+  "difficulty": "medium",
+  "question": "All of the following statements about threads are correct EXCEPT:",
+  "options": [
+   "Thread creation is light-weight",
+   "A thread has its own program counter",
+   "A thread shares its code with other threads of the same process",
+   "Each thread has its own separate address space"
+  ],
+  "answer": 3,
+  "hint": "Recall what threads share in the multithreaded process diagram.",
+  "explanation": "Slides 4.4-4.5: threads share code, data and files (the address space), but have their own registers, program counter and stack. A separate address space belongs to a process, not a thread.",
+  "source": {
+   "kind": "leak",
+   "refs": [
+    "L07-17"
+   ]
+  },
+  "syllabus_ref": {
+   "file": "CH-4-Updated.pdf",
+   "slides": [
+    4,
+    5
+   ]
+  },
+  "review_status": "approved"
+ },
+ {
+  "id": "c4-016",
+  "unit": 4,
+  "topic": "Threads Overview",
+  "difficulty": "easy",
+  "question": "A thread shares its code section, data section and open files with:",
+  "options": [
+   "Other threads that belong to the same process",
+   "Other processes that run the same program",
+   "Threads of all processes in the system",
+   "No other thread"
+  ],
+  "answer": 0,
+  "hint": "Threads share the resources of the process they run in.",
+  "explanation": "Slides 4.5 and 4.7: threads share the resources (code, data, files) of the process they belong to.",
+  "source": {
+   "kind": "leak",
+   "refs": [
+    "L08-22"
+   ]
+  },
+  "syllabus_ref": {
+   "file": "CH-4-Updated.pdf",
+   "slides": [
+    5,
+    7
+   ]
+  },
+  "review_status": "approved"
+ },
+ {
+  "id": "c4-017",
+  "unit": 4,
+  "topic": "Benefits of Threads",
+  "difficulty": "easy",
+  "question": "Multithreading an interactive program increases responsiveness to the user by:",
+  "options": [
+   "Asking the user to decide the order of the threads",
+   "Continuing to run even if part of it is blocked",
+   "Running every thread in kernel mode",
+   "Waiting for one part to finish before another begins"
+  ],
+  "answer": 1,
+  "hint": "This benefit is especially important for user interfaces.",
+  "explanation": "Slide 4.7: responsiveness may allow continued execution if part of the process is blocked, especially important for user interfaces.",
+  "source": {
+   "kind": "leak",
+   "refs": [
+    "L08-29",
+    "L15-04"
+   ]
+  },
+  "syllabus_ref": {
+   "file": "CH-4-Updated.pdf",
+   "slides": [
+    7
+   ]
+  },
+  "review_status": "approved"
+ },
+ {
+  "id": "c4-018",
+  "unit": 4,
+  "topic": "Threads Overview",
+  "difficulty": "medium",
+  "question": "A process that has multiple program counters, each tracking a separate location of execution, has multiple:",
+  "options": [
+   "Threads of control",
+   "Address spaces",
+   "Ready queues",
+   "Kernels"
+  ],
+  "answer": 0,
+  "hint": "Multiple locations can execute at once.",
+  "explanation": "Ch3 slide 11 and ch4 slide 4.5: with multiple program counters per process, multiple locations can execute at once; these are multiple threads of control.",
+  "source": {
+   "kind": "leak",
+   "refs": [
+    "L02-03",
+    "L09-07",
+    "L03-15"
+   ]
+  },
+  "syllabus_ref": {
+   "file": "CH-4-Updated.pdf",
+   "slides": [
+    4,
+    5
+   ]
+  },
+  "review_status": "approved"
+ },
+ {
+  "id": "c4-019",
+  "unit": 4,
+  "topic": "Multithreading Models",
+  "difficulty": "medium",
+  "question": "In the many-to-one model, what happens when one user thread makes a blocking system call?",
+  "options": [
+   "The blocked thread moves to another core",
+   "The whole process blocks, since all threads share one kernel thread",
+   "The kernel creates a new kernel thread for the others",
+   "Only that thread blocks while the others keep running"
+  ],
+  "answer": 1,
+  "hint": "How many kernel threads are there for the whole process?",
+  "explanation": "Slide 4.15: in many-to-one, one thread blocking causes all to block.",
+  "source": {
+   "kind": "leak",
+   "refs": [
+    "L11-13"
+   ]
+  },
+  "syllabus_ref": {
+   "file": "CH-4-Updated.pdf",
+   "slides": [
+    15
+   ]
+  },
+  "review_status": "approved"
+ },
+ {
+  "id": "c4-020",
+  "unit": 4,
+  "topic": "Threads Overview",
+  "difficulty": "easy",
+  "question": "In a multithreaded process, every thread has its own:",
+  "options": [
+   "Open files and stack",
+   "Code and data sections",
+   "Program counter, stack and set of registers",
+   "Address space and open files"
+  ],
+  "answer": 2,
+  "hint": "Code, data and files are what threads share.",
+  "explanation": "Slide 4.5: in a multithreaded process, code, data and files are shared, while each thread has its own registers, stack and program counter.",
+  "source": {
+   "kind": "leak",
+   "refs": [
+    "L13-05"
+   ]
+  },
+  "syllabus_ref": {
+   "file": "CH-4-Updated.pdf",
+   "slides": [
+    5
+   ]
+  },
+  "review_status": "approved"
+ },
+ {
+  "id": "c4-021",
+  "unit": 4,
+  "topic": "Threads Overview",
+  "difficulty": "easy",
+  "question": "A thread shares with the other threads of the same process its:",
+  "options": [
+   "Program counter",
+   "Thread ID",
+   "Register set and stack",
+   "Files and data"
+  ],
+  "answer": 3,
+  "hint": "Everything a thread owns privately is what lets it execute independently.",
+  "explanation": "Slide 4.5: threads share code, data and files; each has its own registers, stack and program counter.",
+  "source": {
+   "kind": "leak",
+   "refs": [
+    "L15-34"
+   ]
+  },
+  "syllabus_ref": {
+   "file": "CH-4-Updated.pdf",
+   "slides": [
+    5
+   ]
+  },
+  "review_status": "approved"
+ },
+ {
+  "id": "c4-022",
+  "unit": 4,
+  "topic": "Threads Overview",
+  "difficulty": "easy",
+  "question": "Which of the following is given as an example of a task that can be implemented by a separate thread within an application?",
+  "options": [
+   "Spell checking",
+   "Loading the BIOS",
+   "Allocating a PCB",
+   "Booting the kernel"
+  ],
+  "answer": 0,
+  "hint": "The slide also lists updating the display and fetching data.",
+  "explanation": "Slide 4.4: multiple tasks within an application can be implemented by separate threads: update display, fetch data, spell checking, answer a network request.",
+  "source": {
+   "kind": "generated"
+  },
+  "syllabus_ref": {
+   "file": "CH-4-Updated.pdf",
+   "slides": [
+    4
+   ]
+  },
+  "review_status": "approved"
+ },
+ {
+  "id": "c4-023",
+  "unit": 4,
+  "topic": "Threads Overview",
+  "difficulty": "medium",
+  "question": "In a multithreaded server architecture, what does the server do when it receives a client request?",
+  "options": [
+   "Sends the request to the bootstrap loader",
+   "Blocks all other clients until the request is finished",
+   "Terminates and restarts as a new process",
+   "Creates a new thread to service the request and resumes listening for more requests"
+  ],
+  "answer": 3,
+  "hint": "The server wants to stay available for other clients.",
+  "explanation": "Slide 4.6: (1) client request, (2) server creates a new thread to service the request, (3) server resumes listening for additional client requests.",
+  "source": {
+   "kind": "generated"
+  },
+  "syllabus_ref": {
+   "file": "CH-4-Updated.pdf",
+   "slides": [
+    6
+   ]
+  },
+  "review_status": "approved"
+ },
+ {
+  "id": "c4-024",
+  "unit": 4,
+  "topic": "Benefits of Threads",
+  "difficulty": "easy",
+  "question": "Threads sharing the resources of their process, which is easier than shared memory or message passing, describes which benefit?",
+  "options": [
+   "Responsiveness",
+   "Resource sharing",
+   "Economy",
+   "Scalability"
+  ],
+  "answer": 1,
+  "hint": "Compare it with the IPC mechanisms from Chapter 3.",
+  "explanation": "Slide 4.7: resource sharing - threads share resources of the process, easier than shared memory or message passing.",
+  "source": {
+   "kind": "generated"
+  },
+  "syllabus_ref": {
+   "file": "CH-4-Updated.pdf",
+   "slides": [
+    7
+   ]
+  },
+  "review_status": "approved"
+ },
+ {
+  "id": "c4-025",
+  "unit": 4,
+  "topic": "Benefits of Threads",
+  "difficulty": "easy",
+  "question": "'Cheaper than process creation; thread switching has lower overhead than context switching' describes which benefit of threads?",
+  "options": [
+   "Resource sharing",
+   "Responsiveness",
+   "Economy",
+   "Scalability"
+  ],
+  "answer": 2,
+  "hint": "The benefit is about cost.",
+  "explanation": "Slide 4.7: economy - cheaper than process creation, and thread switching has lower overhead than context switching.",
+  "source": {
+   "kind": "generated"
+  },
+  "syllabus_ref": {
+   "file": "CH-4-Updated.pdf",
+   "slides": [
+    7
+   ]
+  },
+  "review_status": "approved"
+ },
+ {
+  "id": "c4-026",
+  "unit": 4,
+  "topic": "Benefits of Threads",
+  "difficulty": "easy",
+  "question": "'A process can take advantage of multicore architectures' describes which benefit of threads?",
+  "options": [
+   "Resource sharing",
+   "Responsiveness",
+   "Economy",
+   "Scalability"
+  ],
+  "answer": 3,
+  "hint": "The benefit grows as more cores are added.",
+  "explanation": "Slide 4.7: scalability - a process can take advantage of multicore architectures.",
+  "source": {
+   "kind": "generated"
+  },
+  "syllabus_ref": {
+   "file": "CH-4-Updated.pdf",
+   "slides": [
+    7
+   ]
+  },
+  "review_status": "approved"
+ },
+ {
+  "id": "c4-027",
+  "unit": 4,
+  "topic": "Multicore Programming",
+  "difficulty": "medium",
+  "question": "Which of the following is NOT listed as a challenge of multicore programming?",
+  "options": [
+   "Data dependency",
+   "Increasing the clock speed of each core",
+   "Testing and debugging",
+   "Dividing activities"
+  ],
+  "answer": 1,
+  "hint": "The slide lists five challenges, including balance and data splitting.",
+  "explanation": "Slide 4.8: the challenges are dividing activities, balance, data splitting, data dependency, and testing and debugging.",
+  "source": {
+   "kind": "generated"
+  },
+  "syllabus_ref": {
+   "file": "CH-4-Updated.pdf",
+   "slides": [
+    8
+   ]
+  },
+  "review_status": "approved"
+ },
+ {
+  "id": "c4-028",
+  "unit": 4,
+  "topic": "Multicore Programming",
+  "difficulty": "medium",
+  "question": "On a single-processor (single-core) system, how is concurrency provided?",
+  "options": [
+   "It is impossible to have concurrency on a single core",
+   "By running all tasks at exactly the same instant",
+   "By data parallelism",
+   "By the scheduler interleaving the tasks"
+  ],
+  "answer": 3,
+  "hint": "Concurrency only requires that each task makes progress.",
+  "explanation": "Slides 4.8-4.9: concurrency supports more than one task making progress; on a single processor/core, the scheduler provides concurrency by interleaving execution.",
+  "source": {
+   "kind": "generated"
+  },
+  "syllabus_ref": {
+   "file": "CH-4-Updated.pdf",
+   "slides": [
+    8,
+    9
+   ]
+  },
+  "review_status": "approved"
+ },
+ {
+  "id": "c4-029",
+  "unit": 4,
+  "topic": "Multicore Programming",
+  "difficulty": "easy",
+  "question": "Distributing threads across cores, with each thread performing a unique operation, is called:",
+  "options": [
+   "Data splitting",
+   "Many-to-one mapping",
+   "Data parallelism",
+   "Task parallelism"
+  ],
+  "answer": 3,
+  "hint": "Here the work differs between cores, not just the data.",
+  "explanation": "Slide 4.10: task parallelism distributes threads across cores, each thread performing a unique operation.",
+  "source": {
+   "kind": "generated"
+  },
+  "syllabus_ref": {
+   "file": "CH-4-Updated.pdf",
+   "slides": [
+    10,
+    11
+   ]
+  },
+  "review_status": "approved"
+ },
+ {
+  "id": "c4-030",
+  "unit": 4,
+  "topic": "Multicore Programming",
+  "difficulty": "hard",
+  "question": "A program on a four-core system has one thread that compresses a file, one that encrypts network data, one that updates the display and one that checks spelling, all running at the same time. Which type of parallelism is this?",
+  "options": [
+   "Many-to-one threading",
+   "Concurrency on a single core",
+   "Task parallelism",
+   "Data parallelism"
+  ],
+  "answer": 2,
+  "hint": "Ask whether the threads perform the same operation or different ones.",
+  "explanation": "Slide 4.10: task parallelism distributes threads across cores, each performing a unique operation. Data parallelism would require the same operation on subsets of the same data.",
+  "source": {
+   "kind": "generated"
+  },
+  "syllabus_ref": {
+   "file": "CH-4-Updated.pdf",
+   "slides": [
+    10,
+    11
+   ]
+  },
+  "review_status": "approved"
+ },
+ {
+  "id": "c4-031",
+  "unit": 4,
+  "topic": "User and Kernel Threads",
+  "difficulty": "easy",
+  "question": "User threads are managed by:",
+  "options": [
+   "The kernel only",
+   "A user-level threads library",
+   "The device controller",
+   "The bootstrap loader"
+  ],
+  "answer": 1,
+  "hint": "Kernel threads, by contrast, are supported by the kernel.",
+  "explanation": "Slide 4.12: user threads - management done by a user-level threads library; kernel threads are supported by the kernel.",
+  "source": {
+   "kind": "generated"
+  },
+  "syllabus_ref": {
+   "file": "CH-4-Updated.pdf",
+   "slides": [
+    12,
+    13
+   ]
+  },
+  "review_status": "approved"
+ },
+ {
+  "id": "c4-032",
+  "unit": 4,
+  "topic": "User and Kernel Threads",
+  "difficulty": "easy",
+  "question": "Which of the following is NOT one of the three primary thread libraries mentioned in the slides?",
+  "options": [
+   "Windows threads",
+   "OpenGL threads",
+   "POSIX Pthreads",
+   "Java threads"
+  ],
+  "answer": 1,
+  "hint": "One library comes from a POSIX standard, one from Microsoft and one from a language runtime.",
+  "explanation": "Slide 4.12: three primary thread libraries are POSIX Pthreads, Windows threads and Java threads.",
+  "source": {
+   "kind": "generated"
+  },
+  "syllabus_ref": {
+   "file": "CH-4-Updated.pdf",
+   "slides": [
+    12
+   ]
+  },
+  "review_status": "approved"
+ },
+ {
+  "id": "c4-033",
+  "unit": 4,
+  "topic": "User and Kernel Threads",
+  "difficulty": "easy",
+  "question": "Which operating systems support kernel threads, according to the slides?",
+  "options": [
+   "Only Windows",
+   "Only real-time operating systems",
+   "None; kernel threads are a theoretical concept",
+   "Virtually all general-purpose operating systems, such as Windows, Linux, Mac OS X, iOS and Android"
+  ],
+  "answer": 3,
+  "hint": "The list on the slide is long.",
+  "explanation": "Slide 4.12: kernel threads are supported by virtually all general-purpose operating systems, including Windows, Linux, Mac OS X, iOS and Android.",
+  "source": {
+   "kind": "generated"
+  },
+  "syllabus_ref": {
+   "file": "CH-4-Updated.pdf",
+   "slides": [
+    12
+   ]
+  },
+  "review_status": "approved"
+ },
+ {
+  "id": "c4-034",
+  "unit": 4,
+  "topic": "Multithreading Models",
+  "difficulty": "medium",
+  "question": "Why may multiple threads of a process using the many-to-one model fail to run in parallel on a multicore system?",
+  "options": [
+   "Each thread needs its own core and memory",
+   "The kernel creates too many kernel threads",
+   "Only one thread may be in the kernel at a time",
+   "User threads cannot be scheduled at all"
+  ],
+  "answer": 2,
+  "hint": "Count the kernel threads available to the process.",
+  "explanation": "Slide 4.15: multiple threads may not run in parallel on a multicore system because only one may be in the kernel at a time. Few systems currently use this model.",
+  "source": {
+   "kind": "generated"
+  },
+  "syllabus_ref": {
+   "file": "CH-4-Updated.pdf",
+   "slides": [
+    15
+   ]
+  },
+  "review_status": "approved"
+ },
+ {
+  "id": "c4-035",
+  "unit": 4,
+  "topic": "Multithreading Models",
+  "difficulty": "easy",
+  "question": "In which model does creating a user-level thread create a kernel thread?",
+  "options": [
+   "None of the mentioned",
+   "Many-to-one",
+   "One-to-one",
+   "Many-to-many"
+  ],
+  "answer": 2,
+  "hint": "Each user thread is paired with exactly one kernel thread.",
+  "explanation": "Slide 4.16: in one-to-one, each user-level thread maps to a kernel thread, and creating a user-level thread creates a kernel thread.",
+  "source": {
+   "kind": "generated"
+  },
+  "syllabus_ref": {
+   "file": "CH-4-Updated.pdf",
+   "slides": [
+    16
+   ]
+  },
+  "review_status": "approved"
+ },
+ {
+  "id": "c4-036",
+  "unit": 4,
+  "topic": "Multithreading Models",
+  "difficulty": "medium",
+  "question": "What is a disadvantage of the one-to-one model?",
+  "options": [
+   "Threads can never run in parallel",
+   "It provides less concurrency than many-to-one",
+   "The number of threads per process is sometimes restricted due to overhead",
+   "One blocking thread blocks the whole process"
+  ],
+  "answer": 2,
+  "hint": "Every user thread costs a kernel thread.",
+  "explanation": "Slide 4.16: one-to-one gives more concurrency than many-to-one, but the number of threads per process is sometimes restricted due to overhead.",
+  "source": {
+   "kind": "generated"
+  },
+  "syllabus_ref": {
+   "file": "CH-4-Updated.pdf",
+   "slides": [
+    16
+   ]
+  },
+  "review_status": "approved"
+ },
+ {
+  "id": "c4-037",
+  "unit": 4,
+  "topic": "Multithreading Models",
+  "difficulty": "easy",
+  "question": "Windows and Linux are given as examples of which multithreading model?",
+  "options": [
+   "Many-to-many",
+   "Many-to-one",
+   "One-to-one",
+   "Two-level"
+  ],
+  "answer": 2,
+  "hint": "Solaris Green Threads is the example of a different model.",
+  "explanation": "Slide 4.16: one-to-one examples are Windows and Linux.",
+  "source": {
+   "kind": "generated"
+  },
+  "syllabus_ref": {
+   "file": "CH-4-Updated.pdf",
+   "slides": [
+    16
+   ]
+  },
+  "review_status": "approved"
+ },
+ {
+  "id": "c4-038",
+  "unit": 4,
+  "topic": "Multithreading Models",
+  "difficulty": "medium",
+  "question": "Which model is similar to many-to-many but also allows a user thread to be bound to a kernel thread?",
+  "options": [
+   "Fork-join model",
+   "One-to-one",
+   "Two-level model",
+   "Many-to-one"
+  ],
+  "answer": 2,
+  "hint": "It combines two ideas, hence its name.",
+  "explanation": "Slide 4.18: the two-level model is similar to M:M, except that it allows a user thread to be bound to a kernel thread.",
+  "source": {
+   "kind": "generated"
+  },
+  "syllabus_ref": {
+   "file": "CH-4-Updated.pdf",
+   "slides": [
+    18
+   ]
+  },
+  "review_status": "approved"
+ },
+ {
+  "id": "c4-039",
+  "unit": 4,
+  "topic": "Multithreading Models",
+  "difficulty": "medium",
+  "question": "Windows with the ThreadFiber package is given as an example of which model?",
+  "options": [
+   "Two-level",
+   "Many-to-one",
+   "Many-to-many",
+   "One-to-one"
+  ],
+  "answer": 2,
+  "hint": "The slide says this model is otherwise not very common.",
+  "explanation": "Slide 4.17: many-to-many - Windows with the ThreadFiber package; otherwise not very common.",
+  "source": {
+   "kind": "generated"
+  },
+  "syllabus_ref": {
+   "file": "CH-4-Updated.pdf",
+   "slides": [
+    17
+   ]
+  },
+  "review_status": "approved"
+ },
+ {
+  "id": "c4-040",
+  "unit": 4,
+  "topic": "Multithreading Models",
+  "difficulty": "hard",
+  "question": "A process has 4 user threads mapped with the many-to-one model. On a quad-core machine, one thread calls a blocking read(). How many of the other three threads can continue to run?",
+  "options": [
+   "None",
+   "Three",
+   "Two",
+   "One"
+  ],
+  "answer": 0,
+  "hint": "Think about how many kernel threads exist for this process.",
+  "explanation": "Slide 4.15: in the many-to-one model all user threads share a single kernel thread, so one thread blocking causes all to block, regardless of the number of cores.",
+  "source": {
+   "kind": "generated"
+  },
+  "syllabus_ref": {
+   "file": "CH-4-Updated.pdf",
+   "slides": [
+    15
+   ]
+  },
+  "review_status": "approved"
+ },
+ {
+  "id": "c4-041",
+  "unit": 4,
+  "topic": "Multithreading Models",
+  "difficulty": "hard",
+  "question": "A process creates 6 user-level threads using the one-to-one model. How many kernel threads are created for these user threads?",
+  "options": [
+   "3",
+   "0",
+   "1",
+   "6"
+  ],
+  "answer": 3,
+  "hint": "Look at what creating a user-level thread does in this model.",
+  "explanation": "Slide 4.16: each user-level thread maps to a kernel thread, and creating a user-level thread creates a kernel thread, so 6 user threads give 6 kernel threads.",
+  "source": {
+   "kind": "generated"
+  },
+  "syllabus_ref": {
+   "file": "CH-4-Updated.pdf",
+   "slides": [
+    16
+   ]
+  },
+  "review_status": "approved"
+ },
+ {
+  "id": "c4-042",
+  "unit": 4,
+  "topic": "Thread Libraries",
+  "difficulty": "easy",
+  "question": "A thread library provides the programmer with:",
+  "options": [
+   "An API for creating and managing threads",
+   "A disk scheduling algorithm",
+   "A new kernel",
+   "A bootstrap program"
+  ],
+  "answer": 0,
+  "hint": "It is a programming interface.",
+  "explanation": "Slide 4.19: a thread library provides the programmer with an API for creating and managing threads.",
+  "source": {
+   "kind": "generated"
+  },
+  "syllabus_ref": {
+   "file": "CH-4-Updated.pdf",
+   "slides": [
+    19
+   ]
+  },
+  "review_status": "approved"
+ },
+ {
+  "id": "c4-043",
+  "unit": 4,
+  "topic": "Thread Libraries",
+  "difficulty": "medium",
+  "question": "What are the two primary ways of implementing a thread library?",
+  "options": [
+   "As a device driver, or as a shell",
+   "In the bootstrap loader, or in the BIOS",
+   "Entirely in user space, or as a kernel-level library supported by the OS",
+   "Only in ROM, or only on disk"
+  ],
+  "answer": 2,
+  "hint": "Compare where user threads and kernel threads are managed.",
+  "explanation": "Slide 4.19: the two primary ways are a library entirely in user space, or a kernel-level library supported by the OS.",
+  "source": {
+   "kind": "generated"
+  },
+  "syllabus_ref": {
+   "file": "CH-4-Updated.pdf",
+   "slides": [
+    19
+   ]
+  },
+  "review_status": "approved"
+ },
+ {
+  "id": "c4-044",
+  "unit": 4,
+  "topic": "Thread Libraries",
+  "difficulty": "medium",
+  "question": "Pthreads is best described as:",
+  "options": [
+   "A single implementation used only by Windows",
+   "A POSIX standard API specification, not an implementation",
+   "A kernel module for Linux only",
+   "A Java class for creating threads"
+  ],
+  "answer": 1,
+  "hint": "The API specifies behavior; the implementation is left to library developers.",
+  "explanation": "Slide 4.20: Pthreads is a POSIX standard (IEEE 1003.1c) API for thread creation and synchronization; it is a specification, not an implementation, and may be provided at user or kernel level.",
+  "source": {
+   "kind": "generated"
+  },
+  "syllabus_ref": {
+   "file": "CH-4-Updated.pdf",
+   "slides": [
+    20
+   ]
+  },
+  "review_status": "approved"
+ },
+ {
+  "id": "c4-045",
+  "unit": 4,
+  "topic": "Thread Libraries",
+  "difficulty": "easy",
+  "question": "Pthreads is common in which operating systems?",
+  "options": [
+   "Only Windows",
+   "Only MS-DOS",
+   "UNIX operating systems such as Linux and Mac OS X",
+   "Only embedded systems without an OS"
+  ],
+  "answer": 2,
+  "hint": "Pthreads comes from the POSIX standard.",
+  "explanation": "Slide 4.20: Pthreads is common in UNIX operating systems (Linux and Mac OS X).",
+  "source": {
+   "kind": "generated"
+  },
+  "syllabus_ref": {
+   "file": "CH-4-Updated.pdf",
+   "slides": [
+    20
+   ]
+  },
+  "review_status": "approved"
+ },
+ {
+  "id": "c4-046",
+  "unit": 4,
+  "topic": "Thread Libraries",
+  "difficulty": "easy",
+  "question": "Java threads are managed by:",
+  "options": [
+   "The device controller",
+   "The shell",
+   "The JVM",
+   "The BIOS"
+  ],
+  "answer": 2,
+  "hint": "Java programs run on a virtual machine.",
+  "explanation": "Slide 4.21: Java threads are managed by the JVM, typically using the threads model of the underlying OS.",
+  "source": {
+   "kind": "generated"
+  },
+  "syllabus_ref": {
+   "file": "CH-4-Updated.pdf",
+   "slides": [
+    21
+   ]
+  },
+  "review_status": "approved"
+ },
+ {
+  "id": "c4-047",
+  "unit": 4,
+  "topic": "Thread Libraries",
+  "difficulty": "medium",
+  "question": "What is the standard practice for creating a Java thread?",
+  "options": [
+   "Calling fork()",
+   "Implementing the Runnable interface",
+   "Using the Win32 API",
+   "Extending the Thread class"
+  ],
+  "answer": 1,
+  "hint": "Both ways are possible, but the slide recommends one.",
+  "explanation": "Slide 4.21: Java threads may be created by extending the Thread class or implementing the Runnable interface; standard practice is to implement Runnable.",
+  "source": {
+   "kind": "generated"
+  },
+  "syllabus_ref": {
+   "file": "CH-4-Updated.pdf",
+   "slides": [
+    21,
+    22
+   ]
+  },
+  "review_status": "approved"
+ },
+ {
+  "id": "c4-048",
+  "unit": 4,
+  "topic": "Fork-Join",
+  "difficulty": "easy",
+  "question": "In fork-join parallelism:",
+  "options": [
+   "Threads are never joined",
+   "A single thread is copied into a new process",
+   "Multiple threads (tasks) are forked, and then joined",
+   "Processes are created with fork() and replaced with exec()"
+  ],
+  "answer": 2,
+  "hint": "The name has two steps.",
+  "explanation": "Slide 4.24: in fork-join parallelism, multiple threads (tasks) are forked, and then joined.",
+  "source": {
+   "kind": "generated"
+  },
+  "syllabus_ref": {
+   "file": "CH-4-Updated.pdf",
+   "slides": [
+    24,
+    25
+   ]
+  },
+  "review_status": "approved"
+ },
+ {
+  "id": "c4-049",
+  "unit": 4,
+  "topic": "Threads Overview",
+  "difficulty": "medium",
+  "question": "According to the slides, how do multiple threads affect application code?",
+  "options": [
+   "They can simplify code and increase efficiency",
+   "They require one process per task",
+   "They prevent the use of shared data",
+   "They always make code slower"
+  ],
+  "answer": 0,
+  "hint": "Look at the Motivation slide.",
+  "explanation": "Slide 4.4: using threads can simplify code and increase efficiency.",
+  "source": {
+   "kind": "generated"
+  },
+  "syllabus_ref": {
+   "file": "CH-4-Updated.pdf",
+   "slides": [
+    4
+   ]
+  },
+  "review_status": "approved"
+ },
+ {
+  "id": "c4-050",
+  "unit": 4,
+  "topic": "Multicore Programming",
+  "difficulty": "hard",
+  "question": "Four threads on a single-core system are scheduled one after another in short time slices. Which statement is correct?",
+  "options": [
+   "The threads run neither concurrently nor in parallel",
+   "The threads run concurrently but not in parallel",
+   "The threads run in parallel",
+   "The threads use task parallelism"
+  ],
+  "answer": 1,
+  "hint": "Parallelism needs more than one task executing at the same instant.",
+  "explanation": "Slides 4.8-4.9: on a single core the scheduler provides concurrency (all tasks make progress), but parallelism requires a multicore system.",
+  "source": {
+   "kind": "generated"
+  },
+  "syllabus_ref": {
+   "file": "CH-4-Updated.pdf",
+   "slides": [
+    8,
+    9
+   ]
+  },
+  "review_status": "approved"
+ },
+ {
+  "id": "c4-051",
+  "unit": 4,
+  "topic": "Multicore Programming",
+  "difficulty": "medium",
+  "question": "The multicore programming challenge of ensuring tasks perform equal work of equal value is called:",
+  "options": [
+   "Data dependency",
+   "Balance",
+   "Testing and debugging",
+   "Data splitting"
+  ],
+  "answer": 1,
+  "hint": "It is about how fairly the work is distributed.",
+  "explanation": "Slide 4.8 lists the challenges of multicore programming: dividing activities, balance, data splitting, data dependency, and testing and debugging. Balance means making sure the parallel tasks do comparable amounts of work.",
+  "source": {
+   "kind": "generated"
+  },
+  "syllabus_ref": {
+   "file": "CH-4-Updated.pdf",
+   "slides": [
+    8
+   ]
+  },
+  "review_status": "approved"
+ },
+ {
+  "id": "c4-052",
+  "unit": 4,
+  "topic": "User and Kernel Threads",
+  "difficulty": "medium",
+  "question": "Which statement correctly contrasts user threads and kernel threads?",
+  "options": [
+   "User threads are supported by the kernel; kernel threads are managed by a user library",
+   "Both are managed only by the JVM",
+   "Neither can be used on Linux",
+   "User threads are managed by a user-level library; kernel threads are supported by the kernel"
+  ],
+  "answer": 3,
+  "hint": "The names indicate where the management happens.",
+  "explanation": "Slide 4.12: user threads - management done by a user-level threads library; kernel threads - supported by the kernel.",
+  "source": {
+   "kind": "generated"
+  },
+  "syllabus_ref": {
+   "file": "CH-4-Updated.pdf",
+   "slides": [
+    12,
+    13
+   ]
+  },
+  "review_status": "approved"
+ }
+]

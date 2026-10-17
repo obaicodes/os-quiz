@@ -1,0 +1,6984 @@
+[
+ {
+  "id": "c5-c001",
+  "unit": 5,
+  "topic": "Scheduling Criteria",
+  "difficulty": "easy",
+  "question": "Which of the following is NOT one of the CPU scheduling criteria?",
+  "options": [
+   "Throughput",
+   "CPU utilization",
+   "Waiting time",
+   "Memory size"
+  ],
+  "answer": 3,
+  "hint": "The criteria are measured in time or in processes completed.",
+  "explanation": "Slide 5.8: the scheduling criteria are CPU utilization, throughput, turnaround time, waiting time and response time.",
+  "source": {
+   "kind": "leak",
+   "refs": [
+    "L01-04"
+   ]
+  },
+  "syllabus_ref": {
+   "file": "CH-5-Updated.pdf",
+   "slides": [
+    8
+   ]
+  },
+  "review_status": "approved"
+ },
+ {
+  "id": "c5-c002",
+  "unit": 5,
+  "topic": "Multiple-Processor Scheduling",
+  "difficulty": "easy",
+  "question": "The recent trend of placing multiple processor cores on the same physical chip produces:",
+  "options": [
+   "Clustered systems",
+   "Distributed systems",
+   "Multicore processors",
+   "Cloud systems"
+  ],
+  "answer": 2,
+  "hint": "The result is faster and consumes less power.",
+  "explanation": "Slide 5.33: the recent trend is to place multiple processor cores on the same physical chip (multicore processors), which is faster and consumes less power.",
+  "source": {
+   "kind": "leak",
+   "refs": [
+    "L01-09"
+   ]
+  },
+  "syllabus_ref": {
+   "file": "CH-5-Updated.pdf",
+   "slides": [
+    33
+   ]
+  },
+  "review_status": "approved"
+ },
+ {
+  "id": "c5-c003",
+  "unit": 5,
+  "topic": "Priority Scheduling",
+  "difficulty": "easy",
+  "question": "Gradually increasing the priority of processes that have been waiting in the system for a long time is called:",
+  "options": [
+   "Starvation",
+   "Aging",
+   "Time quantum",
+   "Convoy effect"
+  ],
+  "answer": 1,
+  "hint": "It is the solution, not the problem.",
+  "explanation": "Slide 5.19: problem - starvation (low-priority processes may never execute); solution - aging (as time progresses, increase the priority of the process).",
+  "source": {
+   "kind": "leak",
+   "refs": [
+    "L02-04",
+    "L14-12",
+    "L06-08"
+   ]
+  },
+  "syllabus_ref": {
+   "file": "CH-5-Updated.pdf",
+   "slides": [
+    19
+   ]
+  },
+  "review_status": "approved"
+ },
+ {
+  "id": "c5-c004",
+  "unit": 5,
+  "topic": "Priority Scheduling",
+  "difficulty": "easy",
+  "question": "When low-priority processes may wait for a very long time or never get to execute, the problem is called:",
+  "options": [
+   "Convoy effect",
+   "Starvation",
+   "Aging",
+   "Dispatch latency"
+  ],
+  "answer": 1,
+  "hint": "Other processes keep getting ahead of them.",
+  "explanation": "Slide 5.19: starvation - low-priority processes may never execute.",
+  "source": {
+   "kind": "leak",
+   "refs": [
+    "L02-10",
+    "L15-12",
+    "L05-178",
+    "L02-06"
+   ]
+  },
+  "syllabus_ref": {
+   "file": "CH-5-Updated.pdf",
+   "slides": [
+    19
+   ]
+  },
+  "review_status": "approved"
+ },
+ {
+  "id": "c5-c005",
+  "unit": 5,
+  "topic": "Scheduling Criteria",
+  "difficulty": "easy",
+  "question": "Scheduling-algorithm optimization criteria include all of the following EXCEPT:",
+  "options": [
+   "Maximize CPU utilization",
+   "Maximize throughput",
+   "Maximize turnaround time",
+   "Minimize response time"
+  ],
+  "answer": 2,
+  "hint": "Time spent by processes should go down, not up.",
+  "explanation": "Slide 5.9: max CPU utilization, max throughput, min turnaround time, min waiting time, min response time.",
+  "source": {
+   "kind": "leak",
+   "refs": [
+    "L17-18",
+    "L02-08",
+    "L08-16"
+   ]
+  },
+  "syllabus_ref": {
+   "file": "CH-5-Updated.pdf",
+   "slides": [
+    9
+   ]
+  },
+  "review_status": "approved"
+ },
+ {
+  "id": "c5-c006",
+  "unit": 5,
+  "topic": "Scheduling Criteria",
+  "difficulty": "easy",
+  "question": "When comparing two CPU scheduling algorithms, the better one (other things equal) has:",
+  "options": [
+   "Lower throughput",
+   "Higher throughput",
+   "Higher waiting time",
+   "Higher response time"
+  ],
+  "answer": 1,
+  "hint": "Throughput counts completed processes per time unit.",
+  "explanation": "Slide 5.9: the optimization goal is maximum throughput, so the algorithm with higher throughput is considered better.",
+  "source": {
+   "kind": "leak",
+   "refs": [
+    "L03-21"
+   ]
+  },
+  "syllabus_ref": {
+   "file": "CH-5-Updated.pdf",
+   "slides": [
+    8,
+    9
+   ]
+  },
+  "review_status": "approved"
+ },
+ {
+  "id": "c5-c007",
+  "unit": 5,
+  "topic": "Scheduling Criteria",
+  "difficulty": "easy",
+  "question": "CPU scheduling aims to:",
+  "options": [
+   "Minimize CPU utilization and maximize response time",
+   "Maximize waiting time",
+   "Maximize CPU utilization and minimize response time",
+   "Keep the CPU idle as much as possible"
+  ],
+  "answer": 2,
+  "hint": "Keep the CPU as busy as possible.",
+  "explanation": "Slides 5.8-5.9: CPU utilization should be maximized (keep the CPU as busy as possible) and response time minimized.",
+  "source": {
+   "kind": "leak",
+   "refs": [
+    "L08-15",
+    "L08-17"
+   ]
+  },
+  "syllabus_ref": {
+   "file": "CH-5-Updated.pdf",
+   "slides": [
+    8,
+    9
+   ]
+  },
+  "review_status": "approved"
+ },
+ {
+  "id": "c5-c008",
+  "unit": 5,
+  "topic": "Shortest-Job-First",
+  "difficulty": "easy",
+  "question": "Which scheduling algorithm is optimal, giving the minimum average waiting time for a given set of processes?",
+  "options": [
+   "SJF",
+   "FCFS",
+   "Priority",
+   "Round Robin"
+  ],
+  "answer": 0,
+  "hint": "Its difficulty is knowing the length of the next CPU request.",
+  "explanation": "Slide 5.12: SJF is optimal - it gives the minimum average waiting time for a given set of processes.",
+  "source": {
+   "kind": "leak",
+   "refs": [
+    "L08-07",
+    "L14-21",
+    "L02-13"
+   ]
+  },
+  "syllabus_ref": {
+   "file": "CH-5-Updated.pdf",
+   "slides": [
+    12
+   ]
+  },
+  "review_status": "approved"
+ },
+ {
+  "id": "c5-c009",
+  "unit": 5,
+  "topic": "Dispatcher",
+  "difficulty": "easy",
+  "question": "Which module gives control of the CPU to the process selected by the short-term scheduler?",
+  "options": [
+   "Dispatcher",
+   "Long-term scheduler",
+   "CPU scheduler",
+   "Bootstrap loader"
+  ],
+  "answer": 0,
+  "hint": "The scheduler chooses; this module hands over the CPU.",
+  "explanation": "Slide 5.7: the dispatcher module gives control of the CPU to the process selected by the short-term scheduler.",
+  "source": {
+   "kind": "leak",
+   "refs": [
+    "L03-13",
+    "L08-27"
+   ]
+  },
+  "syllabus_ref": {
+   "file": "CH-5-Updated.pdf",
+   "slides": [
+    7
+   ]
+  },
+  "review_status": "approved"
+ },
+ {
+  "id": "c5-c010",
+  "unit": 5,
+  "topic": "FCFS Scheduling",
+  "difficulty": "easy",
+  "question": "In which scheduling algorithm can the convoy effect happen?",
+  "options": [
+   "SJF",
+   "FCFS",
+   "Round Robin",
+   "SRTF"
+  ],
+  "answer": 1,
+  "hint": "Short processes get stuck behind a long one that arrived earlier.",
+  "explanation": "Slide 5.11: FCFS suffers from the convoy effect - a short process behind a long process.",
+  "source": {
+   "kind": "leak",
+   "refs": [
+    "L03-19",
+    "L10-01"
+   ]
+  },
+  "syllabus_ref": {
+   "file": "CH-5-Updated.pdf",
+   "slides": [
+    10,
+    11
+   ]
+  },
+  "review_status": "approved"
+ },
+ {
+  "id": "c5-c011",
+  "unit": 5,
+  "topic": "FCFS Scheduling",
+  "difficulty": "easy",
+  "question": "The convoy effect is:",
+  "options": [
+   "Low-priority processes never executing",
+   "Increasing the priority of old processes",
+   "The time to stop one process and start another",
+   "Short processes waiting behind a long process"
+  ],
+  "answer": 3,
+  "hint": "Think of slow traffic behind a truck.",
+  "explanation": "Slide 5.11: convoy effect - short process behind long process.",
+  "source": {
+   "kind": "leak",
+   "refs": [
+    "L15-18"
+   ]
+  },
+  "syllabus_ref": {
+   "file": "CH-5-Updated.pdf",
+   "slides": [
+    11
+   ]
+  },
+  "review_status": "approved"
+ },
+ {
+  "id": "c5-c012",
+  "unit": 5,
+  "topic": "FCFS Scheduling",
+  "difficulty": "medium",
+  "question": "Consider one CPU-bound process and many I/O-bound processes under FCFS. Which processes suffer from the convoy effect?",
+  "options": [
+   "Only processes with high priority",
+   "The short I/O-bound processes stuck behind the long CPU-bound process",
+   "No process, since FCFS has no convoy effect",
+   "The CPU-bound process stuck behind the I/O-bound ones"
+  ],
+  "answer": 1,
+  "hint": "Who has the long CPU burst?",
+  "explanation": "Slide 5.11: the convoy effect is short processes waiting behind a long process; with one CPU-bound and many I/O-bound processes, the I/O-bound ones wait behind the CPU-bound one.",
+  "source": {
+   "kind": "leak",
+   "refs": [
+    "L04-08"
+   ]
+  },
+  "syllabus_ref": {
+   "file": "CH-5-Updated.pdf",
+   "slides": [
+    11
+   ]
+  },
+  "review_status": "approved"
+ },
+ {
+  "id": "c5-c013",
+  "unit": 5,
+  "topic": "CPU Scheduler",
+  "difficulty": "easy",
+  "question": "Another name for the short-term scheduler is the:",
+  "options": [
+   "Dispatcher",
+   "Job scheduler",
+   "CPU scheduler",
+   "Long-term scheduler"
+  ],
+  "answer": 2,
+  "hint": "It selects a process from the ready queue and allocates it a CPU core.",
+  "explanation": "Slides 5.6-5.7: the CPU scheduler (short-term scheduler) selects from among the processes in the ready queue and allocates a CPU core to one of them.",
+  "source": {
+   "kind": "leak",
+   "refs": [
+    "L04-01",
+    "L08-26"
+   ]
+  },
+  "syllabus_ref": {
+   "file": "CH-5-Updated.pdf",
+   "slides": [
+    6,
+    7
+   ]
+  },
+  "review_status": "approved"
+ },
+ {
+  "id": "c5-c014",
+  "unit": 5,
+  "topic": "Round Robin",
+  "difficulty": "easy",
+  "question": "When the time quantum is very large, Round Robin behaves like:",
+  "options": [
+   "Priority scheduling",
+   "Multilevel queue",
+   "FCFS",
+   "SJF"
+  ],
+  "answer": 2,
+  "hint": "Every process finishes within its first time slice.",
+  "explanation": "Slide 5.15: performance - q large => FIFO (FCFS).",
+  "source": {
+   "kind": "leak",
+   "refs": [
+    "L04-09"
+   ]
+  },
+  "syllabus_ref": {
+   "file": "CH-5-Updated.pdf",
+   "slides": [
+    15
+   ]
+  },
+  "review_status": "approved"
+ },
+ {
+  "id": "c5-c015",
+  "unit": 5,
+  "topic": "Priority Scheduling",
+  "difficulty": "easy",
+  "question": "SJF and priority scheduling suffer from the __________ problem, which can be solved by __________.",
+  "options": [
+   "throughput, CPU bursts",
+   "starvation, aging",
+   "dispatch latency, swapping",
+   "convoy effect, round robin"
+  ],
+  "answer": 1,
+  "hint": "Low-priority (or long) processes might never run.",
+  "explanation": "Slide 5.19: SJF is a priority scheduling algorithm; the problem is starvation and the solution is aging.",
+  "source": {
+   "kind": "leak",
+   "refs": [
+    "L16-14",
+    "L04-15",
+    "L17-08"
+   ]
+  },
+  "syllabus_ref": {
+   "file": "CH-5-Updated.pdf",
+   "slides": [
+    19
+   ]
+  },
+  "review_status": "approved"
+ },
+ {
+  "id": "c5-c016",
+  "unit": 5,
+  "topic": "Round Robin",
+  "difficulty": "easy",
+  "question": "Which CPU-scheduling algorithm is always preemptive?",
+  "options": [
+   "Priority",
+   "SJF",
+   "FCFS",
+   "Round Robin"
+  ],
+  "answer": 3,
+  "hint": "Its preemption is driven by a timer interrupt every quantum.",
+  "explanation": "Slide 5.15: in RR, after the time quantum elapses the process is preempted and added to the end of the ready queue. SJF and priority can be preemptive or not; FCFS is nonpreemptive.",
+  "source": {
+   "kind": "leak",
+   "refs": [
+    "L04-23",
+    "L14-09"
+   ]
+  },
+  "syllabus_ref": {
+   "file": "CH-5-Updated.pdf",
+   "slides": [
+    15
+   ]
+  },
+  "review_status": "approved"
+ },
+ {
+  "id": "c5-c017",
+  "unit": 5,
+  "topic": "Priority Scheduling",
+  "difficulty": "medium",
+  "question": "SJF is a special case of priority scheduling where the priority is:",
+  "options": [
+   "The time quantum",
+   "The process ID",
+   "The arrival time",
+   "The inverse of the predicted next CPU burst time"
+  ],
+  "answer": 3,
+  "hint": "Shorter jobs get better priority.",
+  "explanation": "Slide 5.19: SJF is priority scheduling where priority is the inverse of the predicted next CPU burst time.",
+  "source": {
+   "kind": "leak",
+   "refs": [
+    "L04-27"
+   ]
+  },
+  "syllabus_ref": {
+   "file": "CH-5-Updated.pdf",
+   "slides": [
+    19
+   ]
+  },
+  "review_status": "approved"
+ },
+ {
+  "id": "c5-c018",
+  "unit": 5,
+  "topic": "Dispatcher",
+  "difficulty": "easy",
+  "question": "Dispatch latency is:",
+  "options": [
+   "The time it takes for the dispatcher to stop one process and start another running",
+   "The time a process spends in the ready queue",
+   "The length of a time quantum",
+   "The time from submission to completion"
+  ],
+  "answer": 0,
+  "hint": "It is the cost of handing the CPU over.",
+  "explanation": "Slide 5.7: dispatch latency - time it takes for the dispatcher to stop one process and start another running.",
+  "source": {
+   "kind": "leak",
+   "refs": [
+    "L05-115",
+    "L08-25"
+   ]
+  },
+  "syllabus_ref": {
+   "file": "CH-5-Updated.pdf",
+   "slides": [
+    7
+   ]
+  },
+  "review_status": "approved"
+ },
+ {
+  "id": "c5-c019",
+  "unit": 5,
+  "topic": "Round Robin",
+  "difficulty": "medium",
+  "question": "In Round Robin scheduling, as the time quantum increases, the average turnaround time:",
+  "options": [
+   "Varies (it does not change in one fixed direction)",
+   "Always increases",
+   "Remains constant",
+   "Always decreases"
+  ],
+  "answer": 0,
+  "hint": "Look at the graph of turnaround time versus time quantum.",
+  "explanation": "Slide 5.18: 'Turnaround Time Varies With The Time Quantum' - the graph is not monotonic.",
+  "source": {
+   "kind": "leak",
+   "refs": [
+    "L05-243"
+   ]
+  },
+  "syllabus_ref": {
+   "file": "CH-5-Updated.pdf",
+   "slides": [
+    18
+   ]
+  },
+  "review_status": "approved"
+ },
+ {
+  "id": "c5-c020",
+  "unit": 5,
+  "topic": "FCFS Scheduling",
+  "difficulty": "easy",
+  "question": "Which of the following scheduling algorithms must be nonpreemptive?",
+  "options": [
+   "Priority",
+   "Round Robin",
+   "FCFS",
+   "SJF"
+  ],
+  "answer": 2,
+  "hint": "Two of the others have both preemptive and nonpreemptive versions.",
+  "explanation": "Slides 5.10, 5.14 and 5.19: SJF has a preemptive version (SRTF), priority can be preemptive or nonpreemptive, RR is preemptive; FCFS runs each process until it finishes or waits.",
+  "source": {
+   "kind": "leak",
+   "refs": [
+    "L17-09",
+    "L05-340",
+    "L05-282"
+   ]
+  },
+  "syllabus_ref": {
+   "file": "CH-5-Updated.pdf",
+   "slides": [
+    10,
+    14,
+    19
+   ]
+  },
+  "review_status": "approved"
+ },
+ {
+  "id": "c5-c021",
+  "unit": 5,
+  "topic": "CPU Scheduler",
+  "difficulty": "medium",
+  "question": "The strategy of allowing a process that is logically runnable to be temporarily suspended (the CPU is taken away from it) is called:",
+  "options": [
+   "Aging",
+   "Nonpreemptive scheduling",
+   "Preemptive scheduling",
+   "FCFS scheduling"
+  ],
+  "answer": 2,
+  "hint": "The process did not ask to give up the CPU.",
+  "explanation": "Slide 5.6: scheduling when a process switches from running to ready (or waiting to ready) is preemptive; the running process loses the CPU even though it could continue.",
+  "source": {
+   "kind": "leak",
+   "refs": [
+    "L05-294",
+    "L05-241"
+   ]
+  },
+  "syllabus_ref": {
+   "file": "CH-5-Updated.pdf",
+   "slides": [
+    6
+   ]
+  },
+  "review_status": "approved"
+ },
+ {
+  "id": "c5-c022",
+  "unit": 5,
+  "topic": "FCFS Scheduling",
+  "difficulty": "easy",
+  "question": "Which scheduling algorithm allocates the CPU first to the process that requests the CPU first?",
+  "options": [
+   "Priority",
+   "First-Come, First-Served",
+   "Round Robin",
+   "Shortest-Job-First"
+  ],
+  "answer": 1,
+  "hint": "It is also the simplest algorithm.",
+  "explanation": "Slide 5.10: FCFS allocates the CPU in order of arrival.",
+  "source": {
+   "kind": "leak",
+   "refs": [
+    "L08-13",
+    "L05-312",
+    "L09-01"
+   ]
+  },
+  "syllabus_ref": {
+   "file": "CH-5-Updated.pdf",
+   "slides": [
+    10
+   ]
+  },
+  "review_status": "approved"
+ },
+ {
+  "id": "c5-c023",
+  "unit": 5,
+  "topic": "Shortest-Job-First",
+  "difficulty": "easy",
+  "question": "The SJF algorithm executes first the process:",
+  "options": [
+   "That entered the queue last",
+   "With the highest process ID",
+   "With the shortest next CPU burst",
+   "That entered the queue first"
+  ],
+  "answer": 2,
+  "hint": "Each process is associated with the length of its next CPU burst.",
+  "explanation": "Slide 5.12: SJF associates each process with the length of its next CPU burst and schedules the process with the shortest time.",
+  "source": {
+   "kind": "leak",
+   "refs": [
+    "L05-331"
+   ]
+  },
+  "syllabus_ref": {
+   "file": "CH-5-Updated.pdf",
+   "slides": [
+    12
+   ]
+  },
+  "review_status": "approved"
+ },
+ {
+  "id": "c5-c024",
+  "unit": 5,
+  "topic": "Multiple-Processor Scheduling",
+  "difficulty": "easy",
+  "question": "CPU scheduling becomes more complex when:",
+  "options": [
+   "All processes are I/O-bound",
+   "Only one process exists",
+   "Multiple CPUs are available",
+   "The time quantum is large"
+  ],
+  "answer": 2,
+  "hint": "The slide title is Multiple-Processor Scheduling.",
+  "explanation": "Slide 5.31: CPU scheduling is more complex when multiple CPUs are available.",
+  "source": {
+   "kind": "leak",
+   "refs": [
+    "L06-09"
+   ]
+  },
+  "syllabus_ref": {
+   "file": "CH-5-Updated.pdf",
+   "slides": [
+    31,
+    32
+   ]
+  },
+  "review_status": "approved"
+ },
+ {
+  "id": "c5-c025",
+  "unit": 5,
+  "topic": "CPU Scheduler",
+  "difficulty": "medium",
+  "question": "Scheduling is nonpreemptive only when it takes place because a process:",
+  "options": [
+   "Switches from running to ready",
+   "Switches from running to ready, or from waiting to ready",
+   "Switches from waiting to ready",
+   "Switches from running to waiting, or terminates"
+  ],
+  "answer": 3,
+  "hint": "In these cases the process gives up the CPU by itself.",
+  "explanation": "Slide 5.6: scheduling decisions happen when a process (1) switches running -> waiting, (2) running -> ready, (3) waiting -> ready, (4) terminates. Scheduling under 1 and 4 is nonpreemptive; all others are preemptive.",
+  "source": {
+   "kind": "leak",
+   "refs": [
+    "L11-11",
+    "L06-10",
+    "L08-08"
+   ]
+  },
+  "syllabus_ref": {
+   "file": "CH-5-Updated.pdf",
+   "slides": [
+    6
+   ]
+  },
+  "review_status": "approved"
+ },
+ {
+  "id": "c5-c026",
+  "unit": 5,
+  "topic": "CPU Scheduler",
+  "difficulty": "easy",
+  "question": "Under nonpreemptive scheduling, once the CPU has been allocated to a process, the process keeps it until it:",
+  "options": [
+   "Has run for one time quantum",
+   "Terminates or switches to the waiting state",
+   "Is preempted by a higher-priority process",
+   "Switches to the ready state"
+  ],
+  "answer": 1,
+  "hint": "Nonpreemptive means the CPU is never taken away.",
+  "explanation": "Slide 5.6: nonpreemptive scheduling happens only when the running process switches to waiting or terminates.",
+  "source": {
+   "kind": "leak",
+   "refs": [
+    "L14-20"
+   ]
+  },
+  "syllabus_ref": {
+   "file": "CH-5-Updated.pdf",
+   "slides": [
+    6
+   ]
+  },
+  "review_status": "approved"
+ },
+ {
+  "id": "c5-c027",
+  "unit": 5,
+  "topic": "Basic Concepts",
+  "difficulty": "medium",
+  "question": "An I/O-bound program typically has:",
+  "options": [
+   "No CPU bursts at all",
+   "Many very short CPU bursts",
+   "Many very long CPU bursts",
+   "A few very long CPU bursts"
+  ],
+  "answer": 1,
+  "hint": "It spends most of its time waiting for I/O.",
+  "explanation": "Slide 5.4: process execution is a cycle of CPU execution and I/O wait. An I/O-bound program does little computing between I/O requests, so it has many short CPU bursts; a CPU-bound program has fewer, longer bursts.",
+  "source": {
+   "kind": "leak",
+   "refs": [
+    "L08-01",
+    "L18-24"
+   ]
+  },
+  "syllabus_ref": {
+   "file": "CH-5-Updated.pdf",
+   "slides": [
+    4
+   ]
+  },
+  "review_status": "approved"
+ },
+ {
+  "id": "c5-c028",
+  "unit": 5,
+  "topic": "CPU Scheduler",
+  "difficulty": "easy",
+  "question": "A process is selected from the __________ queue by the __________ scheduler to be executed on the CPU.",
+  "options": [
+   "wait, short-term",
+   "wait, long-term",
+   "ready, long-term",
+   "ready, short-term (CPU)"
+  ],
+  "answer": 3,
+  "hint": "The selected process must already be ready.",
+  "explanation": "Slide 5.6: the CPU scheduler selects from among the processes in the ready queue and allocates a CPU core to one of them.",
+  "source": {
+   "kind": "leak",
+   "refs": [
+    "L08-02",
+    "L15-13",
+    "L18-25",
+    "L15-30"
+   ]
+  },
+  "syllabus_ref": {
+   "file": "CH-5-Updated.pdf",
+   "slides": [
+    6
+   ]
+  },
+  "review_status": "approved"
+ },
+ {
+  "id": "c5-c029",
+  "unit": 5,
+  "topic": "Scheduling Criteria",
+  "difficulty": "easy",
+  "question": "Turnaround time is:",
+  "options": [
+   "The time until the first response is produced",
+   "The total time from the arrival of a process until its completion",
+   "The time spent waiting in the ready queue only",
+   "The number of processes completed per time unit"
+  ],
+  "answer": 1,
+  "hint": "Turnaround time = completion time - arrival time.",
+  "explanation": "Slides 5.8 and 5.49: turnaround time is the amount of time to execute a particular process: completion time - arrival time.",
+  "source": {
+   "kind": "leak",
+   "refs": [
+    "L08-03",
+    "L08-09"
+   ]
+  },
+  "syllabus_ref": {
+   "file": "CH-5-Updated.pdf",
+   "slides": [
+    8,
+    49
+   ]
+  },
+  "review_status": "approved"
+ },
+ {
+  "id": "c5-c030",
+  "unit": 5,
+  "topic": "Priority Scheduling",
+  "difficulty": "easy",
+  "question": "In priority scheduling, the CPU is allocated to the process with:",
+  "options": [
+   "The highest priority (the smallest integer)",
+   "The longest burst",
+   "The lowest priority (the largest integer)",
+   "The latest arrival"
+  ],
+  "answer": 0,
+  "hint": "In this course a smaller number means a more important process.",
+  "explanation": "Slides 5.19 and 5.49: the CPU is allocated to the process with the highest priority; the smallest integer is the highest priority.",
+  "source": {
+   "kind": "leak",
+   "refs": [
+    "L08-05"
+   ]
+  },
+  "syllabus_ref": {
+   "file": "CH-5-Updated.pdf",
+   "slides": [
+    19,
+    49
+   ]
+  },
+  "review_status": "approved"
+ },
+ {
+  "id": "c5-c031",
+  "unit": 5,
+  "topic": "Multilevel Queue",
+  "difficulty": "easy",
+  "question": "In which algorithm is the ready queue split into multiple queues, with processes classified into groups and unable to move between queues?",
+  "options": [
+   "SJF",
+   "Round Robin",
+   "Multilevel queue",
+   "Multilevel feedback queue"
+  ],
+  "answer": 2,
+  "hint": "Its 'feedback' version lets processes move.",
+  "explanation": "Slides 5.22-5.24: the multilevel queue's ready queue consists of multiple queues (e.g. prioritized by process type). Only the multilevel feedback queue (slide 5.25) lets a process move between queues.",
+  "source": {
+   "kind": "leak",
+   "refs": [
+    "L08-06",
+    "L14-11"
+   ]
+  },
+  "syllabus_ref": {
+   "file": "CH-5-Updated.pdf",
+   "slides": [
+    22,
+    23,
+    24
+   ]
+  },
+  "review_status": "approved"
+ },
+ {
+  "id": "c5-c032",
+  "unit": 5,
+  "topic": "Multilevel Feedback Queue",
+  "difficulty": "easy",
+  "question": "In which algorithm can a process move between the various queues?",
+  "options": [
+   "Multilevel queue",
+   "FCFS",
+   "Nonpreemptive SJF",
+   "Multilevel feedback queue"
+  ],
+  "answer": 3,
+  "hint": "It defines methods to upgrade and demote processes.",
+  "explanation": "Slide 5.25: in the multilevel feedback queue, a process can move between the various queues.",
+  "source": {
+   "kind": "leak",
+   "refs": [
+    "L08-10",
+    "L14-14",
+    "L08-18"
+   ]
+  },
+  "syllabus_ref": {
+   "file": "CH-5-Updated.pdf",
+   "slides": [
+    25
+   ]
+  },
+  "review_status": "approved"
+ },
+ {
+  "id": "c5-c033",
+  "unit": 5,
+  "topic": "Scheduling Criteria",
+  "difficulty": "easy",
+  "question": "Response time is the amount of time from when a request is submitted until:",
+  "options": [
+   "The process enters the ready queue",
+   "The first response is produced (not the output)",
+   "The process completes",
+   "The output is fully printed"
+  ],
+  "answer": 1,
+  "hint": "It matters most for time-sharing environments.",
+  "explanation": "Slide 5.8: response time - amount of time it takes from when a request was submitted until the first response is produced, not output (for time-sharing environments).",
+  "source": {
+   "kind": "leak",
+   "refs": [
+    "L08-11",
+    "L08-19"
+   ]
+  },
+  "syllabus_ref": {
+   "file": "CH-5-Updated.pdf",
+   "slides": [
+    8,
+    49
+   ]
+  },
+  "review_status": "approved"
+ },
+ {
+  "id": "c5-c034",
+  "unit": 5,
+  "topic": "Basic Concepts",
+  "difficulty": "easy",
+  "question": "Maximum CPU utilization is obtained with:",
+  "options": [
+   "Turning off interrupts",
+   "A single program in memory",
+   "Multiprogramming",
+   "Batch processing with no I/O"
+  ],
+  "answer": 2,
+  "hint": "CPU scheduling is the basis of these operating systems.",
+  "explanation": "Slide 5.4: maximum CPU utilization is obtained with multiprogramming.",
+  "source": {
+   "kind": "leak",
+   "refs": [
+    "L08-12"
+   ]
+  },
+  "syllabus_ref": {
+   "file": "CH-5-Updated.pdf",
+   "slides": [
+    4
+   ]
+  },
+  "review_status": "approved"
+ },
+ {
+  "id": "c5-c035",
+  "unit": 5,
+  "topic": "Round Robin",
+  "difficulty": "easy",
+  "question": "In which algorithm does each process get a small unit of CPU time called the time quantum?",
+  "options": [
+   "Round Robin",
+   "FCFS",
+   "SJF",
+   "Nonpreemptive priority"
+  ],
+  "answer": 0,
+  "hint": "After the quantum elapses the process goes to the end of the ready queue.",
+  "explanation": "Slide 5.15: in RR each process gets a small unit of CPU time (time quantum q), usually 10-100 milliseconds.",
+  "source": {
+   "kind": "leak",
+   "refs": [
+    "L08-14",
+    "L09-03",
+    "L14-13"
+   ]
+  },
+  "syllabus_ref": {
+   "file": "CH-5-Updated.pdf",
+   "slides": [
+    15
+   ]
+  },
+  "review_status": "approved"
+ },
+ {
+  "id": "c5-c036",
+  "unit": 5,
+  "topic": "Round Robin",
+  "difficulty": "easy",
+  "question": "Round Robin is basically a __________ scheduling algorithm designed for __________ systems.",
+  "options": [
+   "preemptive, single-user batch",
+   "nonpreemptive, time-sharing",
+   "preemptive, time-sharing",
+   "nonpreemptive, batch"
+  ],
+  "answer": 2,
+  "hint": "It gives each user a turn quickly.",
+  "explanation": "Slide 5.15: RR preempts a process when its quantum expires; it typically gives better response (slide 5.16), which suits time-sharing.",
+  "source": {
+   "kind": "leak",
+   "refs": [
+    "L08-28",
+    "L09-08"
+   ]
+  },
+  "syllabus_ref": {
+   "file": "CH-5-Updated.pdf",
+   "slides": [
+    15,
+    16
+   ]
+  },
+  "review_status": "approved"
+ },
+ {
+  "id": "c5-c037",
+  "unit": 5,
+  "topic": "Scheduling Algorithms",
+  "difficulty": "easy",
+  "question": "Which of the following is NOT a CPU scheduling algorithm covered in the chapter?",
+  "options": [
+   "Round Robin",
+   "Level-set scheduling",
+   "Multilevel feedback queue",
+   "Shortest-Job-First"
+  ],
+  "answer": 1,
+  "hint": "The covered ones are FCFS, SJF, SRTF, RR, priority and multilevel queues.",
+  "explanation": "Slides 5.10-5.26 cover FCFS, SJF, SRTF, RR, priority (with and without RR), multilevel queue and multilevel feedback queue.",
+  "source": {
+   "kind": "leak",
+   "refs": [
+    "L09-10"
+   ]
+  },
+  "syllabus_ref": {
+   "file": "CH-5-Updated.pdf",
+   "slides": [
+    10,
+    12,
+    15,
+    22,
+    25
+   ]
+  },
+  "review_status": "approved"
+ },
+ {
+  "id": "c5-c038",
+  "unit": 5,
+  "topic": "Round Robin",
+  "difficulty": "easy",
+  "question": "Which scheduling algorithm gives each process an equal share of the CPU (1/n of the CPU time in chunks of at most q)?",
+  "options": [
+   "SJF",
+   "Round Robin",
+   "FCFS",
+   "Priority"
+  ],
+  "answer": 1,
+  "hint": "n processes and a quantum q.",
+  "explanation": "Slide 5.15: with n processes and quantum q, each process gets 1/n of the CPU time in chunks of at most q time units at once.",
+  "source": {
+   "kind": "leak",
+   "refs": [
+    "L10-02"
+   ]
+  },
+  "syllabus_ref": {
+   "file": "CH-5-Updated.pdf",
+   "slides": [
+    15
+   ]
+  },
+  "review_status": "approved"
+ },
+ {
+  "id": "c5-c039",
+  "unit": 5,
+  "topic": "Scheduling Criteria",
+  "difficulty": "easy",
+  "question": "The number of processes that complete their execution per time unit is called:",
+  "options": [
+   "Response time",
+   "Throughput",
+   "Turnaround time",
+   "CPU utilization"
+  ],
+  "answer": 1,
+  "hint": "It counts finished processes.",
+  "explanation": "Slide 5.8: throughput - number of processes that complete their execution per time unit.",
+  "source": {
+   "kind": "leak",
+   "refs": [
+    "L15-35",
+    "L16-16"
+   ]
+  },
+  "syllabus_ref": {
+   "file": "CH-5-Updated.pdf",
+   "slides": [
+    8,
+    49
+   ]
+  },
+  "review_status": "approved"
+ },
+ {
+  "id": "c5-c040",
+  "unit": 5,
+  "topic": "Priority Scheduling",
+  "difficulty": "medium",
+  "question": "In preemptive priority scheduling, when a new process arrives at the ready queue, its priority is compared with the priority of the:",
+  "options": [
+   "Processes in the wait queues",
+   "Process that arrived first",
+   "Process with the longest burst",
+   "Currently running process"
+  ],
+  "answer": 3,
+  "hint": "Preemption can only take the CPU from one process.",
+  "explanation": "Slide 5.19: priority scheduling can be preemptive; the newly arrived process takes the CPU if its priority is higher than the running process's priority.",
+  "source": {
+   "kind": "leak",
+   "refs": [
+    "L17-26"
+   ]
+  },
+  "syllabus_ref": {
+   "file": "CH-5-Updated.pdf",
+   "slides": [
+    19,
+    20
+   ]
+  },
+  "review_status": "approved"
+ },
+ {
+  "id": "c5-c041",
+  "unit": 5,
+  "topic": "Multiple-Processor Scheduling",
+  "difficulty": "medium",
+  "question": "A multiprocessor system has 4 processors, each with 3 cores (one hardware thread per core). What is the maximum number of instructions that can execute at the same time?",
+  "options": [
+   "7",
+   "4",
+   "3",
+   "12"
+  ],
+  "answer": 3,
+  "hint": "Each core can execute independently.",
+  "explanation": "Slide 5.33: each core on the chip can execute in parallel, so 4 processors x 3 cores = 12 instructions at a time.",
+  "source": {
+   "kind": "leak",
+   "refs": [
+    "L18-21"
+   ]
+  },
+  "syllabus_ref": {
+   "file": "CH-5-Updated.pdf",
+   "slides": [
+    33
+   ]
+  },
+  "review_status": "approved"
+ },
+ {
+  "id": "c5-c042",
+  "unit": 5,
+  "topic": "Round Robin",
+  "difficulty": "medium",
+  "question": "Which CPU-scheduling algorithm usually has the highest context-switch overhead?",
+  "options": [
+   "Nonpreemptive SJF",
+   "FCFS",
+   "Round Robin with a small quantum",
+   "Nonpreemptive priority"
+  ],
+  "answer": 2,
+  "hint": "The timer interrupts every quantum to schedule the next process.",
+  "explanation": "Slides 5.15 and 5.17: RR switches every quantum; if q is small, the overhead becomes too high, so q must be large with respect to the context-switch time.",
+  "source": {
+   "kind": "leak",
+   "refs": [
+    "L18-40"
+   ]
+  },
+  "syllabus_ref": {
+   "file": "CH-5-Updated.pdf",
+   "slides": [
+    15,
+    17
+   ]
+  },
+  "review_status": "approved"
+ },
+ {
+  "id": "c5-c043",
+  "unit": 5,
+  "topic": "FCFS Scheduling",
+  "difficulty": "medium",
+  "question": "Three processes arrive at time 0 in the order P2, P3, P1 with CPU bursts P1 = 12 ms, P2 = 1.5 ms and P3 = 1.5 ms. What is the average waiting time under FCFS?",
+  "table": {
+   "headers": [
+    "Process",
+    "Arrival Time",
+    "Burst Time"
+   ],
+   "rows": [
+    [
+     "P2",
+     "0",
+     "1.5"
+    ],
+    [
+     "P3",
+     "0",
+     "1.5"
+    ],
+    [
+     "P1",
+     "0",
+     "12"
+    ]
+   ]
+  },
+  "options": [
+   "12 ms",
+   "1.5 ms",
+   "13 ms",
+   "7.5 ms"
+  ],
+  "answer": 1,
+  "hint": "Run them in the order they arrived; waiting time = start time here.",
+  "explanation": "Slide 5.11 style: P2 0-1.5, P3 1.5-3, P1 3-15. WT: P2 = 0, P3 = 1.5, P1 = 3. Average = 4.5/3 = 1.5 ms.",
+  "source": {
+   "kind": "leak",
+   "refs": [
+    "L09-02"
+   ]
+  },
+  "syllabus_ref": {
+   "file": "CH-5-Updated.pdf",
+   "slides": [
+    10,
+    11,
+    49
+   ]
+  },
+  "review_status": "approved"
+ },
+ {
+  "id": "c5-c044",
+  "unit": 5,
+  "topic": "Round Robin",
+  "difficulty": "hard",
+  "question": "Five processes arrive together in the order P1..P5 with CPU bursts 9, 8, 7, 6 and 5 ms. Round Robin with q = 9 ms produces exactly the same schedule as which algorithm?",
+  "options": [
+   "FCFS",
+   "None of the mentioned",
+   "Nonpreemptive SJF",
+   "Preemptive SJF (SRTF)"
+  ],
+  "answer": 0,
+  "hint": "Can any process be preempted when every burst is at most q?",
+  "explanation": "Slide 5.15: if q is at least as large as every burst, no process is preempted and RR behaves like FIFO, running P1..P5 in arrival order. SJF and SRTF would run the shortest job (P5) first, so they differ.",
+  "source": {
+   "kind": "leak",
+   "refs": [
+    "L15-23",
+    "L15-22"
+   ]
+  },
+  "syllabus_ref": {
+   "file": "CH-5-Updated.pdf",
+   "slides": [
+    15
+   ]
+  },
+  "review_status": "approved"
+ },
+ {
+  "id": "c5-c045",
+  "unit": 5,
+  "topic": "Basic Concepts",
+  "difficulty": "easy",
+  "question": "Process execution consists of a cycle of:",
+  "options": [
+   "CPU execution and I/O wait",
+   "Booting and shutting down",
+   "Forking and joining",
+   "Compiling and linking"
+  ],
+  "answer": 0,
+  "hint": "A CPU burst is followed by an I/O burst.",
+  "explanation": "Slide 5.4: CPU-I/O burst cycle - process execution consists of a cycle of CPU execution and I/O wait; the CPU burst distribution is of main concern.",
+  "source": {
+   "kind": "generated"
+  },
+  "syllabus_ref": {
+   "file": "CH-5-Updated.pdf",
+   "slides": [
+    4
+   ]
+  },
+  "review_status": "approved"
+ },
+ {
+  "id": "c5-c046",
+  "unit": 5,
+  "topic": "CPU Scheduler",
+  "difficulty": "medium",
+  "question": "Which of the following scheduling decision points is preemptive?",
+  "options": [
+   "A process switches from running to waiting",
+   "A process switches from running to ready",
+   "A process terminates",
+   "None of the mentioned"
+  ],
+  "answer": 1,
+  "hint": "In this case the process could still use the CPU.",
+  "explanation": "Slide 5.6: scheduling under (1) running -> waiting and (4) termination is nonpreemptive; all other scheduling, including running -> ready, is preemptive.",
+  "source": {
+   "kind": "generated"
+  },
+  "syllabus_ref": {
+   "file": "CH-5-Updated.pdf",
+   "slides": [
+    6
+   ]
+  },
+  "review_status": "approved"
+ },
+ {
+  "id": "c5-c047",
+  "unit": 5,
+  "topic": "CPU Scheduler",
+  "difficulty": "medium",
+  "question": "Which issue must be considered when using preemptive scheduling?",
+  "options": [
+   "The size of the bootstrap program",
+   "The screen resolution",
+   "The number of hard disk sectors",
+   "Access to shared data"
+  ],
+  "answer": 3,
+  "hint": "A process may be interrupted in the middle of updating something.",
+  "explanation": "Slide 5.6: with preemptive scheduling, consider access to shared data, preemption while in kernel mode, and interrupts occurring during crucial OS activities.",
+  "source": {
+   "kind": "generated"
+  },
+  "syllabus_ref": {
+   "file": "CH-5-Updated.pdf",
+   "slides": [
+    6
+   ]
+  },
+  "review_status": "approved"
+ },
+ {
+  "id": "c5-c048",
+  "unit": 5,
+  "topic": "Dispatcher",
+  "difficulty": "medium",
+  "question": "Which of the following is NOT one of the dispatcher's steps?",
+  "options": [
+   "Switching context",
+   "Selecting which process should run next",
+   "Jumping to the proper location in the user program to restart it",
+   "Switching to user mode"
+  ],
+  "answer": 1,
+  "hint": "The decision is made by another component before the dispatcher acts.",
+  "explanation": "Slide 5.7: the dispatcher gives control of the CPU to the process selected by the short-term scheduler: switching context, switching to user mode, and jumping to the proper location. Selection is the CPU scheduler's job.",
+  "source": {
+   "kind": "generated"
+  },
+  "syllabus_ref": {
+   "file": "CH-5-Updated.pdf",
+   "slides": [
+    6,
+    7
+   ]
+  },
+  "review_status": "approved"
+ },
+ {
+  "id": "c5-c049",
+  "unit": 5,
+  "topic": "Scheduling Criteria",
+  "difficulty": "easy",
+  "question": "Waiting time, as a scheduling criterion, is the amount of time a process has spent:",
+  "options": [
+   "Doing I/O",
+   "From arrival to its first response",
+   "Executing on the CPU",
+   "Waiting in the ready queue"
+  ],
+  "answer": 3,
+  "hint": "It does not include time actually running.",
+  "explanation": "Slide 5.8: waiting time - amount of time a process has been waiting in the ready queue.",
+  "source": {
+   "kind": "generated"
+  },
+  "syllabus_ref": {
+   "file": "CH-5-Updated.pdf",
+   "slides": [
+    8
+   ]
+  },
+  "review_status": "approved"
+ },
+ {
+  "id": "c5-c050",
+  "unit": 5,
+  "topic": "Shortest-Job-First",
+  "difficulty": "medium",
+  "question": "What is the main difficulty of SJF scheduling?",
+  "options": [
+   "It needs a time quantum",
+   "It never gives the minimum average waiting time",
+   "Knowing the length of the next CPU request",
+   "It cannot be used with arriving processes"
+  ],
+  "answer": 2,
+  "hint": "The scheduler would need to predict the future.",
+  "explanation": "Slides 5.12 and 5.14: the difficulty is knowing the length of the next CPU request; it can be asked from the user or estimated, similar to the previous bursts.",
+  "source": {
+   "kind": "generated"
+  },
+  "syllabus_ref": {
+   "file": "CH-5-Updated.pdf",
+   "slides": [
+    12,
+    14
+   ]
+  },
+  "review_status": "approved"
+ },
+ {
+  "id": "c5-c051",
+  "unit": 5,
+  "topic": "Shortest-Job-First",
+  "difficulty": "easy",
+  "question": "The preemptive version of SJF is called:",
+  "options": [
+   "Round Robin",
+   "Multilevel queue",
+   "First-come, first-served",
+   "Shortest-remaining-time-first"
+  ],
+  "answer": 3,
+  "hint": "It compares what is left of each burst.",
+  "explanation": "Slide 5.14: the preemptive version of SJF is called shortest-remaining-time-first.",
+  "source": {
+   "kind": "generated"
+  },
+  "syllabus_ref": {
+   "file": "CH-5-Updated.pdf",
+   "slides": [
+    14
+   ]
+  },
+  "review_status": "approved"
+ },
+ {
+  "id": "c5-c052",
+  "unit": 5,
+  "topic": "Round Robin",
+  "difficulty": "hard",
+  "question": "Round Robin is used with 5 processes in the ready queue and a time quantum of 20 ms. What is the maximum time any process waits before getting its next turn?",
+  "options": [
+   "4 ms",
+   "80 ms",
+   "100 ms",
+   "20 ms"
+  ],
+  "answer": 1,
+  "hint": "Every other process may run one full quantum before it.",
+  "explanation": "Slide 5.15: no process waits more than (n-1)q time units: (5-1) x 20 = 80 ms.",
+  "source": {
+   "kind": "generated"
+  },
+  "syllabus_ref": {
+   "file": "CH-5-Updated.pdf",
+   "slides": [
+    15
+   ]
+  },
+  "review_status": "approved"
+ },
+ {
+  "id": "c5-c053",
+  "unit": 5,
+  "topic": "Round Robin",
+  "difficulty": "medium",
+  "question": "What happens in Round Robin if the time quantum is too small?",
+  "options": [
+   "Processes can never be preempted",
+   "Context-switch overhead becomes too high",
+   "RR becomes FCFS",
+   "Starvation always occurs"
+  ],
+  "answer": 1,
+  "hint": "q must be large with respect to something.",
+  "explanation": "Slide 5.15: q small - q must be large with respect to the context switch, otherwise the overhead is too high.",
+  "source": {
+   "kind": "generated"
+  },
+  "syllabus_ref": {
+   "file": "CH-5-Updated.pdf",
+   "slides": [
+    15,
+    17
+   ]
+  },
+  "review_status": "approved"
+ },
+ {
+  "id": "c5-c054",
+  "unit": 5,
+  "topic": "Round Robin",
+  "difficulty": "medium",
+  "question": "According to the slides, typical values are a time quantum of about __________ and a context switch of less than __________.",
+  "options": [
+   "1 second; 1 ms",
+   "10-100 ms; 10 microseconds",
+   "1 microsecond; 1 ns",
+   "1 minute; 1 second"
+  ],
+  "answer": 1,
+  "hint": "The quantum is much larger than the switch time.",
+  "explanation": "Slide 5.16: q usually 10 ms to 100 ms, context switch < 10 usec.",
+  "source": {
+   "kind": "generated"
+  },
+  "syllabus_ref": {
+   "file": "CH-5-Updated.pdf",
+   "slides": [
+    15,
+    16
+   ]
+  },
+  "review_status": "approved"
+ },
+ {
+  "id": "c5-c055",
+  "unit": 5,
+  "topic": "Round Robin",
+  "difficulty": "medium",
+  "question": "As a rule of thumb for choosing the time quantum in RR, what percentage of CPU bursts should be shorter than q?",
+  "options": [
+   "20%",
+   "100%",
+   "50%",
+   "80%"
+  ],
+  "answer": 3,
+  "hint": "Most bursts should finish within one slice.",
+  "explanation": "Slide 5.18: 80% of CPU bursts should be shorter than q.",
+  "source": {
+   "kind": "generated"
+  },
+  "syllabus_ref": {
+   "file": "CH-5-Updated.pdf",
+   "slides": [
+    18
+   ]
+  },
+  "review_status": "approved"
+ },
+ {
+  "id": "c5-c056",
+  "unit": 5,
+  "topic": "Round Robin",
+  "difficulty": "medium",
+  "question": "Compared with SJF, Round Robin typically has:",
+  "options": [
+   "Lower average turnaround time and worse response",
+   "The same turnaround time and response",
+   "No preemption",
+   "Higher average turnaround time but better response"
+  ],
+  "answer": 3,
+  "hint": "RR is fair to all processes, which helps interactivity.",
+  "explanation": "Slide 5.16: RR typically has higher average turnaround than SJF, but better response.",
+  "source": {
+   "kind": "generated"
+  },
+  "syllabus_ref": {
+   "file": "CH-5-Updated.pdf",
+   "slides": [
+    16
+   ]
+  },
+  "review_status": "approved"
+ },
+ {
+  "id": "c5-c057",
+  "unit": 5,
+  "topic": "Round Robin",
+  "difficulty": "easy",
+  "question": "In Round Robin, how does the OS take the CPU back when a quantum ends?",
+  "options": [
+   "The dispatcher waits for I/O",
+   "The user presses a key",
+   "A timer interrupt occurs every quantum",
+   "The process calls exit()"
+  ],
+  "answer": 2,
+  "hint": "The same hardware that prevents infinite loops.",
+  "explanation": "Slide 5.15: timer interrupts every quantum to schedule the next process.",
+  "source": {
+   "kind": "generated"
+  },
+  "syllabus_ref": {
+   "file": "CH-5-Updated.pdf",
+   "slides": [
+    15
+   ]
+  },
+  "review_status": "approved"
+ },
+ {
+  "id": "c5-c058",
+  "unit": 5,
+  "topic": "Priority Scheduling",
+  "difficulty": "medium",
+  "question": "In priority scheduling combined with Round Robin:",
+  "options": [
+   "Lower-priority processes run first",
+   "The highest-priority process runs, and processes with the same priority run round-robin",
+   "All processes run round-robin regardless of priority",
+   "Priorities are ignored when a quantum expires"
+  ],
+  "answer": 1,
+  "hint": "RR is only used to break ties.",
+  "explanation": "Slide 5.21: run the process with the highest priority; processes with the same priority run round-robin.",
+  "source": {
+   "kind": "generated"
+  },
+  "syllabus_ref": {
+   "file": "CH-5-Updated.pdf",
+   "slides": [
+    21
+   ]
+  },
+  "review_status": "approved"
+ },
+ {
+  "id": "c5-c059",
+  "unit": 5,
+  "topic": "Multilevel Queue",
+  "difficulty": "medium",
+  "question": "Which of the following is NOT a parameter that defines a (plain) multilevel queue scheduler?",
+  "options": [
+   "The number of queues",
+   "The scheduling among the queues",
+   "The scheduling algorithm for each queue",
+   "The method used to decide when to upgrade a process"
+  ],
+  "answer": 3,
+  "hint": "Processes in this scheduler never change queues.",
+  "explanation": "Slide 5.22: a multilevel queue is defined by the number of queues, the algorithm for each queue, the method to determine which queue a process enters, and scheduling among the queues. Upgrade/demote methods belong to the multilevel feedback queue (slide 5.25).",
+  "source": {
+   "kind": "generated"
+  },
+  "syllabus_ref": {
+   "file": "CH-5-Updated.pdf",
+   "slides": [
+    22,
+    25
+   ]
+  },
+  "review_status": "approved"
+ },
+ {
+  "id": "c5-c060",
+  "unit": 5,
+  "topic": "Multilevel Queue",
+  "difficulty": "easy",
+  "question": "In a multilevel queue with priority scheduling, which queue is scheduled first?",
+  "options": [
+   "A random queue",
+   "The queue with the oldest process",
+   "The longest queue",
+   "The highest-priority queue"
+  ],
+  "answer": 3,
+  "hint": "Each priority has its own queue.",
+  "explanation": "Slide 5.23: with priority scheduling, have separate queues for each priority and schedule the process in the highest-priority queue.",
+  "source": {
+   "kind": "generated"
+  },
+  "syllabus_ref": {
+   "file": "CH-5-Updated.pdf",
+   "slides": [
+    23,
+    24
+   ]
+  },
+  "review_status": "approved"
+ },
+ {
+  "id": "c5-c061",
+  "unit": 5,
+  "topic": "Multilevel Feedback Queue",
+  "difficulty": "medium",
+  "question": "Aging can be implemented using:",
+  "options": [
+   "A multilevel feedback queue",
+   "Nonpreemptive SJF only",
+   "FCFS",
+   "A multilevel queue with fixed assignment"
+  ],
+  "answer": 0,
+  "hint": "Old processes need a way to move up.",
+  "explanation": "Slide 5.25: aging can be implemented using a multilevel feedback queue, since a process can be upgraded to a higher queue.",
+  "source": {
+   "kind": "generated"
+  },
+  "syllabus_ref": {
+   "file": "CH-5-Updated.pdf",
+   "slides": [
+    25
+   ]
+  },
+  "review_status": "approved"
+ },
+ {
+  "id": "c5-c062",
+  "unit": 5,
+  "topic": "Multilevel Feedback Queue",
+  "difficulty": "hard",
+  "question": "A multilevel feedback queue has Q0: RR with q = 8 ms, Q1: RR with q = 16 ms, and Q2: FCFS. A new process needs a single CPU burst of 30 ms and no other processes exist. How much of its burst runs in Q2?",
+  "options": [
+   "6 ms",
+   "22 ms",
+   "30 ms",
+   "14 ms"
+  ],
+  "answer": 0,
+  "hint": "Follow the process down the queues.",
+  "explanation": "Slide 5.26: a new process enters Q0 and receives 8 ms; if not finished it moves to Q1 and receives 16 more ms; then it moves to Q2. 30 - 8 - 16 = 6 ms run in Q2.",
+  "source": {
+   "kind": "generated"
+  },
+  "syllabus_ref": {
+   "file": "CH-5-Updated.pdf",
+   "slides": [
+    26
+   ]
+  },
+  "review_status": "approved"
+ },
+ {
+  "id": "c5-c063",
+  "unit": 5,
+  "topic": "Multilevel Feedback Queue",
+  "difficulty": "medium",
+  "question": "In the example multilevel feedback queue (Q0 RR 8 ms, Q1 RR 16 ms, Q2 FCFS), what happens to a process that does not finish within its 8 ms in Q0?",
+  "options": [
+   "It is terminated",
+   "It stays in Q0 forever",
+   "It is moved directly to Q2",
+   "It is moved to Q1"
+  ],
+  "answer": 3,
+  "hint": "Processes move down one level at a time.",
+  "explanation": "Slide 5.26: if it does not finish in 8 ms, the process is moved to Q1; if it still doesn't complete there, it is preempted and moved to Q2.",
+  "source": {
+   "kind": "generated"
+  },
+  "syllabus_ref": {
+   "file": "CH-5-Updated.pdf",
+   "slides": [
+    26
+   ]
+  },
+  "review_status": "approved"
+ },
+ {
+  "id": "c5-c064",
+  "unit": 5,
+  "topic": "Thread Scheduling",
+  "difficulty": "medium",
+  "question": "When the thread library schedules user-level threads to run on an LWP (in many-to-one and many-to-many models), this is known as:",
+  "options": [
+   "System-contention scope (SCS)",
+   "Data parallelism",
+   "Symmetric multiprocessing",
+   "Process-contention scope (PCS)"
+  ],
+  "answer": 3,
+  "hint": "The competition happens within one process.",
+  "explanation": "Slide 5.27: the thread library schedules user-level threads on an LWP; this is process-contention scope (PCS), since competition is within the process. Kernel threads scheduled onto a CPU use system-contention scope (SCS).",
+  "source": {
+   "kind": "generated"
+  },
+  "syllabus_ref": {
+   "file": "CH-5-Updated.pdf",
+   "slides": [
+    27
+   ]
+  },
+  "review_status": "approved"
+ },
+ {
+  "id": "c5-c065",
+  "unit": 5,
+  "topic": "Thread Scheduling",
+  "difficulty": "medium",
+  "question": "A kernel thread scheduled onto an available CPU competes with all threads in the system. This is called:",
+  "options": [
+   "Process-contention scope (PCS)",
+   "Dispatch latency",
+   "Aging",
+   "System-contention scope (SCS)"
+  ],
+  "answer": 3,
+  "hint": "The competition is system-wide.",
+  "explanation": "Slide 5.27: a kernel thread scheduled onto an available CPU is system-contention scope (SCS) - competition among all threads in the system.",
+  "source": {
+   "kind": "generated"
+  },
+  "syllabus_ref": {
+   "file": "CH-5-Updated.pdf",
+   "slides": [
+    27
+   ]
+  },
+  "review_status": "approved"
+ },
+ {
+  "id": "c5-c066",
+  "unit": 5,
+  "topic": "Thread Scheduling",
+  "difficulty": "easy",
+  "question": "When an operating system supports threads, what does the scheduler schedule?",
+  "options": [
+   "Only the kernel",
+   "Processes, not threads",
+   "Threads, not processes",
+   "Only I/O devices"
+  ],
+  "answer": 2,
+  "hint": "The slide states this directly.",
+  "explanation": "Slide 5.27: when threads are supported, threads are scheduled, not processes.",
+  "source": {
+   "kind": "generated"
+  },
+  "syllabus_ref": {
+   "file": "CH-5-Updated.pdf",
+   "slides": [
+    27
+   ]
+  },
+  "review_status": "approved"
+ },
+ {
+  "id": "c5-c067",
+  "unit": 5,
+  "topic": "Multiple-Processor Scheduling",
+  "difficulty": "easy",
+  "question": "In symmetric multiprocessing (SMP):",
+  "options": [
+   "One master processor schedules all others",
+   "Each processor is self-scheduling",
+   "Processors never share memory",
+   "Only one processor runs user code"
+  ],
+  "answer": 1,
+  "hint": "Threads may be in a common ready queue or private per-processor queues.",
+  "explanation": "Slide 5.32: SMP is where each processor is self-scheduling; all threads may be in a common ready queue, or each processor may have its own private queue.",
+  "source": {
+   "kind": "generated"
+  },
+  "syllabus_ref": {
+   "file": "CH-5-Updated.pdf",
+   "slides": [
+    32
+   ]
+  },
+  "review_status": "approved"
+ },
+ {
+  "id": "c5-c068",
+  "unit": 5,
+  "topic": "Multiple-Processor Scheduling",
+  "difficulty": "medium",
+  "question": "In a multithreaded multicore system, what does a core do when one hardware thread has a memory stall?",
+  "options": [
+   "Moves the thread to the wait queue on disk",
+   "Switches to another hardware thread",
+   "Stops all threads until the memory returns",
+   "Reboots the core"
+  ],
+  "answer": 1,
+  "hint": "Each core has more than one hardware thread.",
+  "explanation": "Slides 5.33-5.34: each core has more than one hardware thread; if one thread has a memory stall, the core switches to another thread to make progress while memory retrieval happens.",
+  "source": {
+   "kind": "generated"
+  },
+  "syllabus_ref": {
+   "file": "CH-5-Updated.pdf",
+   "slides": [
+    33,
+    34
+   ]
+  },
+  "review_status": "approved"
+ },
+ {
+  "id": "c5-c069",
+  "unit": 5,
+  "topic": "Operating System Examples",
+  "difficulty": "medium",
+  "question": "Windows uses which type of CPU scheduling?",
+  "options": [
+   "Round Robin without priorities",
+   "Priority-based preemptive scheduling",
+   "FCFS",
+   "Nonpreemptive SJF"
+  ],
+  "answer": 1,
+  "hint": "The highest-priority thread runs next.",
+  "explanation": "Slide 5.42: Windows uses priority-based preemptive scheduling; the highest-priority thread runs next, and the dispatcher is the scheduler.",
+  "source": {
+   "kind": "generated"
+  },
+  "syllabus_ref": {
+   "file": "CH-5-Updated.pdf",
+   "slides": [
+    40,
+    42
+   ]
+  },
+  "review_status": "approved"
+ },
+ {
+  "id": "c5-c070",
+  "unit": 5,
+  "topic": "Definitions and Formulas",
+  "difficulty": "easy",
+  "question": "Which formula gives the waiting time of a process?",
+  "options": [
+   "Waiting time = completion time - arrival time",
+   "Waiting time = burst time - arrival time",
+   "Waiting time = completion time + burst time",
+   "Waiting time = turnaround time - burst time"
+  ],
+  "answer": 3,
+  "hint": "Remove the time the process actually spent running.",
+  "explanation": "Slide 5.49: turnaround time = completion time - arrival time; waiting time = turnaround time - burst time.",
+  "source": {
+   "kind": "generated"
+  },
+  "syllabus_ref": {
+   "file": "CH-5-Updated.pdf",
+   "slides": [
+    49
+   ]
+  },
+  "review_status": "approved"
+ },
+ {
+  "id": "c5-c071",
+  "unit": 5,
+  "topic": "Definitions and Formulas",
+  "difficulty": "easy",
+  "question": "Which formula gives the turnaround time of a process?",
+  "options": [
+   "Arrival time + waiting time",
+   "Completion time - arrival time",
+   "Completion time - burst time",
+   "Burst time - waiting time"
+  ],
+  "answer": 1,
+  "hint": "From the moment it arrives until the moment it finishes.",
+  "explanation": "Slide 5.49: turnaround time = completion time - arrival time.",
+  "source": {
+   "kind": "generated"
+  },
+  "syllabus_ref": {
+   "file": "CH-5-Updated.pdf",
+   "slides": [
+    49
+   ]
+  },
+  "review_status": "approved"
+ },
+ {
+  "id": "c5-c072",
+  "unit": 5,
+  "topic": "Definitions and Formulas",
+  "difficulty": "medium",
+  "question": "A CPU completes 5 processes in a total execution time of 40 ms. What is the throughput?",
+  "options": [
+   "200 processes per ms",
+   "8 processes per ms",
+   "0.125 processes per ms",
+   "45 processes per ms"
+  ],
+  "answer": 2,
+  "hint": "Throughput = number of processes completed / total execution time.",
+  "explanation": "Slide 5.49: throughput = number of processes completed / total execution time = 5 / 40 = 0.125 processes per ms (one process every 8 ms).",
+  "source": {
+   "kind": "generated"
+  },
+  "syllabus_ref": {
+   "file": "CH-5-Updated.pdf",
+   "slides": [
+    49
+   ]
+  },
+  "review_status": "approved"
+ },
+ {
+  "id": "c5-c073",
+  "unit": 5,
+  "topic": "Definitions and Formulas",
+  "difficulty": "easy",
+  "question": "Burst time is defined as:",
+  "options": [
+   "The time spent waiting in the ready queue",
+   "The time at which the process arrives",
+   "The time required by a process for CPU execution",
+   "The time at which the process completes"
+  ],
+  "answer": 2,
+  "hint": "It is how long the process needs the CPU.",
+  "explanation": "Slide 5.49: burst time - time required by a process for CPU execution. Arrival time is when it arrives in the ready queue; completion time is when it completes.",
+  "source": {
+   "kind": "generated"
+  },
+  "syllabus_ref": {
+   "file": "CH-5-Updated.pdf",
+   "slides": [
+    49
+   ]
+  },
+  "review_status": "approved"
+ },
+ {
+  "id": "c5-m001",
+  "unit": 5,
+  "topic": "Multilevel Feedback Queue (calculation)",
+  "difficulty": "hard",
+  "question": "A system uses a multilevel feedback queue with 2 queues. Q1: Round Robin, q = 3 ms, highest priority; a process that doesn't finish its time slice moves to the end of Q2. Q2: preemptive SJF. Scheduling between the queues is nonpreemptive priority (a process running from Q2 is not interrupted by arrivals in Q1). All arriving processes enter Q1. What is the sequence of execution?",
+  "table": {
+   "headers": [
+    "Process",
+    "Arrival Time",
+    "Burst Time"
+   ],
+   "rows": [
+    [
+     "P1",
+     "3",
+     "5"
+    ],
+    [
+     "P2",
+     "6",
+     "4"
+    ],
+    [
+     "P3",
+     "10",
+     "2"
+    ]
+   ]
+  },
+  "options": [
+   "P1-P2-P3-P2-P1",
+   "P1-P2-P1-P3-P1",
+   "P1-P2-P3-P1",
+   "P1-P2-P3-P1-P2"
+  ],
+  "answer": 2,
+  "hint": "Track each queue separately and only use Q2 when Q1 is empty.",
+  "explanation": "P1 runs 3-6 in Q1 (2 ms left -> Q2). P2 arrives at 6 and runs 6-9 in Q1 (1 ms left -> Q2). At 9 Q1 is empty; Q2 has P1 (2) and P2 (1), so SJF runs P2 9-10. P3 arrives at 10 and runs 10-12 in Q1. Finally P1 runs 12-14. Sequence: P1-P2-P3-P1. (Slides 5.25-5.26.)",
+  "source": {
+   "kind": "leak",
+   "refs": [
+    "L13-01"
+   ]
+  },
+  "syllabus_ref": {
+   "file": "CH-5-Updated.pdf",
+   "slides": [
+    25,
+    26
+   ]
+  },
+  "review_status": "approved"
+ },
+ {
+  "id": "c5-m002",
+  "unit": 5,
+  "topic": "Multilevel Feedback Queue (calculation)",
+  "difficulty": "hard",
+  "question": "A system uses a multilevel feedback queue with 2 queues. Q1: Round Robin, q = 3 ms, highest priority; a process that doesn't finish its time slice moves to the end of Q2. Q2: nonpreemptive SJF. Scheduling between the queues is preemptive priority; a process preempted from Q2 goes to the end of Q2. All arriving processes enter Q1. A process whose waiting time reaches 8 ms is upgraded to the next higher queue. What is the sequence of execution?",
+  "table": {
+   "headers": [
+    "Process",
+    "Arrival Time",
+    "Burst Time"
+   ],
+   "rows": [
+    [
+     "P1",
+     "0",
+     "6"
+    ],
+    [
+     "P2",
+     "1",
+     "5"
+    ],
+    [
+     "P3",
+     "4",
+     "3"
+    ]
+   ]
+  },
+  "options": [
+   "P1-P2-P3-P2-P1",
+   "P1-P2-P1-P3-P2",
+   "P1-P2-P3-P1-P2",
+   "P1-P2-P3-P1"
+  ],
+  "answer": 0,
+  "hint": "Check the waiting time of the process sitting in Q2 when it may be upgraded.",
+  "explanation": "Q1: P1 0-3 (3 left -> Q2), P2 3-6 (2 left -> Q2), P3 6-9 (done). At 9 Q2 has P1 (3) and P2 (2): SJF runs P2 9-11. P1 has waited 8 ms (3-11) and is upgraded; it runs 11-14. Sequence: P1-P2-P3-P2-P1. (Slides 5.25-5.26.)",
+  "source": {
+   "kind": "leak",
+   "refs": [
+    "L14-03"
+   ]
+  },
+  "syllabus_ref": {
+   "file": "CH-5-Updated.pdf",
+   "slides": [
+    25,
+    26
+   ]
+  },
+  "review_status": "approved"
+ },
+ {
+  "id": "c5-m003",
+  "unit": 5,
+  "topic": "Multilevel Feedback Queue (calculation)",
+  "difficulty": "hard",
+  "question": "A system uses a multilevel feedback queue with 2 queues. Q1: Round Robin, q = 3 ms, highest priority; a process that doesn't finish its time slice moves to the end of Q2. Q2: nonpreemptive SJF. Scheduling between the queues is nonpreemptive priority. All arriving processes enter Q1. A process whose waiting time reaches 7 ms is upgraded to the next higher queue. What is the sequence of execution?",
+  "table": {
+   "headers": [
+    "Process",
+    "Arrival Time",
+    "Burst Time"
+   ],
+   "rows": [
+    [
+     "P1",
+     "0",
+     "5"
+    ],
+    [
+     "P2",
+     "4",
+     "3"
+    ],
+    [
+     "P3",
+     "8",
+     "3"
+    ]
+   ]
+  },
+  "options": [
+   "P1-P2-P3",
+   "P1-P2-P1-P3",
+   "P1-P2-P3-P1",
+   "P1-P2-P1-P3-P1-P2"
+  ],
+  "answer": 0,
+  "hint": "Between-queue scheduling is nonpreemptive, so a Q2 process that has started keeps the CPU.",
+  "explanation": "P1 runs 0-3 in Q1 (2 left -> Q2). At 3 Q1 is empty, so P1 continues from Q2 3-5 and finishes; P2's arrival at 4 does not preempt it. P2 runs 5-8 in Q1 and finishes, then P3 runs 8-11. Sequence: P1-P2-P3. (Slides 5.25-5.26.)",
+  "source": {
+   "kind": "leak",
+   "refs": [
+    "L14-05"
+   ]
+  },
+  "syllabus_ref": {
+   "file": "CH-5-Updated.pdf",
+   "slides": [
+    25,
+    26
+   ]
+  },
+  "review_status": "approved"
+ },
+ {
+  "id": "c5-m004",
+  "unit": 5,
+  "topic": "Multilevel Feedback Queue (calculation)",
+  "difficulty": "hard",
+  "question": "A system uses a multilevel feedback queue with 2 queues. Q1: Round Robin, q = 4 ms, highest priority; a process that doesn't finish its time slice moves to the end of Q2. Q2: nonpreemptive SJF. Scheduling between the queues is nonpreemptive priority. All arriving processes enter Q1. What is the sequence of execution?",
+  "table": {
+   "headers": [
+    "Process",
+    "Arrival Time",
+    "Burst Time"
+   ],
+   "rows": [
+    [
+     "P1",
+     "2",
+     "9"
+    ],
+    [
+     "P2",
+     "6",
+     "2"
+    ],
+    [
+     "P3",
+     "7",
+     "5"
+    ]
+   ]
+  },
+  "options": [
+   "P1-P2-P3-P1",
+   "P1-P2-P1-P3",
+   "P1-P3-P2-P1",
+   "P1-P2-P1-P3-P1"
+  ],
+  "answer": 0,
+  "hint": "When Q1 empties, compare the remaining times in Q2.",
+  "explanation": "P1 runs 2-6 in Q1 (5 left -> Q2). P2 runs 6-8 in Q1 and finishes. P3 runs 8-12 in Q1 (1 left -> Q2). At 12 Q2 has P1 (5) and P3 (1): SJF runs P3 12-13, then P1 13-18. Sequence: P1-P2-P3-P1. (Slides 5.25-5.26.)",
+  "source": {
+   "kind": "leak",
+   "refs": [
+    "L14-25"
+   ]
+  },
+  "syllabus_ref": {
+   "file": "CH-5-Updated.pdf",
+   "slides": [
+    25,
+    26
+   ]
+  },
+  "review_status": "approved"
+ },
+ {
+  "id": "c5-m005",
+  "unit": 5,
+  "topic": "Multilevel Feedback Queue (calculation)",
+  "difficulty": "hard",
+  "question": "A system uses a multilevel feedback queue with 2 queues. Q1: Round Robin, q = 3 ms, highest priority; a process that doesn't finish its time slice moves to the end of Q2. Q2: preemptive priority (a smaller number means a higher priority). Scheduling between the queues is nonpreemptive priority. All arriving processes enter Q1. What is the sequence of execution?",
+  "table": {
+   "headers": [
+    "Process",
+    "Arrival Time",
+    "Burst Time",
+    "Priority"
+   ],
+   "rows": [
+    [
+     "P1",
+     "3",
+     "5",
+     "3"
+    ],
+    [
+     "P2",
+     "6",
+     "4",
+     "2"
+    ],
+    [
+     "P3",
+     "10",
+     "4",
+     "1"
+    ]
+   ]
+  },
+  "options": [
+   "P1-P2-P1-P3-P2",
+   "P1-P2-P3-P2-P1",
+   "P1-P2-P3-P1",
+   "P1-P2-P3-P1-P2"
+  ],
+  "answer": 2,
+  "hint": "Inside Q2 the smaller priority number wins.",
+  "explanation": "P1 runs 3-6 in Q1 (2 left -> Q2). P2 runs 6-9 in Q1 (1 left -> Q2). At 9 Q2 has P1 (priority 3) and P2 (priority 2): P2 runs 9-10 and finishes. P3 arrives at 10 and runs 10-13 in Q1 (1 left -> Q2). Q2 now has P1 (3) and P3 (1): P3 runs 13-14, then P1 14-16. Sequence: P1-P2-P3-P1. (Slides 5.25-5.26.)",
+  "source": {
+   "kind": "leak",
+   "refs": [
+    "L14-26"
+   ]
+  },
+  "syllabus_ref": {
+   "file": "CH-5-Updated.pdf",
+   "slides": [
+    25,
+    26
+   ]
+  },
+  "review_status": "approved"
+ },
+ {
+  "id": "c5-m006",
+  "unit": 5,
+  "topic": "Multilevel Feedback Queue (calculation)",
+  "difficulty": "hard",
+  "question": "A system uses a multilevel feedback queue with 2 queues. Q1: Round Robin, q = 3 ms, highest priority; a process that doesn't finish its time slice moves to Q2. Q2: nonpreemptive SJF; a process preempted from Q2 goes to the end of Q2. Scheduling between the queues is preemptive priority. All arriving processes enter Q1. A process whose waiting time reaches 4 ms is upgraded to the next higher queue. What is the average waiting time?",
+  "table": {
+   "headers": [
+    "Process",
+    "Arrival Time",
+    "Burst Time"
+   ],
+   "rows": [
+    [
+     "P1",
+     "2",
+     "6"
+    ],
+    [
+     "P2",
+     "4",
+     "3"
+    ],
+    [
+     "P3",
+     "10",
+     "4"
+    ]
+   ]
+  },
+  "options": [
+   "2 ms",
+   "4 ms",
+   "3.33 ms",
+   "2.67 ms"
+  ],
+  "answer": 3,
+  "hint": "An arrival in Q1 preempts a process running from Q2.",
+  "explanation": "CPU: P1 2-5 (Q1), P2 5-8 (Q1, done), P1 8-10 (Q2, preempted by P3's arrival), P3 10-13 (Q1, 1 left), P1 13-14 (done), P3 14-15 (done). WT: P1 = (14-2)-6 = 6, P2 = (8-4)-3 = 1, P3 = (15-10)-4 = 1. Average = 8/3 = 2.67 ms. (Slides 5.25-5.26, 5.49.)",
+  "source": {
+   "kind": "leak",
+   "refs": [
+    "L06-12"
+   ]
+  },
+  "syllabus_ref": {
+   "file": "CH-5-Updated.pdf",
+   "slides": [
+    25,
+    26,
+    49
+   ]
+  },
+  "review_status": "approved"
+ },
+ {
+  "id": "c5-m007",
+  "unit": 5,
+  "topic": "Multilevel Feedback Queue (calculation)",
+  "difficulty": "hard",
+  "question": "A system uses a multilevel feedback queue with 2 queues. Q1: Round Robin, q = 2 ms, highest priority; a process that doesn't finish its time slice moves to Q2. Q2: FCFS, lowest priority; a process preempted from Q2 goes to the end of Q2. Scheduling between the queues is preemptive priority. All arriving processes enter Q1. What is the average waiting time?",
+  "table": {
+   "headers": [
+    "Process",
+    "Arrival Time",
+    "Burst Time"
+   ],
+   "rows": [
+    [
+     "P1",
+     "1",
+     "4"
+    ],
+    [
+     "P2",
+     "4",
+     "2"
+    ],
+    [
+     "P3",
+     "5",
+     "5"
+    ],
+    [
+     "P4",
+     "10",
+     "1"
+    ]
+   ]
+  },
+  "options": [
+   "3 ms",
+   "2.25 ms",
+   "1.75 ms",
+   "1.5 ms"
+  ],
+  "answer": 2,
+  "hint": "Each arrival in Q1 interrupts whatever Q2 process is running.",
+  "explanation": "CPU: P1 1-3 (Q1), P1 3-4 (Q2, preempted by P2), P2 4-6 (Q1, done), P3 6-8 (Q1, 3 left), P1 8-9 (Q2, done), P3 9-10 (Q2, preempted by P4), P4 10-11 (Q1, done), P3 11-13 (done). WT: P1 = (9-1)-4 = 4, P2 = 0, P3 = (13-5)-5 = 3, P4 = 0. Average = 7/4 = 1.75 ms. (Slides 5.25-5.26, 5.49.)",
+  "source": {
+   "kind": "leak",
+   "refs": [
+    "L12-01"
+   ]
+  },
+  "syllabus_ref": {
+   "file": "CH-5-Updated.pdf",
+   "slides": [
+    25,
+    26,
+    49
+   ]
+  },
+  "review_status": "approved"
+ },
+ {
+  "id": "c5-n001",
+  "unit": 5,
+  "topic": "Scheduling Algorithms (calculation)",
+  "difficulty": "medium",
+  "question": "Consider the following processes (times in ms). Using First-Come, First-Served (FCFS) scheduling, what is the average waiting time?",
+  "table": {
+   "headers": [
+    "Process",
+    "Arrival Time",
+    "Burst Time"
+   ],
+   "rows": [
+    [
+     "P1",
+     "0",
+     "20"
+    ],
+    [
+     "P2",
+     "3",
+     "7"
+    ],
+    [
+     "P3",
+     "5",
+     "2"
+    ],
+    [
+     "P4",
+     "7",
+     "3"
+    ]
+   ]
+  },
+  "options": [
+   "15.25 ms",
+   "23.25 ms",
+   "4.25 ms",
+   "9 ms"
+  ],
+  "answer": 0,
+  "hint": "Run the processes strictly in order of arrival; no process gives up the CPU early. Waiting time = turnaround time - burst time.",
+  "explanation": "Gantt chart: P1 0-20, P2 20-27, P3 27-29, P4 29-32. Waiting time = turnaround time - burst time, where turnaround time = completion time - arrival time. WT(P1) = (20 - 0) - 20 = 0; WT(P2) = (27 - 3) - 7 = 17; WT(P3) = (29 - 5) - 2 = 22; WT(P4) = (32 - 7) - 3 = 22. Average = 61/4 = 15.25 ms. (Slides 5.10, 5.11, 5.49.)",
+  "source": {
+   "kind": "leak",
+   "refs": [
+    "L01-17"
+   ]
+  },
+  "syllabus_ref": {
+   "file": "CH-5-Updated.pdf",
+   "slides": [
+    10,
+    11,
+    49
+   ]
+  },
+  "review_status": "approved"
+ },
+ {
+  "id": "c5-n002",
+  "unit": 5,
+  "topic": "Scheduling Algorithms (calculation)",
+  "difficulty": "hard",
+  "question": "Consider the following processes (times in ms). Using preemptive SJF (Shortest-Remaining-Time-First) scheduling, what is the average waiting time?",
+  "table": {
+   "headers": [
+    "Process",
+    "Arrival Time",
+    "Burst Time"
+   ],
+   "rows": [
+    [
+     "P1",
+     "0",
+     "20"
+    ],
+    [
+     "P2",
+     "3",
+     "7"
+    ],
+    [
+     "P3",
+     "5",
+     "2"
+    ],
+    [
+     "P4",
+     "7",
+     "3"
+    ]
+   ]
+  },
+  "options": [
+   "9 ms",
+   "13 ms",
+   "4.25 ms",
+   "17 ms"
+  ],
+  "answer": 2,
+  "hint": "Re-check at every arrival: a process with a shorter remaining time takes the CPU. Waiting time = turnaround time - burst time.",
+  "explanation": "Gantt chart: P1 0-3, P2 3-5, P3 5-7, P4 7-10, P2 10-15, P1 15-32. Waiting time = turnaround time - burst time, where turnaround time = completion time - arrival time. WT(P1) = (32 - 0) - 20 = 12; WT(P2) = (15 - 3) - 7 = 5; WT(P3) = (7 - 5) - 2 = 0; WT(P4) = (10 - 7) - 3 = 0. Average = 17/4 = 4.25 ms. (Slides 5.14, 5.49.)",
+  "source": {
+   "kind": "leak",
+   "refs": [
+    "L01-17"
+   ]
+  },
+  "syllabus_ref": {
+   "file": "CH-5-Updated.pdf",
+   "slides": [
+    14,
+    49
+   ]
+  },
+  "review_status": "approved"
+ },
+ {
+  "id": "c5-n003",
+  "unit": 5,
+  "topic": "Scheduling Algorithms (calculation)",
+  "difficulty": "medium",
+  "question": "Consider the following processes (times in ms). Using preemptive SJF (Shortest-Remaining-Time-First) scheduling, what is the order of execution shown on the Gantt chart?",
+  "table": {
+   "headers": [
+    "Process",
+    "Arrival Time",
+    "Burst Time"
+   ],
+   "rows": [
+    [
+     "P1",
+     "0",
+     "20"
+    ],
+    [
+     "P2",
+     "3",
+     "7"
+    ],
+    [
+     "P3",
+     "5",
+     "2"
+    ],
+    [
+     "P4",
+     "7",
+     "3"
+    ]
+   ]
+  },
+  "options": [
+   "P1-P3-P2-P4-P2-P1",
+   "P1-P2-P3-P4-P1-P2",
+   "P1-P2-P4-P3-P2-P1",
+   "P1-P2-P3-P4-P2-P1"
+  ],
+  "answer": 3,
+  "hint": "Re-check at every arrival: a process with a shorter remaining time takes the CPU. Draw the Gantt chart first.",
+  "explanation": "Gantt chart: P1 0-3, P2 3-5, P3 5-7, P4 7-10, P2 10-15, P1 15-32. Reading the chart from left to right gives P1-P2-P3-P4-P2-P1. (Slides 5.14, 5.49.)",
+  "source": {
+   "kind": "leak",
+   "refs": [
+    "L01-17"
+   ]
+  },
+  "syllabus_ref": {
+   "file": "CH-5-Updated.pdf",
+   "slides": [
+    14,
+    49
+   ]
+  },
+  "review_status": "approved"
+ },
+ {
+  "id": "c5-n004",
+  "unit": 5,
+  "topic": "Scheduling Algorithms (calculation)",
+  "difficulty": "medium",
+  "question": "Consider the following processes (times in ms). Using nonpreemptive Shortest-Job-First (SJF) scheduling, what is the average waiting time?",
+  "table": {
+   "headers": [
+    "Process",
+    "Arrival Time",
+    "Burst Time"
+   ],
+   "rows": [
+    [
+     "Pa",
+     "0",
+     "8"
+    ],
+    [
+     "Pb",
+     "0",
+     "5"
+    ],
+    [
+     "Pc",
+     "0",
+     "1"
+    ],
+    [
+     "Pd",
+     "0",
+     "6"
+    ]
+   ]
+  },
+  "options": [
+   "9.75 ms",
+   "4.75 ms",
+   "10 ms",
+   "19 ms"
+  ],
+  "answer": 1,
+  "hint": "Each time the CPU becomes free, pick the arrived process with the shortest burst; no preemption. Waiting time = turnaround time - burst time.",
+  "explanation": "Gantt chart: Pc 0-1, Pb 1-6, Pd 6-12, Pa 12-20. Waiting time = turnaround time - burst time, where turnaround time = completion time - arrival time. WT(Pa) = (20 - 0) - 8 = 12; WT(Pb) = (6 - 0) - 5 = 1; WT(Pc) = (1 - 0) - 1 = 0; WT(Pd) = (12 - 0) - 6 = 6. Average = 19/4 = 4.75 ms. (Slides 5.12, 5.13, 5.49.)",
+  "source": {
+   "kind": "leak",
+   "refs": [
+    "L03-18"
+   ]
+  },
+  "syllabus_ref": {
+   "file": "CH-5-Updated.pdf",
+   "slides": [
+    12,
+    13,
+    49
+   ]
+  },
+  "review_status": "approved"
+ },
+ {
+  "id": "c5-n005",
+  "unit": 5,
+  "topic": "Scheduling Algorithms (calculation)",
+  "difficulty": "hard",
+  "question": "Consider the following processes (times in ms). Using Round Robin (RR) scheduling with time quantum q = 5 ms, what is the average waiting time?",
+  "table": {
+   "headers": [
+    "Process",
+    "Arrival Time",
+    "Burst Time"
+   ],
+   "rows": [
+    [
+     "Pa",
+     "0",
+     "8"
+    ],
+    [
+     "Pb",
+     "0",
+     "5"
+    ],
+    [
+     "Pc",
+     "0",
+     "1"
+    ],
+    [
+     "Pd",
+     "0",
+     "6"
+    ]
+   ]
+  },
+  "options": [
+   "4.75 ms",
+   "10 ms",
+   "6.5 ms",
+   "8.75 ms"
+  ],
+  "answer": 1,
+  "hint": "Each process runs at most one quantum and then goes to the back of the ready queue. Waiting time = turnaround time - burst time.",
+  "explanation": "Gantt chart: Pa 0-5, Pb 5-10, Pc 10-11, Pd 11-16, Pa 16-19, Pd 19-20. Waiting time = turnaround time - burst time, where turnaround time = completion time - arrival time. WT(Pa) = (19 - 0) - 8 = 11; WT(Pb) = (10 - 0) - 5 = 5; WT(Pc) = (11 - 0) - 1 = 10; WT(Pd) = (20 - 0) - 6 = 14. Average = 40/4 = 10 ms. (Slides 5.15, 5.16, 5.49.)",
+  "source": {
+   "kind": "leak",
+   "refs": [
+    "L03-18"
+   ]
+  },
+  "syllabus_ref": {
+   "file": "CH-5-Updated.pdf",
+   "slides": [
+    15,
+    16,
+    49
+   ]
+  },
+  "review_status": "approved"
+ },
+ {
+  "id": "c5-n006",
+  "unit": 5,
+  "topic": "Scheduling Algorithms (calculation)",
+  "difficulty": "medium",
+  "question": "Consider the following processes (times in ms). Using nonpreemptive priority scheduling (a smaller number means a higher priority), what is the average waiting time? Ties are broken in favor of the process that arrived first (then the one listed first).",
+  "table": {
+   "headers": [
+    "Process",
+    "Arrival Time",
+    "Burst Time",
+    "Priority"
+   ],
+   "rows": [
+    [
+     "P1",
+     "0",
+     "10",
+     "3"
+    ],
+    [
+     "P2",
+     "0",
+     "1",
+     "1"
+    ],
+    [
+     "P3",
+     "0",
+     "2",
+     "3"
+    ],
+    [
+     "P4",
+     "0",
+     "1",
+     "4"
+    ],
+    [
+     "P5",
+     "0",
+     "5",
+     "2"
+    ]
+   ]
+  },
+  "options": [
+   "8.2 ms",
+   "3.2 ms",
+   "9.6 ms",
+   "12 ms"
+  ],
+  "answer": 0,
+  "hint": "Each time the CPU becomes free, pick the arrived process with the smallest priority number; no preemption. Waiting time = turnaround time - burst time.",
+  "explanation": "Gantt chart: P2 0-1, P5 1-6, P1 6-16, P3 16-18, P4 18-19. Waiting time = turnaround time - burst time, where turnaround time = completion time - arrival time. WT(P1) = (16 - 0) - 10 = 6; WT(P2) = (1 - 0) - 1 = 0; WT(P3) = (18 - 0) - 2 = 16; WT(P4) = (19 - 0) - 1 = 18; WT(P5) = (6 - 0) - 5 = 1. Average = 41/5 = 8.2 ms. (Slides 5.19, 5.20, 5.49.)",
+  "source": {
+   "kind": "leak",
+   "refs": [
+    "L04-30"
+   ]
+  },
+  "syllabus_ref": {
+   "file": "CH-5-Updated.pdf",
+   "slides": [
+    19,
+    20,
+    49
+   ]
+  },
+  "review_status": "approved"
+ },
+ {
+  "id": "c5-n007",
+  "unit": 5,
+  "topic": "Scheduling Algorithms (calculation)",
+  "difficulty": "easy",
+  "question": "Consider the following processes (times in ms). Using First-Come, First-Served (FCFS) scheduling, what is the order of execution shown on the Gantt chart?",
+  "table": {
+   "headers": [
+    "Process",
+    "Arrival Time",
+    "Burst Time"
+   ],
+   "rows": [
+    [
+     "P1",
+     "2",
+     "7"
+    ],
+    [
+     "P2",
+     "5",
+     "3"
+    ],
+    [
+     "P3",
+     "6",
+     "2"
+    ]
+   ]
+  },
+  "options": [
+   "P1-P3-P2",
+   "P1-P2-P3-P1-P2-P1",
+   "P2-P1-P3",
+   "P1-P2-P3"
+  ],
+  "answer": 3,
+  "hint": "Run the processes strictly in order of arrival; no process gives up the CPU early. Draw the Gantt chart first.",
+  "explanation": "Gantt chart: idle 0-2, P1 2-9, P2 9-12, P3 12-14. Reading the chart from left to right gives P1-P2-P3. (Slides 5.10, 5.11, 5.49.)",
+  "source": {
+   "kind": "leak",
+   "refs": [
+    "L06-03"
+   ]
+  },
+  "syllabus_ref": {
+   "file": "CH-5-Updated.pdf",
+   "slides": [
+    10,
+    11,
+    49
+   ]
+  },
+  "review_status": "approved"
+ },
+ {
+  "id": "c5-n008",
+  "unit": 5,
+  "topic": "Scheduling Algorithms (calculation)",
+  "difficulty": "medium",
+  "question": "Consider the following processes (times in ms). Using First-Come, First-Served (FCFS) scheduling, what is the waiting time of P3?",
+  "table": {
+   "headers": [
+    "Process",
+    "Arrival Time",
+    "Burst Time"
+   ],
+   "rows": [
+    [
+     "P1",
+     "2",
+     "7"
+    ],
+    [
+     "P2",
+     "5",
+     "3"
+    ],
+    [
+     "P3",
+     "6",
+     "2"
+    ]
+   ]
+  },
+  "options": [
+   "6 ms",
+   "0 ms",
+   "3 ms",
+   "2 ms"
+  ],
+  "answer": 0,
+  "hint": "Run the processes strictly in order of arrival; no process gives up the CPU early. Waiting time = turnaround time - burst time.",
+  "explanation": "Gantt chart: idle 0-2, P1 2-9, P2 9-12, P3 12-14. Waiting time = turnaround time - burst time, where turnaround time = completion time - arrival time. WT(P3) = (14 - 6) - 2 = 6. (Slides 5.10, 5.11, 5.49.)",
+  "source": {
+   "kind": "leak",
+   "refs": [
+    "L06-04"
+   ]
+  },
+  "syllabus_ref": {
+   "file": "CH-5-Updated.pdf",
+   "slides": [
+    10,
+    11,
+    49
+   ]
+  },
+  "review_status": "approved"
+ },
+ {
+  "id": "c5-n009",
+  "unit": 5,
+  "topic": "Scheduling Algorithms (calculation)",
+  "difficulty": "medium",
+  "question": "Consider the following processes (times in ms). Using preemptive SJF (Shortest-Remaining-Time-First) scheduling, what is the order of execution shown on the Gantt chart?",
+  "table": {
+   "headers": [
+    "Process",
+    "Arrival Time",
+    "Burst Time"
+   ],
+   "rows": [
+    [
+     "P1",
+     "2",
+     "7"
+    ],
+    [
+     "P2",
+     "5",
+     "3"
+    ],
+    [
+     "P3",
+     "6",
+     "2"
+    ]
+   ]
+  },
+  "options": [
+   "P1-P3-P2-P1",
+   "P1-P2-P3",
+   "P1-P2-P3-P1",
+   "P2-P1-P3-P1"
+  ],
+  "answer": 2,
+  "hint": "Re-check at every arrival: a process with a shorter remaining time takes the CPU. Draw the Gantt chart first.",
+  "explanation": "Gantt chart: idle 0-2, P1 2-5, P2 5-8, P3 8-10, P1 10-14. Reading the chart from left to right gives P1-P2-P3-P1. (Slides 5.14, 5.49.)",
+  "source": {
+   "kind": "leak",
+   "refs": [
+    "L06-05"
+   ]
+  },
+  "syllabus_ref": {
+   "file": "CH-5-Updated.pdf",
+   "slides": [
+    14,
+    49
+   ]
+  },
+  "review_status": "approved"
+ },
+ {
+  "id": "c5-n010",
+  "unit": 5,
+  "topic": "Scheduling Algorithms (calculation)",
+  "difficulty": "medium",
+  "question": "Consider the following processes (times in ms). Using preemptive SJF (Shortest-Remaining-Time-First) scheduling, what is the waiting time of P1?",
+  "table": {
+   "headers": [
+    "Process",
+    "Arrival Time",
+    "Burst Time"
+   ],
+   "rows": [
+    [
+     "P1",
+     "2",
+     "7"
+    ],
+    [
+     "P2",
+     "5",
+     "3"
+    ],
+    [
+     "P3",
+     "6",
+     "2"
+    ]
+   ]
+  },
+  "options": [
+   "12 ms",
+   "0 ms",
+   "5 ms",
+   "2 ms"
+  ],
+  "answer": 2,
+  "hint": "Re-check at every arrival: a process with a shorter remaining time takes the CPU. Waiting time = turnaround time - burst time.",
+  "explanation": "Gantt chart: idle 0-2, P1 2-5, P2 5-8, P3 8-10, P1 10-14. Waiting time = turnaround time - burst time, where turnaround time = completion time - arrival time. WT(P1) = (14 - 2) - 7 = 5. (Slides 5.14, 5.49.)",
+  "source": {
+   "kind": "leak",
+   "refs": [
+    "L06-06"
+   ]
+  },
+  "syllabus_ref": {
+   "file": "CH-5-Updated.pdf",
+   "slides": [
+    14,
+    49
+   ]
+  },
+  "review_status": "approved"
+ },
+ {
+  "id": "c5-n011",
+  "unit": 5,
+  "topic": "Scheduling Algorithms (calculation)",
+  "difficulty": "medium",
+  "question": "Consider the following processes (times in ms). Using preemptive SJF (Shortest-Remaining-Time-First) scheduling, at what time does P3 finish execution?",
+  "table": {
+   "headers": [
+    "Process",
+    "Arrival Time",
+    "Burst Time"
+   ],
+   "rows": [
+    [
+     "P1",
+     "2",
+     "7"
+    ],
+    [
+     "P2",
+     "5",
+     "3"
+    ],
+    [
+     "P3",
+     "6",
+     "2"
+    ]
+   ]
+  },
+  "options": [
+   "14 ms",
+   "8 ms",
+   "10 ms",
+   "11 ms"
+  ],
+  "answer": 2,
+  "hint": "Re-check at every arrival: a process with a shorter remaining time takes the CPU. Draw the Gantt chart first.",
+  "explanation": "Gantt chart: idle 0-2, P1 2-5, P2 5-8, P3 8-10, P1 10-14. P3 completes at time 10. (Slides 5.14, 5.49.)",
+  "source": {
+   "kind": "leak",
+   "refs": [
+    "L06-07"
+   ]
+  },
+  "syllabus_ref": {
+   "file": "CH-5-Updated.pdf",
+   "slides": [
+    14,
+    49
+   ]
+  },
+  "review_status": "approved"
+ },
+ {
+  "id": "c5-n012",
+  "unit": 5,
+  "topic": "Scheduling Algorithms (calculation)",
+  "difficulty": "hard",
+  "question": "Consider the following processes (times in ms). Using Round Robin (RR) scheduling with time quantum q = 2 ms, what is the average waiting time? If a process arrives at the same moment a time slice ends, the arriving process enters the ready queue before the preempted one.",
+  "table": {
+   "headers": [
+    "Process",
+    "Arrival Time",
+    "Burst Time"
+   ],
+   "rows": [
+    [
+     "P1",
+     "0",
+     "7"
+    ],
+    [
+     "P2",
+     "2",
+     "4"
+    ],
+    [
+     "P3",
+     "4",
+     "1"
+    ],
+    [
+     "P4",
+     "5",
+     "4"
+    ]
+   ]
+  },
+  "options": [
+   "4.75 ms",
+   "20 ms",
+   "9 ms",
+   "5 ms"
+  ],
+  "answer": 3,
+  "hint": "Each process runs at most one quantum and then goes to the back of the ready queue. Waiting time = turnaround time - burst time.",
+  "explanation": "Gantt chart: P1 0-2, P2 2-4, P1 4-6, P3 6-7, P2 7-9, P4 9-11, P1 11-13, P4 13-15, P1 15-16. Waiting time = turnaround time - burst time, where turnaround time = completion time - arrival time. WT(P1) = (16 - 0) - 7 = 9; WT(P2) = (9 - 2) - 4 = 3; WT(P3) = (7 - 4) - 1 = 2; WT(P4) = (15 - 5) - 4 = 6. Average = 20/4 = 5 ms. (Slides 5.15, 5.16, 5.49.)",
+  "source": {
+   "kind": "leak",
+   "refs": [
+    "L08-30"
+   ]
+  },
+  "syllabus_ref": {
+   "file": "CH-5-Updated.pdf",
+   "slides": [
+    15,
+    16,
+    49
+   ]
+  },
+  "review_status": "approved"
+ },
+ {
+  "id": "c5-n013",
+  "unit": 5,
+  "topic": "Scheduling Algorithms (calculation)",
+  "difficulty": "medium",
+  "question": "Consider the following processes (times in ms). Using preemptive priority scheduling (a smaller number means a higher priority), what is the order of execution shown on the Gantt chart?",
+  "table": {
+   "headers": [
+    "Process",
+    "Arrival Time",
+    "Burst Time",
+    "Priority"
+   ],
+   "rows": [
+    [
+     "P1",
+     "0",
+     "7",
+     "0"
+    ],
+    [
+     "P2",
+     "2",
+     "4",
+     "1"
+    ],
+    [
+     "P3",
+     "4",
+     "1",
+     "2"
+    ],
+    [
+     "P4",
+     "5",
+     "4",
+     "3"
+    ]
+   ]
+  },
+  "options": [
+   "P1-P2-P3-P4",
+   "P1-P2-P1-P3-P4-P2-P1-P4",
+   "P1-P2-P4-P3",
+   "P1-P3-P2-P4"
+  ],
+  "answer": 0,
+  "hint": "A newly arrived process with a smaller priority number preempts the running process. Draw the Gantt chart first.",
+  "explanation": "Gantt chart: P1 0-7, P2 7-11, P3 11-12, P4 12-16. Reading the chart from left to right gives P1-P2-P3-P4. (Slides 5.19, 5.20, 5.49.)",
+  "source": {
+   "kind": "leak",
+   "refs": [
+    "L08-30"
+   ]
+  },
+  "syllabus_ref": {
+   "file": "CH-5-Updated.pdf",
+   "slides": [
+    19,
+    20,
+    49
+   ]
+  },
+  "review_status": "approved"
+ },
+ {
+  "id": "c5-n014",
+  "unit": 5,
+  "topic": "Scheduling Algorithms (calculation)",
+  "difficulty": "hard",
+  "question": "Consider the following processes (times in ms). Using preemptive SJF (Shortest-Remaining-Time-First) scheduling, what is the average turnaround time?",
+  "table": {
+   "headers": [
+    "Process",
+    "Arrival Time",
+    "Burst Time"
+   ],
+   "rows": [
+    [
+     "P1",
+     "10",
+     "7"
+    ],
+    [
+     "P2",
+     "4",
+     "3"
+    ],
+    [
+     "P3",
+     "2",
+     "8"
+    ],
+    [
+     "P4",
+     "6",
+     "6"
+    ]
+   ]
+  },
+  "options": [
+   "10.75 ms",
+   "11.5 ms",
+   "43 ms",
+   "13.25 ms"
+  ],
+  "answer": 0,
+  "hint": "Re-check at every arrival: a process with a shorter remaining time takes the CPU. Turnaround time = completion time - arrival time.",
+  "explanation": "Gantt chart: idle 0-2, P3 2-4, P2 4-7, P3 7-13, P4 13-19, P1 19-26. Turnaround time = completion time - arrival time. TAT(P1) = 26 - 10 = 16; TAT(P2) = 7 - 4 = 3; TAT(P3) = 13 - 2 = 11; TAT(P4) = 19 - 6 = 13. Average = 43/4 = 10.75 ms. (Slides 5.14, 5.49.)",
+  "source": {
+   "kind": "leak",
+   "refs": [
+    "L08-31"
+   ]
+  },
+  "syllabus_ref": {
+   "file": "CH-5-Updated.pdf",
+   "slides": [
+    14,
+    49
+   ]
+  },
+  "review_status": "approved"
+ },
+ {
+  "id": "c5-n015",
+  "unit": 5,
+  "topic": "Scheduling Algorithms (calculation)",
+  "difficulty": "medium",
+  "question": "Consider the following processes (times in ms). Using nonpreemptive Shortest-Job-First (SJF) scheduling, what is the order of execution shown on the Gantt chart?",
+  "table": {
+   "headers": [
+    "Process",
+    "Arrival Time",
+    "Burst Time"
+   ],
+   "rows": [
+    [
+     "P1",
+     "0",
+     "20"
+    ],
+    [
+     "P2",
+     "0",
+     "10"
+    ],
+    [
+     "P3",
+     "0",
+     "5"
+    ]
+   ]
+  },
+  "options": [
+   "P3-P1-P2",
+   "P2-P3-P1",
+   "P1-P2-P3-P1-P2-P3-P1-P2-P1-P2-P1",
+   "P3-P2-P1"
+  ],
+  "answer": 3,
+  "hint": "Each time the CPU becomes free, pick the arrived process with the shortest burst; no preemption. Draw the Gantt chart first.",
+  "explanation": "Gantt chart: P3 0-5, P2 5-15, P1 15-35. Reading the chart from left to right gives P3-P2-P1. (Slides 5.12, 5.13, 5.49.)",
+  "source": {
+   "kind": "leak",
+   "refs": [
+    "L09-04"
+   ]
+  },
+  "syllabus_ref": {
+   "file": "CH-5-Updated.pdf",
+   "slides": [
+    12,
+    13,
+    49
+   ]
+  },
+  "review_status": "approved"
+ },
+ {
+  "id": "c5-n016",
+  "unit": 5,
+  "topic": "Scheduling Algorithms (calculation)",
+  "difficulty": "medium",
+  "question": "Consider the following processes (times in ms). Using nonpreemptive Shortest-Job-First (SJF) scheduling, what is the average waiting time?",
+  "table": {
+   "headers": [
+    "Process",
+    "Arrival Time",
+    "Burst Time"
+   ],
+   "rows": [
+    [
+     "P1",
+     "0",
+     "20"
+    ],
+    [
+     "P2",
+     "0",
+     "10"
+    ],
+    [
+     "P3",
+     "0",
+     "5"
+    ]
+   ]
+  },
+  "options": [
+   "18.33 ms",
+   "None of the mentioned",
+   "20 ms",
+   "16 ms"
+  ],
+  "answer": 1,
+  "hint": "Each time the CPU becomes free, pick the arrived process with the shortest burst; no preemption. Waiting time = turnaround time - burst time.",
+  "explanation": "Gantt chart: P3 0-5, P2 5-15, P1 15-35. Waiting time = turnaround time - burst time, where turnaround time = completion time - arrival time. WT(P1) = (35 - 0) - 20 = 15; WT(P2) = (15 - 0) - 10 = 5; WT(P3) = (5 - 0) - 5 = 0. Average = 20/3 = 6.67 ms. (Slides 5.12, 5.13, 5.49.) The correct value, 6.67 ms, is not among the listed numbers, so the answer is 'None of the mentioned'.",
+  "source": {
+   "kind": "leak",
+   "refs": [
+    "L09-05"
+   ]
+  },
+  "syllabus_ref": {
+   "file": "CH-5-Updated.pdf",
+   "slides": [
+    12,
+    13,
+    49
+   ]
+  },
+  "review_status": "approved"
+ },
+ {
+  "id": "c5-n017",
+  "unit": 5,
+  "topic": "Scheduling Algorithms (calculation)",
+  "difficulty": "medium",
+  "question": "Consider the following processes (times in ms). Using nonpreemptive Shortest-Job-First (SJF) scheduling, what is the order of execution shown on the Gantt chart? Ties are broken in favor of the process that arrived first (then the one listed first).",
+  "table": {
+   "headers": [
+    "Process",
+    "Arrival Time",
+    "Burst Time"
+   ],
+   "rows": [
+    [
+     "P1",
+     "0",
+     "14"
+    ],
+    [
+     "P2",
+     "4",
+     "8"
+    ],
+    [
+     "P3",
+     "8",
+     "2"
+    ],
+    [
+     "P4",
+     "10",
+     "8"
+    ]
+   ]
+  },
+  "options": [
+   "P1-P3-P4-P2",
+   "P1-P2-P3-P4",
+   "P1-P3-P2-P4",
+   "P3-P1-P2-P4"
+  ],
+  "answer": 2,
+  "hint": "Each time the CPU becomes free, pick the arrived process with the shortest burst; no preemption. Draw the Gantt chart first.",
+  "explanation": "Gantt chart: P1 0-14, P3 14-16, P2 16-24, P4 24-32. Reading the chart from left to right gives P1-P3-P2-P4. (Slides 5.12, 5.13, 5.49.)",
+  "source": {
+   "kind": "leak",
+   "refs": [
+    "L09-06"
+   ]
+  },
+  "syllabus_ref": {
+   "file": "CH-5-Updated.pdf",
+   "slides": [
+    12,
+    13,
+    49
+   ]
+  },
+  "review_status": "approved"
+ },
+ {
+  "id": "c5-n018",
+  "unit": 5,
+  "topic": "Scheduling Algorithms (calculation)",
+  "difficulty": "medium",
+  "question": "Consider the following processes (times in ms). Using nonpreemptive Shortest-Job-First (SJF) scheduling, what is the order of execution shown on the Gantt chart?",
+  "table": {
+   "headers": [
+    "Process",
+    "Arrival Time",
+    "Burst Time"
+   ],
+   "rows": [
+    [
+     "P1",
+     "1",
+     "7"
+    ],
+    [
+     "P2",
+     "2",
+     "5"
+    ],
+    [
+     "P3",
+     "3",
+     "1"
+    ],
+    [
+     "P4",
+     "4",
+     "2"
+    ],
+    [
+     "P5",
+     "5",
+     "8"
+    ]
+   ]
+  },
+  "options": [
+   "P1-P3-P4-P5-P2",
+   "P1-P3-P2-P4-P5",
+   "P1-P4-P3-P2-P5",
+   "P1-P3-P4-P2-P5"
+  ],
+  "answer": 3,
+  "hint": "Each time the CPU becomes free, pick the arrived process with the shortest burst; no preemption. Draw the Gantt chart first.",
+  "explanation": "Gantt chart: idle 0-1, P1 1-8, P3 8-9, P4 9-11, P2 11-16, P5 16-24. Reading the chart from left to right gives P1-P3-P4-P2-P5. (Slides 5.12, 5.13, 5.49.)",
+  "source": {
+   "kind": "leak",
+   "refs": [
+    "L09-11"
+   ]
+  },
+  "syllabus_ref": {
+   "file": "CH-5-Updated.pdf",
+   "slides": [
+    12,
+    13,
+    49
+   ]
+  },
+  "review_status": "approved"
+ },
+ {
+  "id": "c5-n019",
+  "unit": 5,
+  "topic": "Scheduling Algorithms (calculation)",
+  "difficulty": "medium",
+  "question": "Consider the following processes (times in ms). Using nonpreemptive Shortest-Job-First (SJF) scheduling, what is the average waiting time?",
+  "table": {
+   "headers": [
+    "Process",
+    "Arrival Time",
+    "Burst Time"
+   ],
+   "rows": [
+    [
+     "P1",
+     "1",
+     "7"
+    ],
+    [
+     "P2",
+     "2",
+     "5"
+    ],
+    [
+     "P3",
+     "3",
+     "1"
+    ],
+    [
+     "P4",
+     "4",
+     "2"
+    ],
+    [
+     "P5",
+     "5",
+     "8"
+    ]
+   ]
+  },
+  "options": [
+   "4.4 ms",
+   "30 ms",
+   "6 ms",
+   "8.2 ms"
+  ],
+  "answer": 2,
+  "hint": "Each time the CPU becomes free, pick the arrived process with the shortest burst; no preemption. Waiting time = turnaround time - burst time.",
+  "explanation": "Gantt chart: idle 0-1, P1 1-8, P3 8-9, P4 9-11, P2 11-16, P5 16-24. Waiting time = turnaround time - burst time, where turnaround time = completion time - arrival time. WT(P1) = (8 - 1) - 7 = 0; WT(P2) = (16 - 2) - 5 = 9; WT(P3) = (9 - 3) - 1 = 5; WT(P4) = (11 - 4) - 2 = 5; WT(P5) = (24 - 5) - 8 = 11. Average = 30/5 = 6 ms. (Slides 5.12, 5.13, 5.49.)",
+  "source": {
+   "kind": "leak",
+   "refs": [
+    "L09-12"
+   ]
+  },
+  "syllabus_ref": {
+   "file": "CH-5-Updated.pdf",
+   "slides": [
+    12,
+    13,
+    49
+   ]
+  },
+  "review_status": "approved"
+ },
+ {
+  "id": "c5-n020",
+  "unit": 5,
+  "topic": "Scheduling Algorithms (calculation)",
+  "difficulty": "medium",
+  "question": "Consider the following processes (times in ms). Using First-Come, First-Served (FCFS) scheduling, what is the average waiting time?",
+  "table": {
+   "headers": [
+    "Process",
+    "Arrival Time",
+    "Burst Time"
+   ],
+   "rows": [
+    [
+     "P1",
+     "1",
+     "7"
+    ],
+    [
+     "P2",
+     "2",
+     "5"
+    ],
+    [
+     "P3",
+     "3",
+     "1"
+    ],
+    [
+     "P4",
+     "4",
+     "2"
+    ],
+    [
+     "P5",
+     "5",
+     "8"
+    ]
+   ]
+  },
+  "options": [
+   "7.4 ms",
+   "6 ms",
+   "9.4 ms",
+   "4.4 ms"
+  ],
+  "answer": 0,
+  "hint": "Run the processes strictly in order of arrival; no process gives up the CPU early. Waiting time = turnaround time - burst time.",
+  "explanation": "Gantt chart: idle 0-1, P1 1-8, P2 8-13, P3 13-14, P4 14-16, P5 16-24. Waiting time = turnaround time - burst time, where turnaround time = completion time - arrival time. WT(P1) = (8 - 1) - 7 = 0; WT(P2) = (13 - 2) - 5 = 6; WT(P3) = (14 - 3) - 1 = 10; WT(P4) = (16 - 4) - 2 = 10; WT(P5) = (24 - 5) - 8 = 11. Average = 37/5 = 7.4 ms. (Slides 5.10, 5.11, 5.49.)",
+  "source": {
+   "kind": "leak",
+   "refs": [
+    "L09-13"
+   ]
+  },
+  "syllabus_ref": {
+   "file": "CH-5-Updated.pdf",
+   "slides": [
+    10,
+    11,
+    49
+   ]
+  },
+  "review_status": "approved"
+ },
+ {
+  "id": "c5-n021",
+  "unit": 5,
+  "topic": "Scheduling Algorithms (calculation)",
+  "difficulty": "medium",
+  "question": "Consider the following processes (times in ms). Using preemptive priority scheduling (a smaller number means a higher priority), what is the order of execution shown on the Gantt chart?",
+  "table": {
+   "headers": [
+    "Process",
+    "Arrival Time",
+    "Burst Time",
+    "Priority"
+   ],
+   "rows": [
+    [
+     "P1",
+     "0",
+     "5",
+     "2"
+    ],
+    [
+     "P2",
+     "4",
+     "8",
+     "1"
+    ],
+    [
+     "P3",
+     "6",
+     "2",
+     "4"
+    ],
+    [
+     "P4",
+     "8",
+     "6",
+     "3"
+    ]
+   ]
+  },
+  "options": [
+   "P1-P2-P1-P3-P4",
+   "P1-P2-P1-P3-P4-P2-P4",
+   "P1-P2-P1-P4-P3",
+   "P1-P2-P4-P3"
+  ],
+  "answer": 2,
+  "hint": "A newly arrived process with a smaller priority number preempts the running process. Draw the Gantt chart first.",
+  "explanation": "Gantt chart: P1 0-4, P2 4-12, P1 12-13, P4 13-19, P3 19-21. Reading the chart from left to right gives P1-P2-P1-P4-P3. (Slides 5.19, 5.20, 5.49.)",
+  "source": {
+   "kind": "leak",
+   "refs": [
+    "L09-14"
+   ]
+  },
+  "syllabus_ref": {
+   "file": "CH-5-Updated.pdf",
+   "slides": [
+    19,
+    20,
+    49
+   ]
+  },
+  "review_status": "approved"
+ },
+ {
+  "id": "c5-n022",
+  "unit": 5,
+  "topic": "Scheduling Algorithms (calculation)",
+  "difficulty": "medium",
+  "question": "Consider the following processes (times in ms). Using nonpreemptive priority scheduling (a smaller number means a higher priority), what is the average waiting time?",
+  "table": {
+   "headers": [
+    "Process",
+    "Arrival Time",
+    "Burst Time",
+    "Priority"
+   ],
+   "rows": [
+    [
+     "P1",
+     "0",
+     "5",
+     "2"
+    ],
+    [
+     "P2",
+     "4",
+     "8",
+     "1"
+    ],
+    [
+     "P3",
+     "6",
+     "2",
+     "4"
+    ],
+    [
+     "P4",
+     "8",
+     "6",
+     "3"
+    ]
+   ]
+  },
+  "options": [
+   "4.75 ms",
+   "2.25 ms",
+   "3.75 ms",
+   "19 ms"
+  ],
+  "answer": 0,
+  "hint": "Each time the CPU becomes free, pick the arrived process with the smallest priority number; no preemption. Waiting time = turnaround time - burst time.",
+  "explanation": "Gantt chart: P1 0-5, P2 5-13, P4 13-19, P3 19-21. Waiting time = turnaround time - burst time, where turnaround time = completion time - arrival time. WT(P1) = (5 - 0) - 5 = 0; WT(P2) = (13 - 4) - 8 = 1; WT(P3) = (21 - 6) - 2 = 13; WT(P4) = (19 - 8) - 6 = 5. Average = 19/4 = 4.75 ms. (Slides 5.19, 5.20, 5.49.)",
+  "source": {
+   "kind": "leak",
+   "refs": [
+    "L09-15"
+   ]
+  },
+  "syllabus_ref": {
+   "file": "CH-5-Updated.pdf",
+   "slides": [
+    19,
+    20,
+    49
+   ]
+  },
+  "review_status": "approved"
+ },
+ {
+  "id": "c5-n023",
+  "unit": 5,
+  "topic": "Scheduling Algorithms (calculation)",
+  "difficulty": "hard",
+  "question": "Consider the following processes (times in ms). Using Round Robin (RR) scheduling with time quantum q = 4 ms, what is the average waiting time?",
+  "table": {
+   "headers": [
+    "Process",
+    "Arrival Time",
+    "Burst Time"
+   ],
+   "rows": [
+    [
+     "P1",
+     "0",
+     "8"
+    ],
+    [
+     "P2",
+     "1",
+     "5"
+    ],
+    [
+     "P3",
+     "2",
+     "3"
+    ],
+    [
+     "P4",
+     "3",
+     "4"
+    ]
+   ]
+  },
+  "options": [
+   "14.75 ms",
+   "9.75 ms",
+   "7 ms",
+   "4.25 ms"
+  ],
+  "answer": 1,
+  "hint": "Each process runs at most one quantum and then goes to the back of the ready queue. Waiting time = turnaround time - burst time.",
+  "explanation": "Gantt chart: P1 0-4, P2 4-8, P3 8-11, P4 11-15, P1 15-19, P2 19-20. Waiting time = turnaround time - burst time, where turnaround time = completion time - arrival time. WT(P1) = (19 - 0) - 8 = 11; WT(P2) = (20 - 1) - 5 = 14; WT(P3) = (11 - 2) - 3 = 6; WT(P4) = (15 - 3) - 4 = 8. Average = 39/4 = 9.75 ms. (Slides 5.15, 5.16, 5.49.)",
+  "source": {
+   "kind": "leak",
+   "refs": [
+    "L10-03"
+   ]
+  },
+  "syllabus_ref": {
+   "file": "CH-5-Updated.pdf",
+   "slides": [
+    15,
+    16,
+    49
+   ]
+  },
+  "review_status": "approved"
+ },
+ {
+  "id": "c5-n024",
+  "unit": 5,
+  "topic": "Scheduling Algorithms (calculation)",
+  "difficulty": "medium",
+  "question": "Consider the following processes (times in ms). Using nonpreemptive Shortest-Job-First (SJF) scheduling, what is the order of execution shown on the Gantt chart?",
+  "table": {
+   "headers": [
+    "Process",
+    "Arrival Time",
+    "Burst Time"
+   ],
+   "rows": [
+    [
+     "P1",
+     "0",
+     "8"
+    ],
+    [
+     "P2",
+     "1",
+     "5"
+    ],
+    [
+     "P3",
+     "2",
+     "3"
+    ],
+    [
+     "P4",
+     "3",
+     "4"
+    ]
+   ]
+  },
+  "options": [
+   "P3-P1-P4-P2",
+   "P1-P3-P2-P4",
+   "P1-P4-P3-P2",
+   "P1-P3-P4-P2"
+  ],
+  "answer": 3,
+  "hint": "Each time the CPU becomes free, pick the arrived process with the shortest burst; no preemption. Draw the Gantt chart first.",
+  "explanation": "Gantt chart: P1 0-8, P3 8-11, P4 11-15, P2 15-20. Reading the chart from left to right gives P1-P3-P4-P2. (Slides 5.12, 5.13, 5.49.)",
+  "source": {
+   "kind": "leak",
+   "refs": [
+    "L10-03"
+   ]
+  },
+  "syllabus_ref": {
+   "file": "CH-5-Updated.pdf",
+   "slides": [
+    12,
+    13,
+    49
+   ]
+  },
+  "review_status": "approved"
+ },
+ {
+  "id": "c5-n025",
+  "unit": 5,
+  "topic": "Scheduling Algorithms (calculation)",
+  "difficulty": "medium",
+  "question": "Consider the following processes (times in ms). Using nonpreemptive Shortest-Job-First (SJF) scheduling, what is the average waiting time?",
+  "table": {
+   "headers": [
+    "Process",
+    "Arrival Time",
+    "Burst Time"
+   ],
+   "rows": [
+    [
+     "P1",
+     "0",
+     "8"
+    ],
+    [
+     "P2",
+     "0",
+     "6"
+    ],
+    [
+     "P3",
+     "0",
+     "1"
+    ],
+    [
+     "P4",
+     "0",
+     "9"
+    ]
+   ]
+  },
+  "options": [
+   "10.75 ms",
+   "5.75 ms",
+   "11 ms",
+   "9.25 ms"
+  ],
+  "answer": 1,
+  "hint": "Each time the CPU becomes free, pick the arrived process with the shortest burst; no preemption. Waiting time = turnaround time - burst time.",
+  "explanation": "Gantt chart: P3 0-1, P2 1-7, P1 7-15, P4 15-24. Waiting time = turnaround time - burst time, where turnaround time = completion time - arrival time. WT(P1) = (15 - 0) - 8 = 7; WT(P2) = (7 - 0) - 6 = 1; WT(P3) = (1 - 0) - 1 = 0; WT(P4) = (24 - 0) - 9 = 15. Average = 23/4 = 5.75 ms. (Slides 5.12, 5.13, 5.49.)",
+  "source": {
+   "kind": "leak",
+   "refs": [
+    "L11-16"
+   ]
+  },
+  "syllabus_ref": {
+   "file": "CH-5-Updated.pdf",
+   "slides": [
+    12,
+    13,
+    49
+   ]
+  },
+  "review_status": "approved"
+ },
+ {
+  "id": "c5-n026",
+  "unit": 5,
+  "topic": "Scheduling Algorithms (calculation)",
+  "difficulty": "medium",
+  "question": "Consider the following processes (times in ms). Using nonpreemptive Shortest-Job-First (SJF) scheduling, what is the average turnaround time?",
+  "table": {
+   "headers": [
+    "Process",
+    "Arrival Time",
+    "Burst Time"
+   ],
+   "rows": [
+    [
+     "P1",
+     "0",
+     "8"
+    ],
+    [
+     "P2",
+     "0",
+     "6"
+    ],
+    [
+     "P3",
+     "0",
+     "1"
+    ],
+    [
+     "P4",
+     "0",
+     "9"
+    ]
+   ]
+  },
+  "options": [
+   "5.75 ms",
+   "11.75 ms",
+   "17 ms",
+   "16.75 ms"
+  ],
+  "answer": 1,
+  "hint": "Each time the CPU becomes free, pick the arrived process with the shortest burst; no preemption. Turnaround time = completion time - arrival time.",
+  "explanation": "Gantt chart: P3 0-1, P2 1-7, P1 7-15, P4 15-24. Turnaround time = completion time - arrival time. TAT(P1) = 15 - 0 = 15; TAT(P2) = 7 - 0 = 7; TAT(P3) = 1 - 0 = 1; TAT(P4) = 24 - 0 = 24. Average = 47/4 = 11.75 ms. (Slides 5.12, 5.13, 5.49.)",
+  "source": {
+   "kind": "leak",
+   "refs": [
+    "L11-16"
+   ]
+  },
+  "syllabus_ref": {
+   "file": "CH-5-Updated.pdf",
+   "slides": [
+    12,
+    13,
+    49
+   ]
+  },
+  "review_status": "approved"
+ },
+ {
+  "id": "c5-n027",
+  "unit": 5,
+  "topic": "Scheduling Algorithms (calculation)",
+  "difficulty": "hard",
+  "question": "Consider the following processes (times in ms). Using Round Robin (RR) scheduling with time quantum q = 3 ms, what is the average turnaround time?",
+  "table": {
+   "headers": [
+    "Process",
+    "Arrival Time",
+    "Burst Time"
+   ],
+   "rows": [
+    [
+     "P1",
+     "0",
+     "8"
+    ],
+    [
+     "P2",
+     "0",
+     "6"
+    ],
+    [
+     "P3",
+     "0",
+     "1"
+    ],
+    [
+     "P4",
+     "0",
+     "9"
+    ]
+   ]
+  },
+  "options": [
+   "15.25 ms",
+   "17 ms",
+   "68 ms",
+   "11.75 ms"
+  ],
+  "answer": 1,
+  "hint": "Each process runs at most one quantum and then goes to the back of the ready queue. Turnaround time = completion time - arrival time.",
+  "explanation": "Gantt chart: P1 0-3, P2 3-6, P3 6-7, P4 7-10, P1 10-13, P2 13-16, P4 16-19, P1 19-21, P4 21-24. Turnaround time = completion time - arrival time. TAT(P1) = 21 - 0 = 21; TAT(P2) = 16 - 0 = 16; TAT(P3) = 7 - 0 = 7; TAT(P4) = 24 - 0 = 24. Average = 68/4 = 17 ms. (Slides 5.15, 5.16, 5.49.)",
+  "source": {
+   "kind": "leak",
+   "refs": [
+    "L11-16"
+   ]
+  },
+  "syllabus_ref": {
+   "file": "CH-5-Updated.pdf",
+   "slides": [
+    15,
+    16,
+    49
+   ]
+  },
+  "review_status": "approved"
+ },
+ {
+  "id": "c5-n028",
+  "unit": 5,
+  "topic": "Scheduling Algorithms (calculation)",
+  "difficulty": "hard",
+  "question": "Consider the following processes (times in ms). Using Round Robin (RR) scheduling with time quantum q = 3 ms, what is the average waiting time?",
+  "table": {
+   "headers": [
+    "Process",
+    "Arrival Time",
+    "Burst Time"
+   ],
+   "rows": [
+    [
+     "P1",
+     "0",
+     "8"
+    ],
+    [
+     "P2",
+     "0",
+     "6"
+    ],
+    [
+     "P3",
+     "0",
+     "1"
+    ],
+    [
+     "P4",
+     "0",
+     "9"
+    ]
+   ]
+  },
+  "options": [
+   "11 ms",
+   "44 ms",
+   "9.25 ms",
+   "5.75 ms"
+  ],
+  "answer": 0,
+  "hint": "Each process runs at most one quantum and then goes to the back of the ready queue. Waiting time = turnaround time - burst time.",
+  "explanation": "Gantt chart: P1 0-3, P2 3-6, P3 6-7, P4 7-10, P1 10-13, P2 13-16, P4 16-19, P1 19-21, P4 21-24. Waiting time = turnaround time - burst time, where turnaround time = completion time - arrival time. WT(P1) = (21 - 0) - 8 = 13; WT(P2) = (16 - 0) - 6 = 10; WT(P3) = (7 - 0) - 1 = 6; WT(P4) = (24 - 0) - 9 = 15. Average = 44/4 = 11 ms. (Slides 5.15, 5.16, 5.49.)",
+  "source": {
+   "kind": "leak",
+   "refs": [
+    "L11-16"
+   ]
+  },
+  "syllabus_ref": {
+   "file": "CH-5-Updated.pdf",
+   "slides": [
+    15,
+    16,
+    49
+   ]
+  },
+  "review_status": "approved"
+ },
+ {
+  "id": "c5-n029",
+  "unit": 5,
+  "topic": "Scheduling Algorithms (calculation)",
+  "difficulty": "medium",
+  "question": "Consider the following processes (times in ms). Using nonpreemptive Shortest-Job-First (SJF) scheduling, what does the CPU do from time 4 to time 6? Ties are broken in favor of the process that arrived first (then the one listed first).",
+  "table": {
+   "headers": [
+    "Process",
+    "Arrival Time",
+    "Burst Time"
+   ],
+   "rows": [
+    [
+     "P1",
+     "0",
+     "4"
+    ],
+    [
+     "P2",
+     "1",
+     "3"
+    ],
+    [
+     "P3",
+     "2",
+     "3"
+    ]
+   ]
+  },
+  "options": [
+   "The CPU is executing P1",
+   "The CPU is executing P2",
+   "The CPU is idle",
+   "The CPU is executing P3"
+  ],
+  "answer": 1,
+  "hint": "Each time the CPU becomes free, pick the arrived process with the shortest burst; no preemption. Draw the Gantt chart first.",
+  "explanation": "Gantt chart: P1 0-4, P2 4-7, P3 7-10. During that interval, the CPU is executing P2. (Slides 5.12, 5.13, 5.49.)",
+  "source": {
+   "kind": "leak",
+   "refs": [
+    "L13-02"
+   ]
+  },
+  "syllabus_ref": {
+   "file": "CH-5-Updated.pdf",
+   "slides": [
+    12,
+    13,
+    49
+   ]
+  },
+  "review_status": "approved"
+ },
+ {
+  "id": "c5-n030",
+  "unit": 5,
+  "topic": "Scheduling Algorithms (calculation)",
+  "difficulty": "medium",
+  "question": "Consider the following processes (times in ms). Using nonpreemptive Shortest-Job-First (SJF) scheduling, what does the CPU do from time 4 to time 6?",
+  "table": {
+   "headers": [
+    "Process",
+    "Arrival Time",
+    "Burst Time"
+   ],
+   "rows": [
+    [
+     "P1",
+     "0",
+     "4"
+    ],
+    [
+     "P2",
+     "6",
+     "3"
+    ],
+    [
+     "P3",
+     "6",
+     "2"
+    ]
+   ]
+  },
+  "options": [
+   "The CPU is executing P1",
+   "The CPU is executing P3",
+   "The CPU is idle",
+   "The CPU is executing P2"
+  ],
+  "answer": 2,
+  "hint": "Each time the CPU becomes free, pick the arrived process with the shortest burst; no preemption. Draw the Gantt chart first.",
+  "explanation": "Gantt chart: P1 0-4, idle 4-6, P3 6-8, P2 8-11. During that interval, the CPU is idle. (Slides 5.12, 5.13, 5.49.)",
+  "source": {
+   "kind": "leak",
+   "refs": [
+    "L13-03"
+   ]
+  },
+  "syllabus_ref": {
+   "file": "CH-5-Updated.pdf",
+   "slides": [
+    12,
+    13,
+    49
+   ]
+  },
+  "review_status": "approved"
+ },
+ {
+  "id": "c5-n031",
+  "unit": 5,
+  "topic": "Scheduling Algorithms (calculation)",
+  "difficulty": "medium",
+  "question": "Consider the following processes (times in ms). Using nonpreemptive Shortest-Job-First (SJF) scheduling, what is the waiting time of P2?",
+  "table": {
+   "headers": [
+    "Process",
+    "Arrival Time",
+    "Burst Time"
+   ],
+   "rows": [
+    [
+     "P1",
+     "0",
+     "4"
+    ],
+    [
+     "P2",
+     "6",
+     "3"
+    ],
+    [
+     "P3",
+     "6",
+     "2"
+    ]
+   ]
+  },
+  "options": [
+   "5 ms",
+   "3 ms",
+   "0 ms",
+   "2 ms"
+  ],
+  "answer": 3,
+  "hint": "Each time the CPU becomes free, pick the arrived process with the shortest burst; no preemption. Waiting time = turnaround time - burst time.",
+  "explanation": "Gantt chart: P1 0-4, idle 4-6, P3 6-8, P2 8-11. Waiting time = turnaround time - burst time, where turnaround time = completion time - arrival time. WT(P2) = (11 - 6) - 3 = 2. (Slides 5.12, 5.13, 5.49.)",
+  "source": {
+   "kind": "leak",
+   "refs": [
+    "L13-04"
+   ]
+  },
+  "syllabus_ref": {
+   "file": "CH-5-Updated.pdf",
+   "slides": [
+    12,
+    13,
+    49
+   ]
+  },
+  "review_status": "approved"
+ },
+ {
+  "id": "c5-n032",
+  "unit": 5,
+  "topic": "Scheduling Algorithms (calculation)",
+  "difficulty": "medium",
+  "question": "Consider the following processes (times in ms). Using Round Robin (RR) scheduling with time quantum q = 4 ms, what does the CPU do from time 6 to time 7?",
+  "table": {
+   "headers": [
+    "Process",
+    "Arrival Time",
+    "Burst Time"
+   ],
+   "rows": [
+    [
+     "P1",
+     "2",
+     "4"
+    ],
+    [
+     "P2",
+     "7",
+     "8"
+    ],
+    [
+     "P3",
+     "9",
+     "1"
+    ]
+   ]
+  },
+  "options": [
+   "The CPU is executing P1",
+   "The CPU is idle",
+   "The CPU is executing P3",
+   "The CPU is executing P2"
+  ],
+  "answer": 1,
+  "hint": "Each process runs at most one quantum and then goes to the back of the ready queue. Draw the Gantt chart first.",
+  "explanation": "Gantt chart: idle 0-2, P1 2-6, idle 6-7, P2 7-11, P3 11-12, P2 12-16. During that interval, the CPU is idle. (Slides 5.15, 5.16, 5.49.)",
+  "source": {
+   "kind": "leak",
+   "refs": [
+    "L13-08"
+   ]
+  },
+  "syllabus_ref": {
+   "file": "CH-5-Updated.pdf",
+   "slides": [
+    15,
+    16,
+    49
+   ]
+  },
+  "review_status": "approved"
+ },
+ {
+  "id": "c5-n033",
+  "unit": 5,
+  "topic": "Scheduling Algorithms (calculation)",
+  "difficulty": "medium",
+  "question": "Consider the following processes (times in ms). Using preemptive priority scheduling (a smaller number means a higher priority), what is the order of execution shown on the Gantt chart?",
+  "table": {
+   "headers": [
+    "Process",
+    "Arrival Time",
+    "Burst Time",
+    "Priority"
+   ],
+   "rows": [
+    [
+     "P1",
+     "0",
+     "5",
+     "4"
+    ],
+    [
+     "P2",
+     "1",
+     "3",
+     "2"
+    ],
+    [
+     "P3",
+     "2",
+     "3",
+     "1"
+    ]
+   ]
+  },
+  "options": [
+   "P1-P2-P3",
+   "P2-P1-P3-P2-P1",
+   "P1-P2-P3-P1-P2",
+   "P1-P2-P3-P2-P1"
+  ],
+  "answer": 3,
+  "hint": "A newly arrived process with a smaller priority number preempts the running process. Draw the Gantt chart first.",
+  "explanation": "Gantt chart: P1 0-1, P2 1-2, P3 2-5, P2 5-7, P1 7-11. Reading the chart from left to right gives P1-P2-P3-P2-P1. (Slides 5.19, 5.20, 5.49.)",
+  "source": {
+   "kind": "leak",
+   "refs": [
+    "L13-09"
+   ]
+  },
+  "syllabus_ref": {
+   "file": "CH-5-Updated.pdf",
+   "slides": [
+    19,
+    20,
+    49
+   ]
+  },
+  "review_status": "approved"
+ },
+ {
+  "id": "c5-n034",
+  "unit": 5,
+  "topic": "Scheduling Algorithms (calculation)",
+  "difficulty": "medium",
+  "question": "Consider the following processes (times in ms). Using nonpreemptive priority scheduling (a smaller number means a higher priority), what is the waiting time of P2?",
+  "table": {
+   "headers": [
+    "Process",
+    "Arrival Time",
+    "Burst Time",
+    "Priority"
+   ],
+   "rows": [
+    [
+     "P1",
+     "0",
+     "5",
+     "4"
+    ],
+    [
+     "P2",
+     "1",
+     "3",
+     "2"
+    ],
+    [
+     "P3",
+     "2",
+     "3",
+     "1"
+    ]
+   ]
+  },
+  "options": [
+   "5 ms",
+   "4 ms",
+   "7 ms",
+   "3 ms"
+  ],
+  "answer": 2,
+  "hint": "Each time the CPU becomes free, pick the arrived process with the smallest priority number; no preemption. Waiting time = turnaround time - burst time.",
+  "explanation": "Gantt chart: P1 0-5, P3 5-8, P2 8-11. Waiting time = turnaround time - burst time, where turnaround time = completion time - arrival time. WT(P2) = (11 - 1) - 3 = 7. (Slides 5.19, 5.20, 5.49.)",
+  "source": {
+   "kind": "leak",
+   "refs": [
+    "L14-22"
+   ]
+  },
+  "syllabus_ref": {
+   "file": "CH-5-Updated.pdf",
+   "slides": [
+    19,
+    20,
+    49
+   ]
+  },
+  "review_status": "approved"
+ },
+ {
+  "id": "c5-n035",
+  "unit": 5,
+  "topic": "Scheduling Algorithms (calculation)",
+  "difficulty": "medium",
+  "question": "Consider the following processes (times in ms). Using Round Robin (RR) scheduling with time quantum q = 4 ms, what is the order of execution shown on the Gantt chart?",
+  "table": {
+   "headers": [
+    "Process",
+    "Arrival Time",
+    "Burst Time"
+   ],
+   "rows": [
+    [
+     "P1",
+     "0",
+     "5"
+    ],
+    [
+     "P2",
+     "1",
+     "8"
+    ],
+    [
+     "P3",
+     "2",
+     "2"
+    ]
+   ]
+  },
+  "options": [
+   "P1-P2-P3",
+   "P2-P1-P3-P1-P2",
+   "P1-P2-P3-P2-P1",
+   "P1-P2-P3-P1-P2"
+  ],
+  "answer": 3,
+  "hint": "Each process runs at most one quantum and then goes to the back of the ready queue. Draw the Gantt chart first.",
+  "explanation": "Gantt chart: P1 0-4, P2 4-8, P3 8-10, P1 10-11, P2 11-15. Reading the chart from left to right gives P1-P2-P3-P1-P2. (Slides 5.15, 5.16, 5.49.)",
+  "source": {
+   "kind": "leak",
+   "refs": [
+    "L13-10"
+   ]
+  },
+  "syllabus_ref": {
+   "file": "CH-5-Updated.pdf",
+   "slides": [
+    15,
+    16,
+    49
+   ]
+  },
+  "review_status": "approved"
+ },
+ {
+  "id": "c5-n036",
+  "unit": 5,
+  "topic": "Scheduling Algorithms (calculation)",
+  "difficulty": "medium",
+  "question": "Consider the following processes (times in ms). Using nonpreemptive priority scheduling (a smaller number means a higher priority), what is the waiting time of P2?",
+  "table": {
+   "headers": [
+    "Process",
+    "Arrival Time",
+    "Burst Time",
+    "Priority"
+   ],
+   "rows": [
+    [
+     "P1",
+     "10",
+     "15",
+     "6"
+    ],
+    [
+     "P2",
+     "15",
+     "5",
+     "3"
+    ],
+    [
+     "P3",
+     "20",
+     "10",
+     "2"
+    ]
+   ]
+  },
+  "options": [
+   "4 ms",
+   "7 ms",
+   "10 ms",
+   "20 ms"
+  ],
+  "answer": 3,
+  "hint": "Each time the CPU becomes free, pick the arrived process with the smallest priority number; no preemption. Waiting time = turnaround time - burst time.",
+  "explanation": "Gantt chart: idle 0-10, P1 10-25, P3 25-35, P2 35-40. Waiting time = turnaround time - burst time, where turnaround time = completion time - arrival time. WT(P2) = (40 - 15) - 5 = 20. (Slides 5.19, 5.20, 5.49.)",
+  "source": {
+   "kind": "leak",
+   "refs": [
+    "L14-01"
+   ]
+  },
+  "syllabus_ref": {
+   "file": "CH-5-Updated.pdf",
+   "slides": [
+    19,
+    20,
+    49
+   ]
+  },
+  "review_status": "approved"
+ },
+ {
+  "id": "c5-n037",
+  "unit": 5,
+  "topic": "Scheduling Algorithms (calculation)",
+  "difficulty": "medium",
+  "question": "Consider the following processes (times in ms). Using nonpreemptive priority scheduling (a smaller number means a higher priority), at what time does P2 finish execution?",
+  "table": {
+   "headers": [
+    "Process",
+    "Arrival Time",
+    "Burst Time",
+    "Priority"
+   ],
+   "rows": [
+    [
+     "P1",
+     "10",
+     "15",
+     "6"
+    ],
+    [
+     "P2",
+     "15",
+     "5",
+     "3"
+    ],
+    [
+     "P3",
+     "20",
+     "10",
+     "2"
+    ]
+   ]
+  },
+  "options": [
+   "30 ms",
+   "40 ms",
+   "25 ms",
+   "10 ms"
+  ],
+  "answer": 1,
+  "hint": "Each time the CPU becomes free, pick the arrived process with the smallest priority number; no preemption. Draw the Gantt chart first.",
+  "explanation": "Gantt chart: idle 0-10, P1 10-25, P3 25-35, P2 35-40. P2 completes at time 40. (Slides 5.19, 5.20, 5.49.)",
+  "source": {
+   "kind": "leak",
+   "refs": [
+    "L14-02"
+   ]
+  },
+  "syllabus_ref": {
+   "file": "CH-5-Updated.pdf",
+   "slides": [
+    19,
+    20,
+    49
+   ]
+  },
+  "review_status": "approved"
+ },
+ {
+  "id": "c5-n038",
+  "unit": 5,
+  "topic": "Scheduling Algorithms (calculation)",
+  "difficulty": "medium",
+  "question": "Consider the following processes (times in ms). Using nonpreemptive priority scheduling (a smaller number means a higher priority), what is the order of execution shown on the Gantt chart?",
+  "table": {
+   "headers": [
+    "Process",
+    "Arrival Time",
+    "Burst Time",
+    "Priority"
+   ],
+   "rows": [
+    [
+     "P1",
+     "10",
+     "15",
+     "6"
+    ],
+    [
+     "P2",
+     "15",
+     "5",
+     "3"
+    ],
+    [
+     "P3",
+     "20",
+     "10",
+     "2"
+    ]
+   ]
+  },
+  "options": [
+   "P1-P2-P1-P3-P2-P1-P3",
+   "P1-P3-P2",
+   "P3-P1-P2",
+   "P1-P2-P3"
+  ],
+  "answer": 1,
+  "hint": "Each time the CPU becomes free, pick the arrived process with the smallest priority number; no preemption. Draw the Gantt chart first.",
+  "explanation": "Gantt chart: idle 0-10, P1 10-25, P3 25-35, P2 35-40. Reading the chart from left to right gives P1-P3-P2. (Slides 5.19, 5.20, 5.49.)",
+  "source": {
+   "kind": "leak",
+   "refs": [
+    "L18-39"
+   ]
+  },
+  "syllabus_ref": {
+   "file": "CH-5-Updated.pdf",
+   "slides": [
+    19,
+    20,
+    49
+   ]
+  },
+  "review_status": "approved"
+ },
+ {
+  "id": "c5-n039",
+  "unit": 5,
+  "topic": "Scheduling Algorithms (calculation)",
+  "difficulty": "medium",
+  "question": "Consider the following processes (times in ms). Using First-Come, First-Served (FCFS) scheduling, what is the average waiting time?",
+  "table": {
+   "headers": [
+    "Process",
+    "Arrival Time",
+    "Burst Time"
+   ],
+   "rows": [
+    [
+     "P1",
+     "1",
+     "3"
+    ],
+    [
+     "P2",
+     "2",
+     "3"
+    ],
+    [
+     "P3",
+     "3",
+     "3"
+    ]
+   ]
+  },
+  "options": [
+   "6 ms",
+   "2 ms",
+   "5 ms",
+   "4 ms"
+  ],
+  "answer": 1,
+  "hint": "Run the processes strictly in order of arrival; no process gives up the CPU early. Waiting time = turnaround time - burst time.",
+  "explanation": "Gantt chart: idle 0-1, P1 1-4, P2 4-7, P3 7-10. Waiting time = turnaround time - burst time, where turnaround time = completion time - arrival time. WT(P1) = (4 - 1) - 3 = 0; WT(P2) = (7 - 2) - 3 = 2; WT(P3) = (10 - 3) - 3 = 4. Average = 6/3 = 2 ms. (Slides 5.10, 5.11, 5.49.)",
+  "source": {
+   "kind": "leak",
+   "refs": [
+    "L14-06"
+   ]
+  },
+  "syllabus_ref": {
+   "file": "CH-5-Updated.pdf",
+   "slides": [
+    10,
+    11,
+    49
+   ]
+  },
+  "review_status": "approved"
+ },
+ {
+  "id": "c5-n040",
+  "unit": 5,
+  "topic": "Scheduling Algorithms (calculation)",
+  "difficulty": "easy",
+  "question": "Consider the following processes (times in ms). Using First-Come, First-Served (FCFS) scheduling, at what time does P3 finish execution?",
+  "table": {
+   "headers": [
+    "Process",
+    "Arrival Time",
+    "Burst Time"
+   ],
+   "rows": [
+    [
+     "P1",
+     "0",
+     "11"
+    ],
+    [
+     "P2",
+     "6",
+     "7"
+    ],
+    [
+     "P3",
+     "8",
+     "4"
+    ]
+   ]
+  },
+  "options": [
+   "18 ms",
+   "22 ms",
+   "11 ms",
+   "15 ms"
+  ],
+  "answer": 1,
+  "hint": "Run the processes strictly in order of arrival; no process gives up the CPU early. Draw the Gantt chart first.",
+  "explanation": "Gantt chart: P1 0-11, P2 11-18, P3 18-22. P3 completes at time 22. (Slides 5.10, 5.11, 5.49.)",
+  "source": {
+   "kind": "leak",
+   "refs": [
+    "L14-07"
+   ]
+  },
+  "syllabus_ref": {
+   "file": "CH-5-Updated.pdf",
+   "slides": [
+    10,
+    11,
+    49
+   ]
+  },
+  "review_status": "approved"
+ },
+ {
+  "id": "c5-n041",
+  "unit": 5,
+  "topic": "Scheduling Algorithms (calculation)",
+  "difficulty": "medium",
+  "question": "Consider the following processes (times in ms). Using nonpreemptive Shortest-Job-First (SJF) scheduling, what is the waiting time of P3?",
+  "table": {
+   "headers": [
+    "Process",
+    "Arrival Time",
+    "Burst Time"
+   ],
+   "rows": [
+    [
+     "P1",
+     "3",
+     "11"
+    ],
+    [
+     "P2",
+     "6",
+     "5"
+    ],
+    [
+     "P3",
+     "8",
+     "4"
+    ]
+   ]
+  },
+  "options": [
+   "7 ms",
+   "10 ms",
+   "None of the mentioned",
+   "9 ms"
+  ],
+  "answer": 2,
+  "hint": "Each time the CPU becomes free, pick the arrived process with the shortest burst; no preemption. Waiting time = turnaround time - burst time.",
+  "explanation": "Gantt chart: idle 0-3, P1 3-14, P3 14-18, P2 18-23. Waiting time = turnaround time - burst time, where turnaround time = completion time - arrival time. WT(P3) = (18 - 8) - 4 = 6. (Slides 5.12, 5.13, 5.49.) The correct value, 6 ms, is not among the listed numbers, so the answer is 'None of the mentioned'.",
+  "source": {
+   "kind": "leak",
+   "refs": [
+    "L14-08"
+   ]
+  },
+  "syllabus_ref": {
+   "file": "CH-5-Updated.pdf",
+   "slides": [
+    12,
+    13,
+    49
+   ]
+  },
+  "review_status": "approved"
+ },
+ {
+  "id": "c5-n042",
+  "unit": 5,
+  "topic": "Scheduling Algorithms (calculation)",
+  "difficulty": "medium",
+  "question": "Consider the following processes (times in ms). Using nonpreemptive Shortest-Job-First (SJF) scheduling, at what time does P2 start execution (first get the CPU)?",
+  "table": {
+   "headers": [
+    "Process",
+    "Arrival Time",
+    "Burst Time"
+   ],
+   "rows": [
+    [
+     "P1",
+     "3",
+     "11"
+    ],
+    [
+     "P2",
+     "6",
+     "5"
+    ],
+    [
+     "P3",
+     "8",
+     "4"
+    ]
+   ]
+  },
+  "options": [
+   "7 ms",
+   "18 ms",
+   "6 ms",
+   "14 ms"
+  ],
+  "answer": 1,
+  "hint": "Each time the CPU becomes free, pick the arrived process with the shortest burst; no preemption. Draw the Gantt chart first.",
+  "explanation": "Gantt chart: idle 0-3, P1 3-14, P3 14-18, P2 18-23. P2 first gets the CPU at time 18. (Slides 5.12, 5.13, 5.49.)",
+  "source": {
+   "kind": "leak",
+   "refs": [
+    "L18-35"
+   ]
+  },
+  "syllabus_ref": {
+   "file": "CH-5-Updated.pdf",
+   "slides": [
+    12,
+    13,
+    49
+   ]
+  },
+  "review_status": "approved"
+ },
+ {
+  "id": "c5-n043",
+  "unit": 5,
+  "topic": "Scheduling Algorithms (calculation)",
+  "difficulty": "medium",
+  "question": "Consider the following processes (times in ms). Using First-Come, First-Served (FCFS) scheduling, what is the average waiting time?",
+  "table": {
+   "headers": [
+    "Process",
+    "Arrival Time",
+    "Burst Time"
+   ],
+   "rows": [
+    [
+     "P1",
+     "0",
+     "2"
+    ],
+    [
+     "P2",
+     "0",
+     "1"
+    ],
+    [
+     "P3",
+     "0",
+     "8"
+    ],
+    [
+     "P4",
+     "0",
+     "4"
+    ],
+    [
+     "P5",
+     "0",
+     "5"
+    ]
+   ]
+  },
+  "options": [
+   "10.2 ms",
+   "4.6 ms",
+   "7.2 ms",
+   "6.2 ms"
+  ],
+  "answer": 3,
+  "hint": "Run the processes strictly in order of arrival; no process gives up the CPU early. Waiting time = turnaround time - burst time.",
+  "explanation": "Gantt chart: P1 0-2, P2 2-3, P3 3-11, P4 11-15, P5 15-20. Waiting time = turnaround time - burst time, where turnaround time = completion time - arrival time. WT(P1) = (2 - 0) - 2 = 0; WT(P2) = (3 - 0) - 1 = 2; WT(P3) = (11 - 0) - 8 = 3; WT(P4) = (15 - 0) - 4 = 11; WT(P5) = (20 - 0) - 5 = 15. Average = 31/5 = 6.2 ms. (Slides 5.10, 5.11, 5.49.)",
+  "source": {
+   "kind": "leak",
+   "refs": [
+    "L14-15"
+   ]
+  },
+  "syllabus_ref": {
+   "file": "CH-5-Updated.pdf",
+   "slides": [
+    10,
+    11,
+    49
+   ]
+  },
+  "review_status": "approved"
+ },
+ {
+  "id": "c5-n044",
+  "unit": 5,
+  "topic": "Scheduling Algorithms (calculation)",
+  "difficulty": "medium",
+  "question": "Consider the following processes (times in ms). Using nonpreemptive Shortest-Job-First (SJF) scheduling, what is the average waiting time?",
+  "table": {
+   "headers": [
+    "Process",
+    "Arrival Time",
+    "Burst Time"
+   ],
+   "rows": [
+    [
+     "P1",
+     "0",
+     "2"
+    ],
+    [
+     "P2",
+     "0",
+     "1"
+    ],
+    [
+     "P3",
+     "0",
+     "8"
+    ],
+    [
+     "P4",
+     "0",
+     "4"
+    ],
+    [
+     "P5",
+     "0",
+     "5"
+    ]
+   ]
+  },
+  "options": [
+   "23 ms",
+   "4.6 ms",
+   "6.2 ms",
+   "7 ms"
+  ],
+  "answer": 1,
+  "hint": "Each time the CPU becomes free, pick the arrived process with the shortest burst; no preemption. Waiting time = turnaround time - burst time.",
+  "explanation": "Gantt chart: P2 0-1, P1 1-3, P4 3-7, P5 7-12, P3 12-20. Waiting time = turnaround time - burst time, where turnaround time = completion time - arrival time. WT(P1) = (3 - 0) - 2 = 1; WT(P2) = (1 - 0) - 1 = 0; WT(P3) = (20 - 0) - 8 = 12; WT(P4) = (7 - 0) - 4 = 3; WT(P5) = (12 - 0) - 5 = 7. Average = 23/5 = 4.6 ms. (Slides 5.12, 5.13, 5.49.)",
+  "source": {
+   "kind": "leak",
+   "refs": [
+    "L14-15"
+   ]
+  },
+  "syllabus_ref": {
+   "file": "CH-5-Updated.pdf",
+   "slides": [
+    12,
+    13,
+    49
+   ]
+  },
+  "review_status": "approved"
+ },
+ {
+  "id": "c5-n045",
+  "unit": 5,
+  "topic": "Scheduling Algorithms (calculation)",
+  "difficulty": "medium",
+  "question": "Consider the following processes (times in ms). Using nonpreemptive priority scheduling (a smaller number means a higher priority), what is the average waiting time? Ties are broken in favor of the process that arrived first (then the one listed first).",
+  "table": {
+   "headers": [
+    "Process",
+    "Arrival Time",
+    "Burst Time",
+    "Priority"
+   ],
+   "rows": [
+    [
+     "P1",
+     "0",
+     "2",
+     "2"
+    ],
+    [
+     "P2",
+     "0",
+     "1",
+     "1"
+    ],
+    [
+     "P3",
+     "0",
+     "8",
+     "4"
+    ],
+    [
+     "P4",
+     "0",
+     "4",
+     "2"
+    ],
+    [
+     "P5",
+     "0",
+     "5",
+     "3"
+    ]
+   ]
+  },
+  "options": [
+   "8.6 ms",
+   "23 ms",
+   "4.6 ms",
+   "7.8 ms"
+  ],
+  "answer": 2,
+  "hint": "Each time the CPU becomes free, pick the arrived process with the smallest priority number; no preemption. Waiting time = turnaround time - burst time.",
+  "explanation": "Gantt chart: P2 0-1, P1 1-3, P4 3-7, P5 7-12, P3 12-20. Waiting time = turnaround time - burst time, where turnaround time = completion time - arrival time. WT(P1) = (3 - 0) - 2 = 1; WT(P2) = (1 - 0) - 1 = 0; WT(P3) = (20 - 0) - 8 = 12; WT(P4) = (7 - 0) - 4 = 3; WT(P5) = (12 - 0) - 5 = 7. Average = 23/5 = 4.6 ms. (Slides 5.19, 5.20, 5.49.)",
+  "source": {
+   "kind": "leak",
+   "refs": [
+    "L14-15"
+   ]
+  },
+  "syllabus_ref": {
+   "file": "CH-5-Updated.pdf",
+   "slides": [
+    19,
+    20,
+    49
+   ]
+  },
+  "review_status": "approved"
+ },
+ {
+  "id": "c5-n046",
+  "unit": 5,
+  "topic": "Scheduling Algorithms (calculation)",
+  "difficulty": "medium",
+  "question": "Consider the following processes (times in ms). Using nonpreemptive Shortest-Job-First (SJF) scheduling, what is the waiting time of P2?",
+  "table": {
+   "headers": [
+    "Process",
+    "Arrival Time",
+    "Burst Time"
+   ],
+   "rows": [
+    [
+     "P1",
+     "0",
+     "6"
+    ],
+    [
+     "P2",
+     "1",
+     "8"
+    ],
+    [
+     "P3",
+     "2",
+     "7"
+    ],
+    [
+     "P4",
+     "3",
+     "3"
+    ]
+   ]
+  },
+  "options": [
+   "23 ms",
+   "5 ms",
+   "15 ms",
+   "7 ms"
+  ],
+  "answer": 2,
+  "hint": "Each time the CPU becomes free, pick the arrived process with the shortest burst; no preemption. Waiting time = turnaround time - burst time.",
+  "explanation": "Gantt chart: P1 0-6, P4 6-9, P3 9-16, P2 16-24. Waiting time = turnaround time - burst time, where turnaround time = completion time - arrival time. WT(P2) = (24 - 1) - 8 = 15. (Slides 5.12, 5.13, 5.49.)",
+  "source": {
+   "kind": "leak",
+   "refs": [
+    "L14-16"
+   ]
+  },
+  "syllabus_ref": {
+   "file": "CH-5-Updated.pdf",
+   "slides": [
+    12,
+    13,
+    49
+   ]
+  },
+  "review_status": "approved"
+ },
+ {
+  "id": "c5-n047",
+  "unit": 5,
+  "topic": "Scheduling Algorithms (calculation)",
+  "difficulty": "medium",
+  "question": "Consider the following processes (times in ms). Using nonpreemptive Shortest-Job-First (SJF) scheduling, what is the order of execution shown on the Gantt chart?",
+  "table": {
+   "headers": [
+    "Process",
+    "Arrival Time",
+    "Burst Time"
+   ],
+   "rows": [
+    [
+     "P1",
+     "0",
+     "6"
+    ],
+    [
+     "P2",
+     "1",
+     "8"
+    ],
+    [
+     "P3",
+     "2",
+     "7"
+    ],
+    [
+     "P4",
+     "3",
+     "3"
+    ]
+   ]
+  },
+  "options": [
+   "P4-P1-P3-P2",
+   "P1-P3-P4-P2",
+   "P1-P4-P2-P3",
+   "P1-P4-P3-P2"
+  ],
+  "answer": 3,
+  "hint": "Each time the CPU becomes free, pick the arrived process with the shortest burst; no preemption. Draw the Gantt chart first.",
+  "explanation": "Gantt chart: P1 0-6, P4 6-9, P3 9-16, P2 16-24. Reading the chart from left to right gives P1-P4-P3-P2. (Slides 5.12, 5.13, 5.49.)",
+  "source": {
+   "kind": "leak",
+   "refs": [
+    "L14-17"
+   ]
+  },
+  "syllabus_ref": {
+   "file": "CH-5-Updated.pdf",
+   "slides": [
+    12,
+    13,
+    49
+   ]
+  },
+  "review_status": "approved"
+ },
+ {
+  "id": "c5-n048",
+  "unit": 5,
+  "topic": "Scheduling Algorithms (calculation)",
+  "difficulty": "medium",
+  "question": "Consider the following processes (times in ms). Using nonpreemptive Shortest-Job-First (SJF) scheduling, what is the waiting time of P3?",
+  "table": {
+   "headers": [
+    "Process",
+    "Arrival Time",
+    "Burst Time"
+   ],
+   "rows": [
+    [
+     "P1",
+     "0",
+     "6"
+    ],
+    [
+     "P2",
+     "1",
+     "8"
+    ],
+    [
+     "P3",
+     "2",
+     "7"
+    ],
+    [
+     "P4",
+     "3",
+     "3"
+    ]
+   ]
+  },
+  "options": [
+   "15 ms",
+   "7 ms",
+   "12 ms",
+   "3 ms"
+  ],
+  "answer": 1,
+  "hint": "Each time the CPU becomes free, pick the arrived process with the shortest burst; no preemption. Waiting time = turnaround time - burst time.",
+  "explanation": "Gantt chart: P1 0-6, P4 6-9, P3 9-16, P2 16-24. Waiting time = turnaround time - burst time, where turnaround time = completion time - arrival time. WT(P3) = (16 - 2) - 7 = 7. (Slides 5.12, 5.13, 5.49.)",
+  "source": {
+   "kind": "leak",
+   "refs": [
+    "L14-18"
+   ]
+  },
+  "syllabus_ref": {
+   "file": "CH-5-Updated.pdf",
+   "slides": [
+    12,
+    13,
+    49
+   ]
+  },
+  "review_status": "approved"
+ },
+ {
+  "id": "c5-n049",
+  "unit": 5,
+  "topic": "Scheduling Algorithms (calculation)",
+  "difficulty": "hard",
+  "question": "Consider the following processes (times in ms). Using preemptive priority scheduling (a smaller number means a higher priority), what is the average waiting time? Ties are broken in favor of the process that arrived first (then the one listed first).",
+  "table": {
+   "headers": [
+    "Process",
+    "Arrival Time",
+    "Burst Time",
+    "Priority"
+   ],
+   "rows": [
+    [
+     "P1",
+     "0",
+     "6",
+     "2"
+    ],
+    [
+     "P2",
+     "1",
+     "8",
+     "1"
+    ],
+    [
+     "P3",
+     "2",
+     "7",
+     "4"
+    ],
+    [
+     "P4",
+     "3",
+     "3",
+     "2"
+    ]
+   ]
+  },
+  "options": [
+   "6.5 ms",
+   "14.5 ms",
+   "7.75 ms",
+   "8.5 ms"
+  ],
+  "answer": 3,
+  "hint": "A newly arrived process with a smaller priority number preempts the running process. Waiting time = turnaround time - burst time.",
+  "explanation": "Gantt chart: P1 0-1, P2 1-9, P1 9-14, P4 14-17, P3 17-24. Waiting time = turnaround time - burst time, where turnaround time = completion time - arrival time. WT(P1) = (14 - 0) - 6 = 8; WT(P2) = (9 - 1) - 8 = 0; WT(P3) = (24 - 2) - 7 = 15; WT(P4) = (17 - 3) - 3 = 11. Average = 34/4 = 8.5 ms. (Slides 5.19, 5.20, 5.49.)",
+  "source": {
+   "kind": "leak",
+   "refs": [
+    "L14-19"
+   ]
+  },
+  "syllabus_ref": {
+   "file": "CH-5-Updated.pdf",
+   "slides": [
+    19,
+    20,
+    49
+   ]
+  },
+  "review_status": "approved"
+ },
+ {
+  "id": "c5-n050",
+  "unit": 5,
+  "topic": "Scheduling Algorithms (calculation)",
+  "difficulty": "medium",
+  "question": "Consider the following processes (times in ms). Using preemptive SJF (Shortest-Remaining-Time-First) scheduling, what is the order of execution shown on the Gantt chart?",
+  "table": {
+   "headers": [
+    "Process",
+    "Arrival Time",
+    "Burst Time"
+   ],
+   "rows": [
+    [
+     "P1",
+     "0",
+     "4"
+    ],
+    [
+     "P2",
+     "1",
+     "3"
+    ],
+    [
+     "P3",
+     "2",
+     "1"
+    ]
+   ]
+  },
+  "options": [
+   "P1-P3-P1-P2",
+   "P1-P3-P2",
+   "P1-P2-P3-P1-P2",
+   "P1-P2-P3"
+  ],
+  "answer": 0,
+  "hint": "Re-check at every arrival: a process with a shorter remaining time takes the CPU. Draw the Gantt chart first.",
+  "explanation": "Gantt chart: P1 0-2, P3 2-3, P1 3-5, P2 5-8. Reading the chart from left to right gives P1-P3-P1-P2. (Slides 5.14, 5.49.)",
+  "source": {
+   "kind": "leak",
+   "refs": [
+    "L14-23"
+   ]
+  },
+  "syllabus_ref": {
+   "file": "CH-5-Updated.pdf",
+   "slides": [
+    14,
+    49
+   ]
+  },
+  "review_status": "approved"
+ },
+ {
+  "id": "c5-n051",
+  "unit": 5,
+  "topic": "Scheduling Algorithms (calculation)",
+  "difficulty": "medium",
+  "question": "Consider the following processes (times in ms). Using preemptive SJF (Shortest-Remaining-Time-First) scheduling, what is the waiting time of P1?",
+  "table": {
+   "headers": [
+    "Process",
+    "Arrival Time",
+    "Burst Time"
+   ],
+   "rows": [
+    [
+     "P1",
+     "0",
+     "4"
+    ],
+    [
+     "P2",
+     "1",
+     "3"
+    ],
+    [
+     "P3",
+     "2",
+     "1"
+    ]
+   ]
+  },
+  "options": [
+   "5 ms",
+   "0 ms",
+   "1 ms",
+   "4 ms"
+  ],
+  "answer": 2,
+  "hint": "Re-check at every arrival: a process with a shorter remaining time takes the CPU. Waiting time = turnaround time - burst time.",
+  "explanation": "Gantt chart: P1 0-2, P3 2-3, P1 3-5, P2 5-8. Waiting time = turnaround time - burst time, where turnaround time = completion time - arrival time. WT(P1) = (5 - 0) - 4 = 1. (Slides 5.14, 5.49.)",
+  "source": {
+   "kind": "leak",
+   "refs": [
+    "L14-24"
+   ]
+  },
+  "syllabus_ref": {
+   "file": "CH-5-Updated.pdf",
+   "slides": [
+    14,
+    49
+   ]
+  },
+  "review_status": "approved"
+ },
+ {
+  "id": "c5-n052",
+  "unit": 5,
+  "topic": "Scheduling Algorithms (calculation)",
+  "difficulty": "hard",
+  "question": "Consider the following processes (times in ms). Using Round Robin (RR) scheduling with time quantum q = 9 ms, what is the average waiting time?",
+  "table": {
+   "headers": [
+    "Process",
+    "Arrival Time",
+    "Burst Time"
+   ],
+   "rows": [
+    [
+     "P1",
+     "0",
+     "5"
+    ],
+    [
+     "P2",
+     "0",
+     "6"
+    ],
+    [
+     "P3",
+     "0",
+     "7"
+    ],
+    [
+     "P4",
+     "0",
+     "8"
+    ],
+    [
+     "P5",
+     "0",
+     "9"
+    ]
+   ]
+  },
+  "options": [
+   "12 ms",
+   "19 ms",
+   "60 ms",
+   "12.5 ms"
+  ],
+  "answer": 0,
+  "hint": "Each process runs at most one quantum and then goes to the back of the ready queue. Waiting time = turnaround time - burst time.",
+  "explanation": "Gantt chart: P1 0-5, P2 5-11, P3 11-18, P4 18-26, P5 26-35. Waiting time = turnaround time - burst time, where turnaround time = completion time - arrival time. WT(P1) = (5 - 0) - 5 = 0; WT(P2) = (11 - 0) - 6 = 5; WT(P3) = (18 - 0) - 7 = 11; WT(P4) = (26 - 0) - 8 = 18; WT(P5) = (35 - 0) - 9 = 26. Average = 60/5 = 12 ms. (Slides 5.15, 5.16, 5.49.)",
+  "source": {
+   "kind": "leak",
+   "refs": [
+    "L15-22"
+   ]
+  },
+  "syllabus_ref": {
+   "file": "CH-5-Updated.pdf",
+   "slides": [
+    15,
+    16,
+    49
+   ]
+  },
+  "review_status": "approved"
+ },
+ {
+  "id": "c5-n053",
+  "unit": 5,
+  "topic": "Scheduling Algorithms (calculation)",
+  "difficulty": "medium",
+  "question": "Consider the following processes (times in ms). Using preemptive SJF (Shortest-Remaining-Time-First) scheduling, what is the waiting time of P2?",
+  "table": {
+   "headers": [
+    "Process",
+    "Arrival Time",
+    "Burst Time"
+   ],
+   "rows": [
+    [
+     "P1",
+     "0",
+     "5"
+    ],
+    [
+     "P2",
+     "1",
+     "5"
+    ],
+    [
+     "P3",
+     "2",
+     "4"
+    ],
+    [
+     "P4",
+     "3",
+     "3"
+    ]
+   ]
+  },
+  "options": [
+   "0 ms",
+   "11 ms",
+   "6 ms",
+   "4 ms"
+  ],
+  "answer": 1,
+  "hint": "Re-check at every arrival: a process with a shorter remaining time takes the CPU. Waiting time = turnaround time - burst time.",
+  "explanation": "Gantt chart: P1 0-5, P4 5-8, P3 8-12, P2 12-17. Waiting time = turnaround time - burst time, where turnaround time = completion time - arrival time. WT(P2) = (17 - 1) - 5 = 11. (Slides 5.14, 5.49.)",
+  "source": {
+   "kind": "leak",
+   "refs": [
+    "L15-24"
+   ]
+  },
+  "syllabus_ref": {
+   "file": "CH-5-Updated.pdf",
+   "slides": [
+    14,
+    49
+   ]
+  },
+  "review_status": "approved"
+ },
+ {
+  "id": "c5-n054",
+  "unit": 5,
+  "topic": "Scheduling Algorithms (calculation)",
+  "difficulty": "medium",
+  "question": "Consider the following processes (times in ms). Using nonpreemptive Shortest-Job-First (SJF) scheduling, what is the order of execution shown on the Gantt chart?",
+  "table": {
+   "headers": [
+    "Process",
+    "Arrival Time",
+    "Burst Time"
+   ],
+   "rows": [
+    [
+     "P1",
+     "0",
+     "5"
+    ],
+    [
+     "P2",
+     "1",
+     "5"
+    ],
+    [
+     "P3",
+     "2",
+     "4"
+    ],
+    [
+     "P4",
+     "3",
+     "3"
+    ]
+   ]
+  },
+  "options": [
+   "P1-P3-P4-P2",
+   "P4-P1-P3-P2",
+   "P1-P4-P3-P2",
+   "P1-P4-P2-P3"
+  ],
+  "answer": 2,
+  "hint": "Each time the CPU becomes free, pick the arrived process with the shortest burst; no preemption. Draw the Gantt chart first.",
+  "explanation": "Gantt chart: P1 0-5, P4 5-8, P3 8-12, P2 12-17. Reading the chart from left to right gives P1-P4-P3-P2. (Slides 5.12, 5.13, 5.49.)",
+  "source": {
+   "kind": "leak",
+   "refs": [
+    "L15-25"
+   ]
+  },
+  "syllabus_ref": {
+   "file": "CH-5-Updated.pdf",
+   "slides": [
+    12,
+    13,
+    49
+   ]
+  },
+  "review_status": "approved"
+ },
+ {
+  "id": "c5-n055",
+  "unit": 5,
+  "topic": "Scheduling Algorithms (calculation)",
+  "difficulty": "medium",
+  "question": "Consider the following processes (times in ms). Using First-Come, First-Served (FCFS) scheduling, what is the average waiting time?",
+  "table": {
+   "headers": [
+    "Process",
+    "Arrival Time",
+    "Burst Time"
+   ],
+   "rows": [
+    [
+     "P1",
+     "0",
+     "5"
+    ],
+    [
+     "P2",
+     "1",
+     "5"
+    ],
+    [
+     "P3",
+     "2",
+     "4"
+    ],
+    [
+     "P4",
+     "3",
+     "3"
+    ]
+   ]
+  },
+  "options": [
+   "5.75 ms",
+   "9.25 ms",
+   "4.75 ms",
+   "23 ms"
+  ],
+  "answer": 0,
+  "hint": "Run the processes strictly in order of arrival; no process gives up the CPU early. Waiting time = turnaround time - burst time.",
+  "explanation": "Gantt chart: P1 0-5, P2 5-10, P3 10-14, P4 14-17. Waiting time = turnaround time - burst time, where turnaround time = completion time - arrival time. WT(P1) = (5 - 0) - 5 = 0; WT(P2) = (10 - 1) - 5 = 4; WT(P3) = (14 - 2) - 4 = 8; WT(P4) = (17 - 3) - 3 = 11. Average = 23/4 = 5.75 ms. (Slides 5.10, 5.11, 5.49.)",
+  "source": {
+   "kind": "leak",
+   "refs": [
+    "L15-26"
+   ]
+  },
+  "syllabus_ref": {
+   "file": "CH-5-Updated.pdf",
+   "slides": [
+    10,
+    11,
+    49
+   ]
+  },
+  "review_status": "approved"
+ },
+ {
+  "id": "c5-n056",
+  "unit": 5,
+  "topic": "Scheduling Algorithms (calculation)",
+  "difficulty": "hard",
+  "question": "Consider the following processes (times in ms). Using Round Robin (RR) scheduling with time quantum q = 2 ms, what is the average waiting time?",
+  "table": {
+   "headers": [
+    "Process",
+    "Arrival Time",
+    "Burst Time"
+   ],
+   "rows": [
+    [
+     "P1",
+     "0",
+     "4"
+    ],
+    [
+     "P2",
+     "1",
+     "5"
+    ],
+    [
+     "P3",
+     "2",
+     "2"
+    ],
+    [
+     "P4",
+     "4",
+     "3"
+    ]
+   ]
+  },
+  "options": [
+   "20 ms",
+   "3 ms",
+   "5 ms",
+   "1.75 ms"
+  ],
+  "answer": 2,
+  "hint": "Each process runs at most one quantum and then goes to the back of the ready queue. Waiting time = turnaround time - burst time.",
+  "explanation": "Gantt chart: P1 0-2, P2 2-4, P3 4-6, P1 6-8, P4 8-10, P2 10-12, P4 12-13, P2 13-14. Waiting time = turnaround time - burst time, where turnaround time = completion time - arrival time. WT(P1) = (8 - 0) - 4 = 4; WT(P2) = (14 - 1) - 5 = 8; WT(P3) = (6 - 2) - 2 = 2; WT(P4) = (13 - 4) - 3 = 6. Average = 20/4 = 5 ms. (Slides 5.15, 5.16, 5.49.)",
+  "source": {
+   "kind": "leak",
+   "refs": [
+    "L16-25"
+   ]
+  },
+  "syllabus_ref": {
+   "file": "CH-5-Updated.pdf",
+   "slides": [
+    15,
+    16,
+    49
+   ]
+  },
+  "review_status": "approved"
+ },
+ {
+  "id": "c5-n057",
+  "unit": 5,
+  "topic": "Scheduling Algorithms (calculation)",
+  "difficulty": "hard",
+  "question": "Consider the following processes (times in ms). Using Round Robin (RR) scheduling with time quantum q = 2 ms, what is the average waiting time? If a process arrives at the same moment a time slice ends, the arriving process enters the ready queue before the preempted one.",
+  "table": {
+   "headers": [
+    "Process",
+    "Arrival Time",
+    "Burst Time"
+   ],
+   "rows": [
+    [
+     "P1",
+     "0",
+     "6"
+    ],
+    [
+     "P2",
+     "1",
+     "3"
+    ],
+    [
+     "P3",
+     "2",
+     "3"
+    ],
+    [
+     "P4",
+     "4",
+     "5"
+    ]
+   ]
+  },
+  "options": [
+   "4 ms",
+   "11.75 ms",
+   "7.5 ms",
+   "5 ms"
+  ],
+  "answer": 2,
+  "hint": "Each process runs at most one quantum and then goes to the back of the ready queue. Waiting time = turnaround time - burst time.",
+  "explanation": "Gantt chart: P1 0-2, P2 2-4, P3 4-6, P1 6-8, P4 8-10, P2 10-11, P3 11-12, P1 12-14, P4 14-17. Waiting time = turnaround time - burst time, where turnaround time = completion time - arrival time. WT(P1) = (14 - 0) - 6 = 8; WT(P2) = (11 - 1) - 3 = 7; WT(P3) = (12 - 2) - 3 = 7; WT(P4) = (17 - 4) - 5 = 8. Average = 30/4 = 7.5 ms. (Slides 5.15, 5.16, 5.49.)",
+  "source": {
+   "kind": "leak",
+   "refs": [
+    "L17-23"
+   ]
+  },
+  "syllabus_ref": {
+   "file": "CH-5-Updated.pdf",
+   "slides": [
+    15,
+    16,
+    49
+   ]
+  },
+  "review_status": "approved"
+ },
+ {
+  "id": "c5-n058",
+  "unit": 5,
+  "topic": "Scheduling Algorithms (calculation)",
+  "difficulty": "medium",
+  "question": "Consider the following processes (times in ms). Using preemptive SJF (Shortest-Remaining-Time-First) scheduling, at what time does P3 start execution (first get the CPU)?",
+  "table": {
+   "headers": [
+    "Process",
+    "Arrival Time",
+    "Burst Time"
+   ],
+   "rows": [
+    [
+     "P1",
+     "0",
+     "6"
+    ],
+    [
+     "P2",
+     "2",
+     "2"
+    ],
+    [
+     "P3",
+     "3",
+     "1"
+    ]
+   ]
+  },
+  "options": [
+   "0 ms",
+   "6 ms",
+   "4 ms",
+   "9 ms"
+  ],
+  "answer": 2,
+  "hint": "Re-check at every arrival: a process with a shorter remaining time takes the CPU. Draw the Gantt chart first.",
+  "explanation": "Gantt chart: P1 0-2, P2 2-4, P3 4-5, P1 5-9. P3 first gets the CPU at time 4. (Slides 5.14, 5.49.)",
+  "source": {
+   "kind": "leak",
+   "refs": [
+    "L18-33"
+   ]
+  },
+  "syllabus_ref": {
+   "file": "CH-5-Updated.pdf",
+   "slides": [
+    14,
+    49
+   ]
+  },
+  "review_status": "approved"
+ },
+ {
+  "id": "c5-n059",
+  "unit": 5,
+  "topic": "Scheduling Algorithms (calculation)",
+  "difficulty": "medium",
+  "question": "Consider the following processes (times in ms). Using preemptive priority scheduling (a smaller number means a higher priority), what does the CPU do from time 8 to time 9?",
+  "table": {
+   "headers": [
+    "Process",
+    "Arrival Time",
+    "Burst Time",
+    "Priority"
+   ],
+   "rows": [
+    [
+     "P1",
+     "3",
+     "11",
+     "7"
+    ],
+    [
+     "P2",
+     "6",
+     "5",
+     "9"
+    ],
+    [
+     "P3",
+     "8",
+     "4",
+     "3"
+    ]
+   ]
+  },
+  "options": [
+   "The CPU is executing P2",
+   "The CPU is idle",
+   "The CPU is executing P3",
+   "The CPU is executing P1"
+  ],
+  "answer": 2,
+  "hint": "A newly arrived process with a smaller priority number preempts the running process. Draw the Gantt chart first.",
+  "explanation": "Gantt chart: idle 0-3, P1 3-8, P3 8-12, P1 12-18, P2 18-23. During that interval, the CPU is executing P3. (Slides 5.19, 5.20, 5.49.)",
+  "source": {
+   "kind": "leak",
+   "refs": [
+    "L18-34"
+   ]
+  },
+  "syllabus_ref": {
+   "file": "CH-5-Updated.pdf",
+   "slides": [
+    19,
+    20,
+    49
+   ]
+  },
+  "review_status": "approved"
+ },
+ {
+  "id": "c5-n060",
+  "unit": 5,
+  "topic": "Scheduling Algorithms (calculation)",
+  "difficulty": "easy",
+  "question": "Consider the following processes (times in ms). Using First-Come, First-Served (FCFS) scheduling, what is the order of execution shown on the Gantt chart?",
+  "table": {
+   "headers": [
+    "Process",
+    "Arrival Time",
+    "Burst Time"
+   ],
+   "rows": [
+    [
+     "P1",
+     "1",
+     "5"
+    ],
+    [
+     "P2",
+     "3",
+     "2"
+    ],
+    [
+     "P3",
+     "5",
+     "1"
+    ]
+   ]
+  },
+  "options": [
+   "P1-P2-P1-P3-P1",
+   "P1-P3-P2",
+   "P1-P2-P3",
+   "P2-P1-P3"
+  ],
+  "answer": 2,
+  "hint": "Run the processes strictly in order of arrival; no process gives up the CPU early. Draw the Gantt chart first.",
+  "explanation": "Gantt chart: idle 0-1, P1 1-6, P2 6-8, P3 8-9. Reading the chart from left to right gives P1-P2-P3. (Slides 5.10, 5.11, 5.49.)",
+  "source": {
+   "kind": "leak",
+   "refs": [
+    "L18-36"
+   ]
+  },
+  "syllabus_ref": {
+   "file": "CH-5-Updated.pdf",
+   "slides": [
+    10,
+    11,
+    49
+   ]
+  },
+  "review_status": "approved"
+ },
+ {
+  "id": "c5-n061",
+  "unit": 5,
+  "topic": "Scheduling Algorithms (calculation)",
+  "difficulty": "medium",
+  "question": "Consider the following processes (times in ms). Using First-Come, First-Served (FCFS) scheduling, what is the average waiting time?",
+  "table": {
+   "headers": [
+    "Process",
+    "Arrival Time",
+    "Burst Time"
+   ],
+   "rows": [
+    [
+     "P1",
+     "0",
+     "3"
+    ],
+    [
+     "P2",
+     "2",
+     "2"
+    ],
+    [
+     "P3",
+     "3",
+     "3"
+    ]
+   ]
+  },
+  "options": [
+   "1.33 ms",
+   "1 ms",
+   "3.67 ms",
+   "3 ms"
+  ],
+  "answer": 1,
+  "hint": "Run the processes strictly in order of arrival; no process gives up the CPU early. Waiting time = turnaround time - burst time.",
+  "explanation": "Gantt chart: P1 0-3, P2 3-5, P3 5-8. Waiting time = turnaround time - burst time, where turnaround time = completion time - arrival time. WT(P1) = (3 - 0) - 3 = 0; WT(P2) = (5 - 2) - 2 = 1; WT(P3) = (8 - 3) - 3 = 2. Average = 3/3 = 1 ms. (Slides 5.10, 5.11, 5.49.)",
+  "source": {
+   "kind": "leak",
+   "refs": [
+    "L18-37"
+   ]
+  },
+  "syllabus_ref": {
+   "file": "CH-5-Updated.pdf",
+   "slides": [
+    10,
+    11,
+    49
+   ]
+  },
+  "review_status": "approved"
+ },
+ {
+  "id": "c5-n062",
+  "unit": 5,
+  "topic": "Scheduling Algorithms (calculation)",
+  "difficulty": "medium",
+  "question": "Consider the following processes (times in ms). Using nonpreemptive priority scheduling (a smaller number means a higher priority), what is the average waiting time?",
+  "table": {
+   "headers": [
+    "Process",
+    "Arrival Time",
+    "Burst Time",
+    "Priority"
+   ],
+   "rows": [
+    [
+     "P1",
+     "2",
+     "6",
+     "3"
+    ],
+    [
+     "P2",
+     "5",
+     "2",
+     "2"
+    ],
+    [
+     "P3",
+     "6",
+     "4",
+     "1"
+    ]
+   ]
+  },
+  "options": [
+   "9 ms",
+   "2.33 ms",
+   "2 ms",
+   "3 ms"
+  ],
+  "answer": 3,
+  "hint": "Each time the CPU becomes free, pick the arrived process with the smallest priority number; no preemption. Waiting time = turnaround time - burst time.",
+  "explanation": "Gantt chart: idle 0-2, P1 2-8, P3 8-12, P2 12-14. Waiting time = turnaround time - burst time, where turnaround time = completion time - arrival time. WT(P1) = (8 - 2) - 6 = 0; WT(P2) = (14 - 5) - 2 = 7; WT(P3) = (12 - 6) - 4 = 2. Average = 9/3 = 3 ms. (Slides 5.19, 5.20, 5.49.)",
+  "source": {
+   "kind": "leak",
+   "refs": [
+    "L18-38"
+   ]
+  },
+  "syllabus_ref": {
+   "file": "CH-5-Updated.pdf",
+   "slides": [
+    19,
+    20,
+    49
+   ]
+  },
+  "review_status": "approved"
+ },
+ {
+  "id": "c5-n063",
+  "unit": 5,
+  "topic": "Scheduling Algorithms (calculation)",
+  "difficulty": "medium",
+  "question": "Consider the following processes (times in ms). Using First-Come, First-Served (FCFS) scheduling, what is the average waiting time?",
+  "table": {
+   "headers": [
+    "Process",
+    "Arrival Time",
+    "Burst Time"
+   ],
+   "rows": [
+    [
+     "P1",
+     "0",
+     "24"
+    ],
+    [
+     "P2",
+     "0",
+     "3"
+    ],
+    [
+     "P3",
+     "0",
+     "3"
+    ]
+   ]
+  },
+  "options": [
+   "17 ms",
+   "5.67 ms",
+   "5 ms",
+   "3 ms"
+  ],
+  "answer": 0,
+  "hint": "Run the processes strictly in order of arrival; no process gives up the CPU early. Waiting time = turnaround time - burst time.",
+  "explanation": "Gantt chart: P1 0-24, P2 24-27, P3 27-30. Waiting time = turnaround time - burst time, where turnaround time = completion time - arrival time. WT(P1) = (24 - 0) - 24 = 0; WT(P2) = (27 - 0) - 3 = 24; WT(P3) = (30 - 0) - 3 = 27. Average = 51/3 = 17 ms. (Slides 5.10, 5.11, 5.49.)",
+  "source": {
+   "kind": "generated"
+  },
+  "syllabus_ref": {
+   "file": "CH-5-Updated.pdf",
+   "slides": [
+    10,
+    11,
+    49
+   ]
+  },
+  "review_status": "approved"
+ },
+ {
+  "id": "c5-n064",
+  "unit": 5,
+  "topic": "Scheduling Algorithms (calculation)",
+  "difficulty": "medium",
+  "question": "Consider the following processes (times in ms). Using First-Come, First-Served (FCFS) scheduling, what is the average waiting time?",
+  "table": {
+   "headers": [
+    "Process",
+    "Arrival Time",
+    "Burst Time"
+   ],
+   "rows": [
+    [
+     "P2",
+     "0",
+     "3"
+    ],
+    [
+     "P3",
+     "0",
+     "3"
+    ],
+    [
+     "P1",
+     "0",
+     "24"
+    ]
+   ]
+  },
+  "options": [
+   "5 ms",
+   "3 ms",
+   "13 ms",
+   "9 ms"
+  ],
+  "answer": 1,
+  "hint": "Run the processes strictly in order of arrival; no process gives up the CPU early. Waiting time = turnaround time - burst time.",
+  "explanation": "Gantt chart: P2 0-3, P3 3-6, P1 6-30. Waiting time = turnaround time - burst time, where turnaround time = completion time - arrival time. WT(P2) = (3 - 0) - 3 = 0; WT(P3) = (6 - 0) - 3 = 3; WT(P1) = (30 - 0) - 24 = 6. Average = 9/3 = 3 ms. (Slides 5.10, 5.11, 5.49.)",
+  "source": {
+   "kind": "generated"
+  },
+  "syllabus_ref": {
+   "file": "CH-5-Updated.pdf",
+   "slides": [
+    10,
+    11,
+    49
+   ]
+  },
+  "review_status": "approved"
+ },
+ {
+  "id": "c5-n065",
+  "unit": 5,
+  "topic": "Scheduling Algorithms (calculation)",
+  "difficulty": "medium",
+  "question": "Consider the following processes (times in ms). Using nonpreemptive Shortest-Job-First (SJF) scheduling, what is the average waiting time?",
+  "table": {
+   "headers": [
+    "Process",
+    "Arrival Time",
+    "Burst Time"
+   ],
+   "rows": [
+    [
+     "P1",
+     "0",
+     "6"
+    ],
+    [
+     "P2",
+     "0",
+     "8"
+    ],
+    [
+     "P3",
+     "0",
+     "7"
+    ],
+    [
+     "P4",
+     "0",
+     "3"
+    ]
+   ]
+  },
+  "options": [
+   "28 ms",
+   "13 ms",
+   "10.25 ms",
+   "7 ms"
+  ],
+  "answer": 3,
+  "hint": "Each time the CPU becomes free, pick the arrived process with the shortest burst; no preemption. Waiting time = turnaround time - burst time.",
+  "explanation": "Gantt chart: P4 0-3, P1 3-9, P3 9-16, P2 16-24. Waiting time = turnaround time - burst time, where turnaround time = completion time - arrival time. WT(P1) = (9 - 0) - 6 = 3; WT(P2) = (24 - 0) - 8 = 16; WT(P3) = (16 - 0) - 7 = 9; WT(P4) = (3 - 0) - 3 = 0. Average = 28/4 = 7 ms. (Slides 5.12, 5.13, 5.49.)",
+  "source": {
+   "kind": "generated"
+  },
+  "syllabus_ref": {
+   "file": "CH-5-Updated.pdf",
+   "slides": [
+    12,
+    13,
+    49
+   ]
+  },
+  "review_status": "approved"
+ },
+ {
+  "id": "c5-n066",
+  "unit": 5,
+  "topic": "Scheduling Algorithms (calculation)",
+  "difficulty": "hard",
+  "question": "Consider the following processes (times in ms). Using preemptive SJF (Shortest-Remaining-Time-First) scheduling, what is the average waiting time?",
+  "table": {
+   "headers": [
+    "Process",
+    "Arrival Time",
+    "Burst Time"
+   ],
+   "rows": [
+    [
+     "P1",
+     "0",
+     "8"
+    ],
+    [
+     "P2",
+     "1",
+     "4"
+    ],
+    [
+     "P3",
+     "2",
+     "9"
+    ],
+    [
+     "P4",
+     "3",
+     "5"
+    ]
+   ]
+  },
+  "options": [
+   "6.5 ms",
+   "26 ms",
+   "7.75 ms",
+   "11.75 ms"
+  ],
+  "answer": 0,
+  "hint": "Re-check at every arrival: a process with a shorter remaining time takes the CPU. Waiting time = turnaround time - burst time.",
+  "explanation": "Gantt chart: P1 0-1, P2 1-5, P4 5-10, P1 10-17, P3 17-26. Waiting time = turnaround time - burst time, where turnaround time = completion time - arrival time. WT(P1) = (17 - 0) - 8 = 9; WT(P2) = (5 - 1) - 4 = 0; WT(P3) = (26 - 2) - 9 = 15; WT(P4) = (10 - 3) - 5 = 2. Average = 26/4 = 6.5 ms. (Slides 5.14, 5.49.)",
+  "source": {
+   "kind": "generated"
+  },
+  "syllabus_ref": {
+   "file": "CH-5-Updated.pdf",
+   "slides": [
+    14,
+    49
+   ]
+  },
+  "review_status": "approved"
+ },
+ {
+  "id": "c5-n067",
+  "unit": 5,
+  "topic": "Scheduling Algorithms (calculation)",
+  "difficulty": "hard",
+  "question": "Consider the following processes (times in ms). Using Round Robin (RR) scheduling with time quantum q = 4 ms, what is the average waiting time?",
+  "table": {
+   "headers": [
+    "Process",
+    "Arrival Time",
+    "Burst Time"
+   ],
+   "rows": [
+    [
+     "P1",
+     "0",
+     "24"
+    ],
+    [
+     "P2",
+     "0",
+     "3"
+    ],
+    [
+     "P3",
+     "0",
+     "3"
+    ]
+   ]
+  },
+  "options": [
+   "17 ms",
+   "15.67 ms",
+   "3.67 ms",
+   "5.67 ms"
+  ],
+  "answer": 3,
+  "hint": "Each process runs at most one quantum and then goes to the back of the ready queue. Waiting time = turnaround time - burst time.",
+  "explanation": "Gantt chart: P1 0-4, P2 4-7, P3 7-10, P1 10-30. Waiting time = turnaround time - burst time, where turnaround time = completion time - arrival time. WT(P1) = (30 - 0) - 24 = 6; WT(P2) = (7 - 0) - 3 = 4; WT(P3) = (10 - 0) - 3 = 7. Average = 17/3 = 5.67 ms. (Slides 5.15, 5.16, 5.49.)",
+  "source": {
+   "kind": "generated"
+  },
+  "syllabus_ref": {
+   "file": "CH-5-Updated.pdf",
+   "slides": [
+    15,
+    16,
+    49
+   ]
+  },
+  "review_status": "approved"
+ },
+ {
+  "id": "c5-n068",
+  "unit": 5,
+  "topic": "Scheduling Algorithms (calculation)",
+  "difficulty": "medium",
+  "question": "Consider the following processes (times in ms). Using nonpreemptive priority scheduling (a smaller number means a higher priority), what is the average waiting time?",
+  "table": {
+   "headers": [
+    "Process",
+    "Arrival Time",
+    "Burst Time",
+    "Priority"
+   ],
+   "rows": [
+    [
+     "P1",
+     "0",
+     "10",
+     "3"
+    ],
+    [
+     "P2",
+     "0",
+     "1",
+     "1"
+    ],
+    [
+     "P3",
+     "0",
+     "2",
+     "4"
+    ],
+    [
+     "P4",
+     "0",
+     "1",
+     "5"
+    ],
+    [
+     "P5",
+     "0",
+     "5",
+     "2"
+    ]
+   ]
+  },
+  "options": [
+   "8.2 ms",
+   "41 ms",
+   "7.4 ms",
+   "3.2 ms"
+  ],
+  "answer": 0,
+  "hint": "Each time the CPU becomes free, pick the arrived process with the smallest priority number; no preemption. Waiting time = turnaround time - burst time.",
+  "explanation": "Gantt chart: P2 0-1, P5 1-6, P1 6-16, P3 16-18, P4 18-19. Waiting time = turnaround time - burst time, where turnaround time = completion time - arrival time. WT(P1) = (16 - 0) - 10 = 6; WT(P2) = (1 - 0) - 1 = 0; WT(P3) = (18 - 0) - 2 = 16; WT(P4) = (19 - 0) - 1 = 18; WT(P5) = (6 - 0) - 5 = 1. Average = 41/5 = 8.2 ms. (Slides 5.19, 5.20, 5.49.)",
+  "source": {
+   "kind": "generated"
+  },
+  "syllabus_ref": {
+   "file": "CH-5-Updated.pdf",
+   "slides": [
+    19,
+    20,
+    49
+   ]
+  },
+  "review_status": "approved"
+ },
+ {
+  "id": "c5-n069",
+  "unit": 5,
+  "topic": "Scheduling Algorithms (calculation)",
+  "difficulty": "hard",
+  "question": "Consider the following processes (times in ms). Using preemptive SJF (Shortest-Remaining-Time-First) scheduling, what is the average waiting time?",
+  "table": {
+   "headers": [
+    "Process",
+    "Arrival Time",
+    "Burst Time"
+   ],
+   "rows": [
+    [
+     "P1",
+     "0",
+     "5"
+    ],
+    [
+     "P2",
+     "2",
+     "3"
+    ],
+    [
+     "P3",
+     "4",
+     "1"
+    ],
+    [
+     "P4",
+     "6",
+     "2"
+    ]
+   ]
+  },
+  "options": [
+   "3.25 ms",
+   "3 ms",
+   "4.5 ms",
+   "1.75 ms"
+  ],
+  "answer": 3,
+  "hint": "Re-check at every arrival: a process with a shorter remaining time takes the CPU. Waiting time = turnaround time - burst time.",
+  "explanation": "Gantt chart: P1 0-5, P3 5-6, P4 6-8, P2 8-11. Waiting time = turnaround time - burst time, where turnaround time = completion time - arrival time. WT(P1) = (5 - 0) - 5 = 0; WT(P2) = (11 - 2) - 3 = 6; WT(P3) = (6 - 4) - 1 = 1; WT(P4) = (8 - 6) - 2 = 0. Average = 7/4 = 1.75 ms. (Slides 5.14, 5.49.)",
+  "source": {
+   "kind": "generated"
+  },
+  "syllabus_ref": {
+   "file": "CH-5-Updated.pdf",
+   "slides": [
+    14,
+    49
+   ]
+  },
+  "review_status": "approved"
+ },
+ {
+  "id": "c5-n070",
+  "unit": 5,
+  "topic": "Scheduling Algorithms (calculation)",
+  "difficulty": "medium",
+  "question": "Consider the following processes (times in ms). Using Round Robin (RR) scheduling with time quantum q = 2 ms, at what time does P1 finish execution? If a process arrives at the same moment a time slice ends, the arriving process enters the ready queue before the preempted one.",
+  "table": {
+   "headers": [
+    "Process",
+    "Arrival Time",
+    "Burst Time"
+   ],
+   "rows": [
+    [
+     "P1",
+     "0",
+     "5"
+    ],
+    [
+     "P2",
+     "2",
+     "3"
+    ],
+    [
+     "P3",
+     "4",
+     "1"
+    ],
+    [
+     "P4",
+     "6",
+     "2"
+    ]
+   ]
+  },
+  "options": [
+   "5 ms",
+   "10 ms",
+   "6 ms",
+   "11 ms"
+  ],
+  "answer": 3,
+  "hint": "Each process runs at most one quantum and then goes to the back of the ready queue. Draw the Gantt chart first.",
+  "explanation": "Gantt chart: P1 0-2, P2 2-4, P1 4-6, P3 6-7, P2 7-8, P4 8-10, P1 10-11. P1 completes at time 11. (Slides 5.15, 5.16, 5.49.)",
+  "source": {
+   "kind": "generated"
+  },
+  "syllabus_ref": {
+   "file": "CH-5-Updated.pdf",
+   "slides": [
+    15,
+    16,
+    49
+   ]
+  },
+  "review_status": "approved"
+ },
+ {
+  "id": "c5-n071",
+  "unit": 5,
+  "topic": "Scheduling Algorithms (calculation)",
+  "difficulty": "hard",
+  "question": "Consider the following processes (times in ms). Using preemptive priority scheduling (a smaller number means a higher priority), what is the average turnaround time?",
+  "table": {
+   "headers": [
+    "Process",
+    "Arrival Time",
+    "Burst Time",
+    "Priority"
+   ],
+   "rows": [
+    [
+     "P1",
+     "0",
+     "7",
+     "3"
+    ],
+    [
+     "P2",
+     "1",
+     "4",
+     "1"
+    ],
+    [
+     "P3",
+     "3",
+     "2",
+     "2"
+    ],
+    [
+     "P4",
+     "5",
+     "3",
+     "4"
+    ]
+   ]
+  },
+  "options": [
+   "4 ms",
+   "32 ms",
+   "10 ms",
+   "8 ms"
+  ],
+  "answer": 3,
+  "hint": "A newly arrived process with a smaller priority number preempts the running process. Turnaround time = completion time - arrival time.",
+  "explanation": "Gantt chart: P1 0-1, P2 1-5, P3 5-7, P1 7-13, P4 13-16. Turnaround time = completion time - arrival time. TAT(P1) = 13 - 0 = 13; TAT(P2) = 5 - 1 = 4; TAT(P3) = 7 - 3 = 4; TAT(P4) = 16 - 5 = 11. Average = 32/4 = 8 ms. (Slides 5.19, 5.20, 5.49.)",
+  "source": {
+   "kind": "generated"
+  },
+  "syllabus_ref": {
+   "file": "CH-5-Updated.pdf",
+   "slides": [
+    19,
+    20,
+    49
+   ]
+  },
+  "review_status": "approved"
+ },
+ {
+  "id": "c5-n072",
+  "unit": 5,
+  "topic": "Scheduling Algorithms (calculation)",
+  "difficulty": "medium",
+  "question": "Consider the following processes (times in ms). Using nonpreemptive priority scheduling (a smaller number means a higher priority), what is the order of execution shown on the Gantt chart?",
+  "table": {
+   "headers": [
+    "Process",
+    "Arrival Time",
+    "Burst Time",
+    "Priority"
+   ],
+   "rows": [
+    [
+     "P1",
+     "0",
+     "7",
+     "3"
+    ],
+    [
+     "P2",
+     "1",
+     "4",
+     "1"
+    ],
+    [
+     "P3",
+     "3",
+     "2",
+     "2"
+    ],
+    [
+     "P4",
+     "5",
+     "3",
+     "4"
+    ]
+   ]
+  },
+  "options": [
+   "P1-P2-P3-P4",
+   "P1-P3-P2-P4",
+   "P1-P2-P4-P3",
+   "P2-P1-P3-P4"
+  ],
+  "answer": 0,
+  "hint": "Each time the CPU becomes free, pick the arrived process with the smallest priority number; no preemption. Draw the Gantt chart first.",
+  "explanation": "Gantt chart: P1 0-7, P2 7-11, P3 11-13, P4 13-16. Reading the chart from left to right gives P1-P2-P3-P4. (Slides 5.19, 5.20, 5.49.)",
+  "source": {
+   "kind": "generated"
+  },
+  "syllabus_ref": {
+   "file": "CH-5-Updated.pdf",
+   "slides": [
+    19,
+    20,
+    49
+   ]
+  },
+  "review_status": "approved"
+ },
+ {
+  "id": "c5-n073",
+  "unit": 5,
+  "topic": "Scheduling Algorithms (calculation)",
+  "difficulty": "hard",
+  "question": "Consider the following processes (times in ms). Using Round Robin (RR) scheduling with time quantum q = 3 ms, what is the average waiting time? If a process arrives at the same moment a time slice ends, the arriving process enters the ready queue before the preempted one.",
+  "table": {
+   "headers": [
+    "Process",
+    "Arrival Time",
+    "Burst Time"
+   ],
+   "rows": [
+    [
+     "P1",
+     "0",
+     "6"
+    ],
+    [
+     "P2",
+     "1",
+     "4"
+    ],
+    [
+     "P3",
+     "3",
+     "2"
+    ],
+    [
+     "P4",
+     "5",
+     "3"
+    ]
+   ]
+  },
+  "options": [
+   "24 ms",
+   "2.75 ms",
+   "3.25 ms",
+   "6 ms"
+  ],
+  "answer": 3,
+  "hint": "Each process runs at most one quantum and then goes to the back of the ready queue. Waiting time = turnaround time - burst time.",
+  "explanation": "Gantt chart: P1 0-3, P2 3-6, P3 6-8, P1 8-11, P4 11-14, P2 14-15. Waiting time = turnaround time - burst time, where turnaround time = completion time - arrival time. WT(P1) = (11 - 0) - 6 = 5; WT(P2) = (15 - 1) - 4 = 10; WT(P3) = (8 - 3) - 2 = 3; WT(P4) = (14 - 5) - 3 = 6. Average = 24/4 = 6 ms. (Slides 5.15, 5.16, 5.49.)",
+  "source": {
+   "kind": "generated"
+  },
+  "syllabus_ref": {
+   "file": "CH-5-Updated.pdf",
+   "slides": [
+    15,
+    16,
+    49
+   ]
+  },
+  "review_status": "approved"
+ },
+ {
+  "id": "c5-n074",
+  "unit": 5,
+  "topic": "Scheduling Algorithms (calculation)",
+  "difficulty": "medium",
+  "question": "Consider the following processes (times in ms). Using preemptive SJF (Shortest-Remaining-Time-First) scheduling, what is the turnaround time of P1?",
+  "table": {
+   "headers": [
+    "Process",
+    "Arrival Time",
+    "Burst Time"
+   ],
+   "rows": [
+    [
+     "P1",
+     "0",
+     "6"
+    ],
+    [
+     "P2",
+     "1",
+     "4"
+    ],
+    [
+     "P3",
+     "3",
+     "2"
+    ],
+    [
+     "P4",
+     "5",
+     "3"
+    ]
+   ]
+  },
+  "options": [
+   "4 ms",
+   "6 ms",
+   "15 ms",
+   "12 ms"
+  ],
+  "answer": 2,
+  "hint": "Re-check at every arrival: a process with a shorter remaining time takes the CPU. Turnaround time = completion time - arrival time.",
+  "explanation": "Gantt chart: P1 0-1, P2 1-5, P3 5-7, P4 7-10, P1 10-15. Turnaround time = completion time - arrival time. TAT(P1) = 15 - 0 = 15. (Slides 5.14, 5.49.)",
+  "source": {
+   "kind": "generated"
+  },
+  "syllabus_ref": {
+   "file": "CH-5-Updated.pdf",
+   "slides": [
+    14,
+    49
+   ]
+  },
+  "review_status": "approved"
+ },
+ {
+  "id": "c5-n075",
+  "unit": 5,
+  "topic": "Scheduling Algorithms (calculation)",
+  "difficulty": "easy",
+  "question": "Consider the following processes (times in ms). Using First-Come, First-Served (FCFS) scheduling, what does the CPU do from time 0 to time 1?",
+  "table": {
+   "headers": [
+    "Process",
+    "Arrival Time",
+    "Burst Time"
+   ],
+   "rows": [
+    [
+     "P1",
+     "1",
+     "6"
+    ],
+    [
+     "P2",
+     "2",
+     "2"
+    ],
+    [
+     "P3",
+     "4",
+     "8"
+    ],
+    [
+     "P4",
+     "5",
+     "3"
+    ]
+   ]
+  },
+  "options": [
+   "The CPU is executing P1",
+   "The CPU is idle",
+   "The CPU is executing P4",
+   "The CPU is executing P2"
+  ],
+  "answer": 1,
+  "hint": "Run the processes strictly in order of arrival; no process gives up the CPU early. Draw the Gantt chart first.",
+  "explanation": "Gantt chart: idle 0-1, P1 1-7, P2 7-9, P3 9-17, P4 17-20. During that interval, the CPU is idle. (Slides 5.10, 5.11, 5.49.)",
+  "source": {
+   "kind": "generated"
+  },
+  "syllabus_ref": {
+   "file": "CH-5-Updated.pdf",
+   "slides": [
+    10,
+    11,
+    49
+   ]
+  },
+  "review_status": "approved"
+ },
+ {
+  "id": "c5-n076",
+  "unit": 5,
+  "topic": "Scheduling Algorithms (calculation)",
+  "difficulty": "medium",
+  "question": "Consider the following processes (times in ms). Using nonpreemptive Shortest-Job-First (SJF) scheduling, what is the average turnaround time?",
+  "table": {
+   "headers": [
+    "Process",
+    "Arrival Time",
+    "Burst Time"
+   ],
+   "rows": [
+    [
+     "P1",
+     "1",
+     "6"
+    ],
+    [
+     "P2",
+     "2",
+     "2"
+    ],
+    [
+     "P3",
+     "4",
+     "8"
+    ],
+    [
+     "P4",
+     "5",
+     "3"
+    ]
+   ]
+  },
+  "options": [
+   "10.5 ms",
+   "36 ms",
+   "9 ms",
+   "4.25 ms"
+  ],
+  "answer": 2,
+  "hint": "Each time the CPU becomes free, pick the arrived process with the shortest burst; no preemption. Turnaround time = completion time - arrival time.",
+  "explanation": "Gantt chart: idle 0-1, P1 1-7, P2 7-9, P4 9-12, P3 12-20. Turnaround time = completion time - arrival time. TAT(P1) = 7 - 1 = 6; TAT(P2) = 9 - 2 = 7; TAT(P3) = 20 - 4 = 16; TAT(P4) = 12 - 5 = 7. Average = 36/4 = 9 ms. (Slides 5.12, 5.13, 5.49.)",
+  "source": {
+   "kind": "generated"
+  },
+  "syllabus_ref": {
+   "file": "CH-5-Updated.pdf",
+   "slides": [
+    12,
+    13,
+    49
+   ]
+  },
+  "review_status": "approved"
+ }
+]

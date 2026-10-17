@@ -1,0 +1,14 @@
+# Original leak files and course slides (~92MB): kept locally, not published.
+# Everything the site needs is extracted into data/.
+sources/
+
+# Generated files
+data/bank/review.html
+__pycache__/
+
+# Editors / OS
+*.kate-swp
+*.swp
+.DS_Store
+.vscode/
+.idea/

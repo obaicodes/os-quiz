@@ -1,0 +1,2283 @@
+[
+ {
+  "id": "c1-001",
+  "unit": 1,
+  "topic": "Storage Structure",
+  "difficulty": "easy",
+  "question": "Copying information into a faster storage system, so that main memory can be viewed as a cache for secondary storage, is called:",
+  "options": [
+   "Caching",
+   "Swapping",
+   "Spooling",
+   "Buffering"
+  ],
+  "answer": 0,
+  "hint": "The faster storage is checked first to see if the information is there.",
+  "explanation": "Slides 1.24 and 1.39: caching means copying information into a faster storage system; main memory can be viewed as a cache for secondary storage.",
+  "source": {
+   "kind": "leak",
+   "refs": [
+    "L01-07",
+    "L16-45"
+   ]
+  },
+  "syllabus_ref": {
+   "file": "CH-1-Updated.pdf",
+   "slides": [
+    23,
+    38
+   ]
+  },
+  "review_status": "approved"
+ },
+ {
+  "id": "c1-002",
+  "unit": 1,
+  "topic": "Operating System Definition",
+  "difficulty": "easy",
+  "question": "'The one program running at all times on the computer' is the:",
+  "options": [
+   "Kernel",
+   "Application program",
+   "Bootstrap program",
+   "System program"
+  ],
+  "answer": 0,
+  "hint": "It is the core part of the operating system.",
+  "explanation": "Slide 1.9: 'the one program running at all times on the computer' is the kernel, part of the operating system.",
+  "source": {
+   "kind": "leak",
+   "refs": [
+    "L01-08",
+    "L15-21",
+    "L18-16",
+    "L05-249"
+   ]
+  },
+  "syllabus_ref": {
+   "file": "CH-1-Updated.pdf",
+   "slides": [
+    9
+   ]
+  },
+  "review_status": "approved"
+ },
+ {
+  "id": "c1-003",
+  "unit": 1,
+  "topic": "Dual-mode Operation",
+  "difficulty": "easy",
+  "question": "The two modes of operation in a dual-mode system are:",
+  "options": [
+   "Hardware mode and software mode",
+   "User mode and kernel mode",
+   "Kernel mode and privileged mode",
+   "Physical mode and logical mode"
+  ],
+  "answer": 1,
+  "hint": "One for user code and one for operating-system code.",
+  "explanation": "Slide 1.32: dual-mode operation allows the OS to protect itself and other system components: user mode and kernel mode.",
+  "source": {
+   "kind": "leak",
+   "refs": [
+    "L11-01",
+    "L16-08",
+    "L05-242"
+   ]
+  },
+  "syllabus_ref": {
+   "file": "CH-1-Updated.pdf",
+   "slides": [
+    31
+   ]
+  },
+  "review_status": "approved"
+ },
+ {
+  "id": "c1-004",
+  "unit": 1,
+  "topic": "Dual-mode Operation",
+  "difficulty": "easy",
+  "question": "When the operating system gains control and kernel code is executing, the system is in:",
+  "options": [
+   "User mode",
+   "Idle mode",
+   "Batch mode",
+   "Kernel mode"
+  ],
+  "answer": 3,
+  "hint": "The mode bit reflects whose code is running.",
+  "explanation": "Slide 1.32: when a user is running, the mode bit is 'user'; when kernel code is executing, the mode bit is 'kernel'.",
+  "source": {
+   "kind": "leak",
+   "refs": [
+    "L01-12",
+    "L05-300",
+    "L02-16"
+   ]
+  },
+  "syllabus_ref": {
+   "file": "CH-1-Updated.pdf",
+   "slides": [
+    31
+   ]
+  },
+  "review_status": "approved"
+ },
+ {
+  "id": "c1-005",
+  "unit": 1,
+  "topic": "Dual-mode Operation",
+  "difficulty": "easy",
+  "question": "What is provided by the hardware to distinguish whether the system is running user code or kernel code?",
+  "options": [
+   "The device-status table",
+   "The mode bit",
+   "The interrupt vector",
+   "The program counter"
+  ],
+  "answer": 1,
+  "hint": "It is a single bit.",
+  "explanation": "Slide 1.32: the mode bit provided by hardware gives the ability to distinguish when the system is running user code or kernel code.",
+  "source": {
+   "kind": "leak",
+   "refs": [
+    "L02-17"
+   ]
+  },
+  "syllabus_ref": {
+   "file": "CH-1-Updated.pdf",
+   "slides": [
+    31
+   ]
+  },
+  "review_status": "approved"
+ },
+ {
+  "id": "c1-006",
+  "unit": 1,
+  "topic": "Dual-mode Operation",
+  "difficulty": "medium",
+  "question": "A system call changes the mode to __________, and the return from the call resets it to __________.",
+  "options": [
+   "user, kernel",
+   "kernel, user",
+   "kernel, kernel",
+   "user, user"
+  ],
+  "answer": 1,
+  "hint": "This is how the OS guarantees that a user cannot set the mode bit to kernel by itself.",
+  "explanation": "Slide 1.32: a system call changes mode to kernel, and the return from the call resets it to user.",
+  "source": {
+   "kind": "leak",
+   "refs": [
+    "L03-03",
+    "L15-15"
+   ]
+  },
+  "syllabus_ref": {
+   "file": "CH-1-Updated.pdf",
+   "slides": [
+    31,
+    32
+   ]
+  },
+  "review_status": "approved"
+ },
+ {
+  "id": "c1-007",
+  "unit": 1,
+  "topic": "Dual-mode Operation",
+  "difficulty": "medium",
+  "question": "When a user-level process wishes to call a function inside the kernel:",
+  "options": [
+   "It issues a system call, and the mode changes from user mode to kernel mode",
+   "The mode changes from kernel mode to user mode",
+   "It sets the mode bit to kernel by itself",
+   "It directly executes the kernel function in user mode"
+  ],
+  "answer": 0,
+  "hint": "The user program must not be able to set the mode bit itself.",
+  "explanation": "Slides 1.32-1.33: a system call changes the mode to kernel (and the return resets it to user); this prevents the user from explicitly setting the mode bit to kernel.",
+  "source": {
+   "kind": "leak",
+   "refs": [
+    "L15-08"
+   ]
+  },
+  "syllabus_ref": {
+   "file": "CH-1-Updated.pdf",
+   "slides": [
+    31,
+    32
+   ]
+  },
+  "review_status": "approved"
+ },
+ {
+  "id": "c1-008",
+  "unit": 1,
+  "topic": "Interrupts",
+  "difficulty": "easy",
+  "question": "Modern operating systems are said to be __________ driven.",
+  "options": [
+   "Interrupt",
+   "Exception",
+   "Program",
+   "Trap"
+  ],
+  "answer": 0,
+  "hint": "The OS waits for events from hardware and software to do work.",
+  "explanation": "Slide 1.13: an operating system is interrupt driven. Slide 1.28: the kernel is interrupt driven (hardware and software).",
+  "source": {
+   "kind": "leak",
+   "refs": [
+    "L03-07",
+    "L07-08"
+   ]
+  },
+  "syllabus_ref": {
+   "file": "CH-1-Updated.pdf",
+   "slides": [
+    13,
+    27
+   ]
+  },
+  "review_status": "approved"
+ },
+ {
+  "id": "c1-009",
+  "unit": 1,
+  "topic": "What Operating Systems Do",
+  "difficulty": "medium",
+  "question": "An operating system for a shared computer such as a mainframe (many users) should be designed mainly to:",
+  "options": [
+   "Maximize resource utilization and keep all users happy",
+   "Maximize the usability of one individual user",
+   "Run without any user intervention",
+   "Maximize battery life"
+  ],
+  "answer": 0,
+  "hint": "The OS acts as a resource allocator here.",
+  "explanation": "Slide 1.7: a shared computer such as a mainframe must keep all users happy; the OS is a resource allocator making efficient use of the hardware.",
+  "source": {
+   "kind": "leak",
+   "refs": [
+    "L03-01",
+    "L18-11",
+    "L18-29"
+   ]
+  },
+  "syllabus_ref": {
+   "file": "CH-1-Updated.pdf",
+   "slides": [
+    7
+   ]
+  },
+  "review_status": "approved"
+ },
+ {
+  "id": "c1-010",
+  "unit": 1,
+  "topic": "What Operating Systems Do",
+  "difficulty": "easy",
+  "question": "Operating systems for which devices are optimized for usability and battery life?",
+  "options": [
+   "Mainframes",
+   "Mobile devices such as smartphones and tablets",
+   "Embedded computers in automobiles",
+   "Workstations connected to servers"
+  ],
+  "answer": 1,
+  "hint": "These devices are described as resource poor.",
+  "explanation": "Slide 1.7: mobile devices like smartphones and tablets are resource poor and optimized for usability and battery life.",
+  "source": {
+   "kind": "leak",
+   "refs": [
+    "L18-03"
+   ]
+  },
+  "syllabus_ref": {
+   "file": "CH-1-Updated.pdf",
+   "slides": [
+    7
+   ]
+  },
+  "review_status": "approved"
+ },
+ {
+  "id": "c1-011",
+  "unit": 1,
+  "topic": "Computer System Structure",
+  "difficulty": "easy",
+  "question": "Which of the following is NOT one of the four components of a computer system?",
+  "options": [
+   "The compiler",
+   "Operating system",
+   "Hardware",
+   "Users"
+  ],
+  "answer": 0,
+  "hint": "The four components are hardware, OS, application programs and one more.",
+  "explanation": "Slide 1.5: a computer system can be divided into four components: hardware, operating system, application programs and users. A compiler is an example of an application program.",
+  "source": {
+   "kind": "leak",
+   "refs": [
+    "L03-02"
+   ]
+  },
+  "syllabus_ref": {
+   "file": "CH-1-Updated.pdf",
+   "slides": [
+    5
+   ]
+  },
+  "review_status": "approved"
+ },
+ {
+  "id": "c1-012",
+  "unit": 1,
+  "topic": "Storage Structure",
+  "difficulty": "easy",
+  "question": "In which location is information most readily available for manipulation by the CPU?",
+  "options": [
+   "Cache memory",
+   "Main memory",
+   "Mass storage",
+   "Registers"
+  ],
+  "answer": 3,
+  "hint": "It is at the very top of the storage-device hierarchy.",
+  "explanation": "Slide 1.25: the storage-device hierarchy starts with registers (fastest), then cache, main memory, and slower storage.",
+  "source": {
+   "kind": "leak",
+   "refs": [
+    "L16-20",
+    "L04-20",
+    "L05-020"
+   ]
+  },
+  "syllabus_ref": {
+   "file": "CH-1-Updated.pdf",
+   "slides": [
+    23,
+    24
+   ]
+  },
+  "review_status": "approved"
+ },
+ {
+  "id": "c1-013",
+  "unit": 1,
+  "topic": "Storage Structure",
+  "difficulty": "medium",
+  "question": "Which statement about the storage hierarchy is correct?",
+  "options": [
+   "Storage near the top is slower and cheaper",
+   "Storage near the top of the hierarchy is faster and smaller",
+   "Lower levels are more volatile than upper levels",
+   "Lower levels are faster than upper levels"
+  ],
+  "answer": 1,
+  "hint": "Storage systems are organized by speed, cost and volatility.",
+  "explanation": "Slides 1.24-1.25: storage is organized in a hierarchy by speed, cost and volatility. Upper levels (registers, cache) are faster, smaller and more expensive; lower levels are larger, slower and nonvolatile.",
+  "source": {
+   "kind": "leak",
+   "refs": [
+    "L16-52"
+   ]
+  },
+  "syllabus_ref": {
+   "file": "CH-1-Updated.pdf",
+   "slides": [
+    23,
+    24
+   ]
+  },
+  "review_status": "approved"
+ },
+ {
+  "id": "c1-014",
+  "unit": 1,
+  "topic": "Storage Structure",
+  "difficulty": "medium",
+  "question": "Which sentence is true according to the storage-device hierarchy?",
+  "options": [
+   "Magnetic tape is volatile",
+   "A hard disk is faster than magnetic tape",
+   "Registers are slower than main memory",
+   "Main memory is faster than cache"
+  ],
+  "answer": 1,
+  "hint": "Magnetic tape sits at the very bottom of the hierarchy.",
+  "explanation": "Slide 1.25: the hierarchy runs from registers, cache and main memory down to nonvolatile memory, hard-disk drives, optical disks and magnetic tapes. Lower is slower, so a hard disk is faster than tape.",
+  "source": {
+   "kind": "leak",
+   "refs": [
+    "L18-09"
+   ]
+  },
+  "syllabus_ref": {
+   "file": "CH-1-Updated.pdf",
+   "slides": [
+    23,
+    24
+   ]
+  },
+  "review_status": "approved"
+ },
+ {
+  "id": "c1-015",
+  "unit": 1,
+  "topic": "Multiprogramming",
+  "difficulty": "easy",
+  "question": "Which technique was introduced because a single user (job) cannot always keep both the CPU and the I/O devices busy?",
+  "options": [
+   "Spooling",
+   "Dual-mode operation",
+   "Multiprogramming",
+   "Caching"
+  ],
+  "answer": 2,
+  "hint": "It organizes jobs so that the CPU always has one to execute.",
+  "explanation": "Slide 1.29: a single user cannot always keep the CPU and I/O devices busy; multiprogramming organizes jobs so the CPU always has one to execute.",
+  "source": {
+   "kind": "leak",
+   "refs": [
+    "L04-21"
+   ]
+  },
+  "syllabus_ref": {
+   "file": "CH-1-Updated.pdf",
+   "slides": [
+    28
+   ]
+  },
+  "review_status": "approved"
+ },
+ {
+  "id": "c1-016",
+  "unit": 1,
+  "topic": "Multiprogramming",
+  "difficulty": "medium",
+  "question": "In a multiprogramming (batch) system:",
+  "options": [
+   "Only one job is allowed in memory at a time",
+   "Programs are developed by more than one person",
+   "The CPU waits idle while a job does I/O",
+   "A subset of the jobs is kept in memory, and when a job has to wait, the OS switches to another job"
+  ],
+  "answer": 3,
+  "hint": "The goal is to never leave the CPU idle.",
+  "explanation": "Slide 1.29: a subset of total jobs is kept in memory, one job is selected via job scheduling, and when it has to wait (e.g. for I/O) the OS switches to another job. This increases CPU utilization.",
+  "source": {
+   "kind": "leak",
+   "refs": [
+    "L05-256",
+    "L18-17",
+    "L07-15"
+   ]
+  },
+  "syllabus_ref": {
+   "file": "CH-1-Updated.pdf",
+   "slides": [
+    28,
+    30
+   ]
+  },
+  "review_status": "approved"
+ },
+ {
+  "id": "c1-017",
+  "unit": 1,
+  "topic": "What is an Operating System",
+  "difficulty": "easy",
+  "question": "An operating system is a program that acts as an intermediary between:",
+  "options": [
+   "The CPU and main memory only",
+   "Computer software and the desktop",
+   "The user of a computer and the computer hardware",
+   "Two application programs"
+  ],
+  "answer": 2,
+  "hint": "Look at the first definition in the chapter.",
+  "explanation": "Slide 1.4: an OS is a program that acts as an intermediary between a user of a computer and the computer hardware.",
+  "source": {
+   "kind": "leak",
+   "refs": [
+    "L16-11",
+    "L05-016",
+    "L05-313",
+    "L05-371"
+   ]
+  },
+  "syllabus_ref": {
+   "file": "CH-1-Updated.pdf",
+   "slides": [
+    4
+   ]
+  },
+  "review_status": "approved"
+ },
+ {
+  "id": "c1-018",
+  "unit": 1,
+  "topic": "Computer-System Operation",
+  "difficulty": "easy",
+  "question": "Each device controller type has an operating-system __________ to manage it.",
+  "options": [
+   "Interrupt vector",
+   "Device driver",
+   "Mode bit",
+   "Bootstrap program"
+  ],
+  "answer": 1,
+  "hint": "It is software that provides a uniform interface between the controller and the kernel.",
+  "explanation": "Slides 1.12 and 1.24: each device controller type has an OS device driver to manage it, providing a uniform interface between controller and kernel.",
+  "source": {
+   "kind": "leak",
+   "refs": [
+    "L05-018"
+   ]
+  },
+  "syllabus_ref": {
+   "file": "CH-1-Updated.pdf",
+   "slides": [
+    12,
+    23
+   ]
+  },
+  "review_status": "approved"
+ },
+ {
+  "id": "c1-019",
+  "unit": 1,
+  "topic": "Real-Time Embedded Systems",
+  "difficulty": "easy",
+  "question": "An operating system that has well-defined, fixed time constraints, and operates correctly only if those constraints are met, is a:",
+  "options": [
+   "Network OS",
+   "Time-sharing OS",
+   "Batch OS",
+   "Real-time OS"
+  ],
+  "answer": 3,
+  "hint": "Processing must be done within the constraint.",
+  "explanation": "Slide 1.65: a real-time OS has well-defined fixed time constraints; processing must be done within the constraint, and correct operation only if constraints are met.",
+  "source": {
+   "kind": "leak",
+   "refs": [
+    "L05-112",
+    "L05-021"
+   ]
+  },
+  "syllabus_ref": {
+   "file": "CH-1-Updated.pdf",
+   "slides": [
+    64
+   ]
+  },
+  "review_status": "approved"
+ },
+ {
+  "id": "c1-020",
+  "unit": 1,
+  "topic": "Multitasking",
+  "difficulty": "medium",
+  "question": "A logical extension of batch systems in which the CPU switches jobs so frequently that users can interact with each job while it is running is called:",
+  "options": [
+   "Multiprogramming without switching",
+   "Multitasking (time sharing)",
+   "Batch processing",
+   "Bootstrapping"
+  ],
+  "answer": 1,
+  "hint": "Response time should be less than one second.",
+  "explanation": "Slide 1.30: multitasking (timesharing) is a logical extension of batch systems; the CPU switches jobs so frequently that users can interact with each job while it is running, creating interactive computing.",
+  "source": {
+   "kind": "leak",
+   "refs": [
+    "L05-028",
+    "L16-41"
+   ]
+  },
+  "syllabus_ref": {
+   "file": "CH-1-Updated.pdf",
+   "slides": [
+    29
+   ]
+  },
+  "review_status": "approved"
+ },
+ {
+  "id": "c1-021",
+  "unit": 1,
+  "topic": "What is an Operating System",
+  "difficulty": "easy",
+  "question": "All of the following are operating-system goals EXCEPT:",
+  "options": [
+   "Execute user programs and make solving user problems easier",
+   "Provide text-processing support",
+   "Use the computer hardware in an efficient manner",
+   "Make the computer system convenient to use"
+  ],
+  "answer": 1,
+  "hint": "The slide lists three goals.",
+  "explanation": "Slide 1.4: OS goals are to execute user programs and make solving user problems easier, make the computer system convenient to use, and use the hardware efficiently. Text processing is an application's job.",
+  "source": {
+   "kind": "leak",
+   "refs": [
+    "L15-06",
+    "L05-111",
+    "L15-02"
+   ]
+  },
+  "syllabus_ref": {
+   "file": "CH-1-Updated.pdf",
+   "slides": [
+    4
+   ]
+  },
+  "review_status": "approved"
+ },
+ {
+  "id": "c1-022",
+  "unit": 1,
+  "topic": "Interrupts",
+  "difficulty": "easy",
+  "question": "How does a device controller inform the CPU that it has finished its operation?",
+  "options": [
+   "By setting the mode bit",
+   "By a context switch",
+   "By causing an interrupt",
+   "By interprocess communication"
+  ],
+  "answer": 2,
+  "hint": "The same mechanism a peripheral uses when it needs immediate attention.",
+  "explanation": "Slide 1.12: the device controller informs the CPU that it has finished its operation by causing an interrupt.",
+  "source": {
+   "kind": "leak",
+   "refs": [
+    "L11-05",
+    "L05-134"
+   ]
+  },
+  "syllabus_ref": {
+   "file": "CH-1-Updated.pdf",
+   "slides": [
+    12,
+    13
+   ]
+  },
+  "review_status": "approved"
+ },
+ {
+  "id": "c1-023",
+  "unit": 1,
+  "topic": "Process Management",
+  "difficulty": "easy",
+  "question": "A single-threaded process has __________ specifying the location of the next instruction to execute.",
+  "options": [
+   "One program counter per thread of another process",
+   "Many program counters",
+   "One program counter",
+   "No program counter"
+  ],
+  "answer": 2,
+  "hint": "A multithreaded process has one per thread.",
+  "explanation": "Slide 1.34: a single-threaded process has one program counter specifying the location of the next instruction; a multithreaded process has one program counter per thread.",
+  "source": {
+   "kind": "leak",
+   "refs": [
+    "L09-09"
+   ]
+  },
+  "syllabus_ref": {
+   "file": "CH-1-Updated.pdf",
+   "slides": [
+    33
+   ]
+  },
+  "review_status": "approved"
+ },
+ {
+  "id": "c1-024",
+  "unit": 1,
+  "topic": "Operating-System Operations",
+  "difficulty": "easy",
+  "question": "A hardware interrupt is generated by:",
+  "options": [
+   "A division by zero",
+   "A request for an OS service",
+   "A process modifying another process",
+   "One of the devices"
+  ],
+  "answer": 3,
+  "hint": "The other three are software interrupts (traps or exceptions).",
+  "explanation": "Slide 1.28: the kernel is interrupt driven. Hardware interrupts come from one of the devices; software interrupts (exception or trap) come from software errors such as division by zero, requests for OS service (system call), and other process problems.",
+  "source": {
+   "kind": "leak",
+   "refs": [
+    "L10-06"
+   ]
+  },
+  "syllabus_ref": {
+   "file": "CH-1-Updated.pdf",
+   "slides": [
+    27
+   ]
+  },
+  "review_status": "approved"
+ },
+ {
+  "id": "c1-025",
+  "unit": 1,
+  "topic": "Operating-System Operations",
+  "difficulty": "easy",
+  "question": "Division by zero is an example of a:",
+  "options": [
+   "DMA transfer",
+   "Hardware interrupt",
+   "Context switch",
+   "Software interrupt (exception or trap)"
+  ],
+  "answer": 3,
+  "hint": "It is caused by a software error.",
+  "explanation": "Slide 1.28: a software interrupt (exception or trap) is caused by a software error (e.g. division by zero), a request for OS service, or other process problems.",
+  "source": {
+   "kind": "leak",
+   "refs": [
+    "L18-22"
+   ]
+  },
+  "syllabus_ref": {
+   "file": "CH-1-Updated.pdf",
+   "slides": [
+    27
+   ]
+  },
+  "review_status": "approved"
+ },
+ {
+  "id": "c1-026",
+  "unit": 1,
+  "topic": "Operating-System Operations",
+  "difficulty": "easy",
+  "question": "The simple code that initializes the system and loads the kernel at power-up or reboot is the:",
+  "options": [
+   "Device driver",
+   "Window manager",
+   "Scheduler",
+   "Bootstrap program"
+  ],
+  "answer": 3,
+  "hint": "After it runs, the kernel loads and starts the system daemons.",
+  "explanation": "Slide 1.28: the bootstrap program is simple code to initialize the system and load the kernel.",
+  "source": {
+   "kind": "leak",
+   "refs": [
+    "L11-02",
+    "L16-38b"
+   ]
+  },
+  "syllabus_ref": {
+   "file": "CH-1-Updated.pdf",
+   "slides": [
+    27
+   ]
+  },
+  "review_status": "approved"
+ },
+ {
+  "id": "c1-027",
+  "unit": 1,
+  "topic": "Computer System Structure",
+  "difficulty": "easy",
+  "question": "Which computer-system component controls and coordinates the use of hardware among various applications and users?",
+  "options": [
+   "Hardware",
+   "Users",
+   "Operating system",
+   "Application programs"
+  ],
+  "answer": 2,
+  "hint": "It sits between the hardware and the application programs.",
+  "explanation": "Slide 1.5: the operating system controls and coordinates the use of hardware among various applications and users.",
+  "source": {
+   "kind": "leak",
+   "refs": [
+    "L11-04",
+    "L15-31"
+   ]
+  },
+  "syllabus_ref": {
+   "file": "CH-1-Updated.pdf",
+   "slides": [
+    5
+   ]
+  },
+  "review_status": "approved"
+ },
+ {
+  "id": "c1-028",
+  "unit": 1,
+  "topic": "Computer System Structure",
+  "difficulty": "medium",
+  "question": "Which computer-system component defines the ways in which system resources are used to solve the users' computing problems?",
+  "options": [
+   "Bootstrap loader",
+   "Hardware",
+   "Application programs",
+   "Operating system"
+  ],
+  "answer": 2,
+  "hint": "Examples include word processors, compilers and web browsers.",
+  "explanation": "Slide 1.5: application programs define the ways in which the system resources are used to solve the computing problems of the users.",
+  "source": {
+   "kind": "leak",
+   "refs": [
+    "L16-43"
+   ]
+  },
+  "syllabus_ref": {
+   "file": "CH-1-Updated.pdf",
+   "slides": [
+    5
+   ]
+  },
+  "review_status": "approved"
+ },
+ {
+  "id": "c1-029",
+  "unit": 1,
+  "topic": "Interrupts",
+  "difficulty": "easy",
+  "question": "A trap (or exception) is a:",
+  "options": [
+   "Hardware-generated interrupt from a device",
+   "Signal that ends the bootstrap program",
+   "Type of storage device",
+   "Software-generated interrupt caused either by an error or a user request"
+  ],
+  "answer": 3,
+  "hint": "It is not generated by a device.",
+  "explanation": "Slide 1.13: a trap or exception is a software-generated interrupt caused either by an error or a user request.",
+  "source": {
+   "kind": "leak",
+   "refs": [
+    "L16-40",
+    "L15-07",
+    "L16-22"
+   ]
+  },
+  "syllabus_ref": {
+   "file": "CH-1-Updated.pdf",
+   "slides": [
+    13
+   ]
+  },
+  "review_status": "approved"
+ },
+ {
+  "id": "c1-030",
+  "unit": 1,
+  "topic": "Timer",
+  "difficulty": "medium",
+  "question": "How does the OS regain control from a process that would otherwise run forever (for example, in an infinite loop)?",
+  "options": [
+   "The process voluntarily gives up the CPU",
+   "The bootstrap program restarts the process",
+   "The user presses a key",
+   "A timer generates an interrupt when its counter reaches zero"
+  ],
+  "answer": 3,
+  "hint": "It is set up before scheduling a process.",
+  "explanation": "Slide 1.33: a timer prevents infinite loops and processes hogging resources; a counter is decremented by the physical clock and when it reaches zero an interrupt is generated, so the OS regains control.",
+  "source": {
+   "kind": "leak",
+   "refs": [
+    "L16-38c"
+   ]
+  },
+  "syllabus_ref": {
+   "file": "CH-1-Updated.pdf",
+   "slides": [
+    32
+   ]
+  },
+  "review_status": "approved"
+ },
+ {
+  "id": "c1-031",
+  "unit": 1,
+  "topic": "Multitasking",
+  "difficulty": "medium",
+  "question": "In a time-sharing system, if processes don't fit in memory, what moves them in and out to run?",
+  "options": [
+   "Swapping",
+   "Caching",
+   "DMA",
+   "Bootstrapping"
+  ],
+  "answer": 0,
+  "hint": "It happens when memory is almost full.",
+  "explanation": "Slide 1.30: if processes don't fit in memory, swapping moves them in and out to run.",
+  "source": {
+   "kind": "leak",
+   "refs": [
+    "L18-02"
+   ]
+  },
+  "syllabus_ref": {
+   "file": "CH-1-Updated.pdf",
+   "slides": [
+    29
+   ]
+  },
+  "review_status": "approved"
+ },
+ {
+  "id": "c1-032",
+  "unit": 1,
+  "topic": "Computer-System Operation",
+  "difficulty": "easy",
+  "question": "A device controller is in charge of:",
+  "options": [
+   "A particular device type",
+   "Only main memory",
+   "Only the CPU",
+   "All device types in the system"
+  ],
+  "answer": 0,
+  "hint": "A general-purpose system has several of them.",
+  "explanation": "Slide 1.12: each device controller is in charge of a particular device type and has a local buffer.",
+  "source": {
+   "kind": "leak",
+   "refs": [
+    "L18-08",
+    "L18-28"
+   ]
+  },
+  "syllabus_ref": {
+   "file": "CH-1-Updated.pdf",
+   "slides": [
+    11,
+    12
+   ]
+  },
+  "review_status": "approved"
+ },
+ {
+  "id": "c1-033",
+  "unit": 1,
+  "topic": "Computer-System Operation",
+  "difficulty": "medium",
+  "question": "I/O transfers data between the device and:",
+  "options": [
+   "The CPU registers directly",
+   "The interrupt vector",
+   "The local buffer of the device controller",
+   "The bootstrap ROM"
+  ],
+  "answer": 2,
+  "hint": "Each controller has its own small storage.",
+  "explanation": "Slide 1.12: I/O is from the device to the local buffer of the controller; the CPU moves data between main memory and the local buffers.",
+  "source": {
+   "kind": "leak",
+   "refs": [
+    "L18-23"
+   ]
+  },
+  "syllabus_ref": {
+   "file": "CH-1-Updated.pdf",
+   "slides": [
+    12
+   ]
+  },
+  "review_status": "approved"
+ },
+ {
+  "id": "c1-034",
+  "unit": 1,
+  "topic": "What Operating Systems Do",
+  "difficulty": "easy",
+  "question": "From the user's point of view, what do users of a personal computer mostly want?",
+  "options": [
+   "No user interface",
+   "Convenience, ease of use and good performance",
+   "Maximum resource utilization",
+   "Many dedicated servers"
+  ],
+  "answer": 1,
+  "hint": "The slide says users don't care about resource utilization.",
+  "explanation": "Slide 1.7: users want convenience, ease of use and good performance, and don't care about resource utilization.",
+  "source": {
+   "kind": "generated"
+  },
+  "syllabus_ref": {
+   "file": "CH-1-Updated.pdf",
+   "slides": [
+    7
+   ]
+  },
+  "review_status": "approved"
+ },
+ {
+  "id": "c1-035",
+  "unit": 1,
+  "topic": "What Operating Systems Do",
+  "difficulty": "easy",
+  "question": "Embedded computers in devices and automobiles typically:",
+  "options": [
+   "Are optimized mainly for battery life",
+   "Are shared by many interactive users",
+   "Have little or no user interface and run primarily without user intervention",
+   "Have rich touch-screen interfaces"
+  ],
+  "answer": 2,
+  "hint": "Think about the computer inside a car's engine controller.",
+  "explanation": "Slide 1.7: some computers have little or no user interface, such as embedded computers in devices and automobiles; they run primarily without user intervention.",
+  "source": {
+   "kind": "generated"
+  },
+  "syllabus_ref": {
+   "file": "CH-1-Updated.pdf",
+   "slides": [
+    7
+   ]
+  },
+  "review_status": "approved"
+ },
+ {
+  "id": "c1-036",
+  "unit": 1,
+  "topic": "Operating System Definition",
+  "difficulty": "medium",
+  "question": "A program that ships with the operating system but is not part of the kernel is called a(n):",
+  "options": [
+   "Application program",
+   "Device controller",
+   "Middleware framework",
+   "System program"
+  ],
+  "answer": 3,
+  "hint": "Application programs are all programs not associated with the OS.",
+  "explanation": "Slide 1.9: everything else besides the kernel is either a system program (ships with the OS but is not part of the kernel) or an application program (not associated with the OS).",
+  "source": {
+   "kind": "generated"
+  },
+  "syllabus_ref": {
+   "file": "CH-1-Updated.pdf",
+   "slides": [
+    9
+   ]
+  },
+  "review_status": "approved"
+ },
+ {
+  "id": "c1-037",
+  "unit": 1,
+  "topic": "Operating System Definition",
+  "difficulty": "medium",
+  "question": "A set of software frameworks that provide additional services to application developers, such as databases, multimedia and graphics, is called:",
+  "options": [
+   "Firmware",
+   "Middleware",
+   "A device driver",
+   "The kernel"
+  ],
+  "answer": 1,
+  "hint": "Today's general-purpose and mobile OSes include it.",
+  "explanation": "Slide 1.9: today's OSes for general purpose and mobile computing also include middleware, a set of software frameworks that provide additional services to application developers.",
+  "source": {
+   "kind": "generated"
+  },
+  "syllabus_ref": {
+   "file": "CH-1-Updated.pdf",
+   "slides": [
+    9
+   ]
+  },
+  "review_status": "approved"
+ },
+ {
+  "id": "c1-038",
+  "unit": 1,
+  "topic": "Operating System Definition",
+  "difficulty": "easy",
+  "question": "Which statement about the definition of an operating system is correct according to the slides?",
+  "options": [
+   "The OS is only the bootstrap program",
+   "The OS includes every application installed by the user",
+   "There is no universally accepted definition",
+   "The OS is the same on every vendor's system"
+  ],
+  "answer": 2,
+  "hint": "'Everything a vendor ships' is only a good approximation.",
+  "explanation": "Slide 1.9: there is no universally accepted definition; 'everything a vendor ships when you order an OS' is a good approximation, but it varies wildly.",
+  "source": {
+   "kind": "generated"
+  },
+  "syllabus_ref": {
+   "file": "CH-1-Updated.pdf",
+   "slides": [
+    9
+   ]
+  },
+  "review_status": "approved"
+ },
+ {
+  "id": "c1-039",
+  "unit": 1,
+  "topic": "Computer-System Operation",
+  "difficulty": "medium",
+  "question": "In computer-system operation, one or more CPUs and device controllers connect through a common bus that provides access to:",
+  "options": [
+   "The bootstrap ROM only",
+   "Separate memories for each controller",
+   "A private disk for each CPU",
+   "Shared memory"
+  ],
+  "answer": 3,
+  "hint": "CPUs and devices compete for its cycles.",
+  "explanation": "Slide 1.11: one or more CPUs and device controllers connect through a common bus providing access to shared memory, with concurrent execution of CPUs and devices competing for memory cycles.",
+  "source": {
+   "kind": "generated"
+  },
+  "syllabus_ref": {
+   "file": "CH-1-Updated.pdf",
+   "slides": [
+    11
+   ]
+  },
+  "review_status": "approved"
+ },
+ {
+  "id": "c1-040",
+  "unit": 1,
+  "topic": "Interrupts",
+  "difficulty": "medium",
+  "question": "An interrupt transfers control to the interrupt service routine generally through the:",
+  "options": [
+   "Mode bit",
+   "Ready queue",
+   "Device-status table",
+   "Interrupt vector, which contains the addresses of all the service routines"
+  ],
+  "answer": 3,
+  "hint": "It is a table of addresses.",
+  "explanation": "Slide 1.13: an interrupt transfers control to the interrupt service routine generally through the interrupt vector, which contains the addresses of all the service routines.",
+  "source": {
+   "kind": "generated"
+  },
+  "syllabus_ref": {
+   "file": "CH-1-Updated.pdf",
+   "slides": [
+    13
+   ]
+  },
+  "review_status": "approved"
+ },
+ {
+  "id": "c1-041",
+  "unit": 1,
+  "topic": "Interrupts",
+  "difficulty": "medium",
+  "question": "What must the interrupt architecture save so that the interrupted program can continue later?",
+  "options": [
+   "The contents of the hard disk",
+   "The device driver",
+   "The bootstrap program",
+   "The address of the interrupted instruction"
+  ],
+  "answer": 3,
+  "hint": "The CPU needs to know where to resume.",
+  "explanation": "Slide 1.13: the interrupt architecture must save the address of the interrupted instruction. Slide 1.15: the OS also preserves the CPU state by storing registers and the program counter.",
+  "source": {
+   "kind": "generated"
+  },
+  "syllabus_ref": {
+   "file": "CH-1-Updated.pdf",
+   "slides": [
+    13,
+    15
+   ]
+  },
+  "review_status": "approved"
+ },
+ {
+  "id": "c1-042",
+  "unit": 1,
+  "topic": "Interrupts",
+  "difficulty": "medium",
+  "question": "During interrupt handling, the operating system preserves the state of the CPU by storing:",
+  "options": [
+   "The registers and the program counter",
+   "The interrupt vector",
+   "The ready queue",
+   "The contents of the hard disk"
+  ],
+  "answer": 0,
+  "hint": "Exactly what is needed to resume execution correctly.",
+  "explanation": "Slide 1.15: the OS preserves the state of the CPU by storing the registers and the program counter, then determines which type of interrupt has occurred.",
+  "source": {
+   "kind": "generated"
+  },
+  "syllabus_ref": {
+   "file": "CH-1-Updated.pdf",
+   "slides": [
+    15,
+    16
+   ]
+  },
+  "review_status": "approved"
+ },
+ {
+  "id": "c1-043",
+  "unit": 1,
+  "topic": "I/O Structure",
+  "difficulty": "medium",
+  "question": "When I/O starts and control returns to the user program only upon I/O completion:",
+  "options": [
+   "A device-status table is required",
+   "The CPU continues running other programs",
+   "At most one I/O request is outstanding at a time",
+   "Many I/O requests are processed simultaneously"
+  ],
+  "answer": 2,
+  "hint": "The CPU idles with a wait instruction or a wait loop.",
+  "explanation": "Slide 1.18: in this method a wait instruction idles the CPU until the next interrupt (or a wait loop is used), and at most one I/O request is outstanding at a time - no simultaneous I/O processing.",
+  "source": {
+   "kind": "generated"
+  },
+  "syllabus_ref": {
+   "file": "CH-1-Updated.pdf",
+   "slides": [
+    17,
+    18
+   ]
+  },
+  "review_status": "approved"
+ },
+ {
+  "id": "c1-044",
+  "unit": 1,
+  "topic": "I/O Structure",
+  "difficulty": "medium",
+  "question": "The table that contains an entry for each I/O device indicating its type, address and state is the:",
+  "options": [
+   "Page table",
+   "Interrupt vector",
+   "Process control block",
+   "Device-status table"
+  ],
+  "answer": 3,
+  "hint": "It is used when control returns to the user program without waiting for I/O completion.",
+  "explanation": "Slide 1.18: the device-status table contains an entry for each I/O device indicating its type, address and state; the OS indexes into it to determine device status.",
+  "source": {
+   "kind": "generated"
+  },
+  "syllabus_ref": {
+   "file": "CH-1-Updated.pdf",
+   "slides": [
+    18
+   ]
+  },
+  "review_status": "approved"
+ },
+ {
+  "id": "c1-045",
+  "unit": 1,
+  "topic": "Storage Structure",
+  "difficulty": "easy",
+  "question": "Main memory is the only large storage medium that:",
+  "options": [
+   "Is nonvolatile",
+   "The CPU can access directly",
+   "Is slower than magnetic tape",
+   "Is used for backup"
+  ],
+  "answer": 1,
+  "hint": "It is random access and typically volatile.",
+  "explanation": "Slide 1.21: main memory is the only large storage media that the CPU can access directly; it is random access and typically volatile (DRAM).",
+  "source": {
+   "kind": "generated"
+  },
+  "syllabus_ref": {
+   "file": "CH-1-Updated.pdf",
+   "slides": [
+    20
+   ]
+  },
+  "review_status": "approved"
+ },
+ {
+  "id": "c1-046",
+  "unit": 1,
+  "topic": "Storage Structure",
+  "difficulty": "easy",
+  "question": "Main memory is typically implemented as:",
+  "options": [
+   "ROM",
+   "Hard disk platters",
+   "Dynamic Random-Access Memory (DRAM)",
+   "Magnetic tape"
+  ],
+  "answer": 2,
+  "hint": "It is random access and volatile.",
+  "explanation": "Slide 1.21: main memory is typically random-access memory in the form of Dynamic Random-access Memory (DRAM).",
+  "source": {
+   "kind": "generated"
+  },
+  "syllabus_ref": {
+   "file": "CH-1-Updated.pdf",
+   "slides": [
+    20
+   ]
+  },
+  "review_status": "approved"
+ },
+ {
+  "id": "c1-047",
+  "unit": 1,
+  "topic": "Storage Structure",
+  "difficulty": "easy",
+  "question": "Secondary storage is:",
+  "options": [
+   "Always volatile",
+   "Directly accessed by the CPU like registers",
+   "The fastest storage in the system",
+   "An extension of main memory that provides large nonvolatile storage capacity"
+  ],
+  "answer": 3,
+  "hint": "It keeps data when the power is off.",
+  "explanation": "Slide 1.21: secondary storage is an extension of main memory that provides large nonvolatile storage capacity.",
+  "source": {
+   "kind": "generated"
+  },
+  "syllabus_ref": {
+   "file": "CH-1-Updated.pdf",
+   "slides": [
+    20
+   ]
+  },
+  "review_status": "approved"
+ },
+ {
+  "id": "c1-048",
+  "unit": 1,
+  "topic": "Storage Structure",
+  "difficulty": "easy",
+  "question": "The surface of a hard disk is logically divided into tracks, which are subdivided into:",
+  "options": [
+   "Frames",
+   "Blocks of registers",
+   "Sectors",
+   "Pages"
+  ],
+  "answer": 2,
+  "hint": "Think about how a disk surface is organized.",
+  "explanation": "Slide 1.22: the disk surface is logically divided into tracks, which are subdivided into sectors.",
+  "source": {
+   "kind": "generated"
+  },
+  "syllabus_ref": {
+   "file": "CH-1-Updated.pdf",
+   "slides": [
+    21
+   ]
+  },
+  "review_status": "approved"
+ },
+ {
+  "id": "c1-049",
+  "unit": 1,
+  "topic": "Storage Structure",
+  "difficulty": "easy",
+  "question": "Compared with hard disks, non-volatile memory (NVM) devices are:",
+  "options": [
+   "Always cheaper",
+   "Faster",
+   "Divided into tracks and sectors",
+   "Slower and volatile"
+  ],
+  "answer": 1,
+  "hint": "They are becoming more popular as capacity and performance increase.",
+  "explanation": "Slide 1.22: NVM devices are faster than hard disks and nonvolatile.",
+  "source": {
+   "kind": "generated"
+  },
+  "syllabus_ref": {
+   "file": "CH-1-Updated.pdf",
+   "slides": [
+    21
+   ]
+  },
+  "review_status": "approved"
+ },
+ {
+  "id": "c1-050",
+  "unit": 1,
+  "topic": "Storage Definitions",
+  "difficulty": "easy",
+  "question": "On most computers, the smallest convenient chunk of storage is the:",
+  "options": [
+   "Kilobyte",
+   "Byte",
+   "Bit",
+   "Word"
+  ],
+  "answer": 1,
+  "hint": "Most computers have no instruction to move a single bit.",
+  "explanation": "Slide 1.23: a byte is 8 bits, and on most computers it is the smallest convenient chunk of storage.",
+  "source": {
+   "kind": "generated"
+  },
+  "syllabus_ref": {
+   "file": "CH-1-Updated.pdf",
+   "slides": [
+    22
+   ]
+  },
+  "review_status": "approved"
+ },
+ {
+  "id": "c1-051",
+  "unit": 1,
+  "topic": "Storage Definitions",
+  "difficulty": "medium",
+  "question": "A computer architecture's native unit of data, made up of one or more bytes, is called a:",
+  "options": [
+   "Sector",
+   "Bit",
+   "Page",
+   "Word"
+  ],
+  "answer": 3,
+  "hint": "A machine with 64-bit registers typically uses 8-byte units of this kind.",
+  "explanation": "Slide 1.23: a word is a computer architecture's native unit of data, made of one or more bytes; a computer with 64-bit registers typically has 64-bit (8-byte) words.",
+  "source": {
+   "kind": "generated"
+  },
+  "syllabus_ref": {
+   "file": "CH-1-Updated.pdf",
+   "slides": [
+    22
+   ]
+  },
+  "review_status": "approved"
+ },
+ {
+  "id": "c1-052",
+  "unit": 1,
+  "topic": "Storage Definitions",
+  "difficulty": "medium",
+  "question": "How many bytes are in a megabyte (MB), according to the slides?",
+  "options": [
+   "1,000 bytes",
+   "1,024 x 1,024 bytes",
+   "1,024 x 1,024 x 1,024 bytes",
+   "1,024 bytes"
+  ],
+  "answer": 1,
+  "hint": "A kilobyte is 1,024 bytes.",
+  "explanation": "Slide 1.23: a kilobyte is 1,024 bytes and a megabyte is 1,024^2 bytes (manufacturers often round to 1 million).",
+  "source": {
+   "kind": "generated"
+  },
+  "syllabus_ref": {
+   "file": "CH-1-Updated.pdf",
+   "slides": [
+    22
+   ]
+  },
+  "review_status": "approved"
+ },
+ {
+  "id": "c1-053",
+  "unit": 1,
+  "topic": "Storage Definitions",
+  "difficulty": "medium",
+  "question": "Networking measurements are an exception to measuring in bytes. They are given in:",
+  "options": [
+   "Bits, because networks move data a bit at a time",
+   "Words",
+   "Sectors",
+   "Pages"
+  ],
+  "answer": 0,
+  "hint": "Consider how data actually travels on a network.",
+  "explanation": "Slide 1.23: networking measurements are given in bits, because networks move data a bit at a time.",
+  "source": {
+   "kind": "generated"
+  },
+  "syllabus_ref": {
+   "file": "CH-1-Updated.pdf",
+   "slides": [
+    22
+   ]
+  },
+  "review_status": "approved"
+ },
+ {
+  "id": "c1-054",
+  "unit": 1,
+  "topic": "Storage Structure",
+  "difficulty": "medium",
+  "question": "Storage systems are organized in a hierarchy according to:",
+  "options": [
+   "Speed, cost and volatility",
+   "Only the number of users",
+   "Only capacity",
+   "Color, size and brand"
+  ],
+  "answer": 0,
+  "hint": "Three criteria are listed.",
+  "explanation": "Slide 1.24: storage systems are organized in a hierarchy by speed, cost and volatility.",
+  "source": {
+   "kind": "generated"
+  },
+  "syllabus_ref": {
+   "file": "CH-1-Updated.pdf",
+   "slides": [
+    23
+   ]
+  },
+  "review_status": "approved"
+ },
+ {
+  "id": "c1-055",
+  "unit": 1,
+  "topic": "Direct Memory Access",
+  "difficulty": "medium",
+  "question": "With Direct Memory Access (DMA), how many interrupts are generated?",
+  "options": [
+   "One interrupt per block",
+   "No interrupts at all",
+   "One interrupt per byte",
+   "One interrupt per bit"
+  ],
+  "answer": 0,
+  "hint": "The controller moves whole blocks without CPU intervention.",
+  "explanation": "Slide 1.27: with DMA the device controller transfers blocks of data from buffer storage directly to main memory without CPU intervention; only one interrupt is generated per block rather than one per byte.",
+  "source": {
+   "kind": "generated"
+  },
+  "syllabus_ref": {
+   "file": "CH-1-Updated.pdf",
+   "slides": [
+    26
+   ]
+  },
+  "review_status": "approved"
+ },
+ {
+  "id": "c1-056",
+  "unit": 1,
+  "topic": "Direct Memory Access",
+  "difficulty": "easy",
+  "question": "DMA is used for:",
+  "options": [
+   "Switching between user and kernel mode",
+   "Slow keyboards only",
+   "Booting the kernel",
+   "High-speed I/O devices able to transmit information at close to memory speeds"
+  ],
+  "answer": 3,
+  "hint": "These devices would generate too many interrupts otherwise.",
+  "explanation": "Slide 1.27: DMA is used for high-speed I/O devices able to transmit information at close to memory speeds.",
+  "source": {
+   "kind": "generated"
+  },
+  "syllabus_ref": {
+   "file": "CH-1-Updated.pdf",
+   "slides": [
+    26
+   ]
+  },
+  "review_status": "approved"
+ },
+ {
+  "id": "c1-057",
+  "unit": 1,
+  "topic": "Operating-System Operations",
+  "difficulty": "medium",
+  "question": "After the kernel loads, it starts system daemons. What are system daemons?",
+  "options": [
+   "Parts of the bootstrap ROM",
+   "Services provided outside of the kernel",
+   "Hardware interrupts",
+   "Kernel data structures"
+  ],
+  "answer": 1,
+  "hint": "They run in the background after boot.",
+  "explanation": "Slide 1.28: the kernel loads and starts system daemons, which are services provided outside of the kernel.",
+  "source": {
+   "kind": "generated"
+  },
+  "syllabus_ref": {
+   "file": "CH-1-Updated.pdf",
+   "slides": [
+    27
+   ]
+  },
+  "review_status": "approved"
+ },
+ {
+  "id": "c1-058",
+  "unit": 1,
+  "topic": "Multitasking",
+  "difficulty": "easy",
+  "question": "In a time-sharing (multitasking) system, the response time should be:",
+  "options": [
+   "Unbounded",
+   "More than 1 minute",
+   "Less than 1 second",
+   "Exactly 10 seconds"
+  ],
+  "answer": 2,
+  "hint": "Users interact with their jobs while they run.",
+  "explanation": "Slide 1.30: in multitasking (timesharing), response time should be < 1 second.",
+  "source": {
+   "kind": "generated"
+  },
+  "syllabus_ref": {
+   "file": "CH-1-Updated.pdf",
+   "slides": [
+    29
+   ]
+  },
+  "review_status": "approved"
+ },
+ {
+  "id": "c1-059",
+  "unit": 1,
+  "topic": "Multitasking",
+  "difficulty": "medium",
+  "question": "Which technique allows execution of processes that are not completely in memory?",
+  "options": [
+   "Virtual memory",
+   "Caching",
+   "DMA",
+   "CPU scheduling"
+  ],
+  "answer": 0,
+  "hint": "It is mentioned as part of time-sharing systems.",
+  "explanation": "Slide 1.30: virtual memory allows execution of processes not completely in memory.",
+  "source": {
+   "kind": "generated"
+  },
+  "syllabus_ref": {
+   "file": "CH-1-Updated.pdf",
+   "slides": [
+    29
+   ]
+  },
+  "review_status": "approved"
+ },
+ {
+  "id": "c1-060",
+  "unit": 1,
+  "topic": "Multitasking",
+  "difficulty": "medium",
+  "question": "In a time-sharing system, if several jobs are ready to run at the same time, the OS must perform:",
+  "options": [
+   "CPU scheduling",
+   "Caching",
+   "Swapping",
+   "Bootstrapping"
+  ],
+  "answer": 0,
+  "hint": "Someone has to decide which job gets the CPU next.",
+  "explanation": "Slide 1.30: if several jobs are ready to run at the same time, CPU scheduling is needed.",
+  "source": {
+   "kind": "generated"
+  },
+  "syllabus_ref": {
+   "file": "CH-1-Updated.pdf",
+   "slides": [
+    29
+   ]
+  },
+  "review_status": "approved"
+ },
+ {
+  "id": "c1-061",
+  "unit": 1,
+  "topic": "Dual-mode Operation",
+  "difficulty": "medium",
+  "question": "Instructions that are designated as privileged can be executed only in:",
+  "options": [
+   "Both user and kernel mode",
+   "Batch mode",
+   "User mode",
+   "Kernel mode"
+  ],
+  "answer": 3,
+  "hint": "Setting the timer counter is one example of such an instruction.",
+  "explanation": "Slide 1.32: some instructions are designated as privileged, only executable in kernel mode. Slide 1.33: setting the timer counter is a privileged instruction.",
+  "source": {
+   "kind": "generated"
+  },
+  "syllabus_ref": {
+   "file": "CH-1-Updated.pdf",
+   "slides": [
+    31,
+    32
+   ]
+  },
+  "review_status": "approved"
+ },
+ {
+  "id": "c1-062",
+  "unit": 1,
+  "topic": "Dual-mode Operation",
+  "difficulty": "easy",
+  "question": "Dual-mode operation allows the operating system to:",
+  "options": [
+   "Run two kernels at once",
+   "Protect itself and other system components",
+   "Execute two programs on one core simultaneously",
+   "Double the CPU speed"
+  ],
+  "answer": 1,
+  "hint": "It separates what user code can and cannot do.",
+  "explanation": "Slide 1.32: dual-mode operation allows the OS to protect itself and other system components.",
+  "source": {
+   "kind": "generated"
+  },
+  "syllabus_ref": {
+   "file": "CH-1-Updated.pdf",
+   "slides": [
+    31
+   ]
+  },
+  "review_status": "approved"
+ },
+ {
+  "id": "c1-063",
+  "unit": 1,
+  "topic": "Timer",
+  "difficulty": "hard",
+  "question": "Why must setting the timer counter be a privileged instruction?",
+  "options": [
+   "Because the timer is stored on the hard disk",
+   "Because the timer is only used during booting",
+   "Because user programs never execute instructions",
+   "Otherwise a user program could disable the timer and keep the CPU forever"
+  ],
+  "answer": 3,
+  "hint": "Recall what the timer is meant to prevent.",
+  "explanation": "Slide 1.33: the timer prevents infinite loops / processes hogging resources; the OS sets the counter (privileged instruction). If users could set it, a process could avoid the interrupt and never give back control.",
+  "source": {
+   "kind": "generated"
+  },
+  "syllabus_ref": {
+   "file": "CH-1-Updated.pdf",
+   "slides": [
+    32
+   ]
+  },
+  "review_status": "approved"
+ },
+ {
+  "id": "c1-064",
+  "unit": 1,
+  "topic": "Timer",
+  "difficulty": "medium",
+  "question": "How does the timer work?",
+  "options": [
+   "A counter is incremented by each system call",
+   "The user sets the timer from user mode",
+   "A counter is decremented by the physical clock, and an interrupt is generated when it reaches zero",
+   "The timer reads the program counter every second"
+  ],
+  "answer": 2,
+  "hint": "The OS sets the counter before scheduling a process.",
+  "explanation": "Slide 1.33: the OS keeps a counter decremented by the physical clock; when the counter is zero an interrupt is generated.",
+  "source": {
+   "kind": "generated"
+  },
+  "syllabus_ref": {
+   "file": "CH-1-Updated.pdf",
+   "slides": [
+    32
+   ]
+  },
+  "review_status": "approved"
+ },
+ {
+  "id": "c1-065",
+  "unit": 1,
+  "topic": "Process Management",
+  "difficulty": "easy",
+  "question": "Which statement about programs and processes is correct?",
+  "options": [
+   "Both are active entities",
+   "A program is an active entity; a process is a passive entity",
+   "Both are passive entities",
+   "A program is a passive entity; a process is an active entity"
+  ],
+  "answer": 3,
+  "hint": "A process is a program in execution.",
+  "explanation": "Slide 1.34: a process is a program in execution, a unit of work within the system. Program is a passive entity; process is an active entity.",
+  "source": {
+   "kind": "generated"
+  },
+  "syllabus_ref": {
+   "file": "CH-1-Updated.pdf",
+   "slides": [
+    33
+   ]
+  },
+  "review_status": "approved"
+ },
+ {
+  "id": "c1-066",
+  "unit": 1,
+  "topic": "Process Management",
+  "difficulty": "medium",
+  "question": "What does process termination require?",
+  "options": [
+   "Rebooting the system",
+   "Switching the system to user mode permanently",
+   "Reclaiming any reusable resources",
+   "Deleting the program file from disk"
+  ],
+  "answer": 2,
+  "hint": "The process used CPU, memory, I/O and files.",
+  "explanation": "Slide 1.34: a process needs resources (CPU, memory, I/O, files) to accomplish its task, and process termination requires reclaiming any reusable resources.",
+  "source": {
+   "kind": "generated"
+  },
+  "syllabus_ref": {
+   "file": "CH-1-Updated.pdf",
+   "slides": [
+    33
+   ]
+  },
+  "review_status": "approved"
+ },
+ {
+  "id": "c1-067",
+  "unit": 1,
+  "topic": "Process Management",
+  "difficulty": "medium",
+  "question": "Which of the following is NOT listed as an OS activity in connection with process management?",
+  "options": [
+   "Providing mechanisms for deadlock handling",
+   "Creating and deleting user and system processes",
+   "Allocating and deallocating disk sectors",
+   "Suspending and resuming processes"
+  ],
+  "answer": 2,
+  "hint": "The list also includes process synchronization and communication.",
+  "explanation": "Slide 1.35: process management activities are creating/deleting processes, suspending/resuming, and providing mechanisms for synchronization, communication and deadlock handling. Disk allocation is mass-storage management.",
+  "source": {
+   "kind": "generated"
+  },
+  "syllabus_ref": {
+   "file": "CH-1-Updated.pdf",
+   "slides": [
+    34
+   ]
+  },
+  "review_status": "approved"
+ },
+ {
+  "id": "c1-068",
+  "unit": 1,
+  "topic": "Memory Management",
+  "difficulty": "medium",
+  "question": "Keeping track of which parts of memory are currently being used and by whom is an activity of:",
+  "options": [
+   "Process synchronization",
+   "Mass-storage management",
+   "File-system management",
+   "Memory management"
+  ],
+  "answer": 3,
+  "hint": "It also decides which processes to move into and out of memory.",
+  "explanation": "Slide 1.36: memory management activities include keeping track of which parts of memory are in use and by whom, deciding which processes and data to move in and out of memory, and allocating/deallocating memory space.",
+  "source": {
+   "kind": "generated"
+  },
+  "syllabus_ref": {
+   "file": "CH-1-Updated.pdf",
+   "slides": [
+    35
+   ]
+  },
+  "review_status": "approved"
+ },
+ {
+  "id": "c1-069",
+  "unit": 1,
+  "topic": "File-system Management",
+  "difficulty": "medium",
+  "question": "The OS abstracts the physical properties of storage into a logical storage unit called a:",
+  "options": [
+   "Sector",
+   "Frame",
+   "File",
+   "Register"
+  ],
+  "answer": 2,
+  "hint": "It is the unit you create, open, save and delete every day.",
+  "explanation": "Slide 1.37: the OS provides a uniform, logical view of information storage, abstracting physical properties to a logical storage unit - the file.",
+  "source": {
+   "kind": "generated"
+  },
+  "syllabus_ref": {
+   "file": "CH-1-Updated.pdf",
+   "slides": [
+    36
+   ]
+  },
+  "review_status": "approved"
+ },
+ {
+  "id": "c1-070",
+  "unit": 1,
+  "topic": "Mass-Storage Management",
+  "difficulty": "medium",
+  "question": "Which of the following is an OS activity of mass-storage management?",
+  "options": [
+   "Caching registers",
+   "Disk scheduling",
+   "Creating processes",
+   "Context switching"
+  ],
+  "answer": 1,
+  "hint": "Mounting, free-space management and partitioning are other examples.",
+  "explanation": "Slide 1.38: mass-storage management activities are mounting/unmounting, free-space management, storage allocation, disk scheduling, partitioning and protection.",
+  "source": {
+   "kind": "generated"
+  },
+  "syllabus_ref": {
+   "file": "CH-1-Updated.pdf",
+   "slides": [
+    37
+   ]
+  },
+  "review_status": "approved"
+ },
+ {
+  "id": "c1-071",
+  "unit": 1,
+  "topic": "Caching",
+  "difficulty": "medium",
+  "question": "When information is requested, the faster storage (cache) is checked first. If the information is not there:",
+  "options": [
+   "The process is terminated",
+   "The CPU switches to kernel mode permanently",
+   "The data is copied to the cache and used there",
+   "The data is deleted from secondary storage"
+  ],
+  "answer": 2,
+  "hint": "Caching keeps recently used information in faster storage.",
+  "explanation": "Slide 1.39: if the information is in the cache it is used directly (fast); if not, the data is copied to the cache and used there.",
+  "source": {
+   "kind": "generated"
+  },
+  "syllabus_ref": {
+   "file": "CH-1-Updated.pdf",
+   "slides": [
+    38
+   ]
+  },
+  "review_status": "approved"
+ },
+ {
+  "id": "c1-072",
+  "unit": 1,
+  "topic": "Caching",
+  "difficulty": "medium",
+  "question": "Because the cache is smaller than the storage being cached, an important design problem is:",
+  "options": [
+   "Choosing the user interface",
+   "Deciding the mode bit value",
+   "Cache management: cache size and replacement policy",
+   "Choosing the bootstrap program"
+  ],
+  "answer": 2,
+  "hint": "Not everything can fit in the cache at once.",
+  "explanation": "Slide 1.39: the cache is smaller than the storage being cached, so cache management is an important design problem (cache size and replacement policy).",
+  "source": {
+   "kind": "generated"
+  },
+  "syllabus_ref": {
+   "file": "CH-1-Updated.pdf",
+   "slides": [
+    38
+   ]
+  },
+  "review_status": "approved"
+ },
+ {
+  "id": "c1-073",
+  "unit": 1,
+  "topic": "Computing Environments",
+  "difficulty": "easy",
+  "question": "Network computers (thin clients) in the traditional computing environment are like:",
+  "options": [
+   "Mainframes",
+   "Embedded controllers",
+   "Peer-to-peer nodes",
+   "Web terminals"
+  ],
+  "answer": 3,
+  "hint": "Portals provide web access to internal systems.",
+  "explanation": "Slide 1.58: in the traditional environment, network computers (thin clients) are like Web terminals.",
+  "source": {
+   "kind": "generated"
+  },
+  "syllabus_ref": {
+   "file": "CH-1-Updated.pdf",
+   "slides": [
+    57
+   ]
+  },
+  "review_status": "approved"
+ },
+ {
+  "id": "c1-074",
+  "unit": 1,
+  "topic": "Computing Environments",
+  "difficulty": "easy",
+  "question": "Mobile devices connect using:",
+  "options": [
+   "Only wired Ethernet",
+   "IEEE 802.11 wireless or cellular data networks",
+   "Only magnetic tape",
+   "No network at all"
+  ],
+  "answer": 1,
+  "hint": "The leaders in this environment are Apple iOS and Google Android.",
+  "explanation": "Slide 1.59: mobile devices use IEEE 802.11 wireless or cellular data networks for connectivity; leaders are Apple iOS and Google Android.",
+  "source": {
+   "kind": "generated"
+  },
+  "syllabus_ref": {
+   "file": "CH-1-Updated.pdf",
+   "slides": [
+    58
+   ]
+  },
+  "review_status": "approved"
+ },
+ {
+  "id": "c1-075",
+  "unit": 1,
+  "topic": "Computing Environments",
+  "difficulty": "medium",
+  "question": "A server that provides an interface for clients to store and retrieve files is a:",
+  "options": [
+   "Peer-to-peer node",
+   "File-server system",
+   "Compute-server system",
+   "Thin client"
+  ],
+  "answer": 1,
+  "hint": "The other server type responds to requests for services such as a database.",
+  "explanation": "Slide 1.60: a compute-server system provides an interface for clients to request services (e.g. a database); a file-server system provides an interface for clients to store and retrieve files.",
+  "source": {
+   "kind": "generated"
+  },
+  "syllabus_ref": {
+   "file": "CH-1-Updated.pdf",
+   "slides": [
+    59
+   ]
+  },
+  "review_status": "approved"
+ },
+ {
+  "id": "c1-076",
+  "unit": 1,
+  "topic": "Computing Environments",
+  "difficulty": "medium",
+  "question": "Which distributed model does NOT distinguish between clients and servers, treating all nodes as peers?",
+  "options": [
+   "Client-server",
+   "Peer-to-peer",
+   "Mainframe time sharing",
+   "Thin client"
+  ],
+  "answer": 1,
+  "hint": "Napster, Gnutella and Skype are examples.",
+  "explanation": "Slide 1.61: P2P does not distinguish clients and servers; all nodes are considered peers and may act as client, server or both. Examples: Napster, Gnutella, VoIP such as Skype.",
+  "source": {
+   "kind": "generated"
+  },
+  "syllabus_ref": {
+   "file": "CH-1-Updated.pdf",
+   "slides": [
+    60
+   ]
+  },
+  "review_status": "approved"
+ },
+ {
+  "id": "c1-077",
+  "unit": 1,
+  "topic": "Computing Environments",
+  "difficulty": "medium",
+  "question": "A cloud that is run by a company for the company's own use is a:",
+  "options": [
+   "Hybrid cloud",
+   "Public cloud",
+   "Private cloud",
+   "Software as a Service"
+  ],
+  "answer": 2,
+  "hint": "A public cloud is available via the Internet to anyone willing to pay.",
+  "explanation": "Slide 1.63: public cloud - available via the Internet to anyone willing to pay; private cloud - run by a company for its own use; hybrid - includes both.",
+  "source": {
+   "kind": "generated"
+  },
+  "syllabus_ref": {
+   "file": "CH-1-Updated.pdf",
+   "slides": [
+    62
+   ]
+  },
+  "review_status": "approved"
+ },
+ {
+  "id": "c1-078",
+  "unit": 1,
+  "topic": "Computing Environments",
+  "difficulty": "hard",
+  "question": "A company rents servers and storage over the Internet to use for backups. Which cloud service type is this?",
+  "options": [
+   "Private cloud",
+   "Platform as a Service (PaaS)",
+   "Software as a Service (SaaS)",
+   "Infrastructure as a Service (IaaS)"
+  ],
+  "answer": 3,
+  "hint": "Match what is provided: raw servers/storage, a ready software stack, or a finished application.",
+  "explanation": "Slide 1.63: IaaS provides servers or storage over the Internet (e.g. storage for backup); PaaS provides a software stack ready for application use (e.g. a database server); SaaS provides applications (e.g. a word processor).",
+  "source": {
+   "kind": "generated"
+  },
+  "syllabus_ref": {
+   "file": "CH-1-Updated.pdf",
+   "slides": [
+    62
+   ]
+  },
+  "review_status": "approved"
+ },
+ {
+  "id": "c1-079",
+  "unit": 1,
+  "topic": "Computing Environments",
+  "difficulty": "medium",
+  "question": "A database server available over the Internet as a ready-to-use software stack is an example of:",
+  "options": [
+   "Peer-to-peer computing",
+   "Infrastructure as a Service (IaaS)",
+   "Software as a Service (SaaS)",
+   "Platform as a Service (PaaS)"
+  ],
+  "answer": 3,
+  "hint": "It is not a finished end-user application, but not raw hardware either.",
+  "explanation": "Slide 1.63: PaaS is a software stack ready for application use via the Internet, e.g. a database server.",
+  "source": {
+   "kind": "generated"
+  },
+  "syllabus_ref": {
+   "file": "CH-1-Updated.pdf",
+   "slides": [
+    62
+   ]
+  },
+  "review_status": "approved"
+ },
+ {
+  "id": "c1-080",
+  "unit": 1,
+  "topic": "Real-Time Embedded Systems",
+  "difficulty": "easy",
+  "question": "According to the slides, the most prevalent form of computers is:",
+  "options": [
+   "Cloud servers",
+   "Personal computers",
+   "Real-time embedded systems",
+   "Mainframes"
+  ],
+  "answer": 2,
+  "hint": "They are found in many special-purpose devices.",
+  "explanation": "Slide 1.65: real-time embedded systems are the most prevalent form of computers.",
+  "source": {
+   "kind": "generated"
+  },
+  "syllabus_ref": {
+   "file": "CH-1-Updated.pdf",
+   "slides": [
+    64
+   ]
+  },
+  "review_status": "approved"
+ },
+ {
+  "id": "c1-081",
+  "unit": 1,
+  "topic": "Operating-System Operations",
+  "difficulty": "easy",
+  "question": "A program's request for an operating-system service, which is handled as a software interrupt, is called a:",
+  "options": [
+   "System call",
+   "Device driver",
+   "Hardware interrupt",
+   "Timer"
+  ],
+  "answer": 0,
+  "hint": "It is one of the listed causes of a trap.",
+  "explanation": "Slide 1.28: software interrupts (exception or trap) include a software error and a request for operating system service - a system call.",
+  "source": {
+   "kind": "leak",
+   "refs": [
+    "L02-18"
+   ]
+  },
+  "syllabus_ref": {
+   "file": "CH-1-Updated.pdf",
+   "slides": [
+    27
+   ]
+  },
+  "review_status": "approved"
+ },
+ {
+  "id": "c1-082",
+  "unit": 1,
+  "topic": "Dual-mode Operation",
+  "difficulty": "medium",
+  "question": "Which statement correctly distinguishes kernel mode from user mode?",
+  "options": [
+   "User mode can execute every instruction, kernel mode cannot",
+   "Privileged instructions can execute only in kernel mode; user code runs in user mode",
+   "Both modes allow privileged instructions",
+   "Kernel mode is used only during booting"
+  ],
+  "answer": 1,
+  "hint": "Think about the mode bit and privileged instructions.",
+  "explanation": "Slide 1.32: the mode bit is 'user' when user code runs and 'kernel' when kernel code executes; some instructions are designated as privileged and are only executable in kernel mode.",
+  "source": {
+   "kind": "leak",
+   "refs": [
+    "L10-07"
+   ]
+  },
+  "syllabus_ref": {
+   "file": "CH-1-Updated.pdf",
+   "slides": [
+    31
+   ]
+  },
+  "review_status": "approved"
+ }
+]

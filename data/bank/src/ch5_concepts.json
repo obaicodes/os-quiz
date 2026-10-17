@@ -1,0 +1,2124 @@
+[
+ {
+  "id": "c5-c001",
+  "unit": 5,
+  "topic": "Scheduling Criteria",
+  "difficulty": "easy",
+  "question": "Which of the following is NOT one of the CPU scheduling criteria?",
+  "options": [
+   "Memory size",
+   "CPU utilization",
+   "Throughput",
+   "Waiting time"
+  ],
+  "answer": 0,
+  "hint": "The criteria are measured in time or in processes completed.",
+  "explanation": "Slide 5.8: the scheduling criteria are CPU utilization, throughput, turnaround time, waiting time and response time.",
+  "source": {
+   "kind": "leak",
+   "refs": [
+    "L01-04"
+   ]
+  },
+  "syllabus_ref": {
+   "file": "CH-5-Updated.pdf",
+   "slides": [
+    8
+   ]
+  },
+  "review_status": "approved"
+ },
+ {
+  "id": "c5-c002",
+  "unit": 5,
+  "topic": "Multiple-Processor Scheduling",
+  "difficulty": "easy",
+  "question": "The recent trend of placing multiple processor cores on the same physical chip produces:",
+  "options": [
+   "Multicore processors",
+   "Distributed systems",
+   "Clustered systems",
+   "Cloud systems"
+  ],
+  "answer": 0,
+  "hint": "The result is faster and consumes less power.",
+  "explanation": "Slide 5.33: the recent trend is to place multiple processor cores on the same physical chip (multicore processors), which is faster and consumes less power.",
+  "source": {
+   "kind": "leak",
+   "refs": [
+    "L01-09"
+   ]
+  },
+  "syllabus_ref": {
+   "file": "CH-5-Updated.pdf",
+   "slides": [
+    33
+   ]
+  },
+  "review_status": "approved"
+ },
+ {
+  "id": "c5-c003",
+  "unit": 5,
+  "topic": "Priority Scheduling",
+  "difficulty": "easy",
+  "question": "Gradually increasing the priority of processes that have been waiting in the system for a long time is called:",
+  "options": [
+   "Aging",
+   "Starvation",
+   "Time quantum",
+   "Convoy effect"
+  ],
+  "answer": 0,
+  "hint": "It is the solution, not the problem.",
+  "explanation": "Slide 5.19: problem - starvation (low-priority processes may never execute); solution - aging (as time progresses, increase the priority of the process).",
+  "source": {
+   "kind": "leak",
+   "refs": [
+    "L02-04",
+    "L14-12",
+    "L06-08"
+   ]
+  },
+  "syllabus_ref": {
+   "file": "CH-5-Updated.pdf",
+   "slides": [
+    19
+   ]
+  },
+  "review_status": "approved"
+ },
+ {
+  "id": "c5-c004",
+  "unit": 5,
+  "topic": "Priority Scheduling",
+  "difficulty": "easy",
+  "question": "When low-priority processes may wait for a very long time or never get to execute, the problem is called:",
+  "options": [
+   "Starvation",
+   "Aging",
+   "Convoy effect",
+   "Dispatch latency"
+  ],
+  "answer": 0,
+  "hint": "Other processes keep getting ahead of them.",
+  "explanation": "Slide 5.19: starvation - low-priority processes may never execute.",
+  "source": {
+   "kind": "leak",
+   "refs": [
+    "L02-10",
+    "L15-12",
+    "L05-178",
+    "L02-06"
+   ]
+  },
+  "syllabus_ref": {
+   "file": "CH-5-Updated.pdf",
+   "slides": [
+    19
+   ]
+  },
+  "review_status": "approved"
+ },
+ {
+  "id": "c5-c005",
+  "unit": 5,
+  "topic": "Scheduling Criteria",
+  "difficulty": "easy",
+  "question": "Scheduling-algorithm optimization criteria include all of the following EXCEPT:",
+  "options": [
+   "Maximize turnaround time",
+   "Maximize throughput",
+   "Maximize CPU utilization",
+   "Minimize response time"
+  ],
+  "answer": 0,
+  "hint": "Time spent by processes should go down, not up.",
+  "explanation": "Slide 5.9: max CPU utilization, max throughput, min turnaround time, min waiting time, min response time.",
+  "source": {
+   "kind": "leak",
+   "refs": [
+    "L17-18",
+    "L02-08",
+    "L08-16"
+   ]
+  },
+  "syllabus_ref": {
+   "file": "CH-5-Updated.pdf",
+   "slides": [
+    9
+   ]
+  },
+  "review_status": "approved"
+ },
+ {
+  "id": "c5-c006",
+  "unit": 5,
+  "topic": "Scheduling Criteria",
+  "difficulty": "easy",
+  "question": "When comparing two CPU scheduling algorithms, the better one (other things equal) has:",
+  "options": [
+   "Higher throughput",
+   "Lower throughput",
+   "Higher waiting time",
+   "Higher response time"
+  ],
+  "answer": 0,
+  "hint": "Throughput counts completed processes per time unit.",
+  "explanation": "Slide 5.9: the optimization goal is maximum throughput, so the algorithm with higher throughput is considered better.",
+  "source": {
+   "kind": "leak",
+   "refs": [
+    "L03-21"
+   ]
+  },
+  "syllabus_ref": {
+   "file": "CH-5-Updated.pdf",
+   "slides": [
+    8,
+    9
+   ]
+  },
+  "review_status": "approved"
+ },
+ {
+  "id": "c5-c007",
+  "unit": 5,
+  "topic": "Scheduling Criteria",
+  "difficulty": "easy",
+  "question": "CPU scheduling aims to:",
+  "options": [
+   "Maximize CPU utilization and minimize response time",
+   "Minimize CPU utilization and maximize response time",
+   "Keep the CPU idle as much as possible",
+   "Maximize waiting time"
+  ],
+  "answer": 0,
+  "hint": "Keep the CPU as busy as possible.",
+  "explanation": "Slides 5.8-5.9: CPU utilization should be maximized (keep the CPU as busy as possible) and response time minimized.",
+  "source": {
+   "kind": "leak",
+   "refs": [
+    "L08-15",
+    "L08-17"
+   ]
+  },
+  "syllabus_ref": {
+   "file": "CH-5-Updated.pdf",
+   "slides": [
+    8,
+    9
+   ]
+  },
+  "review_status": "approved"
+ },
+ {
+  "id": "c5-c008",
+  "unit": 5,
+  "topic": "Shortest-Job-First",
+  "difficulty": "easy",
+  "question": "Which scheduling algorithm is optimal, giving the minimum average waiting time for a given set of processes?",
+  "options": [
+   "SJF",
+   "FCFS",
+   "Round Robin",
+   "Priority"
+  ],
+  "answer": 0,
+  "hint": "Its difficulty is knowing the length of the next CPU request.",
+  "explanation": "Slide 5.12: SJF is optimal - it gives the minimum average waiting time for a given set of processes.",
+  "source": {
+   "kind": "leak",
+   "refs": [
+    "L08-07",
+    "L14-21",
+    "L02-13"
+   ]
+  },
+  "syllabus_ref": {
+   "file": "CH-5-Updated.pdf",
+   "slides": [
+    12
+   ]
+  },
+  "review_status": "approved"
+ },
+ {
+  "id": "c5-c009",
+  "unit": 5,
+  "topic": "Dispatcher",
+  "difficulty": "easy",
+  "question": "Which module gives control of the CPU to the process selected by the short-term scheduler?",
+  "options": [
+   "Dispatcher",
+   "CPU scheduler",
+   "Long-term scheduler",
+   "Bootstrap loader"
+  ],
+  "answer": 0,
+  "hint": "The scheduler chooses; this module hands over the CPU.",
+  "explanation": "Slide 5.7: the dispatcher module gives control of the CPU to the process selected by the short-term scheduler.",
+  "source": {
+   "kind": "leak",
+   "refs": [
+    "L03-13",
+    "L08-27"
+   ]
+  },
+  "syllabus_ref": {
+   "file": "CH-5-Updated.pdf",
+   "slides": [
+    7
+   ]
+  },
+  "review_status": "approved"
+ },
+ {
+  "id": "c5-c010",
+  "unit": 5,
+  "topic": "FCFS Scheduling",
+  "difficulty": "easy",
+  "question": "In which scheduling algorithm can the convoy effect happen?",
+  "options": [
+   "FCFS",
+   "SJF",
+   "Round Robin",
+   "SRTF"
+  ],
+  "answer": 0,
+  "hint": "Short processes get stuck behind a long one that arrived earlier.",
+  "explanation": "Slide 5.11: FCFS suffers from the convoy effect - a short process behind a long process.",
+  "source": {
+   "kind": "leak",
+   "refs": [
+    "L03-19",
+    "L10-01"
+   ]
+  },
+  "syllabus_ref": {
+   "file": "CH-5-Updated.pdf",
+   "slides": [
+    10,
+    11
+   ]
+  },
+  "review_status": "approved"
+ },
+ {
+  "id": "c5-c011",
+  "unit": 5,
+  "topic": "FCFS Scheduling",
+  "difficulty": "easy",
+  "question": "The convoy effect is:",
+  "options": [
+   "Short processes waiting behind a long process",
+   "Low-priority processes never executing",
+   "Increasing the priority of old processes",
+   "The time to stop one process and start another"
+  ],
+  "answer": 0,
+  "hint": "Think of slow traffic behind a truck.",
+  "explanation": "Slide 5.11: convoy effect - short process behind long process.",
+  "source": {
+   "kind": "leak",
+   "refs": [
+    "L15-18"
+   ]
+  },
+  "syllabus_ref": {
+   "file": "CH-5-Updated.pdf",
+   "slides": [
+    11
+   ]
+  },
+  "review_status": "approved"
+ },
+ {
+  "id": "c5-c012",
+  "unit": 5,
+  "topic": "FCFS Scheduling",
+  "difficulty": "medium",
+  "question": "Consider one CPU-bound process and many I/O-bound processes under FCFS. Which processes suffer from the convoy effect?",
+  "options": [
+   "The short I/O-bound processes stuck behind the long CPU-bound process",
+   "The CPU-bound process stuck behind the I/O-bound ones",
+   "No process, since FCFS has no convoy effect",
+   "Only processes with high priority"
+  ],
+  "answer": 0,
+  "hint": "Who has the long CPU burst?",
+  "explanation": "Slide 5.11: the convoy effect is short processes waiting behind a long process; with one CPU-bound and many I/O-bound processes, the I/O-bound ones wait behind the CPU-bound one.",
+  "source": {
+   "kind": "leak",
+   "refs": [
+    "L04-08"
+   ]
+  },
+  "syllabus_ref": {
+   "file": "CH-5-Updated.pdf",
+   "slides": [
+    11
+   ]
+  },
+  "review_status": "approved"
+ },
+ {
+  "id": "c5-c013",
+  "unit": 5,
+  "topic": "CPU Scheduler",
+  "difficulty": "easy",
+  "question": "Another name for the short-term scheduler is the:",
+  "options": [
+   "CPU scheduler",
+   "Dispatcher",
+   "Long-term scheduler",
+   "Job scheduler"
+  ],
+  "answer": 0,
+  "hint": "It selects a process from the ready queue and allocates it a CPU core.",
+  "explanation": "Slides 5.6-5.7: the CPU scheduler (short-term scheduler) selects from among the processes in the ready queue and allocates a CPU core to one of them.",
+  "source": {
+   "kind": "leak",
+   "refs": [
+    "L04-01",
+    "L08-26"
+   ]
+  },
+  "syllabus_ref": {
+   "file": "CH-5-Updated.pdf",
+   "slides": [
+    6,
+    7
+   ]
+  },
+  "review_status": "approved"
+ },
+ {
+  "id": "c5-c014",
+  "unit": 5,
+  "topic": "Round Robin",
+  "difficulty": "easy",
+  "question": "When the time quantum is very large, Round Robin behaves like:",
+  "options": [
+   "FCFS",
+   "SJF",
+   "Priority scheduling",
+   "Multilevel queue"
+  ],
+  "answer": 0,
+  "hint": "Every process finishes within its first time slice.",
+  "explanation": "Slide 5.15: performance - q large => FIFO (FCFS).",
+  "source": {
+   "kind": "leak",
+   "refs": [
+    "L04-09"
+   ]
+  },
+  "syllabus_ref": {
+   "file": "CH-5-Updated.pdf",
+   "slides": [
+    15
+   ]
+  },
+  "review_status": "approved"
+ },
+ {
+  "id": "c5-c015",
+  "unit": 5,
+  "topic": "Priority Scheduling",
+  "difficulty": "easy",
+  "question": "SJF and priority scheduling suffer from the __________ problem, which can be solved by __________.",
+  "options": [
+   "starvation, aging",
+   "convoy effect, round robin",
+   "throughput, CPU bursts",
+   "dispatch latency, swapping"
+  ],
+  "answer": 0,
+  "hint": "Low-priority (or long) processes might never run.",
+  "explanation": "Slide 5.19: SJF is a priority scheduling algorithm; the problem is starvation and the solution is aging.",
+  "source": {
+   "kind": "leak",
+   "refs": [
+    "L16-14",
+    "L04-15",
+    "L17-08"
+   ]
+  },
+  "syllabus_ref": {
+   "file": "CH-5-Updated.pdf",
+   "slides": [
+    19
+   ]
+  },
+  "review_status": "approved"
+ },
+ {
+  "id": "c5-c016",
+  "unit": 5,
+  "topic": "Round Robin",
+  "difficulty": "easy",
+  "question": "Which CPU-scheduling algorithm is always preemptive?",
+  "options": [
+   "Round Robin",
+   "FCFS",
+   "SJF",
+   "Priority"
+  ],
+  "answer": 0,
+  "hint": "Its preemption is driven by a timer interrupt every quantum.",
+  "explanation": "Slide 5.15: in RR, after the time quantum elapses the process is preempted and added to the end of the ready queue. SJF and priority can be preemptive or not; FCFS is nonpreemptive.",
+  "source": {
+   "kind": "leak",
+   "refs": [
+    "L04-23",
+    "L14-09"
+   ]
+  },
+  "syllabus_ref": {
+   "file": "CH-5-Updated.pdf",
+   "slides": [
+    15
+   ]
+  },
+  "review_status": "approved"
+ },
+ {
+  "id": "c5-c017",
+  "unit": 5,
+  "topic": "Priority Scheduling",
+  "difficulty": "medium",
+  "question": "SJF is a special case of priority scheduling where the priority is:",
+  "options": [
+   "The inverse of the predicted next CPU burst time",
+   "The arrival time",
+   "The process ID",
+   "The time quantum"
+  ],
+  "answer": 0,
+  "hint": "Shorter jobs get better priority.",
+  "explanation": "Slide 5.19: SJF is priority scheduling where priority is the inverse of the predicted next CPU burst time.",
+  "source": {
+   "kind": "leak",
+   "refs": [
+    "L04-27"
+   ]
+  },
+  "syllabus_ref": {
+   "file": "CH-5-Updated.pdf",
+   "slides": [
+    19
+   ]
+  },
+  "review_status": "approved"
+ },
+ {
+  "id": "c5-c018",
+  "unit": 5,
+  "topic": "Dispatcher",
+  "difficulty": "easy",
+  "question": "Dispatch latency is:",
+  "options": [
+   "The time it takes for the dispatcher to stop one process and start another running",
+   "The time a process spends in the ready queue",
+   "The time from submission to completion",
+   "The length of a time quantum"
+  ],
+  "answer": 0,
+  "hint": "It is the cost of handing the CPU over.",
+  "explanation": "Slide 5.7: dispatch latency - time it takes for the dispatcher to stop one process and start another running.",
+  "source": {
+   "kind": "leak",
+   "refs": [
+    "L05-115",
+    "L08-25"
+   ]
+  },
+  "syllabus_ref": {
+   "file": "CH-5-Updated.pdf",
+   "slides": [
+    7
+   ]
+  },
+  "review_status": "approved"
+ },
+ {
+  "id": "c5-c019",
+  "unit": 5,
+  "topic": "Round Robin",
+  "difficulty": "medium",
+  "question": "In Round Robin scheduling, as the time quantum increases, the average turnaround time:",
+  "options": [
+   "Varies (it does not change in one fixed direction)",
+   "Always increases",
+   "Always decreases",
+   "Remains constant"
+  ],
+  "answer": 0,
+  "hint": "Look at the graph of turnaround time versus time quantum.",
+  "explanation": "Slide 5.18: 'Turnaround Time Varies With The Time Quantum' - the graph is not monotonic.",
+  "source": {
+   "kind": "leak",
+   "refs": [
+    "L05-243"
+   ]
+  },
+  "syllabus_ref": {
+   "file": "CH-5-Updated.pdf",
+   "slides": [
+    18
+   ]
+  },
+  "review_status": "approved"
+ },
+ {
+  "id": "c5-c020",
+  "unit": 5,
+  "topic": "FCFS Scheduling",
+  "difficulty": "easy",
+  "question": "Which of the following scheduling algorithms must be nonpreemptive?",
+  "options": [
+   "FCFS",
+   "SJF",
+   "Priority",
+   "Round Robin"
+  ],
+  "answer": 0,
+  "hint": "Two of the others have both preemptive and nonpreemptive versions.",
+  "explanation": "Slides 5.10, 5.14 and 5.19: SJF has a preemptive version (SRTF), priority can be preemptive or nonpreemptive, RR is preemptive; FCFS runs each process until it finishes or waits.",
+  "source": {
+   "kind": "leak",
+   "refs": [
+    "L17-09",
+    "L05-340",
+    "L05-282"
+   ]
+  },
+  "syllabus_ref": {
+   "file": "CH-5-Updated.pdf",
+   "slides": [
+    10,
+    14,
+    19
+   ]
+  },
+  "review_status": "approved"
+ },
+ {
+  "id": "c5-c021",
+  "unit": 5,
+  "topic": "CPU Scheduler",
+  "difficulty": "medium",
+  "question": "The strategy of allowing a process that is logically runnable to be temporarily suspended (the CPU is taken away from it) is called:",
+  "options": [
+   "Preemptive scheduling",
+   "Nonpreemptive scheduling",
+   "FCFS scheduling",
+   "Aging"
+  ],
+  "answer": 0,
+  "hint": "The process did not ask to give up the CPU.",
+  "explanation": "Slide 5.6: scheduling when a process switches from running to ready (or waiting to ready) is preemptive; the running process loses the CPU even though it could continue.",
+  "source": {
+   "kind": "leak",
+   "refs": [
+    "L05-294",
+    "L05-241"
+   ]
+  },
+  "syllabus_ref": {
+   "file": "CH-5-Updated.pdf",
+   "slides": [
+    6
+   ]
+  },
+  "review_status": "approved"
+ },
+ {
+  "id": "c5-c022",
+  "unit": 5,
+  "topic": "FCFS Scheduling",
+  "difficulty": "easy",
+  "question": "Which scheduling algorithm allocates the CPU first to the process that requests the CPU first?",
+  "options": [
+   "First-Come, First-Served",
+   "Shortest-Job-First",
+   "Priority",
+   "Round Robin"
+  ],
+  "answer": 0,
+  "hint": "It is also the simplest algorithm.",
+  "explanation": "Slide 5.10: FCFS allocates the CPU in order of arrival.",
+  "source": {
+   "kind": "leak",
+   "refs": [
+    "L08-13",
+    "L05-312",
+    "L09-01"
+   ]
+  },
+  "syllabus_ref": {
+   "file": "CH-5-Updated.pdf",
+   "slides": [
+    10
+   ]
+  },
+  "review_status": "approved"
+ },
+ {
+  "id": "c5-c023",
+  "unit": 5,
+  "topic": "Shortest-Job-First",
+  "difficulty": "easy",
+  "question": "The SJF algorithm executes first the process:",
+  "options": [
+   "With the shortest next CPU burst",
+   "That entered the queue first",
+   "That entered the queue last",
+   "With the highest process ID"
+  ],
+  "answer": 0,
+  "hint": "Each process is associated with the length of its next CPU burst.",
+  "explanation": "Slide 5.12: SJF associates each process with the length of its next CPU burst and schedules the process with the shortest time.",
+  "source": {
+   "kind": "leak",
+   "refs": [
+    "L05-331"
+   ]
+  },
+  "syllabus_ref": {
+   "file": "CH-5-Updated.pdf",
+   "slides": [
+    12
+   ]
+  },
+  "review_status": "approved"
+ },
+ {
+  "id": "c5-c024",
+  "unit": 5,
+  "topic": "Multiple-Processor Scheduling",
+  "difficulty": "easy",
+  "question": "CPU scheduling becomes more complex when:",
+  "options": [
+   "Multiple CPUs are available",
+   "Only one process exists",
+   "The time quantum is large",
+   "All processes are I/O-bound"
+  ],
+  "answer": 0,
+  "hint": "The slide title is Multiple-Processor Scheduling.",
+  "explanation": "Slide 5.31: CPU scheduling is more complex when multiple CPUs are available.",
+  "source": {
+   "kind": "leak",
+   "refs": [
+    "L06-09"
+   ]
+  },
+  "syllabus_ref": {
+   "file": "CH-5-Updated.pdf",
+   "slides": [
+    31,
+    32
+   ]
+  },
+  "review_status": "approved"
+ },
+ {
+  "id": "c5-c025",
+  "unit": 5,
+  "topic": "CPU Scheduler",
+  "difficulty": "medium",
+  "question": "Scheduling is nonpreemptive only when it takes place because a process:",
+  "options": [
+   "Switches from running to waiting, or terminates",
+   "Switches from running to ready",
+   "Switches from waiting to ready",
+   "Switches from running to ready, or from waiting to ready"
+  ],
+  "answer": 0,
+  "hint": "In these cases the process gives up the CPU by itself.",
+  "explanation": "Slide 5.6: scheduling decisions happen when a process (1) switches running -> waiting, (2) running -> ready, (3) waiting -> ready, (4) terminates. Scheduling under 1 and 4 is nonpreemptive; all others are preemptive.",
+  "source": {
+   "kind": "leak",
+   "refs": [
+    "L11-11",
+    "L06-10",
+    "L08-08"
+   ]
+  },
+  "syllabus_ref": {
+   "file": "CH-5-Updated.pdf",
+   "slides": [
+    6
+   ]
+  },
+  "review_status": "approved"
+ },
+ {
+  "id": "c5-c026",
+  "unit": 5,
+  "topic": "CPU Scheduler",
+  "difficulty": "easy",
+  "question": "Under nonpreemptive scheduling, once the CPU has been allocated to a process, the process keeps it until it:",
+  "options": [
+   "Terminates or switches to the waiting state",
+   "Switches to the ready state",
+   "Has run for one time quantum",
+   "Is preempted by a higher-priority process"
+  ],
+  "answer": 0,
+  "hint": "Nonpreemptive means the CPU is never taken away.",
+  "explanation": "Slide 5.6: nonpreemptive scheduling happens only when the running process switches to waiting or terminates.",
+  "source": {
+   "kind": "leak",
+   "refs": [
+    "L14-20"
+   ]
+  },
+  "syllabus_ref": {
+   "file": "CH-5-Updated.pdf",
+   "slides": [
+    6
+   ]
+  },
+  "review_status": "approved"
+ },
+ {
+  "id": "c5-c027",
+  "unit": 5,
+  "topic": "Basic Concepts",
+  "difficulty": "medium",
+  "question": "An I/O-bound program typically has:",
+  "options": [
+   "Many very short CPU bursts",
+   "A few very long CPU bursts",
+   "Many very long CPU bursts",
+   "No CPU bursts at all"
+  ],
+  "answer": 0,
+  "hint": "It spends most of its time waiting for I/O.",
+  "explanation": "Slide 5.4: process execution is a cycle of CPU execution and I/O wait. An I/O-bound program does little computing between I/O requests, so it has many short CPU bursts; a CPU-bound program has fewer, longer bursts.",
+  "source": {
+   "kind": "leak",
+   "refs": [
+    "L08-01",
+    "L18-24"
+   ]
+  },
+  "syllabus_ref": {
+   "file": "CH-5-Updated.pdf",
+   "slides": [
+    4
+   ]
+  },
+  "review_status": "approved"
+ },
+ {
+  "id": "c5-c028",
+  "unit": 5,
+  "topic": "CPU Scheduler",
+  "difficulty": "easy",
+  "question": "A process is selected from the __________ queue by the __________ scheduler to be executed on the CPU.",
+  "options": [
+   "ready, short-term (CPU)",
+   "wait, long-term",
+   "ready, long-term",
+   "wait, short-term"
+  ],
+  "answer": 0,
+  "hint": "The selected process must already be ready.",
+  "explanation": "Slide 5.6: the CPU scheduler selects from among the processes in the ready queue and allocates a CPU core to one of them.",
+  "source": {
+   "kind": "leak",
+   "refs": [
+    "L08-02",
+    "L15-13",
+    "L18-25",
+    "L15-30"
+   ]
+  },
+  "syllabus_ref": {
+   "file": "CH-5-Updated.pdf",
+   "slides": [
+    6
+   ]
+  },
+  "review_status": "approved"
+ },
+ {
+  "id": "c5-c029",
+  "unit": 5,
+  "topic": "Scheduling Criteria",
+  "difficulty": "easy",
+  "question": "Turnaround time is:",
+  "options": [
+   "The total time from the arrival of a process until its completion",
+   "The time spent waiting in the ready queue only",
+   "The time until the first response is produced",
+   "The number of processes completed per time unit"
+  ],
+  "answer": 0,
+  "hint": "Turnaround time = completion time - arrival time.",
+  "explanation": "Slides 5.8 and 5.49: turnaround time is the amount of time to execute a particular process: completion time - arrival time.",
+  "source": {
+   "kind": "leak",
+   "refs": [
+    "L08-03",
+    "L08-09"
+   ]
+  },
+  "syllabus_ref": {
+   "file": "CH-5-Updated.pdf",
+   "slides": [
+    8,
+    49
+   ]
+  },
+  "review_status": "approved"
+ },
+ {
+  "id": "c5-c030",
+  "unit": 5,
+  "topic": "Priority Scheduling",
+  "difficulty": "easy",
+  "question": "In priority scheduling, the CPU is allocated to the process with:",
+  "options": [
+   "The highest priority (the smallest integer)",
+   "The lowest priority (the largest integer)",
+   "The longest burst",
+   "The latest arrival"
+  ],
+  "answer": 0,
+  "hint": "In this course a smaller number means a more important process.",
+  "explanation": "Slides 5.19 and 5.49: the CPU is allocated to the process with the highest priority; the smallest integer is the highest priority.",
+  "source": {
+   "kind": "leak",
+   "refs": [
+    "L08-05"
+   ]
+  },
+  "syllabus_ref": {
+   "file": "CH-5-Updated.pdf",
+   "slides": [
+    19,
+    49
+   ]
+  },
+  "review_status": "approved"
+ },
+ {
+  "id": "c5-c031",
+  "unit": 5,
+  "topic": "Multilevel Queue",
+  "difficulty": "easy",
+  "question": "In which algorithm is the ready queue split into multiple queues, with processes classified into groups and unable to move between queues?",
+  "options": [
+   "Multilevel queue",
+   "Multilevel feedback queue",
+   "Round Robin",
+   "SJF"
+  ],
+  "answer": 0,
+  "hint": "Its 'feedback' version lets processes move.",
+  "explanation": "Slides 5.22-5.24: the multilevel queue's ready queue consists of multiple queues (e.g. prioritized by process type). Only the multilevel feedback queue (slide 5.25) lets a process move between queues.",
+  "source": {
+   "kind": "leak",
+   "refs": [
+    "L08-06",
+    "L14-11"
+   ]
+  },
+  "syllabus_ref": {
+   "file": "CH-5-Updated.pdf",
+   "slides": [
+    22,
+    23,
+    24
+   ]
+  },
+  "review_status": "approved"
+ },
+ {
+  "id": "c5-c032",
+  "unit": 5,
+  "topic": "Multilevel Feedback Queue",
+  "difficulty": "easy",
+  "question": "In which algorithm can a process move between the various queues?",
+  "options": [
+   "Multilevel feedback queue",
+   "Multilevel queue",
+   "FCFS",
+   "Nonpreemptive SJF"
+  ],
+  "answer": 0,
+  "hint": "It defines methods to upgrade and demote processes.",
+  "explanation": "Slide 5.25: in the multilevel feedback queue, a process can move between the various queues.",
+  "source": {
+   "kind": "leak",
+   "refs": [
+    "L08-10",
+    "L14-14",
+    "L08-18"
+   ]
+  },
+  "syllabus_ref": {
+   "file": "CH-5-Updated.pdf",
+   "slides": [
+    25
+   ]
+  },
+  "review_status": "approved"
+ },
+ {
+  "id": "c5-c033",
+  "unit": 5,
+  "topic": "Scheduling Criteria",
+  "difficulty": "easy",
+  "question": "Response time is the amount of time from when a request is submitted until:",
+  "options": [
+   "The first response is produced (not the output)",
+   "The process completes",
+   "The process enters the ready queue",
+   "The output is fully printed"
+  ],
+  "answer": 0,
+  "hint": "It matters most for time-sharing environments.",
+  "explanation": "Slide 5.8: response time - amount of time it takes from when a request was submitted until the first response is produced, not output (for time-sharing environments).",
+  "source": {
+   "kind": "leak",
+   "refs": [
+    "L08-11",
+    "L08-19"
+   ]
+  },
+  "syllabus_ref": {
+   "file": "CH-5-Updated.pdf",
+   "slides": [
+    8,
+    49
+   ]
+  },
+  "review_status": "approved"
+ },
+ {
+  "id": "c5-c034",
+  "unit": 5,
+  "topic": "Basic Concepts",
+  "difficulty": "easy",
+  "question": "Maximum CPU utilization is obtained with:",
+  "options": [
+   "Multiprogramming",
+   "A single program in memory",
+   "Batch processing with no I/O",
+   "Turning off interrupts"
+  ],
+  "answer": 0,
+  "hint": "CPU scheduling is the basis of these operating systems.",
+  "explanation": "Slide 5.4: maximum CPU utilization is obtained with multiprogramming.",
+  "source": {
+   "kind": "leak",
+   "refs": [
+    "L08-12"
+   ]
+  },
+  "syllabus_ref": {
+   "file": "CH-5-Updated.pdf",
+   "slides": [
+    4
+   ]
+  },
+  "review_status": "approved"
+ },
+ {
+  "id": "c5-c035",
+  "unit": 5,
+  "topic": "Round Robin",
+  "difficulty": "easy",
+  "question": "In which algorithm does each process get a small unit of CPU time called the time quantum?",
+  "options": [
+   "Round Robin",
+   "FCFS",
+   "SJF",
+   "Nonpreemptive priority"
+  ],
+  "answer": 0,
+  "hint": "After the quantum elapses the process goes to the end of the ready queue.",
+  "explanation": "Slide 5.15: in RR each process gets a small unit of CPU time (time quantum q), usually 10-100 milliseconds.",
+  "source": {
+   "kind": "leak",
+   "refs": [
+    "L08-14",
+    "L09-03",
+    "L14-13"
+   ]
+  },
+  "syllabus_ref": {
+   "file": "CH-5-Updated.pdf",
+   "slides": [
+    15
+   ]
+  },
+  "review_status": "approved"
+ },
+ {
+  "id": "c5-c036",
+  "unit": 5,
+  "topic": "Round Robin",
+  "difficulty": "easy",
+  "question": "Round Robin is basically a __________ scheduling algorithm designed for __________ systems.",
+  "options": [
+   "preemptive, time-sharing",
+   "nonpreemptive, time-sharing",
+   "nonpreemptive, batch",
+   "preemptive, single-user batch"
+  ],
+  "answer": 0,
+  "hint": "It gives each user a turn quickly.",
+  "explanation": "Slide 5.15: RR preempts a process when its quantum expires; it typically gives better response (slide 5.16), which suits time-sharing.",
+  "source": {
+   "kind": "leak",
+   "refs": [
+    "L08-28",
+    "L09-08"
+   ]
+  },
+  "syllabus_ref": {
+   "file": "CH-5-Updated.pdf",
+   "slides": [
+    15,
+    16
+   ]
+  },
+  "review_status": "approved"
+ },
+ {
+  "id": "c5-c037",
+  "unit": 5,
+  "topic": "Scheduling Algorithms",
+  "difficulty": "easy",
+  "question": "Which of the following is NOT a CPU scheduling algorithm covered in the chapter?",
+  "options": [
+   "Level-set scheduling",
+   "Round Robin",
+   "Shortest-Job-First",
+   "Multilevel feedback queue"
+  ],
+  "answer": 0,
+  "hint": "The covered ones are FCFS, SJF, SRTF, RR, priority and multilevel queues.",
+  "explanation": "Slides 5.10-5.26 cover FCFS, SJF, SRTF, RR, priority (with and without RR), multilevel queue and multilevel feedback queue.",
+  "source": {
+   "kind": "leak",
+   "refs": [
+    "L09-10"
+   ]
+  },
+  "syllabus_ref": {
+   "file": "CH-5-Updated.pdf",
+   "slides": [
+    10,
+    12,
+    15,
+    22,
+    25
+   ]
+  },
+  "review_status": "approved"
+ },
+ {
+  "id": "c5-c038",
+  "unit": 5,
+  "topic": "Round Robin",
+  "difficulty": "easy",
+  "question": "Which scheduling algorithm gives each process an equal share of the CPU (1/n of the CPU time in chunks of at most q)?",
+  "options": [
+   "Round Robin",
+   "FCFS",
+   "Priority",
+   "SJF"
+  ],
+  "answer": 0,
+  "hint": "n processes and a quantum q.",
+  "explanation": "Slide 5.15: with n processes and quantum q, each process gets 1/n of the CPU time in chunks of at most q time units at once.",
+  "source": {
+   "kind": "leak",
+   "refs": [
+    "L10-02"
+   ]
+  },
+  "syllabus_ref": {
+   "file": "CH-5-Updated.pdf",
+   "slides": [
+    15
+   ]
+  },
+  "review_status": "approved"
+ },
+ {
+  "id": "c5-c039",
+  "unit": 5,
+  "topic": "Scheduling Criteria",
+  "difficulty": "easy",
+  "question": "The number of processes that complete their execution per time unit is called:",
+  "options": [
+   "Throughput",
+   "CPU utilization",
+   "Turnaround time",
+   "Response time"
+  ],
+  "answer": 0,
+  "hint": "It counts finished processes.",
+  "explanation": "Slide 5.8: throughput - number of processes that complete their execution per time unit.",
+  "source": {
+   "kind": "leak",
+   "refs": [
+    "L15-35",
+    "L16-16"
+   ]
+  },
+  "syllabus_ref": {
+   "file": "CH-5-Updated.pdf",
+   "slides": [
+    8,
+    49
+   ]
+  },
+  "review_status": "approved"
+ },
+ {
+  "id": "c5-c040",
+  "unit": 5,
+  "topic": "Priority Scheduling",
+  "difficulty": "medium",
+  "question": "In preemptive priority scheduling, when a new process arrives at the ready queue, its priority is compared with the priority of the:",
+  "options": [
+   "Currently running process",
+   "Processes in the wait queues",
+   "Process that arrived first",
+   "Process with the longest burst"
+  ],
+  "answer": 0,
+  "hint": "Preemption can only take the CPU from one process.",
+  "explanation": "Slide 5.19: priority scheduling can be preemptive; the newly arrived process takes the CPU if its priority is higher than the running process's priority.",
+  "source": {
+   "kind": "leak",
+   "refs": [
+    "L17-26"
+   ]
+  },
+  "syllabus_ref": {
+   "file": "CH-5-Updated.pdf",
+   "slides": [
+    19,
+    20
+   ]
+  },
+  "review_status": "approved"
+ },
+ {
+  "id": "c5-c041",
+  "unit": 5,
+  "topic": "Multiple-Processor Scheduling",
+  "difficulty": "medium",
+  "question": "A multiprocessor system has 4 processors, each with 3 cores (one hardware thread per core). What is the maximum number of instructions that can execute at the same time?",
+  "options": [
+   "12",
+   "7",
+   "4",
+   "3"
+  ],
+  "answer": 0,
+  "hint": "Each core can execute independently.",
+  "explanation": "Slide 5.33: each core on the chip can execute in parallel, so 4 processors x 3 cores = 12 instructions at a time.",
+  "source": {
+   "kind": "leak",
+   "refs": [
+    "L18-21"
+   ]
+  },
+  "syllabus_ref": {
+   "file": "CH-5-Updated.pdf",
+   "slides": [
+    33
+   ]
+  },
+  "review_status": "approved"
+ },
+ {
+  "id": "c5-c042",
+  "unit": 5,
+  "topic": "Round Robin",
+  "difficulty": "medium",
+  "question": "Which CPU-scheduling algorithm usually has the highest context-switch overhead?",
+  "options": [
+   "Round Robin with a small quantum",
+   "FCFS",
+   "Nonpreemptive SJF",
+   "Nonpreemptive priority"
+  ],
+  "answer": 0,
+  "hint": "The timer interrupts every quantum to schedule the next process.",
+  "explanation": "Slides 5.15 and 5.17: RR switches every quantum; if q is small, the overhead becomes too high, so q must be large with respect to the context-switch time.",
+  "source": {
+   "kind": "leak",
+   "refs": [
+    "L18-40"
+   ]
+  },
+  "syllabus_ref": {
+   "file": "CH-5-Updated.pdf",
+   "slides": [
+    15,
+    17
+   ]
+  },
+  "review_status": "approved"
+ },
+ {
+  "id": "c5-c043",
+  "unit": 5,
+  "topic": "FCFS Scheduling",
+  "difficulty": "medium",
+  "question": "Three processes arrive at time 0 in the order P2, P3, P1 with CPU bursts P1 = 12 ms, P2 = 1.5 ms and P3 = 1.5 ms. What is the average waiting time under FCFS?",
+  "table": {
+   "headers": [
+    "Process",
+    "Arrival Time",
+    "Burst Time"
+   ],
+   "rows": [
+    [
+     "P2",
+     "0",
+     "1.5"
+    ],
+    [
+     "P3",
+     "0",
+     "1.5"
+    ],
+    [
+     "P1",
+     "0",
+     "12"
+    ]
+   ]
+  },
+  "options": [
+   "1.5 ms",
+   "13 ms",
+   "7.5 ms",
+   "12 ms"
+  ],
+  "answer": 0,
+  "hint": "Run them in the order they arrived; waiting time = start time here.",
+  "explanation": "Slide 5.11 style: P2 0-1.5, P3 1.5-3, P1 3-15. WT: P2 = 0, P3 = 1.5, P1 = 3. Average = 4.5/3 = 1.5 ms.",
+  "source": {
+   "kind": "leak",
+   "refs": [
+    "L09-02"
+   ]
+  },
+  "syllabus_ref": {
+   "file": "CH-5-Updated.pdf",
+   "slides": [
+    10,
+    11,
+    49
+   ]
+  },
+  "review_status": "approved"
+ },
+ {
+  "id": "c5-c044",
+  "unit": 5,
+  "topic": "Round Robin",
+  "difficulty": "hard",
+  "question": "Five processes arrive together in the order P1..P5 with CPU bursts 9, 8, 7, 6 and 5 ms. Round Robin with q = 9 ms produces exactly the same schedule as which algorithm?",
+  "options": [
+   "FCFS",
+   "Nonpreemptive SJF",
+   "Preemptive SJF (SRTF)",
+   "None of the mentioned"
+  ],
+  "answer": 0,
+  "hint": "Can any process be preempted when every burst is at most q?",
+  "explanation": "Slide 5.15: if q is at least as large as every burst, no process is preempted and RR behaves like FIFO, running P1..P5 in arrival order. SJF and SRTF would run the shortest job (P5) first, so they differ.",
+  "source": {
+   "kind": "leak",
+   "refs": [
+    "L15-23",
+    "L15-22"
+   ]
+  },
+  "syllabus_ref": {
+   "file": "CH-5-Updated.pdf",
+   "slides": [
+    15
+   ]
+  },
+  "review_status": "approved"
+ },
+ {
+  "id": "c5-c045",
+  "unit": 5,
+  "topic": "Basic Concepts",
+  "difficulty": "easy",
+  "question": "Process execution consists of a cycle of:",
+  "options": [
+   "CPU execution and I/O wait",
+   "Booting and shutting down",
+   "Compiling and linking",
+   "Forking and joining"
+  ],
+  "answer": 0,
+  "hint": "A CPU burst is followed by an I/O burst.",
+  "explanation": "Slide 5.4: CPU-I/O burst cycle - process execution consists of a cycle of CPU execution and I/O wait; the CPU burst distribution is of main concern.",
+  "source": {
+   "kind": "generated"
+  },
+  "syllabus_ref": {
+   "file": "CH-5-Updated.pdf",
+   "slides": [
+    4
+   ]
+  },
+  "review_status": "approved"
+ },
+ {
+  "id": "c5-c046",
+  "unit": 5,
+  "topic": "CPU Scheduler",
+  "difficulty": "medium",
+  "question": "Which of the following scheduling decision points is preemptive?",
+  "options": [
+   "A process switches from running to ready",
+   "A process switches from running to waiting",
+   "A process terminates",
+   "None of the mentioned"
+  ],
+  "answer": 0,
+  "hint": "In this case the process could still use the CPU.",
+  "explanation": "Slide 5.6: scheduling under (1) running -> waiting and (4) termination is nonpreemptive; all other scheduling, including running -> ready, is preemptive.",
+  "source": {
+   "kind": "generated"
+  },
+  "syllabus_ref": {
+   "file": "CH-5-Updated.pdf",
+   "slides": [
+    6
+   ]
+  },
+  "review_status": "approved"
+ },
+ {
+  "id": "c5-c047",
+  "unit": 5,
+  "topic": "CPU Scheduler",
+  "difficulty": "medium",
+  "question": "Which issue must be considered when using preemptive scheduling?",
+  "options": [
+   "Access to shared data",
+   "The size of the bootstrap program",
+   "The number of hard disk sectors",
+   "The screen resolution"
+  ],
+  "answer": 0,
+  "hint": "A process may be interrupted in the middle of updating something.",
+  "explanation": "Slide 5.6: with preemptive scheduling, consider access to shared data, preemption while in kernel mode, and interrupts occurring during crucial OS activities.",
+  "source": {
+   "kind": "generated"
+  },
+  "syllabus_ref": {
+   "file": "CH-5-Updated.pdf",
+   "slides": [
+    6
+   ]
+  },
+  "review_status": "approved"
+ },
+ {
+  "id": "c5-c048",
+  "unit": 5,
+  "topic": "Dispatcher",
+  "difficulty": "medium",
+  "question": "Which of the following is NOT one of the dispatcher's steps?",
+  "options": [
+   "Selecting which process should run next",
+   "Switching context",
+   "Switching to user mode",
+   "Jumping to the proper location in the user program to restart it"
+  ],
+  "answer": 0,
+  "hint": "The decision is made by another component before the dispatcher acts.",
+  "explanation": "Slide 5.7: the dispatcher gives control of the CPU to the process selected by the short-term scheduler: switching context, switching to user mode, and jumping to the proper location. Selection is the CPU scheduler's job.",
+  "source": {
+   "kind": "generated"
+  },
+  "syllabus_ref": {
+   "file": "CH-5-Updated.pdf",
+   "slides": [
+    6,
+    7
+   ]
+  },
+  "review_status": "approved"
+ },
+ {
+  "id": "c5-c049",
+  "unit": 5,
+  "topic": "Scheduling Criteria",
+  "difficulty": "easy",
+  "question": "Waiting time, as a scheduling criterion, is the amount of time a process has spent:",
+  "options": [
+   "Waiting in the ready queue",
+   "Executing on the CPU",
+   "Doing I/O",
+   "From arrival to its first response"
+  ],
+  "answer": 0,
+  "hint": "It does not include time actually running.",
+  "explanation": "Slide 5.8: waiting time - amount of time a process has been waiting in the ready queue.",
+  "source": {
+   "kind": "generated"
+  },
+  "syllabus_ref": {
+   "file": "CH-5-Updated.pdf",
+   "slides": [
+    8
+   ]
+  },
+  "review_status": "approved"
+ },
+ {
+  "id": "c5-c050",
+  "unit": 5,
+  "topic": "Shortest-Job-First",
+  "difficulty": "medium",
+  "question": "What is the main difficulty of SJF scheduling?",
+  "options": [
+   "Knowing the length of the next CPU request",
+   "It never gives the minimum average waiting time",
+   "It needs a time quantum",
+   "It cannot be used with arriving processes"
+  ],
+  "answer": 0,
+  "hint": "The scheduler would need to predict the future.",
+  "explanation": "Slides 5.12 and 5.14: the difficulty is knowing the length of the next CPU request; it can be asked from the user or estimated, similar to the previous bursts.",
+  "source": {
+   "kind": "generated"
+  },
+  "syllabus_ref": {
+   "file": "CH-5-Updated.pdf",
+   "slides": [
+    12,
+    14
+   ]
+  },
+  "review_status": "approved"
+ },
+ {
+  "id": "c5-c051",
+  "unit": 5,
+  "topic": "Shortest-Job-First",
+  "difficulty": "easy",
+  "question": "The preemptive version of SJF is called:",
+  "options": [
+   "Shortest-remaining-time-first",
+   "Round Robin",
+   "Multilevel queue",
+   "First-come, first-served"
+  ],
+  "answer": 0,
+  "hint": "It compares what is left of each burst.",
+  "explanation": "Slide 5.14: the preemptive version of SJF is called shortest-remaining-time-first.",
+  "source": {
+   "kind": "generated"
+  },
+  "syllabus_ref": {
+   "file": "CH-5-Updated.pdf",
+   "slides": [
+    14
+   ]
+  },
+  "review_status": "approved"
+ },
+ {
+  "id": "c5-c052",
+  "unit": 5,
+  "topic": "Round Robin",
+  "difficulty": "hard",
+  "question": "Round Robin is used with 5 processes in the ready queue and a time quantum of 20 ms. What is the maximum time any process waits before getting its next turn?",
+  "options": [
+   "80 ms",
+   "100 ms",
+   "20 ms",
+   "4 ms"
+  ],
+  "answer": 0,
+  "hint": "Every other process may run one full quantum before it.",
+  "explanation": "Slide 5.15: no process waits more than (n-1)q time units: (5-1) x 20 = 80 ms.",
+  "source": {
+   "kind": "generated"
+  },
+  "syllabus_ref": {
+   "file": "CH-5-Updated.pdf",
+   "slides": [
+    15
+   ]
+  },
+  "review_status": "approved"
+ },
+ {
+  "id": "c5-c053",
+  "unit": 5,
+  "topic": "Round Robin",
+  "difficulty": "medium",
+  "question": "What happens in Round Robin if the time quantum is too small?",
+  "options": [
+   "Context-switch overhead becomes too high",
+   "RR becomes FCFS",
+   "Starvation always occurs",
+   "Processes can never be preempted"
+  ],
+  "answer": 0,
+  "hint": "q must be large with respect to something.",
+  "explanation": "Slide 5.15: q small - q must be large with respect to the context switch, otherwise the overhead is too high.",
+  "source": {
+   "kind": "generated"
+  },
+  "syllabus_ref": {
+   "file": "CH-5-Updated.pdf",
+   "slides": [
+    15,
+    17
+   ]
+  },
+  "review_status": "approved"
+ },
+ {
+  "id": "c5-c054",
+  "unit": 5,
+  "topic": "Round Robin",
+  "difficulty": "medium",
+  "question": "According to the slides, typical values are a time quantum of about __________ and a context switch of less than __________.",
+  "options": [
+   "10-100 ms; 10 microseconds",
+   "1 second; 1 ms",
+   "1 microsecond; 1 ns",
+   "1 minute; 1 second"
+  ],
+  "answer": 0,
+  "hint": "The quantum is much larger than the switch time.",
+  "explanation": "Slide 5.16: q usually 10 ms to 100 ms, context switch < 10 usec.",
+  "source": {
+   "kind": "generated"
+  },
+  "syllabus_ref": {
+   "file": "CH-5-Updated.pdf",
+   "slides": [
+    15,
+    16
+   ]
+  },
+  "review_status": "approved"
+ },
+ {
+  "id": "c5-c055",
+  "unit": 5,
+  "topic": "Round Robin",
+  "difficulty": "medium",
+  "question": "As a rule of thumb for choosing the time quantum in RR, what percentage of CPU bursts should be shorter than q?",
+  "options": [
+   "80%",
+   "20%",
+   "50%",
+   "100%"
+  ],
+  "answer": 0,
+  "hint": "Most bursts should finish within one slice.",
+  "explanation": "Slide 5.18: 80% of CPU bursts should be shorter than q.",
+  "source": {
+   "kind": "generated"
+  },
+  "syllabus_ref": {
+   "file": "CH-5-Updated.pdf",
+   "slides": [
+    18
+   ]
+  },
+  "review_status": "approved"
+ },
+ {
+  "id": "c5-c056",
+  "unit": 5,
+  "topic": "Round Robin",
+  "difficulty": "medium",
+  "question": "Compared with SJF, Round Robin typically has:",
+  "options": [
+   "Higher average turnaround time but better response",
+   "Lower average turnaround time and worse response",
+   "The same turnaround time and response",
+   "No preemption"
+  ],
+  "answer": 0,
+  "hint": "RR is fair to all processes, which helps interactivity.",
+  "explanation": "Slide 5.16: RR typically has higher average turnaround than SJF, but better response.",
+  "source": {
+   "kind": "generated"
+  },
+  "syllabus_ref": {
+   "file": "CH-5-Updated.pdf",
+   "slides": [
+    16
+   ]
+  },
+  "review_status": "approved"
+ },
+ {
+  "id": "c5-c057",
+  "unit": 5,
+  "topic": "Round Robin",
+  "difficulty": "easy",
+  "question": "In Round Robin, how does the OS take the CPU back when a quantum ends?",
+  "options": [
+   "A timer interrupt occurs every quantum",
+   "The process calls exit()",
+   "The dispatcher waits for I/O",
+   "The user presses a key"
+  ],
+  "answer": 0,
+  "hint": "The same hardware that prevents infinite loops.",
+  "explanation": "Slide 5.15: timer interrupts every quantum to schedule the next process.",
+  "source": {
+   "kind": "generated"
+  },
+  "syllabus_ref": {
+   "file": "CH-5-Updated.pdf",
+   "slides": [
+    15
+   ]
+  },
+  "review_status": "approved"
+ },
+ {
+  "id": "c5-c058",
+  "unit": 5,
+  "topic": "Priority Scheduling",
+  "difficulty": "medium",
+  "question": "In priority scheduling combined with Round Robin:",
+  "options": [
+   "The highest-priority process runs, and processes with the same priority run round-robin",
+   "All processes run round-robin regardless of priority",
+   "Lower-priority processes run first",
+   "Priorities are ignored when a quantum expires"
+  ],
+  "answer": 0,
+  "hint": "RR is only used to break ties.",
+  "explanation": "Slide 5.21: run the process with the highest priority; processes with the same priority run round-robin.",
+  "source": {
+   "kind": "generated"
+  },
+  "syllabus_ref": {
+   "file": "CH-5-Updated.pdf",
+   "slides": [
+    21
+   ]
+  },
+  "review_status": "approved"
+ },
+ {
+  "id": "c5-c059",
+  "unit": 5,
+  "topic": "Multilevel Queue",
+  "difficulty": "medium",
+  "question": "Which of the following is NOT a parameter that defines a (plain) multilevel queue scheduler?",
+  "options": [
+   "The method used to decide when to upgrade a process",
+   "The number of queues",
+   "The scheduling algorithm for each queue",
+   "The scheduling among the queues"
+  ],
+  "answer": 0,
+  "hint": "Processes in this scheduler never change queues.",
+  "explanation": "Slide 5.22: a multilevel queue is defined by the number of queues, the algorithm for each queue, the method to determine which queue a process enters, and scheduling among the queues. Upgrade/demote methods belong to the multilevel feedback queue (slide 5.25).",
+  "source": {
+   "kind": "generated"
+  },
+  "syllabus_ref": {
+   "file": "CH-5-Updated.pdf",
+   "slides": [
+    22,
+    25
+   ]
+  },
+  "review_status": "approved"
+ },
+ {
+  "id": "c5-c060",
+  "unit": 5,
+  "topic": "Multilevel Queue",
+  "difficulty": "easy",
+  "question": "In a multilevel queue with priority scheduling, which queue is scheduled first?",
+  "options": [
+   "The highest-priority queue",
+   "The longest queue",
+   "The queue with the oldest process",
+   "A random queue"
+  ],
+  "answer": 0,
+  "hint": "Each priority has its own queue.",
+  "explanation": "Slide 5.23: with priority scheduling, have separate queues for each priority and schedule the process in the highest-priority queue.",
+  "source": {
+   "kind": "generated"
+  },
+  "syllabus_ref": {
+   "file": "CH-5-Updated.pdf",
+   "slides": [
+    23,
+    24
+   ]
+  },
+  "review_status": "approved"
+ },
+ {
+  "id": "c5-c061",
+  "unit": 5,
+  "topic": "Multilevel Feedback Queue",
+  "difficulty": "medium",
+  "question": "Aging can be implemented using:",
+  "options": [
+   "A multilevel feedback queue",
+   "FCFS",
+   "A multilevel queue with fixed assignment",
+   "Nonpreemptive SJF only"
+  ],
+  "answer": 0,
+  "hint": "Old processes need a way to move up.",
+  "explanation": "Slide 5.25: aging can be implemented using a multilevel feedback queue, since a process can be upgraded to a higher queue.",
+  "source": {
+   "kind": "generated"
+  },
+  "syllabus_ref": {
+   "file": "CH-5-Updated.pdf",
+   "slides": [
+    25
+   ]
+  },
+  "review_status": "approved"
+ },
+ {
+  "id": "c5-c062",
+  "unit": 5,
+  "topic": "Multilevel Feedback Queue",
+  "difficulty": "hard",
+  "question": "A multilevel feedback queue has Q0: RR with q = 8 ms, Q1: RR with q = 16 ms, and Q2: FCFS. A new process needs a single CPU burst of 30 ms and no other processes exist. How much of its burst runs in Q2?",
+  "options": [
+   "6 ms",
+   "14 ms",
+   "22 ms",
+   "30 ms"
+  ],
+  "answer": 0,
+  "hint": "Follow the process down the queues.",
+  "explanation": "Slide 5.26: a new process enters Q0 and receives 8 ms; if not finished it moves to Q1 and receives 16 more ms; then it moves to Q2. 30 - 8 - 16 = 6 ms run in Q2.",
+  "source": {
+   "kind": "generated"
+  },
+  "syllabus_ref": {
+   "file": "CH-5-Updated.pdf",
+   "slides": [
+    26
+   ]
+  },
+  "review_status": "approved"
+ },
+ {
+  "id": "c5-c063",
+  "unit": 5,
+  "topic": "Multilevel Feedback Queue",
+  "difficulty": "medium",
+  "question": "In the example multilevel feedback queue (Q0 RR 8 ms, Q1 RR 16 ms, Q2 FCFS), what happens to a process that does not finish within its 8 ms in Q0?",
+  "options": [
+   "It is moved to Q1",
+   "It is terminated",
+   "It stays in Q0 forever",
+   "It is moved directly to Q2"
+  ],
+  "answer": 0,
+  "hint": "Processes move down one level at a time.",
+  "explanation": "Slide 5.26: if it does not finish in 8 ms, the process is moved to Q1; if it still doesn't complete there, it is preempted and moved to Q2.",
+  "source": {
+   "kind": "generated"
+  },
+  "syllabus_ref": {
+   "file": "CH-5-Updated.pdf",
+   "slides": [
+    26
+   ]
+  },
+  "review_status": "approved"
+ },
+ {
+  "id": "c5-c064",
+  "unit": 5,
+  "topic": "Thread Scheduling",
+  "difficulty": "medium",
+  "question": "When the thread library schedules user-level threads to run on an LWP (in many-to-one and many-to-many models), this is known as:",
+  "options": [
+   "Process-contention scope (PCS)",
+   "System-contention scope (SCS)",
+   "Symmetric multiprocessing",
+   "Data parallelism"
+  ],
+  "answer": 0,
+  "hint": "The competition happens within one process.",
+  "explanation": "Slide 5.27: the thread library schedules user-level threads on an LWP; this is process-contention scope (PCS), since competition is within the process. Kernel threads scheduled onto a CPU use system-contention scope (SCS).",
+  "source": {
+   "kind": "generated"
+  },
+  "syllabus_ref": {
+   "file": "CH-5-Updated.pdf",
+   "slides": [
+    27
+   ]
+  },
+  "review_status": "approved"
+ },
+ {
+  "id": "c5-c065",
+  "unit": 5,
+  "topic": "Thread Scheduling",
+  "difficulty": "medium",
+  "question": "A kernel thread scheduled onto an available CPU competes with all threads in the system. This is called:",
+  "options": [
+   "System-contention scope (SCS)",
+   "Process-contention scope (PCS)",
+   "Aging",
+   "Dispatch latency"
+  ],
+  "answer": 0,
+  "hint": "The competition is system-wide.",
+  "explanation": "Slide 5.27: a kernel thread scheduled onto an available CPU is system-contention scope (SCS) - competition among all threads in the system.",
+  "source": {
+   "kind": "generated"
+  },
+  "syllabus_ref": {
+   "file": "CH-5-Updated.pdf",
+   "slides": [
+    27
+   ]
+  },
+  "review_status": "approved"
+ },
+ {
+  "id": "c5-c066",
+  "unit": 5,
+  "topic": "Thread Scheduling",
+  "difficulty": "easy",
+  "question": "When an operating system supports threads, what does the scheduler schedule?",
+  "options": [
+   "Threads, not processes",
+   "Processes, not threads",
+   "Only I/O devices",
+   "Only the kernel"
+  ],
+  "answer": 0,
+  "hint": "The slide states this directly.",
+  "explanation": "Slide 5.27: when threads are supported, threads are scheduled, not processes.",
+  "source": {
+   "kind": "generated"
+  },
+  "syllabus_ref": {
+   "file": "CH-5-Updated.pdf",
+   "slides": [
+    27
+   ]
+  },
+  "review_status": "approved"
+ },
+ {
+  "id": "c5-c067",
+  "unit": 5,
+  "topic": "Multiple-Processor Scheduling",
+  "difficulty": "easy",
+  "question": "In symmetric multiprocessing (SMP):",
+  "options": [
+   "Each processor is self-scheduling",
+   "One master processor schedules all others",
+   "Only one processor runs user code",
+   "Processors never share memory"
+  ],
+  "answer": 0,
+  "hint": "Threads may be in a common ready queue or private per-processor queues.",
+  "explanation": "Slide 5.32: SMP is where each processor is self-scheduling; all threads may be in a common ready queue, or each processor may have its own private queue.",
+  "source": {
+   "kind": "generated"
+  },
+  "syllabus_ref": {
+   "file": "CH-5-Updated.pdf",
+   "slides": [
+    32
+   ]
+  },
+  "review_status": "approved"
+ },
+ {
+  "id": "c5-c068",
+  "unit": 5,
+  "topic": "Multiple-Processor Scheduling",
+  "difficulty": "medium",
+  "question": "In a multithreaded multicore system, what does a core do when one hardware thread has a memory stall?",
+  "options": [
+   "Switches to another hardware thread",
+   "Stops all threads until the memory returns",
+   "Reboots the core",
+   "Moves the thread to the wait queue on disk"
+  ],
+  "answer": 0,
+  "hint": "Each core has more than one hardware thread.",
+  "explanation": "Slides 5.33-5.34: each core has more than one hardware thread; if one thread has a memory stall, the core switches to another thread to make progress while memory retrieval happens.",
+  "source": {
+   "kind": "generated"
+  },
+  "syllabus_ref": {
+   "file": "CH-5-Updated.pdf",
+   "slides": [
+    33,
+    34
+   ]
+  },
+  "review_status": "approved"
+ },
+ {
+  "id": "c5-c069",
+  "unit": 5,
+  "topic": "Operating System Examples",
+  "difficulty": "medium",
+  "question": "Windows uses which type of CPU scheduling?",
+  "options": [
+   "Priority-based preemptive scheduling",
+   "FCFS",
+   "Nonpreemptive SJF",
+   "Round Robin without priorities"
+  ],
+  "answer": 0,
+  "hint": "The highest-priority thread runs next.",
+  "explanation": "Slide 5.42: Windows uses priority-based preemptive scheduling; the highest-priority thread runs next, and the dispatcher is the scheduler.",
+  "source": {
+   "kind": "generated"
+  },
+  "syllabus_ref": {
+   "file": "CH-5-Updated.pdf",
+   "slides": [
+    40,
+    42
+   ]
+  },
+  "review_status": "approved"
+ },
+ {
+  "id": "c5-c070",
+  "unit": 5,
+  "topic": "Definitions and Formulas",
+  "difficulty": "easy",
+  "question": "Which formula gives the waiting time of a process?",
+  "options": [
+   "Waiting time = turnaround time - burst time",
+   "Waiting time = completion time - arrival time",
+   "Waiting time = burst time - arrival time",
+   "Waiting time = completion time + burst time"
+  ],
+  "answer": 0,
+  "hint": "Remove the time the process actually spent running.",
+  "explanation": "Slide 5.49: turnaround time = completion time - arrival time; waiting time = turnaround time - burst time.",
+  "source": {
+   "kind": "generated"
+  },
+  "syllabus_ref": {
+   "file": "CH-5-Updated.pdf",
+   "slides": [
+    49
+   ]
+  },
+  "review_status": "approved"
+ },
+ {
+  "id": "c5-c071",
+  "unit": 5,
+  "topic": "Definitions and Formulas",
+  "difficulty": "easy",
+  "question": "Which formula gives the turnaround time of a process?",
+  "options": [
+   "Completion time - arrival time",
+   "Completion time - burst time",
+   "Burst time - waiting time",
+   "Arrival time + waiting time"
+  ],
+  "answer": 0,
+  "hint": "From the moment it arrives until the moment it finishes.",
+  "explanation": "Slide 5.49: turnaround time = completion time - arrival time.",
+  "source": {
+   "kind": "generated"
+  },
+  "syllabus_ref": {
+   "file": "CH-5-Updated.pdf",
+   "slides": [
+    49
+   ]
+  },
+  "review_status": "approved"
+ },
+ {
+  "id": "c5-c072",
+  "unit": 5,
+  "topic": "Definitions and Formulas",
+  "difficulty": "medium",
+  "question": "A CPU completes 5 processes in a total execution time of 40 ms. What is the throughput?",
+  "options": [
+   "0.125 processes per ms",
+   "8 processes per ms",
+   "200 processes per ms",
+   "45 processes per ms"
+  ],
+  "answer": 0,
+  "hint": "Throughput = number of processes completed / total execution time.",
+  "explanation": "Slide 5.49: throughput = number of processes completed / total execution time = 5 / 40 = 0.125 processes per ms (one process every 8 ms).",
+  "source": {
+   "kind": "generated"
+  },
+  "syllabus_ref": {
+   "file": "CH-5-Updated.pdf",
+   "slides": [
+    49
+   ]
+  },
+  "review_status": "approved"
+ },
+ {
+  "id": "c5-c073",
+  "unit": 5,
+  "topic": "Definitions and Formulas",
+  "difficulty": "easy",
+  "question": "Burst time is defined as:",
+  "options": [
+   "The time required by a process for CPU execution",
+   "The time at which the process arrives",
+   "The time at which the process completes",
+   "The time spent waiting in the ready queue"
+  ],
+  "answer": 0,
+  "hint": "It is how long the process needs the CPU.",
+  "explanation": "Slide 5.49: burst time - time required by a process for CPU execution. Arrival time is when it arrives in the ready queue; completion time is when it completes.",
+  "source": {
+   "kind": "generated"
+  },
+  "syllabus_ref": {
+   "file": "CH-5-Updated.pdf",
+   "slides": [
+    49
+   ]
+  },
+  "review_status": "approved"
+ }
+]
