@@ -28,3 +28,11 @@ export function getQuestion(id: string): Question | undefined {
 export function questionsInUnit(unit: UnitId): Question[] {
   return QUESTIONS.filter((q) => q.unit === unit)
 }
+
+export function unitLabel(unit: UnitId): string {
+  return `Unit ${unit} — ${UNITS.find((u) => u.id === unit)?.title ?? ''}`
+}
+
+export function sourceLabel(q: Question): string {
+  return q.source.kind === 'leak' ? 'Past exam' : 'Practice question'
+}

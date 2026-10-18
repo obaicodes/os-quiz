@@ -8,6 +8,7 @@
   --muted: #9aa3ad;
   --accent: #5aa9e6;
   --accent-text: #0b1620;
+  --accent-soft: #20384c;
   --correct: #3fb67a;
   --wrong: #e5534b;
   --flag: #e0b04a;
@@ -70,6 +71,17 @@ button.primary {
   font-weight: 600;
 }
 
+button.danger {
+  border-color: var(--wrong);
+  color: var(--wrong);
+}
+
+button.danger.primary,
+dialog button.danger {
+  background: var(--wrong);
+  color: #fff;
+}
+
 button:disabled {
   opacity: 0.45;
   cursor: not-allowed;
@@ -103,4 +115,30 @@ pre,
 code {
   font-family: var(--font-code);
   font-size: 0.875rem;
+}
+
+/* A link styled as a primary button. */
+a.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 44px;
+  padding: 10px 16px;
+  border-radius: var(--radius);
+  background: var(--accent);
+  color: var(--accent-text);
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.grade-Excellent,
+.grade-Very-Good {
+  color: var(--correct);
+}
+.grade-Good,
+.grade-Pass {
+  color: var(--flag);
+}
+.grade-Fail {
+  color: var(--wrong);
 }

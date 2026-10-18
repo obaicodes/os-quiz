@@ -27,3 +27,15 @@ npm run test:e2e     # browser tests (Playwright)
 npm run build        # production build in web/dist
 npm run bank:check   # validate the question bank
 ```
+
+## Deployment
+
+GitHub Pages, built by `.github/workflows/deploy.yml` on every push to `main`
+(validates the bank, type-checks, runs unit tests, builds `web/dist`).
+
+First publish (creates the public repo, enables Pages, pushes):
+
+```bash
+sudo dnf install gh
+bash tools/publish.sh
+```
