@@ -3,6 +3,8 @@
 Practice quizzes for the Operating Systems course (Midterm 1, chapters 1–5).
 A static site: all progress is stored in the visitor's browser (localStorage).
 
+**Live:** https://obaicodes.github.io/os-quiz/
+
 ## Repository layout
 
 | Path | Contents |
